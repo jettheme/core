@@ -270,7 +270,9 @@ margin-left: 5px;
 #main-content {
 background-color: $(posts.background.color);
 }
-
+.no-items.section {
+display: none;
+}
 .separator > a {
 margin: 0 !important;
 padding: 0 !important;
@@ -632,7 +634,7 @@ width: 50%;
     <b:includable id='main'><b:include name='JetHtml'/></b:includable>
   </b:widget>
 </b:section>
-<b:section class='pt-4' cond='data:is_show' id='blog-post' maxwidgets='1' showaddelement='no'>
+<b:section class='pt-4 mb-5' cond='data:is_show' id='blog-post' maxwidgets='1' showaddelement='no'>
   <b:widget id='Blog50' locked='true' title='Blog Posts' type='Blog' visible='true'>
     <b:widget-settings>
       <b:widget-setting name='showDateHeader'>false</b:widget-setting>
@@ -1162,7 +1164,7 @@ width: 50%;
 </b:if>
 </div>
 <b:else/>
-<div class='d-flex justify-content-evenly mb-5 invisible' expr:data-label='data:view.search.label' expr:data-pagination='!data:view.isArchive and !data:view.isPost and !data:view.search.query' expr:data-posts='data:posts.size' id='pagination'>
+<div class='d-flex justify-content-evenly invisible' expr:data-label='data:view.search.label' expr:data-pagination='!data:view.isArchive and !data:view.isPost and !data:view.search.query' expr:data-posts='data:posts.size' id='pagination'>
 <b:if cond='data:newerPageUrl'>
 <div class='prev-page'>
 <a class='btn btn-sm btn-color border-2 py-2 px-5 fw-bold' expr:href='data:newerPageUrl'><svg aria-hidden='true' height='1em' style='vertical-align:-0.135em' width='1em'><use xlink:href='#i-arrow-l'/></svg>Previous</a>
@@ -1223,7 +1225,7 @@ width: 50%;
 </b:includable>
 <b:includable id='Jet404'>
 <b:if cond='data:view.isMultipleItems'>
-<article class='mb-5' id='page-content'>
+<article id='page-content'>
 <header class='entry-header'>
 <h1 class='entry-title mb-4'>Nothing Here</h1>
 </header>
@@ -1236,7 +1238,7 @@ width: 50%;
 </div>
 </article>
 <b:else/>
-<article class='mb-5' id='page-content'>
+<article id='page-content'>
 <header class='entry-header'>
 <h1 class='entry-title mb-4'>404 Not Found</h1>
 </header>
@@ -1489,7 +1491,7 @@ width: 50%;
     </b:includable>
 	<b:includable id='JetRelatedPost' var='post'>
   <b:if cond='data:post.labels'>
-    <div class='related-post mb-5'>
+    <div class='related-post'>
       <div class='widget-title mb-3 text-uppercase fw-light'><span>Related Post</span></div>
       <div class='custom-posts visually-hidden' data-items='4' data-target='related-post-template' expr:data-no-item='data:post.url'><b:with value='data:post.labels where (l =&gt; l.name not contains &quot;#&quot;)' var='labels'><b:loop index='i' values='data:labels' var='label'><data:label.name/><b:if cond='data:i != data:labels.size - 1 '>,</b:if></b:loop></b:with></div>
       <div class='row row-cols-sm-2'>

@@ -7,7 +7,7 @@
 ]]></b:skin>
 </head>
 <body>
-<b:section class='main' id='main' showaddelement='yes'/>
+<b:section id='1' showaddelement='yes'/>
 <b:if cond='!data:view.isPreview'>
 &lt;div id=&quot;element-r&quot; style=&quot;display:none&quot;&gt;
 &lt;textarea disabled readonly&gt;

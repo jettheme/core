@@ -80,7 +80,7 @@ URL			: www.jettheme.com
 </Group>
 
 <Group description="_Typography">
-<Variable name="body.text.font" description="Body Font" type="font" default="normal normal 16px system-ui,-apple-system,Segoe UI,Helvetica Neue,Arial,Noto Sans,Liberation Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji"/>
+<Variable name="body.text" description="Body Font" type="font" default="normal normal 16px system-ui,-apple-system,Segoe UI,Helvetica Neue,Arial,Noto Sans,Liberation Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji"/>
 <Variable name="body.text.color" description="Paragraph Color" type="color" default="#686868"/>
 <Variable name="posts.title" description="Heading Font" type="font" default="normal bold 40px var(--bs-font-sans-serif)"/>
 <Variable name="posts.title.color" description="Heading Color" type="color" default="#343a40"/>
@@ -92,6 +92,7 @@ URL			: www.jettheme.com
 <Variable name="body.link.color" description="Link Color" type="color" default="$(keycolor)"/>
 <Variable name="body.hover.color" description="Link Hover Color" type="color" default="#f46013"/>
 <Variable name="posts.text.color" description="Blockquote Color" type="color" default="#343a40"/>
+<Variable name="body.text.font" description="Comment Form" type="font" default="normal normal 14px system-ui,-apple-system,Segoe UI,Helvetica Neue,Arial,Noto Sans,Liberation Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji"/>
 </Group> 
 
 <Group description="_Logo">
@@ -114,8 +115,8 @@ URL			: www.jettheme.com
 */
 
 body {
---bs-font-sans-serif: $(body.text.font.family);
-font: $(body.text.font);
+--bs-font-sans-serif: $(body.text.family);
+font: $(body.text);
 color: $(body.text.color);
 background-color: $(body.background);
 line-height: 1.5;

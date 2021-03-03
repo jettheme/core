@@ -270,9 +270,6 @@ margin-left: 5px;
 #main-content {
 background-color: $(posts.background.color);
 }
-.no-items.section {
-display: none;
-}
 .separator > a {
 margin: 0 !important;
 padding: 0 !important;

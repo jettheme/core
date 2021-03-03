@@ -270,6 +270,9 @@ margin-left: 5px;
 #main-content {
 background-color: $(posts.background.color);
 }
+.no-items {
+display: none;
+}
 .separator > a {
 margin: 0 !important;
 padding: 0 !important;
@@ -437,6 +440,9 @@ display: none;
 body#layout.ltr div.section {
 border: 0 none;
 margin: 0;
+}
+body#layout .no-items {
+display: block;
 }
 body#layout.ltr div.layout-widget-description {
 font-size: 10px;

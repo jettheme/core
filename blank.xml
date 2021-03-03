@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html b:css='false' b:defaultwidgetversion='2' b:layoutsVersion='3' expr:dir='data:blog.languageDirection' expr:lang='data:blog.locale' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+<head>
+<title><data:blog.pageTitle/></title>
+<b:skin><![CDATA[
+]]></b:skin>
+</head>
+<body>
+<b:section class='main' id='main' showaddelement='yes'/>
+<b:if cond='!data:view.isPreview'>
+&lt;div id=&quot;element-r&quot; style=&quot;display:none&quot;&gt;
+&lt;textarea disabled readonly&gt;
+&lt;!--</b:if>
+</body>
+<b:if cond='!data:view.isPreview'>
+--&gt;&lt;/textarea&gt;&lt;/div&gt;
+<script type='text/javascript'>//<![CDATA[
+document.getElementById('element-r').outerHTML = '';
+const _WidgetManager = {};_WidgetManager['_PopupConfig'] = function(){};
+//]]></script></b:if><b:if cond='!data:view.isPreview'>
+&lt;/body&gt;
+</b:if>
+</html>

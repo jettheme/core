@@ -393,6 +393,9 @@ transition: .3s;
 max-height: 100%;
 overflow-y: auto;
 }
+#navbar.show {
+opacity: 1;
+}
 #navbar .nav-link {
 border-bottom: 1px solid #eee;
 }

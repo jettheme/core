@@ -698,24 +698,7 @@ body#layout .section h4{display:none}body#layout.ltr div.section{border:0 none;m
 <button aria-label='Toggle navigation' class='navbar-toggler shadow-none border-0 py-1 px-2 fs-3 hover-text-color collapsed' href='#' id='navbar-toggler' type='button'><svg aria-hidden='true' height='1em' style='vertical-align:-.15em' width='1em'><use xlink:href='#i-menu'/></svg></button>
 </div>
 <nav class='collapse navbar-collapse' id='navbar'>
-<ul class='navbar-nav container px-3 p-lg-0 ms-auto' itemscope='itemscope' itemtype='http://schema.org/SiteNavigationElement' role='menu'>
-<b:loop index='i' values='data:links' var='link'>
-<b:switch var='data:link.href'>
-<b:case value='#sub-start'/>
-<span class='dropdown-toggle dropdown-arrow'/>
-&lt;ul class=&quot;dropdown-menu border-light dropdown-menu-end rounded-0&quot;&gt;
-&lt;li class=&quot;d-none&quot;&gt;
-<b:case value='#sub-end'/>&lt;/li&gt;
-&lt;/ul&gt;
-<b:default/><b:if cond='data:i &gt; 0'>&lt;/li&gt;</b:if>
-&lt;li class=&quot;menu-item&quot;&gt;
-<b:with value='data:link.href not contains &quot;http&quot; and data:link.href != data:blog.homepageUrl and data:link.href != &quot;#&quot; ? path(data:blog.homepageUrl, data:link.href) : data:link.href' var='link_url'>
-<a class='nav-link' expr:href='data:link_url' itemprop='url' role='menuitem'>
-<b:class cond='data:link.isCurrentPage or data:view.url == data:link_url' name='active'/>
-<span itemprop='name'><data:link.title/></span>
-</a></b:with></b:switch>
-</b:loop>&lt;/li&gt;
-</ul>
+<ul class='navbar-nav container px-3 p-lg-0 ms-auto' itemscope='itemscope' itemtype='http://schema.org/SiteNavigationElement' role='menu'><b:loop index='i' values='data:links' var='link'><b:switch var='data:link.href'><b:case value='#sub-start'/><span class='dropdown-toggle dropdown-arrow'/>&lt;ul class=&quot;dropdown-menu border-light dropdown-menu-end rounded-0&quot;&gt;&lt;li class=&quot;d-none&quot;&gt;<b:case value='#sub-end'/>&lt;/li&gt;&lt;/ul&gt;<b:default/><b:if cond='data:i &gt; 0'>&lt;/li&gt;</b:if>&lt;li class=&quot;menu-item&quot;&gt;<b:with value='data:link.href not contains &quot;http&quot; and data:link.href != data:blog.homepageUrl and data:link.href != &quot;#&quot; ? path(data:blog.homepageUrl, data:link.href) : data:link.href' var='link_url'><a class='nav-link' expr:href='data:link_url' itemprop='url' role='menuitem'><b:class cond='data:link.isCurrentPage or data:view.url == data:link_url' name='active'/><span itemprop='name'><data:link.title/></span></a></b:with></b:switch></b:loop>&lt;/li&gt;</ul>
 </nav>
     </b:includable>
     <b:includable id='JetCopyRight'>

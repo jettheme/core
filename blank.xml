@@ -1,24 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE html>
-<html b:css='false' b:defaultwidgetversion='2' b:layoutsVersion='3' expr:dir='data:blog.languageDirection' expr:lang='data:blog.locale' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+<html b:css='false' b:js='false' b:defaultwidgetversion='2' b:layoutsVersion='3'>
+<b:attr name='xmlns' value=''/>
+<b:attr name='xmlns:b' value=''/>
+<b:attr name='xmlns:expr' value=''/>
+<b:attr name='xmlns:data' value=''/>
 <head>
 <title><data:blog.pageTitle/></title>
-<b:skin><![CDATA[
-]]></b:skin>
+<b:skin/>
 </head>
 <body>
-<b:section id='1' showaddelement='yes'/>
-<b:if cond='!data:view.isPreview'>
-&lt;div id=&quot;element-r&quot; style=&quot;display:none&quot;&gt;
-&lt;textarea disabled readonly&gt;
-&lt;!--</b:if>
+<b:section id='1'/>
 </body>
-<b:if cond='!data:view.isPreview'>
---&gt;&lt;/textarea&gt;&lt;/div&gt;
-<script type='text/javascript'>//<![CDATA[
-document.getElementById('element-r').outerHTML = '';
-const _WidgetManager = {};_WidgetManager['_PopupConfig'] = function(){};
-//]]></script></b:if><b:if cond='!data:view.isPreview'>
-&lt;/body&gt;
-</b:if>
 </html>

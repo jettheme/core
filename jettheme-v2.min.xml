@@ -1387,11 +1387,11 @@ function hasClass(e,t){return-1<(" "+e.className+" ").indexOf(" "+t+" ")}functio
 <b:if cond='!data:view.isPreview'>
 --&gt;&lt;/textarea&gt;&lt;/div&gt;
 <script type='deferjs'>//<![CDATA[
-doc.getElementById('element-r').outerHTML = '';
+document.getElementById('element-r').outerHTML = '';
 const _WidgetManager = {};_WidgetManager['_PopupConfig'] = function(){};
 const lazyadsense = false;
 if(lazyadsense){
-const ads = doc.querySelectorAll("ins.adsbygoogle");
+const ads = document.querySelectorAll("ins.adsbygoogle");
 if (ads !== null) {
   Defer.js('https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js','adsbygoogle',1000,function(){
     (adsbygoogle=window.adsbygoogle||[]).push({});

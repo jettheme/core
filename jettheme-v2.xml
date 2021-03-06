@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE html>
-<html b:css='false' b:js='false' b:defaultwidgetversion='2' b:layoutsVersion='3' expr:dir='data:blog.languageDirection' expr:lang='data:blog.locale' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+<html b:css='false' b:defaultwidgetversion='2' b:layoutsVersion='3' expr:dir='data:blog.languageDirection' expr:lang='data:blog.locale' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
 <b:attr name='xmlns' value=''/>
 <b:attr name='xmlns:b' value=''/>
 <b:attr name='xmlns:expr' value=''/>
@@ -2181,7 +2181,15 @@ Defer.dom('.custom-posts',100,'jetfeeds',function(e) {
 
 //]]></script>
 <b:if cond='!data:view.isPreview'>
+&lt;div id=&quot;element-r&quot; style=&quot;display:none;&quot;&gt;
+&lt;textarea disabled readonly&gt;
+&lt;!--</b:if>
+</body>
+<b:if cond='!data:view.isPreview'>
+--&gt;&lt;/textarea&gt;&lt;/div&gt;
 <script type='deferjs'>//<![CDATA[
+doc.getElementById('element-r').outerHTML = '';
+const _WidgetManager = {};_WidgetManager['_PopupConfig'] = function(){};
 const lazyadsense = false;
 if(lazyadsense){
 const ads = doc.querySelectorAll("ins.adsbygoogle");
@@ -2196,5 +2204,7 @@ if (ads !== null) {
 }
 //]]></script>
 </b:if>
-</body>
+<b:if cond='!data:view.isPreview'>
+&lt;/body&gt;
+</b:if>
 </html>

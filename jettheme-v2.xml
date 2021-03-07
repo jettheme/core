@@ -177,6 +177,7 @@ box-shadow: none !important;
 transition-property: transform;
 transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 transition-duration: .3s;
+min-height: 50px;
 }
 #navbar-toggler:not(.collapsed) {
 background-color: #f8f9fa;
@@ -343,9 +344,12 @@ pointer-events: none;
 transition: .3s;
 box-shadow: -5px 10px 10px -5px rgba(0, 0, 0, 0.14);
 }
+#navbar .dropdown-menu .nav-link {
+padding-right: 20px;
+}
 #navbar .dropdown-menu .dropdown-toggle {
 position: absolute;
-right: 15px;
+right: 10px;
 top: 20px;
 }
 #navbar .dropdown-menu .dropdown-menu {

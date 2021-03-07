@@ -316,6 +316,7 @@ border-left: 1px solid;
 @media (min-width: 768px) {
 #search-header {
 min-width: 300px;
+right:0
 }
 .position-lg-relative {
 position: relative;
@@ -379,6 +380,7 @@ width: $(logo.width.mobile);
 }
 #search-header {
 width: 100%;
+right:0
 }
 #navbar {
 background-color: #fff;

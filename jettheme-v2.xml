@@ -1182,7 +1182,7 @@ width: 50%;
 </b:if>
 </div>
 <b:else/>
-<div class='d-flex justify-content-evenly invisible' expr:data-label='data:view.search.label' expr:data-pagination='!data:view.isArchive and !data:view.isPost and !data:view.search.query' expr:data-posts='data:posts.size' id='pagination'>
+<div class='d-flex justify-content-evenly invisible' expr:data-label='data:view.search.label' expr:data-pagination='!data:view.isArchive and !data:view.isPost and !data:view.search.query' expr:data-posts='data:posts.size' id='pagination' style="min-height:41px">
 <b:if cond='data:newerPageUrl'>
 <div class='prev-page'>
 <a class='btn btn-sm btn-color border-2 py-2 px-5 fw-bold' expr:href='data:newerPageUrl'><svg aria-hidden='true' height='1em' style='vertical-align:-0.135em' width='1em'><use xlink:href='#i-arrow-l'/></svg>Previous</a>

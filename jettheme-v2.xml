@@ -2152,7 +2152,7 @@ function loadCustomPosts(e) {
                     result['summary'] = post.summary.$t;
                     result['img'] = post.media$thumbnail && post.media$thumbnail.url;
                     result['author'] = post.author[0].name.$t;
-                    result['comment'] = post.thr$total.$t > 0 && post.thr$total.$t;
+                    result['comment'] = post.thr$total && post.thr$total.$t;
 					result['label'] = post.category;
 
                     var publish = post.updated.$t;

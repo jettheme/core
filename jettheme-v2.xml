@@ -234,24 +234,21 @@ color: $(keycolor)!important
 .bg-color {
 background-color: $(keycolor)
 }
-.btn-color {
+.btn-color,
+.btn-outline-color:hover {
 color: #fff;
 background-color: $(posts.icons.color);
 border-color: $(posts.icons.color);
 }
 .btn-color:hover,
-.hover-btn-color:hover{
+.hover-btn-color:hover,
+.btn-check:checked + .btn-outline-color {
 color: #fff;
 background-color: $(labels.background.color);
 border-color: $(labels.background.color)
 }
 .btn-outline-color {
 color: $(posts.icons.color);
-border-color: $(posts.icons.color);
-}
-.btn-outline-color:hover {
-color: #fff;
-background-color: $(posts.icons.color);
 border-color: $(posts.icons.color);
 }
 .border-color {

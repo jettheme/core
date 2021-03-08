@@ -905,7 +905,7 @@ width: 50%;
 <b:section class='container px-3' id='copyright' maxwidgets='1' showaddelement='no'>
   <b:widget id='HTML56' locked='true' title='Copyright' type='HTML' version='2' visible='true'>
     <b:widget-settings>
-      <b:widget-setting name='content'><![CDATA[Copyright &copy; 2021. Design by <a class="text-decoration-none" href="https://www.jettheme.com">JetTheme.com</a>]]></b:widget-setting>
+      <b:widget-setting name='content'><![CDATA[Copyright &copy; 2021 [Nama Blog]. Design by <a class="text-decoration-none" href="https://www.jettheme.com">JetTheme.com</a>]]></b:widget-setting>
     </b:widget-settings>
     <b:includable id='main'><b:include name='JetCopyRight'/></b:includable>
   </b:widget>

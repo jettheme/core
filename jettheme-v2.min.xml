@@ -538,15 +538,7 @@ body#layout .section h4{display:none}body#layout.ltr div.section{border:0 none;m
     <b:includable id='JetSocial'>
       <b:include name='JetWidgetTitle'/>
       <div class='widget-content social-media'>
-        <ul class='list-inline'>
-          <b:loop values='data:links' var='link'>
-            <li class='list-inline-item mb-2'>
-              <a expr:aria-label='data:link.name' expr:class='&quot;btn btn-sm btn-light hover-btn-color rounded-pill i-&quot; + data:link.name' expr:href='data:link.target' rel='noopener' target='_blank'>
-                <svg aria-hidden='true' height='1em' style='vertical-align:-.15em' width='1em'><use expr:xlink:href='&quot;#i-&quot; + data:link.name'/></svg>
-              </a>
-            </li>
-          </b:loop>
-        </ul>
+        <ul class='list-inline'><b:loop values='data:links' var='link'><li class='list-inline-item mb-2'><a expr:aria-label='data:link.name' expr:class='&quot;btn btn-sm btn-light hover-btn-color rounded-pill i-&quot; + data:link.name' expr:href='data:link.target' rel='noopener' target='_blank'><svg aria-hidden='true' height='1em' style='vertical-align:-.15em' width='1em'><use expr:xlink:href='&quot;#i-&quot; + data:link.name'/></svg></a></li></b:loop></ul>
       </div>
       <b:include name='JetEdit'/>
     </b:includable>

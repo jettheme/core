@@ -190,12 +190,11 @@ body#layout .section h4{display:none}body#layout.ltr div.section{border:0 none;m
 <b:section cond='data:view.isHomepage' id='special-home' showaddelement='yes'/>
   
 <!--Main Content-->
-<b:with value='true' var='is_show'>
-<b:tag cond='data:is_show' id='primary' name='div'>
-<b:tag class='container px-0' cond='data:is_show' name='div'>
-<b:tag class='d-lg-flex' cond='data:is_show' id='main-content' name='div'>
-<b:tag class='col-lg-8 px-3' cond='data:is_show' id='main' name='div'>
-<b:section class='pt-4' cond='data:is_show and data:view.isMultipleItems and !data:view.search.query' id='before-blog' showaddelement='yes'>
+<div id='primary'>
+<div class='container px-0'>
+<div class='d-lg-flex' id='main-content'>
+<div class='col-lg-8 px-3' id='main'>
+<b:section class='pt-4' cond='data:view.isMultipleItems and !data:view.search.query' id='before-blog' showaddelement='yes'>
   <b:widget id='HTML51' locked='false' title='#Advertisement' type='HTML' visible='true'>
     <b:widget-settings>
       <b:widget-setting name='content'><![CDATA[<div class="example-ads bg-light rounded text-center py-4 text-secondary fs-7">Advertisement here</div>]]></b:widget-setting>
@@ -256,7 +255,7 @@ body#layout .section h4{display:none}body#layout.ltr div.section{border:0 none;m
     <b:includable id='main'><b:include name='JetHtml'/></b:includable>
   </b:widget>
 </b:section>
-<b:section class='pt-4 mb-5' cond='data:is_show' id='blog-post' maxwidgets='1' showaddelement='no'>
+<b:section class='pt-4 mb-5' id='blog-post' maxwidgets='1' showaddelement='no'>
   <b:widget id='Blog50' locked='true' title='Blog Posts' type='Blog' visible='true'>
     <b:widget-settings>
       <b:widget-setting name='showDateHeader'>false</b:widget-setting>
@@ -347,9 +346,9 @@ body#layout .section h4{display:none}body#layout.ltr div.section{border:0 none;m
     <b:includable id='threadedComments'/>
   </b:widget>
 </b:section>
-</b:tag>
-<b:tag class='col-lg-4 px-3 border-start border-color separator-main position-relative ms-auto' cond='data:is_show' id='sidebar' itemtype='https://schema.org/WPSideBar' name='div'>
-<b:section class='pt-4' cond='data:is_show' id='sidebar-static' itemscope='itemscope'>
+</div>
+<div class='col-lg-4 px-3 border-start border-color separator-main position-relative ms-auto' id='sidebar' itemtype='https://schema.org/WPSideBar'>
+<b:section class='pt-4' id='sidebar-static' itemscope='itemscope'>
   <b:widget id='PopularPosts50' locked='false' title='Popular Posts' type='PopularPosts' visible='true'>
     <b:widget-settings>
       <b:widget-setting name='numItemsToShow'>5</b:widget-setting>
@@ -423,7 +422,7 @@ body#layout .section h4{display:none}body#layout.ltr div.section{border:0 none;m
     <b:includable id='list'/>
   </b:widget>
 </b:section>
-<b:section class='position-sticky py-4 top-0' cond='data:is_show' id='sidebar-sticky' itemscope='itemscope'>
+<b:section class='position-sticky py-4 top-0' id='sidebar-sticky' itemscope='itemscope'>
   <b:widget id='HTML53' locked='false' title='#Advertisement' type='HTML' visible='true'>
     <b:widget-settings>
       <b:widget-setting name='content'><![CDATA[<div class="example-ads bg-light rounded text-center py-4 text-secondary fs-7">Advertisement here</div>]]></b:widget-setting>
@@ -433,11 +432,10 @@ body#layout .section h4{display:none}body#layout.ltr div.section{border:0 none;m
     </b:includable>
   </b:widget>
 </b:section>
-</b:tag>
-</b:tag>
-</b:tag>
-</b:tag>
-</b:with>
+</div>
+</div>
+</div>
+</div>
 <!--Main Content End-->
 
 <footer id='footer' itemscope='itemscope' itemtype='https://schema.org/WPFooter'>
@@ -601,23 +599,7 @@ body#layout .section h4{display:none}body#layout.ltr div.section{border:0 none;m
     <b:includable id='JetLabel'>
       <b:include name='JetWidgetTitle'/>
       <div class='widget-content categories'>
-        <ul expr:class='data:display + &quot; d-flex flex-wrap list-unstyled&quot;'>
-          <b:loop values='data:labels' var='label'>
-            <b:if cond='data:display == &quot;list&quot; and data:label.name not contains &quot;#&quot;'>
-              <li class='mb-2 pe-2 col-6'>
-                <a class='text-secondary fw-bold text-decoration-none' expr:href='data:label.url + &quot;?max-results=10&quot;'>
-                  <data:label.name/>
-                </a>
-              </li>
-              <b:elseif cond='data:display == &quot;cloud&quot; and data:label.name contains &quot;#&quot;'/>
-              <li class='list-inline-item mb-2'>
-                <a class='btn btn-sm bg-light rounded-pill' expr:href='data:label.url + &quot;?max-results=10&quot;'>
-                  <data:label.name/>
-                </a>
-              </li>
-            </b:if>
-          </b:loop>
-        </ul>
+        <ul expr:class='data:display + &quot; d-flex flex-wrap list-unstyled&quot;'><b:loop values='data:labels' var='label'><b:if cond='data:display == &quot;list&quot; and data:label.name not contains &quot;#&quot;'><li class='mb-2 pe-2 col-6'><a class='text-secondary fw-bold text-decoration-none' expr:href='data:label.url + &quot;?max-results=10&quot;'><data:label.name/></a></li><b:elseif cond='data:display == &quot;cloud&quot; and data:label.name contains &quot;#&quot;'/><li class='list-inline-item mb-2'><a class='btn btn-sm bg-light rounded-pill' expr:href='data:label.url + &quot;?max-results=10&quot;'><data:label.name/></a></li></b:if></b:loop></ul>
       </div>
       <b:include name='JetEdit'/>
     </b:includable>
@@ -640,13 +622,7 @@ body#layout .section h4{display:none}body#layout.ltr div.section{border:0 none;m
     <b:includable id='JetLinkList'>
       <b:include name='JetWidgetTitle'/>
       <div class='widget-content'>
-        <ul class='list-unstyled'>
-          <b:loop values='data:links' var='link'>
-            <li class='mb-2'>
-              <a class='text-reset hover-text-color text-decoration-none' expr:href='data:link.target'><data:link.name/></a>
-            </li>
-          </b:loop>
-        </ul>
+        <ul class='list-unstyled'><b:loop values='data:links' var='link'><li class='mb-2'><a class='text-reset hover-text-color text-decoration-none' expr:href='data:link.target'><data:link.name/></a></li></b:loop></ul>
       </div>
       <b:include name='JetEdit'/>
     </b:includable>

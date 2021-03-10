@@ -582,8 +582,6 @@ width: 50%;
     </b:includable>
   </b:widget>
 </b:section>
-
-<b:section cond='data:view.isHomepage' id='special-home' showaddelement='yes'/>
   
 <!--Main Content-->
 <div id='primary'>

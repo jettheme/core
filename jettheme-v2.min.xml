@@ -186,9 +186,7 @@ body#layout .section h4{display:none}body#layout.ltr div.section{border:0 none;m
     </b:includable>
   </b:widget>
 </b:section>
-
-<b:section cond='data:view.isHomepage' id='special-home' showaddelement='yes'/>
-  
+	
 <!--Main Content-->
 <div id='primary'>
 <div class='container px-0'>

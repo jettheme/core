@@ -75,45 +75,45 @@ Designer	: jettheme
 URL			: www.jettheme.com
 -----------------------------------------------
 
-<Variable name="keycolor" description="Main Color" type="color" default="#f67938"/>
+<Variable name="keycolor" description="Main Color" type="color" default="#f67938" value="#f67938"/>
 
 <Group description="_Main Color">
-<Variable name="body.background" description="Body Background" type="color" default="#ffffff"/>
-<Variable name="posts.background.color" description="Main Background" type="color" default="$(body.background)"/>
-<Variable name="border.color" description="Border Color" type="color" default="rgba(150, 150, 150, 0.15)"/>
+<Variable name="body.background" description="Body Background" type="color" default="#ffffff" value="#ffffff"/>
+<Variable name="posts.background.color" description="Main Background" type="color" default="$(body.background)" value="#ffffff"/>
+<Variable name="border.color" description="Border Color" type="color" default="rgba(150, 150, 150, 0.15)" value="rgba(150, 150, 150, 0.15)"/>
 </Group>
 
 <Group description="_Typography">
-<Variable name="body.text" description="Body Font" type="font" default="normal normal 16px system-ui,-apple-system,Segoe UI,Helvetica Neue,Arial,Noto Sans,Liberation Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji"/>
-<Variable name="body.text.color" description="Paragraph Color" type="color" default="#686868"/>
-<Variable name="posts.title" description="Heading Font" type="font" default="normal bold 40px var(--bs-font-sans-serif)"/>
-<Variable name="posts.title.color" description="Heading Color" type="color" default="#343a40"/>
-<Variable name="title.h2" description="H2 Size" type="length" default="26px" min="12px" max="50px"/>
-<Variable name="title.h3" description="H3 Size" type="length" default="22px" min="12px" max="50px"/>
-<Variable name="title.h4" description="H4 Size" type="length" default="20px" min="12px" max="50px"/>
-<Variable name="title.h5" description="H5 Size" type="length" default="18px" min="12px" max="50px"/>
-<Variable name="title.h6" description="H6 Size" type="length" default="16px" min="12px" max="50px"/>
-<Variable name="body.link.color" description="Link Color" type="color" default="$(keycolor)"/>
-<Variable name="body.hover.color" description="Link Hover Color" type="color" default="#f46013"/>
-<Variable name="posts.text.color" description="Blockquote Color" type="color" default="#343a40"/>
-<Variable name="body.text.font" description="Comment Form" type="font" default="normal normal 14px system-ui,-apple-system,Segoe UI,Helvetica Neue,Arial,Noto Sans,Liberation Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji"/>
+<Variable name="body.text" description="Body Font" type="font" default="normal normal 16px system-ui,-apple-system,Segoe UI,Helvetica Neue,Arial,Noto Sans,Liberation Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji" value="normal normal 16px system-ui,-apple-system,Segoe UI,Helvetica Neue,Arial,Noto Sans,Liberation Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji"/>
+<Variable name="body.text.color" description="Paragraph Color" type="color" default="#686868" value="#686868"/>
+<Variable name="posts.title" description="Heading Font" type="font" default="normal bold 40px var(--bs-font-sans-serif)" value="normal bold 40px var(--bs-font-sans-serif)"/>
+<Variable name="posts.title.color" description="Heading Color" type="color" default="#343a40" value="#343a40"/>
+<Variable name="title.h2" description="H2 Size" type="length" default="26px" min="12px" max="50px" value="26px"/>
+<Variable name="title.h3" description="H3 Size" type="length" default="22px" min="12px" max="50px" value="22px"/>
+<Variable name="title.h4" description="H4 Size" type="length" default="20px" min="12px" max="50px" value="20px"/>
+<Variable name="title.h5" description="H5 Size" type="length" default="18px" min="12px" max="50px" value="18px"/>
+<Variable name="title.h6" description="H6 Size" type="length" default="16px" min="12px" max="50px" value="16px"/>
+<Variable name="body.link.color" description="Link Color" type="color" default="$(keycolor)" value="#f67938"/>
+<Variable name="body.hover.color" description="Link Hover Color" type="color" default="#f46013" value="#f46013"/>
+<Variable name="posts.text.color" description="Blockquote Color" type="color" default="#343a40" value="#343a40"/>
+<Variable name="body.text.font" description="Comment Form" type="font" default="normal normal 14px system-ui,-apple-system,Segoe UI,Helvetica Neue,Arial,Noto Sans,Liberation Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji" value="normal normal 14px system-ui,-apple-system,Segoe UI,Helvetica Neue,Arial,Noto Sans,Liberation Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji"/>
 </Group> 
 
 <Group description="_Logo">
-<Variable name="logo.width" description="Logo Max Width" type="length" default="200px" min="50px" max="500px"/>
-<Variable name="logo.width.mobile" description="Logo Max Width (mobile)" type="length" default="150px" min="50px" max="500px"/>
+<Variable name="logo.width" description="Logo Max Width" type="length" default="200px" min="50px" max="500px" value="200px"/>
+<Variable name="logo.width.mobile" description="Logo Max Width (mobile)" type="length" default="150px" min="50px" max="500px" value="150px"/>
 </Group>
 
 <Group description="_Menu">
-<Variable name="tabs.font" description="Font Size" type="font" default="normal bold 16px var(--bs-font-sans-serif)"/>
-<Variable name="tabs.color" description="Font Color" type="color" default="$(body.text.color)"/>
-<Variable name="tabs.hover" description="Font Hover" type="color" default="$(keycolor)"/>
-<Variable name="tabs.selected.color" description="Font Selected" type="color" default="$(keycolor)"/>
+<Variable name="tabs.font" description="Font Size" type="font" default="normal bold 16px var(--bs-font-sans-serif)" value="normal bold 16px var(--bs-font-sans-serif)"/>
+<Variable name="tabs.color" description="Font Color" type="color" default="$(body.text.color)" value="#686868"/>
+<Variable name="tabs.hover" description="Font Hover" type="color" default="$(keycolor)" value="#f67938"/>
+<Variable name="tabs.selected.color" description="Font Selected" type="color" default="$(keycolor)" value="#f67938"/>
 </Group>
 
 <Group description="_Button">
-<Variable name="posts.icons.color" description="Button Color" type="color" default="$(keycolor)"/>
-<Variable name="labels.background.color" description="Button Hover"  type="color"  default="#f46013"/>
+<Variable name="posts.icons.color" description="Button Color" type="color" default="$(keycolor)" value="#f67938"/>
+<Variable name="labels.background.color" description="Button Hover"  type="color"  default="#f46013" value="#f46013"/>
 </Group>
 
 */
@@ -243,9 +243,9 @@ border-color: $(posts.icons.color);
 .btn-color:hover,
 .hover-btn-color:hover,
 .btn-check:checked + .btn-outline-color {
-color: #fff;
-background-color: $(labels.background.color);
-border-color: $(labels.background.color)
+color: #fff !important;
+background-color: $(labels.background.color) !important;
+border-color: $(labels.background.color) !important;
 }
 .btn-outline-color {
 color: $(posts.icons.color);
@@ -706,6 +706,11 @@ width: 50%;
     <b:includable id='iframeComments'/>
     <b:includable id='inlineAd'/>
     <b:includable id='linkShare'/>
+    <b:includable id='manageComments'>
+  <a expr:href='data:post.commentsUrl' expr:onclick='data:post.manageCommentsUrlOnclick'>
+    <b:message name='messages.manageComments'/>
+  </a>
+</b:includable>
     <b:includable id='nextPageLink'/>
     <b:includable id='otherSharingButton'/>
     <b:includable id='platformShare'/>
@@ -857,6 +862,7 @@ width: 50%;
           <b:widget-setting name='text-2'>ChangeLog</b:widget-setting>
         </b:widget-settings>
         <b:includable id='main'>
+          <b:class name="ps-lg-5"/>
       <b:include name='JetLinkList'/>
     </b:includable>
         <b:includable id='content'/>
@@ -940,13 +946,13 @@ width: 50%;
 <b:include name='JetWidgetTitle'/>
 <div class='widget-content popular-posts'>
 <b:loop index='i' values='data:posts' var='post'>
-<div class='d-flex items-center mb-3'>
+<div class='d-flex mb-3'>
 <b:if cond='data:postDisplay.showFeaturedImage'>
 <b:if cond='data:post.featuredImage'>
 <div class='item-thumbnail me-3' style='width:85px'>
 <a class='rounded bg-light overflow-hidden d-block ratio ratio-1x1' expr:href='data:post.url'>
 <b:with value='data:post.featuredImage' var='image'>
-<img class='object-cover lazyload' data-size='s85-c' expr:alt='data:post.title' expr:data-src='data:image' loading='lazy' src='data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=='/>
+<img class='object-cover lazyload' expr:alt='data:post.title' expr:data-src='data:image' loading='lazy' src='data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=='/>
 </b:with>
 </a>
 </div>
@@ -1148,7 +1154,7 @@ width: 50%;
 </b:if>
 </div>
 <b:else/>
-<div class='d-flex justify-content-evenly invisible' expr:data-label='data:view.search.label' expr:data-pagination='!data:view.isArchive and !data:view.isPost and !data:view.search.query' expr:data-posts='data:posts.size' id='pagination' style="min-height:41px">
+<div class='d-flex justify-content-evenly invisible' expr:data-label='data:view.search.label' expr:data-pagination='!data:view.isArchive and !data:view.isPost and !data:view.search.query' expr:data-posts='data:posts.size' id='pagination' style='min-height:41px'>
 <b:if cond='data:newerPageUrl'>
 <div class='prev-page'>
 <a class='btn btn-sm btn-color border-2 py-2 px-5 fw-bold' expr:href='data:newerPageUrl'><svg aria-hidden='true' height='1em' style='vertical-align:-0.135em' width='1em'><use xlink:href='#i-arrow-l'/></svg>Previous</a>
@@ -1167,7 +1173,7 @@ width: 50%;
 <b:include name='JetWidgetTitle'/>
 <div class='widget-content feature-posts'>
 <b:loop values='data:posts' var='post'>
-<div class='d-sm-flex items-center'>
+<div class='d-sm-flex'>
 <b:if cond='data:post.featuredImage'>
 <div class='item-thumbnail pe-sm-3 col-sm-6'>
 <a class='d-block bg-light overflow-hidden rounded shadow ratio ratio-1x1' expr:href='data:post.url' rel='bookmark'>
@@ -1385,7 +1391,7 @@ width: 50%;
           <a class='p-2 col' expr:href='&quot;//www.linkedin.com/sharing/share-offsite/?url=&quot; + data:post.url + &quot;&amp;title=&quot; + data:post.title + &quot; – &quot; + data:blog.title' rel='nofollow noopener noreferrer' style='color:#2554bf' target='_blank' title='Linkedin Share'><svg aria-hidden='true' height='1em' style='vertical-align:-.15em' width='1em'><use xlink:href='#i-linkedin'/></svg></a>
           <a class='p-2 col' expr:href='&quot;//www.tumblr.com/share/link?url=&quot; + data:post.url' rel='nofollow noopener noreferrer' style='color:#314358' target='_blank' title='Tumblr Share'><svg aria-hidden='true' height='1em' style='vertical-align:-.15em' width='1em'><use xlink:href='#i-tumblr'/></svg></a>
           <a class='p-2 col' expr:href='&quot;//wa.me/?text=&quot;+ data:post.title + &quot; – &quot; + data:blog.title + &quot;%0A&quot; + data:post.url' onclick='window.parent.null' rel='nofollow noopener noreferrer' style='color:#25d366' target='_blank' title='Share to whatsapp'><svg aria-hidden='true' height='1em' style='vertical-align:-.15em' width='1em'><use xlink:href='#i-whatsapp'/></svg></a>
-		  <a class='p-2 col' expr:href='&quot;//t.me/share/url?url=" + data:post.url + "&amp;text=" + data:post.title + " – " + data:blog.title' onclick='window.parent.null' rel='nofollow noopener noreferrer' style='color:#0088cc' target='_blank' title='Share to telegram'><svg aria-hidden='true' height='1em' style='vertical-align:-.15em' width='1em'><use xlink:href='#i-telegram'/></svg></a>
+		  <a class='p-2 col' expr:href='&quot;//t.me/share/url?url=&quot; + data:post.url + &quot;&amp;text=&quot; + data:post.title + &quot; – &quot; + data:blog.title' onclick='window.parent.null' rel='nofollow noopener noreferrer' style='color:#0088cc' target='_blank' title='Share to telegram'><svg aria-hidden='true' height='1em' style='vertical-align:-.15em' width='1em'><use xlink:href='#i-telegram'/></svg></a>
         </div>
       </div>
     </b:includable>

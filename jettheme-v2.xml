@@ -1882,7 +1882,7 @@ if (reply !== null){
 	}
 }
 
-const imgs =  document.querySelectorAll('.entry-text > noscript');
+const imgs =  document.querySelectorAll('.entry-text noscript');
 if (imgs !== null){
 	for (var i = 0; i < imgs.length; ++i) {
 		var img = imgs[i];

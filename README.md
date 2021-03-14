@@ -1,0 +1,2 @@
+# core
+Blogger Template JetTheme

@@ -257,6 +257,9 @@ border-color: $(border.color)!important;
 .widget:last-child {
 margin-bottom: 0 !important;
 }
+.object-cover {
+object-fit: cover;
+}
 .feature-image img,
 .item-thumbnail img {
 transition-property: opacity;
@@ -650,7 +653,7 @@ width: 50%;
   </b:widget>
 </b:section>
 <b:section class='pt-4 mb-5' id='blog-post' maxwidgets='1' showaddelement='no'>
-  <b:widget id='Blog50' locked='true' title='Blog Posts' type='Blog' visible='true'>
+  <b:widget id='Blog50' locked='true' title='Blog Posts' type='Blog' version='2' visible='true'>
     <b:widget-settings>
       <b:widget-setting name='showDateHeader'>false</b:widget-setting>
       <b:widget-setting name='commentLabel'>Review</b:widget-setting>
@@ -664,6 +667,7 @@ width: 50%;
       <b:widget-setting name='style.unittype'>TextAndImage</b:widget-setting>
       <b:widget-setting name='style.bgcolor'>#000000</b:widget-setting>
       <b:widget-setting name='timestampLabel'>-</b:widget-setting>
+      <b:widget-setting name='reactionsLabel'/>
       <b:widget-setting name='showAuthorProfile'>true</b:widget-setting>
       <b:widget-setting name='style.layout'>1x1</b:widget-setting>
       <b:widget-setting name='showLabels'>false</b:widget-setting>
@@ -849,7 +853,7 @@ width: 50%;
       <b:include name='JetHtml'/>
     </b:includable>
       </b:widget>
-      <b:widget id='LinkList50' locked='false' title='Learn More' type='LinkList' visible='true'>
+      <b:widget id='LinkList50' locked='false' title='Learn More' type='LinkList' version='2' visible='true'>
         <b:widget-settings>
           <b:widget-setting name='link-3'>https://jettheme-demo.blogspot.com/p/privacy-policy.html</b:widget-setting>
           <b:widget-setting name='sorting'>NONE</b:widget-setting>
@@ -862,7 +866,7 @@ width: 50%;
           <b:widget-setting name='text-2'>ChangeLog</b:widget-setting>
         </b:widget-settings>
         <b:includable id='main'>
-          <b:class name="ps-lg-5"/>
+          <b:class name='ps-lg-5'/>
       <b:include name='JetLinkList'/>
     </b:includable>
         <b:includable id='content'/>
@@ -951,9 +955,7 @@ width: 50%;
 <b:if cond='data:post.featuredImage'>
 <div class='item-thumbnail me-3' style='width:85px'>
 <a class='rounded bg-light overflow-hidden d-block ratio ratio-1x1' expr:href='data:post.url'>
-<b:with value='data:post.featuredImage' var='image'>
-<img class='object-cover lazyload' expr:alt='data:post.title' expr:data-src='data:image' loading='lazy' src='data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=='/>
-</b:with>
+<img expr:alt='data:post.title' expr:class='data:post.featuredImage.isYoutube ?  &quot;object-cover lazyload&quot; : &quot;lazyload&quot;' expr:data-src='data:post.featuredImage.isYoutube ? data:post.featuredImage.youtubeMaxResDefaultUrl : data:post.featuredImage' loading='lazy' src='data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=='/>
 </a>
 </div>
 </b:if>
@@ -1103,8 +1105,8 @@ width: 50%;
 <b:include data='post' name='JetPostMeta'/>
 <b:if cond='data:post.featuredImage'>
 <div class='item-thumbnail'>
-<a class='bg-light d-block ratio ratio-16x9' expr:href='data:post.url' rel='bookmark'>
-<img class='object-cover lazyload' expr:alt='data:post.title' expr:data-src='data:post.featuredImage' loading='lazy' src='data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=='/>
+<a class='bg-light d-block ratio ratio-16x9' expr:href='data:post.url' rel='bookmark'>  
+<img expr:alt='data:post.title' expr:class='data:post.featuredImage.isYoutube ?  &quot;object-cover lazyload&quot; : &quot;lazyload&quot;' expr:data-src='data:post.featuredImage.isYoutube ? data:post.thumbnailUrl : data:post.featuredImage' loading='lazy' src='data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=='/>
 </a>
 </div>
 </b:if>
@@ -1177,7 +1179,7 @@ width: 50%;
 <b:if cond='data:post.featuredImage'>
 <div class='item-thumbnail pe-sm-3 col-sm-6'>
 <a class='d-block bg-light overflow-hidden rounded shadow ratio ratio-1x1' expr:href='data:post.url' rel='bookmark'>
-<img class='object-cover lazyload' expr:alt='data:post.title' expr:data-src='data:post.featuredImage' loading='lazy' src='data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=='/>
+<img expr:alt='data:post.title' expr:class='data:post.featuredImage.isYoutube ?  &quot;object-cover lazyload&quot; : &quot;lazyload&quot;' expr:data-src='data:post.featuredImage.isYoutube ? data:post.featuredImage.youtubeMaxResDefaultUrl : data:post.featuredImage' loading='lazy' src='data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=='/>
 </a>
 </div>
 </b:if>
@@ -1907,30 +1909,35 @@ if (imgs !== null){
 }
 
 function loadImg(){
- var imgrs = document.querySelectorAll('img.lazyload');
- if (imgrs !== null) {
-  for (var i = 0; i < imgrs.length; ++i) {
-   var img = imgrs[i],
-   n = img.getAttribute('data-src');
-   if(n.indexOf('bp.blogspot') > 0){
-    var w = img.offsetWidth.toFixed(0),
-    ow = img.getAttribute('width'),
-    mw = img.getAttribute('data-original-width'),
-    pw = img.parentElement.offsetWidth.toFixed(0),
-    h = img.offsetHeight.toFixed(0),
-    p = n.split( '/' ),
-    r = '';
-    if(hasClass(img.parentElement, 'ratio')){
-     r = 'w'+w+'-h'+h+'-c';
-     }else{
-     nw = ow ? ow : mw ? mw : w;
-     r = pw <= parseFloat(nw) ? 'w'+pw : 'w'+nw;
-    }
-    n = n.replace( p[ p.length - 2 ], r);
-    img.setAttribute('data-src',n);
-   }
-  }
- }
+	var imgrs = document.querySelectorAll('img.lazyload');
+	if (imgrs !== null) {
+		for (var i = 0; i < imgrs.length; ++i) {
+			var img = imgrs[i],
+			n = img.getAttribute('data-src');
+			if(n.indexOf('bp.blogspot') > 0){
+				var w = img.offsetWidth.toFixed(0),
+				ow = img.getAttribute('width'),
+				mw = img.getAttribute('data-original-width'),
+				pw = img.parentElement.offsetWidth.toFixed(0),
+				h = img.offsetHeight.toFixed(0),
+				p = n.split( '/' ),
+				r = '';
+				if(hasClass(img.parentElement, 'ratio')){
+					r = 'w'+w+'-h'+h+'-c';
+					}else{
+					nw = ow ? ow : mw ? mw : w;
+					r = pw <= parseFloat(nw) ? 'w'+pw : 'w'+nw;
+				}
+				n = n.replace( p[ p.length - 2 ], r);
+				
+				}else if(n.match( /(img.youtube|i.ytimg)/ )){				
+				n = n.substring(0, n.lastIndexOf('/')) + '/mqdefault.jpg';
+				
+			}			
+			
+			img.setAttribute('data-src',n);
+		}
+	}
  Defer.dom('.lazyload',100,'lazied',function(el) {
   removeClass(el, 'lazyload');
  });

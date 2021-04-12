@@ -439,6 +439,9 @@ white-space:nowrap;
 #navbar .navbar-nav > .menu-item > .dropdown-toggle {
 pointer-events: none;
 }
+#sidebar {
+border-left: 1px solid;
+}
 #footer-widget .widget {
 margin-bottom: 0 !important;
 }
@@ -509,6 +512,9 @@ top: 0;
 #navbar .dropdown-menu {
 border: none;
 padding-left: 10px;
+}
+#sidebar {
+border-top: 1px solid;
 }
 }
 @media (max-width: 575.98px) {
@@ -862,7 +868,7 @@ width: 50%;
   </b:widget>
 </b:section>
 </div>
-<div class='col-lg-4 px-3 border-start border-color separator-main position-relative ms-auto' id='sidebar' itemtype='https://schema.org/WPSideBar'>
+<div class='col-lg-4 px-3 border-color separator-main position-relative ms-auto' id='sidebar' itemtype='https://schema.org/WPSideBar'>
 <b:section class='pt-4' id='sidebar-static' itemscope='itemscope'>
   <b:widget id='PopularPosts50' locked='false' title='Popular Posts' type='PopularPosts' visible='true'>
     <b:widget-settings>

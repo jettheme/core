@@ -795,7 +795,7 @@ blog_title = &quot;<data:blog.title/>&quot;;
       <b:if cond='data:content contains &quot;data:image/&quot; OR  data:content contains &quot;https://&quot;'>
         <b:class name='logo-wrap position-relative'/>
         <a class='d-block navbar-brand' expr:href='data:blog.homepageUrl'>
-          <img expr:alt='data:blog.title' expr:src='data:content' height='55' loading='lazy' width='174'/>
+          <img expr:alt='data:blog.title' expr:src='data:content' loading='lazy'/>
         </a>
       <b:else/>
         <a class='navbar-brand fw-bold' expr:href='data:blog.homepageUrl'>

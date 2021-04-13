@@ -310,9 +310,6 @@ padding: 0 !important;
 #special-categories .widget {
 margin-bottom: 0 !important;
 }
-#extra-menu {
-z-index: 100;
-}
 body > .google-auto-placed {
 margin: 0 auto 1.5rem;
 max-width: 1108px;

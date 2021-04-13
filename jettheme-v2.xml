@@ -302,6 +302,9 @@ margin-left: 5px;
 .no-items {
 display: none;
 }
+.separator {
+margin-bottom: 1.5rem;
+}
 .separator a {
 margin: 0 !important;
 padding: 0 !important;

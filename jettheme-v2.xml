@@ -1879,7 +1879,6 @@ blog_title = &quot;<data:blog.title/>&quot;;
     <b:includable id='threadedComments'/>
   </b:defaultmarkup>
 </b:defaultmarkups>
-<script src='https://cdn.jsdelivr.net/gh/jettheme/js@0.3/main.js' type='text/javascript'/>
 <script type='text/javascript'>//<![CDATA[
 function related_temp(e) {
  return `${e.title ? `<div class='widget-title mb-3 text-uppercase fw-light'><span>${ e.title }</span></div>` : ``}
@@ -1970,6 +1969,7 @@ function sitemap_cb(e) {
  }
 }
 //]]></script>
+<script src='https://cdn.jsdelivr.net/gh/jettheme/js@0.3/main.js' type='text/javascript'/>
 <b:if cond='!data:view.isPreview'>
 &lt;div id=&quot;element-r&quot; style=&quot;display:none;&quot;&gt;
 &lt;textarea disabled readonly&gt;

@@ -40,7 +40,7 @@
 <!-- Primary Meta Tags -->
 <meta expr:content='data:view.url' property='og:url'/>
 <meta content='website' property='og:type'/>
-<meta content='Jettheme' name='author'/>
+<meta content='' name='author'/>
 
 <!-- Open Graph / Facebook -->
 <meta content='' property='fb:app_id'/>

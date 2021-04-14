@@ -1270,7 +1270,7 @@ blog_title = &quot;<data:blog.title/>&quot;;
       <b:include name='JetEdit'/>
     </b:includable>
     <b:includable id='JetArchive' var='post'>
-<div class='h-100 overflow-hidden rounded position-relative border border-color bg-white shadow' itemprop='blogPosts' itemscope='itemscope' itemtype='http://schema.org/BlogPosting'>
+<div class='h-100 overflow-hidden rounded position-relative border border-color bg-white shadow-sm' itemprop='blogPosts' itemscope='itemscope' itemtype='http://schema.org/BlogPosting'>
 <b:include data='post' name='JetPostMeta'/>
 <b:if cond='data:post.featuredImage'>
 <div class='item-thumbnail'>
@@ -1347,7 +1347,7 @@ blog_title = &quot;<data:blog.title/>&quot;;
 <div class='d-sm-flex'>
 <b:if cond='data:post.featuredImage'>
 <div class='item-thumbnail pe-sm-3 col-sm-6'>
-<a class='d-block bg-light overflow-hidden rounded shadow ratio ratio-1x1' expr:href='data:post.url' rel='bookmark'>
+<a class='d-block bg-light overflow-hidden rounded shadow-sm ratio ratio-1x1' expr:href='data:post.url' rel='bookmark'>
 <img expr:alt='data:post.title' expr:class='data:post.featuredImage.isYoutube ?  &quot;object-cover lazyload&quot; : &quot;lazyload&quot;' expr:data-src='data:post.featuredImage.isYoutube ? data:post.featuredImage.youtubeMaxResDefaultUrl : data:post.featuredImage' loading='lazy' src='data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=='/>
 </a>
 </div>
@@ -1888,7 +1888,7 @@ function related_temp(e) {
  <div class='row row-cols-sm-2'>
  ${e.posts.map(function(data, i){
  return `<article class='mb-4'>
- <div class='h-100 overflow-hidden rounded position-relative border border-color bg-white shadow'>
+ <div class='h-100 overflow-hidden rounded position-relative border border-color bg-white shadow-sm'>
  ${data.img ? `
  <div class='item-thumbnail'><a class='bg-light d-block ratio ratio-21x9' href='${ data.url }'><img alt='${ data.title }' class='object-cover lazy-${ data.grup_id } lazyload' data-src='${ data.img }' loading='lazy' src='data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=='/></a></div>`: ``}
  <div class='item-content p-4'>

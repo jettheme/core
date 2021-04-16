@@ -649,7 +649,7 @@ width: 50%;
       <b:widget-setting name='content'>const analyticId = false;
 /*Fill with Analytic ID use &quot;&quot;, and false if not used.*/
 
-const caPubAdsense = false;
+const _caPubAdsense = false;
 /*Fill with ca-pub-adsense ID, and false if not used.*/
 
 const autoTOC = true;

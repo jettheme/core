@@ -1903,38 +1903,39 @@ function related_temp(e) {
 function toc_temp(e) {
  var hc = 0;
  var l = 1;
- return `<div id='toc-post' class="position-relative p-4 mb-4 border-bottom border-5 border-light">
+ return `<div id='toc-post' class="position-relative p-4 mb-4 border-bottom border-5 jt-border-light">
     <input id="toc-toggle" class="d-none" autocomplete="off" type="checkbox"/>
     <label for="toc-toggle" id="toc-toggler" class="toc-toggler d-flex align-items-center">
-   <span class="fw-light">On this Content</span>
-   <span class="dropdown-toggle ms-auto"></span>
-  </label>
+     <span class="fw-light">On this Content</span>
+     <span class="dropdown-toggle ms-auto"></span>
+    </label>
     ${e.map(function(data, i){
     var n = data.level;
     var text = '';
     if( i  ==  0 ){
- text += '<ul class="mb-0 ps-3 pt-3 d-none-check fs-7">';
- }else if(hc < n){
- text += '<ul class="mb-3 ps-3 pt-3 fs-8"><li>';
- l++;
- }else if(hc > n && l > 1){
- text += '</li></ul>';
- l--;
-    }	
-  hc = n;
+     text += '<ul class="mb-0 ps-3 pt-3 d-none-check fs-7">';
+     }else if(hc < n){
+     text += '<ul class="mb-3 ps-3 pt-3 fs-8"><li>';
+     l++;
+     }else if(hc > n && l > 1){
+       for(var m = 0; m < hc - n; m++){
+       	text += '</li></ul>';
+       }
+      l--;
+    }
+  	hc = n;
     text += i > 0 ? '</li>' : '';
-  text += '<li class="mb-2">';
-    text += '<a class="text-reset text-decoration-none hover-text-color" href="#heading-'+i+'">'+data.title+'</a>';
+  	text += '<li class="mb-2">';
+    text += '<a class="text-reset text-decoration-none hover-text-primary" href="#heading-'+i+'">'+data.title+'</a>';
     if( i  ==  e.length - 1 ){
- for(var j = 0; j < l; j++){
- text += '</li></ul>';
- }
+     for(var j = 1; j < hc; j++){
+     text += '</li></ul>';
+     }
     }
     return text;
     }).join('').replace(/<li>\s*<\/li>/ig, '')}
     </div>`;
 }
-
 function sitemap_temp(e) {
  return `<div class='accordion'>
  ${e.categories.map(function(data, i){

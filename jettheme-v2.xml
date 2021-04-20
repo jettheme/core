@@ -254,15 +254,6 @@ object-fit: cover;
 input:checked ~ .check-text-primary {
 color: var(--jt-primary)!important
 }
-.jt-bg-primary {
-background-color: var(--jt-primary)
-}
-.jt-bg-light {
-background-color: var(--jt-bg-light)
-}
-.bg-archive {
-background-color: var(--jt-bg-archive)
-}
 .jt-btn-primary,
 .jt-btn-outline-primary:hover {
 color: #fff;
@@ -287,6 +278,15 @@ border-color: var(--jt-btn-primary-hover)!important
 .jt-btn-outline-primary {
 color: var(--jt-btn-primary);
 border-color: var(--jt-btn-primary);
+}
+.jt-bg-primary {
+background-color: var(--jt-primary)
+}
+.jt-bg-light {
+background-color: var(--jt-bg-light)
+}
+.bg-archive {
+background-color: var(--jt-bg-archive)
 }
 .jt-border-light {
 border-color: var(--jt-border-light)!important;

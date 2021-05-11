@@ -61,7 +61,7 @@
 <b:if cond='data:view.isHomepage'>
 <script type='application/ld+json'>{&quot;@context&quot;:&quot;https://schema.org&quot;,&quot;@type&quot;:&quot;WebSite&quot;,&quot;url&quot;:&quot;<data:blog.homepageUrl/>&quot;,&quot;name&quot;:&quot;<data:blog.title/>&quot;,&quot;potentialAction&quot;:{&quot;@type&quot;:&quot;SearchAction&quot;,&quot;target&quot;:&quot;<data:blog.homepageUrl/>search?q={search_term_string}&amp;max-results=10&quot;,&quot;query-input&quot;:&quot;required name=search_term_string&quot;}}</script>
 </b:if>
-<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css' rel='stylesheet'/>
+<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css' rel='stylesheet'/>
 <b:if cond='!data:view.isLayoutMode'>
 <b:skin><![CDATA[/*
 <Group description="_Main Color">
@@ -228,9 +228,6 @@ box-shadow: none;
 margin: 0;
 padding: 0;
 }
-.dropdown-menu-end {
-right: 0;
-}
 .ratio:before{
 content: none;
 }
@@ -381,6 +378,8 @@ width: $(logo.width);
 }
 #search-header .dropdown-menu{
 min-width: 300px;
+right:0;
+top:100%
 }
 .blog-admin {
 display: none;
@@ -509,6 +508,7 @@ pointer-events: none;
 -o-transition: .3s;
 transition: .3s;
 box-shadow: 5px 10px 10px -5px rgba(0, 0, 0, 0.14);
+top:100%
 }
 #navbar .dropdown-menu .nav-link {
 padding-right: 20px;
@@ -1352,7 +1352,7 @@ blogTitle = &quot;<data:blog.title/>&quot;;
       <div class='d-flex align-self-stretch align-items-center position-md-relative' id='search-header'>
         <input class='d-none' id='search-toggle' type='checkbox'/>
         <label aria-label='Toggle search' class='px-2 fs-5 check-text-primary hover-text-primary' for='search-toggle' id='search-toggler'><svg aria-hidden='true' height='1em' style='vertical-align:-.15em' width='1em'><use xlink:href='#i-search'/></svg></label>
-        <div class='dropdown-menu dropdown-menu-end p-1 jt-border-light shadow-sm d-block-check'>
+        <div class='dropdown-menu p-1 jt-border-light shadow-sm d-block-check'>
           <form class='input-group' expr:action='data:blog.searchUrl' method='GET' target='_top'> 
             <input class='form-control fs-7 border-0 rounded-0 bg-transparent text-reset' expr:value='data:view.isSearch ? data:view.search.query : &quot;&quot;' id='search-input' name='q' placeholder='Enter your search' required='required' type='text'/>
             <input name='max-results' type='hidden' value='10'/>

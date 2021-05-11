@@ -93,7 +93,7 @@
 <Group description="_Menu">
 <Variable name="tabs.font" description="Font Size" type="font" default="normal bold 16px var(--bs-font-sans-serif)" value="normal bold 16px var(--bs-font-sans-serif)"/>
 <Variable name="tabs.color" description="Font Color" type="color" default="$(body.text.color)" value="#686868"/>
-<Variable name="tabs.hover" description="Font Hover" type="color" default="$(maincolor)" value="#f67938"/>
+<Variable name="tabs.hover" description="Font Hover" type="color" default="$(keycolor)" value="#f67938"/>
 <Variable name="tabs.selected.color" description="Font Selected" type="color" default="$(keycolor)" value="#f67938"/>
 </Group>
 

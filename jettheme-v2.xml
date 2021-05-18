@@ -2086,6 +2086,7 @@ function sitemap_cb(e) {
   Defer.dom(sm,100,'loaded',jo.loadCustomPosts);
  }
 }
+
 function jtCallback(){
  if(document.getElementById('page-skin-1') == null){
   Defer.css('https://www.blogger.com/dyn-css/authorization.css?targetBlogID='+blogId,'admin-css',100)

@@ -646,10 +646,10 @@ width: 50%;
   </b:widget>
   <b:widget id='HTML59' locked='true' title='JetScript Options' type='HTML' version='2' visible='true'>
     <b:widget-settings>
-      <b:widget-setting name='content'>const analyticId = false;
-/*Fill with Analytic ID use &quot;&quot;, and false if not used.*/
+      <b:widget-setting name='content'>const analyticId = &quot;false&quot;;
+/*Fill with Analytic ID, and false if not used.*/
 
-const caPubAdsense = false;
+const caPubAdsense = &quot;false&quot;;
 /*Fill with ca-pub-adsense ID, and false if not used.*/
 
 const autoTOC = true;

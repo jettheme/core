@@ -898,11 +898,7 @@ width: 50%;
     <b:includable id='iframeComments'/>
     <b:includable id='inlineAd'/>
     <b:includable id='linkShare'/>
-    <b:includable id='manageComments'>
-  <a expr:href='data:post.commentsUrl' expr:onclick='data:post.manageCommentsUrlOnclick'>
-    <b:message name='messages.manageComments'/>
-  </a>
-</b:includable>
+    <b:includable id='manageComments'/>
     <b:includable id='nextPageLink'/>
     <b:includable id='otherSharingButton'/>
     <b:includable id='platformShare'/>
@@ -1960,6 +1956,7 @@ blogTitle = &quot;<data:blog.title/>&quot;;
     <b:includable id='iframeComments'/>
     <b:includable id='inlineAd'/>
     <b:includable id='linkShare'/>
+    <b:includable id='manageComments'/>
     <b:includable id='nextPageLink'/>
     <b:includable id='otherSharingButton'/>
     <b:includable id='platformShare'/>

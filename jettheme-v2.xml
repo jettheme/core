@@ -1681,7 +1681,7 @@ blogTitle = &quot;<data:blog.title/>&quot;;
     }
   },
   &quot;headline&quot;: &quot;<data:post.title/>&quot;,
-  &quot;description&quot;: &quot;<b:eval expr='data:view.isMultipleItems ? data:post.snippets.long.escaped : data:view.description.escaped'/>&quot;,
+  &quot;description&quot;: &quot;<b:eval expr='data:view.isMultipleItems ? data:post.snippets.long.jsonEscaped : data:view.description.jsonEscaped'/>&quot;,
   &quot;image&quot;: &quot;<data:post.featuredImage/>&quot;,
   &quot;datePublished&quot;: &quot;<data:post.date.iso8601/>&quot;,
   &quot;dateModified&quot;: &quot;<data:post.lastUpdated.iso8601/>&quot;

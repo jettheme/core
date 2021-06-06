@@ -111,12 +111,15 @@
 -----------------------------------------------
 JetTheme Blogger Template
 Name		: JetTheme Core
-Version		: 2.6
+Version		: 2.7
 Designer	: jettheme
 URL			: www.jettheme.com
 -----------------------------------------------
 */
-:root{--jt-primary:$(keycolor);--jt-text-color:$(body.text.color);--jt-heading-color:$(posts.title.color);--jt-link-color:$(body.link.color);--jt-link-hover:$(body.hover.color);--jt-blockquote:$(posts.text.color);--jt-btn-primary:$(posts.icons.color);--jt-btn-primary-hover:$(labels.background.color);--jt-btn-light-hover:$(posts.title.color);--jt-border-light:$(border.color);--jt-bg-light:#f3f7f9;--jt-bg-archive:#fffff;--jt-nav-text:$(tabs.color);--jt-nav-hover:$(tabs.hover);--jt-nav-active:$(tabs.selected.color);--jt-nav-mobile:$(body.background);--jt-bg-body:$(body.background);--jt-bg-header:$(body.background);--jt-bg-footer:#212529;--jt-text-footer:#9fa6ad;--jt-bg-dropdown:#ffffff;--jt-dropdown-text:$(tabs.color);--jt-dropdown-hover:$(tabs.hover)}.dark-mode{--jt-primary:$(keycolor);--jt-text-color:#9fa6ad;--jt-heading-color:#9fa6ad;--jt-link-color:$(body.link.color);--jt-link-hover:$(body.hover.color);--jt-blockquote:$(posts.text.color);--jt-btn-primary:$(posts.icons.color);--jt-btn-primary-hover:$(labels.background.color);--jt-btn-light-hover:#ffffff;--jt-border-light:#323539;--jt-bg-light:#292d31;--jt-bg-archive:#292d31;--jt-nav-text:#9fa6ad;--jt-nav-hover:#ffffff;--jt-nav-active:$(tabs.selected.color);--jt-nav-mobile:#212529;--jt-bg-body:#212529;--jt-bg-header:#212529;--jt-bg-footer:#212529;--jt-text-footer:#9fa6ad;--jt-bg-dropdown:#292d31;--jt-dropdown-text:#9fa6ad;--jt-dropdown-hover:#ffffff}body{--bs-font-sans-serif:$(body.text.family);font:$(body.text);color:var(--jt-text-color);background-color:var(--jt-bg-body);line-height:1.5;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-rendering:optimizeLegibility}.h1,.h2,.h3,.h4,.h5,.h6,h1,h2,h3,h4,h5,h6{font:$(posts.title);line-height:1.2}a{transition-property:background-color,border-color,color,fill,stroke;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.3s;color:var(--jt-link-color)}a:hover{color:var(--jt-link-hover)}blockquote{color:var(--jt-blockquote)}.fs-7{font-size:.875rem;line-height:1.25rem}.fs-8{font-size:.75rem;line-height:1rem}.btn{box-shadow:none!important}.btn-sm{min-width:32px;min-height:32px}iframe,img{max-width:100%}img{height:auto;object-fit:cover}label{cursor:pointer}.form-control,.form-control:focus{box-shadow:none}.dropdown-menu{margin:0;padding:0}.ratio:before{content:none}.ratio-1x1{padding-bottom:100%}.ratio-4x3{padding-bottom:75%}.ratio-16x9{padding-bottom:56.25%}.ratio-21x9{padding-bottom:43%}.object-cover{object-fit:cover}.hover-text-primary:hover,.jt-text-primary,input:checked~.check-text-primary{color:var(--jt-primary)!important}.jt-btn-outline-primary:hover,.jt-btn-primary{color:#fff;background-color:var(--jt-btn-primary);border-color:var(--jt-btn-primary)}.jt-btn-light{color:var(--jt-text-color);background-color:var(--jt-bg-light);border-color:var(--jt-bg-light)}.jt-btn-light:hover{color:var(--jt-btn-light-hover)}.hover-btn-primary:hover,.jt-btn-primary:checked+.jt-btn-outline-primary,.jt-btn-primary:hover{color:#fff!important;background-color:var(--jt-btn-primary-hover)!important;border-color:var(--jt-btn-primary-hover)!important}.jt-btn-outline-primary{color:var(--jt-btn-primary);border-color:var(--jt-btn-primary)}.jt-bg-primary{background-color:var(--jt-primary)}.jt-bg-light{background-color:var(--jt-bg-light)}.bg-archive{background-color:var(--jt-bg-archive)}.jt-border-light{border-color:var(--jt-border-light)!important}input:checked~.d-block-check{display:block!important}input:checked~.d-none-check{display:none!important}.accordion-header,.accordion-item,.dropdown-menu{background-color:var(--jt-bg-dropdown);color:var(--jt-dropdown-text);border-color:var(--jt-border-light)}.lazyload{transition-property:opacity;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.3s;opacity:0}.lazyload.loaded{opacity:1}.cursor-default{cursor:default!important}.drag-scroll{cursor:grab}.drag-scroll.row>*{max-width:80%}.drag-scroll.row-cols-2>*{max-width:45%}.header-animate.header-hidden{transform:translateY(-100%);box-shadow:none!important}#header{background-color:var(--jt-bg-header);transition-property:transform;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.3s;min-height:50px}#dark-toggler .icon-mode:before{content:url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1.2em' height='1.2em' viewBox='0 0 24 24' fill='none' stroke='%23686868' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z'%3E%3C/path%3E%3C/svg%3E");height:1.2em;width:1.2em}.dark-mode #dark-toggler .icon-mode:before{content:url("data:image/svg+xml;utf8,%3Csvg width='1.2em' height='1.2em' fill='white' stroke='white' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z'%3E%3C/path%3E%3C/svg%3E")}#footer{background-color:var(--jt-bg-footer);color:var(--jt-text-footer)}#navbar{z-index:9999}#navbar .menu-item{position:relative}#navbar .nav-link{min-height:40px}#navbar .dropdown-toggle{cursor:pointer;align-items:center;display:flex}#navbar .navbar-nav>.menu-item>.nav-link{font:$(tabs.font);line-height:1.5;color:var(--jt-nav-text)}#navbar .navbar-nav>.menu-item>.nav-link:hover{color:var(--jt-nav-hover)}#navbar .navbar-nav>.menu-item>.nav-link.active{color:var(--jt-nav-active)}.logo-wrap{width:$(logo.width)}#search-header .dropdown-menu{min-width:300px;right:0;top:100%}.blog-admin{display:none}#pagination li+li{margin-left:5px}.no-items{display:none}.separator{margin-bottom:1.5rem}.separator a{margin:0!important;padding:0!important}#special-categories .widget,.widget:last-child{margin-bottom:0!important}body>.google-auto-placed{margin:0 auto 1.5rem;max-width:1108px}.google-auto-placed>ins{margin:0!important}#post-body .widget{margin-top:1.5rem}.entry-title,.item-title{color:var(--jt-heading-color)}#comment-editor{width:100%}.h1,h1{font-size:calc(1.375rem + 1.5vw)}.h2,h2{font-size:calc(1.325rem + .9vw)}.h3,h3{font-size:calc(1.3rem + .6vw)}.h4,h4{font-size:calc(1.275rem + .3vw)}.h5,h5{font-size:$(title.h5)}.h6,h6{font-size:$(title.h6)}.entry-text h1,.entry-text h2,.entry-text h3,.entry-text h4,.entry-text h5,.entry-text h6{color:var(--jt-heading-color);padding-top:1em;margin-bottom:1rem}@media (min-width:576px){.drag-scroll.row-cols-sm-2>*{max-width:40%}.drag-scroll.flex-lg-wrap{cursor:default}.drag-scroll.flex-sm-wrap>*{max-width:none}.ratio-sm-4x3{padding-bottom:75%}.border-sm-end{border-right-width:1px!important;border-right-style:solid}#post-pager .next-page{border-left:1px solid}}@media (min-width:768px){.drag-scroll.row-cols-md-3>*{max-width:30%}.drag-scroll.flex-lg-wrap{cursor:default}.drag-scroll.flex-md-wrap>*{max-width:none}.position-md-relative{position:relative}.border-md-end{border-right-width:1px!important;border-right-style:solid}}@media (min-width:992px){.border-lg-end{border-right-width:1px!important;border-right-style:solid}.drag-scroll.row-cols-lg-4>*{max-width:23%}.drag-scroll.flex-lg-wrap{cursor:default}.drag-scroll.flex-lg-wrap>*{max-width:none}#navbar .navbar-nav>.menu-item{display:flex}#navbar .dropdown-menu{margin-top:-10px;display:block;opacity:0;visibility:hidden;pointer-events:none;-webkit-transition:.3s;-ms-transition:.3s;-o-transition:.3s;transition:.3s;box-shadow:5px 10px 10px -5px rgba(0,0,0,.14);top:100%}#navbar .dropdown-menu .nav-link{padding-right:20px;color:var(--jt-text-color)}#navbar .dropdown-menu .nav-link:hover{color:var(--jt-dropdown-hover)}#navbar .dropdown-menu .dropdown-toggle{position:absolute;right:10px;top:20px}#navbar .dropdown-menu .dropdown-menu{margin-right:-10px;left:100%;top:-1px}#navbar .menu-item:hover>.dropdown-menu{opacity:1;visibility:visible;pointer-events:unset;margin:0}#navbar .navbar-nav>.menu-item>.nav-link{padding:1.5rem 1rem;white-space:nowrap}#navbar .navbar-nav>.menu-item>.dropdown-toggle{pointer-events:none}#sidebar{border-left:1px solid}#footer-widget .widget{margin-bottom:0!important}}@media (min-width:1200px){.h1,h1{font-size:$(posts.title.size)}.h2,h2{font-size:$(title.h2)}.h3,h3{font-size:$(title.h3)}.h4,h4{font-size:$(title.h4)}}@media (max-width:991.98px){input:checked~.dropdown-menu{display:block}input:checked+.dropdown-toggle{color:var(--jt-nav-active)}.drag-scroll{overflow-x:auto!important}.logo-wrap{width:$(logo.width.mobile)}#search-header .dropdown-menu{width:100%}#navbar{background-color:var(--jt-nav-mobile);padding-top:70px;padding-bottom:30px;position:fixed;left:0;right:0;top:0;bottom:0;width:auto}#navbar.d-block{opacity:0;transform:translateX(-20%);-webkit-transition:.3s;-ms-transition:.3s;-o-transition:.3s;transition:.3s}#navbar.show{transform:translateX(0);opacity:1}#navbar .navbar-nav{max-height:100%;overflow-y:auto}#navbar-toggle:checked~#header-main #navbar{display:block}#navbar .nav-link{border-bottom:1px solid var(--jt-border-light);color:var(--jt-text-color)}#navbar .nav-link:hover{color:var(--jt-dropdown-hover)}#navbar .dropdown-toggle{border-left:1px solid var(--jt-border-light);height:2.5rem;padding:0 1rem;position:absolute;right:0;top:0}#navbar .dropdown-menu{border:none;padding-left:10px}#sidebar{border-top:1px solid}}@media (max-width:575.98px){.feature-posts .item-thumbnail{margin-bottom:-150px}.feature-posts .item-thumbnail a{border-radius:0!important;box-shadow:none!important;padding-bottom:75%}.feature-posts .item-content{background-color:var(--jt-bg-body);border:5px solid;border-radius:.25rem}#post-pager .prev-page+.next-page{border-top:1px solid}#toc-post,.feature-image,.feature-posts .item-thumbnail,.px-3>.google-auto-placed{margin-left:-1rem;margin-right:-1rem;width:auto!important}}
+:root{--jt-primary:$(keycolor);--jt-text-color:$(body.text.color);--jt-heading-color:$(posts.title.color);--jt-link-color:$(body.link.color);--jt-link-hover:$(body.hover.color);--jt-blockquote:$(posts.text.color);--jt-btn-primary:$(posts.icons.color);--jt-btn-primary-hover:$(labels.background.color);--jt-btn-light-hover:$(posts.title.color);--jt-border-light:$(border.color);--jt-bg-light:#f3f7f9;--jt-bg-archive:#fffff;--jt-nav-text:$(tabs.color);--jt-nav-hover:$(tabs.hover);--jt-nav-active:$(tabs.selected.color);--jt-nav-mobile:$(body.background);--jt-bg-body:$(body.background);--jt-bg-header:$(body.background);--jt-bg-footer:#212529;--jt-text-footer:#9fa6ad;--jt-bg-dropdown:#ffffff;--jt-dropdown-text:$(tabs.color);--jt-dropdown-hover:$(tabs.hover)}.dark-mode{--jt-primary:$(keycolor);--jt-text-color:#9fa6ad;--jt-heading-color:#9fa6ad;--jt-link-color:$(body.link.color);--jt-link-hover:$(body.hover.color);--jt-blockquote:$(posts.text.color);--jt-btn-primary:$(posts.icons.color);--jt-btn-primary-hover:$(labels.background.color);--jt-btn-light-hover:#ffffff;--jt-border-light:#323539;--jt-bg-light:#292d31;--jt-bg-archive:#292d31;--jt-nav-text:#9fa6ad;--jt-nav-hover:#ffffff;--jt-nav-active:$(tabs.selected.color);--jt-nav-mobile:#212529;--jt-bg-body:#212529;--jt-bg-header:#212529;--jt-bg-footer:#212529;--jt-text-footer:#9fa6ad;--jt-bg-dropdown:#292d31;--jt-dropdown-text:#9fa6ad;--jt-dropdown-hover:#ffffff}body{--bs-font-sans-serif:$(body.text.family);font:$(body.text);color:var(--jt-text-color);background-color:var(--jt-bg-body);line-height:1.5;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-rendering:optimizeLegibility}.h1,.h2,.h3,.h4,.h5,.h6,h1,h2,h3,h4,h5,h6{font:$(posts.title);line-height:1.2}a{transition-property:background-color,border-color,color,fill,stroke;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.3s;color:var(--jt-link-color)}a:hover{color:var(--jt-link-hover)}blockquote{color:var(--jt-blockquote)}.fs-7{font-size:.875rem;line-height:1.25rem}.fs-8{font-size:.75rem;line-height:1rem}.btn{box-shadow:none!important}.btn-sm{min-width:32px;min-height:32px}iframe,img{max-width:100%}img{height:auto;object-fit:cover}label{cursor:pointer}.visually-hidden{position:unset!important}.form-control,.form-control:focus{box-shadow:none}.dropdown-menu{margin:0;padding:0}.ratio:before{content:none}.ratio-1x1{padding-bottom:100%}.ratio-4x3{padding-bottom:75%}.ratio-16x9{padding-bottom:56.25%}.ratio-21x9{padding-bottom:43%}.object-cover{object-fit:cover}.hover-text-primary:hover,.jt-text-primary,input:checked~.check-text-primary{color:var(--jt-primary)!important}.jt-btn-outline-primary:hover,.jt-btn-primary{color:#fff;background-color:var(--jt-btn-primary);border-color:var(--jt-btn-primary)}.jt-btn-light{color:var(--jt-text-color);background-color:var(--jt-bg-light);border-color:var(--jt-bg-light)}.jt-btn-light:hover{color:var(--jt-btn-light-hover)}.hover-btn-primary:hover,.jt-btn-primary:checked+.jt-btn-outline-primary,.jt-btn-primary:hover{color:#fff!important;background-color:var(--jt-btn-primary-hover)!important;border-color:var(--jt-btn-primary-hover)!important}.jt-btn-outline-primary{color:var(--jt-btn-primary);border-color:var(--jt-btn-primary)}.jt-bg-primary{background-color:var(--jt-primary)}.jt-bg-light{background-color:var(--jt-bg-light)}.bg-archive{background-color:var(--jt-bg-archive)}.jt-border-light{border-color:var(--jt-border-light)!important}input:checked~.d-block-check{display:block!important}input:checked~.d-none-check{display:none!important}.accordion-header,.accordion-item,.dropdown-menu{background-color:var(--jt-bg-dropdown);color:var(--jt-dropdown-text);border-color:var(--jt-border-light)}.lazyload{transition-property:opacity;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.3s;opacity:0}.lazyload.loaded{opacity:1}.cursor-default{cursor:default!important}.drag-scroll{cursor:grab}.drag-scroll.row>*{max-width:80%}.drag-scroll.row-cols-2>*{max-width:45%}.header-animate.header-hidden{transform:translateY(-100%);box-shadow:none!important}#header{background-color:var(--jt-bg-header);transition-property:transform;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.3s;min-height:50px}.jt-icon{display:inline-block;height:1em;vertical-align:-.15em;width:1em;fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:2}.jt-icon-center{font-family:"Segoe UI",sans-serif}#dark-toggler .icon-mode:before{content:url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1.2em' height='1.2em' viewBox='0 0 24 24' fill='none' stroke='%23686868' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z'%3E%3C/path%3E%3C/svg%3E")}.dark-mode #dark-toggler .icon-mode:before{content:url("data:image/svg+xml;utf8,%3Csvg width='1.2em' height='1.2em' fill='white' stroke='white' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z'%3E%3C/path%3E%3C/svg%3E")}#footer{background-color:var(--jt-bg-footer);color:var(--jt-text-footer)}#navbar{z-index:9999}#navbar .menu-item{position:relative}#navbar .nav-link{min-height:40px}#navbar .dropdown-toggle{cursor:pointer;align-items:center;display:flex}#navbar .navbar-nav>.menu-item>.nav-link{font:$(tabs.font);line-height:1.5;color:var(--jt-nav-text)}#navbar .navbar-nav>.menu-item>.nav-link:hover{color:var(--jt-nav-hover)}#navbar .navbar-nav>.menu-item>.nav-link.active{color:var(--jt-nav-active)}.logo-wrap{width:$(logo.width)}#search-header .dropdown-menu{min-width:300px;right:0;top:100%}.blog-admin{display:none}#pagination li+li{margin-left:5px}.no-items{display:none}.separator{margin-bottom:1.5rem}.separator a{margin:0!important;padding:0!important}#special-categories .widget,.widget:last-child{margin-bottom:0!important}body>.google-auto-placed{margin:0 auto 1.5rem;max-width:1108px}.google-auto-placed>ins{margin:0!important}#post-body .widget{margin-top:1.5rem}.entry-title,.item-title{color:var(--jt-heading-color)}#comment-editor{width:100%}.h1,h1{font-size:calc(1.375rem + 1.5vw)}.h2,h2{font-size:calc(1.325rem + .9vw)}.h3,h3{font-size:calc(1.3rem + .6vw)}.h4,h4{font-size:calc(1.275rem + .3vw)}.h5,h5{font-size:$(title.h5)}.h6,h6{font-size:$(title.h6)}.entry-text h1,.entry-text h2,.entry-text h3,.entry-text h4,.entry-text h5,.entry-text h6{color:var(--jt-heading-color);padding-top:1em;margin-bottom:1rem}@media (min-width:576px){.drag-scroll.row-cols-sm-2>*{max-width:40%}.drag-scroll.flex-lg-wrap{cursor:default}.drag-scroll.flex-sm-wrap>*{max-width:none}.ratio-sm-4x3{padding-bottom:75%}.ratio-sm-16x9{padding-bottom:56.25%}.border-sm-end{border-right-width:1px!important;border-right-style:solid}#post-pager .next-page{border-left:1px solid}}@media (min-width:768px){.drag-scroll.row-cols-md-3>*{max-width:30%}.drag-scroll.flex-lg-wrap{cursor:default}.drag-scroll.flex-md-wrap>*{max-width:none}.position-md-relative{position:relative}.border-md-end{border-right-width:1px!important;border-right-style:solid}}@media (min-width:992px){.border-lg-end{border-right-width:1px!important;border-right-style:solid}.drag-scroll.row-cols-lg-4>*{max-width:23%}.drag-scroll.flex-lg-wrap{cursor:default}.drag-scroll.flex-lg-wrap>*{max-width:none}#navbar .navbar-nav>.menu-item{display:flex}#navbar .dropdown-menu{margin-top:-10px;display:block;opacity:0;visibility:hidden;pointer-events:none;-webkit-transition:.3s;-ms-transition:.3s;-o-transition:.3s;transition:.3s;box-shadow:5px 10px 10px -5px rgba(0,0,0,.14);top:100%}#navbar .dropdown-menu .nav-link{padding-right:20px;color:var(--jt-text-color)}#navbar .dropdown-menu .nav-link:hover{color:var(--jt-dropdown-hover)}#navbar .dropdown-menu .dropdown-toggle{position:absolute;right:10px;top:20px}#navbar .dropdown-menu .dropdown-menu{margin-right:-10px;left:100%;top:-1px}#navbar .menu-item:hover>.dropdown-menu{opacity:1;visibility:visible;pointer-events:unset;margin:0}#navbar .navbar-nav>.menu-item>.nav-link{padding:1.5rem 1rem;white-space:nowrap}#navbar .navbar-nav>.menu-item>.dropdown-toggle{pointer-events:none}#sidebar{border-left:1px solid}#footer-widget .widget{margin-bottom:0!important}}@media (min-width:1200px){.h1,h1{font-size:$(posts.title.size)}.h2,h2{font-size:$(title.h2)}.h3,h3{font-size:$(title.h3)}.h4,h4{font-size:$(title.h4)}}@media (max-width:991.98px){input:checked~.dropdown-menu{display:block}input:checked+.dropdown-toggle{color:var(--jt-nav-active)}.drag-scroll{overflow-x:auto!important}.logo-wrap{width:$(logo.width.mobile)}#search-header .dropdown-menu{width:100%}#navbar{background-color:var(--jt-nav-mobile);padding-top:70px;padding-bottom:30px;position:fixed;left:0;right:0;top:0;bottom:0;width:auto}#navbar.d-block{opacity:0;transform:translateX(-20%);-webkit-transition:.3s;-ms-transition:.3s;-o-transition:.3s;transition:.3s}#navbar.show{transform:translateX(0);opacity:1}#navbar .navbar-nav{max-height:100%;overflow-y:auto}#navbar-toggle:checked~#header-main #navbar{display:block}#navbar .nav-link{border-bottom:1px solid var(--jt-border-light);color:var(--jt-text-color)}#navbar .nav-link:hover{color:var(--jt-dropdown-hover)}#navbar .dropdown-toggle{border-left:1px solid var(--jt-border-light);height:2.5rem;padding:0 1rem;position:absolute;right:0;top:0}#navbar .dropdown-menu{border:none;padding-left:10px}#sidebar{border-top:1px solid}}@media (max-width:575.98px){.feature-posts .item-thumbnail{margin-bottom:-150px}.feature-posts .item-thumbnail a{border-radius:0!important;box-shadow:none!important;padding-bottom:75%}.feature-posts .item-content{background-color:var(--jt-bg-body);border:5px solid;border-radius:.25rem}#post-pager .prev-page+.next-page{border-top:1px solid}.feature-image,.feature-posts .item-thumbnail,.px-3>.google-auto-placed{margin-left:-1rem;margin-right:-1rem;width:auto!important}}
+
+/*Your custom CSS is here*/
+
 ]]></b:skin>
 </b:if>
 <b:if cond='data:view.isLayoutMode'>
@@ -141,7 +144,7 @@ body#layout:before {
 background-color: #f67938;
 border-radius: 30px;
 color: #fff;
-content: "JetTheme Version 2.6";
+content: "JetTheme Version 2.7";
 display: block;
 font-family: Roboto,sans-serif;
 padding: 10px 20px;
@@ -203,10 +206,10 @@ width: 50%;
 <body>
 <header class='header-animate sticky-top navbar py-0 navbar-expand-lg border-bottom jt-border-light' content='itemid' id='header' itemid='#header' itemscope='itemscope' itemtype='https://schema.org/WPHeader'>
 <input class='d-none' id='navbar-toggle' type='checkbox'/>
-<b:section class='container position-relative px-3' id='header-main' maxwidgets='3' showaddelement='no'>
+<b:section class='container position-relative px-3 flex-nowrap' id='header-main' maxwidgets='3' showaddelement='no'>
   <b:widget id='HTML50' locked='true' title='Logo' type='HTML' version='2' visible='true'>
     <b:widget-settings>
-      <b:widget-setting name='content'>https://1.bp.blogspot.com/-r664mx3Cejs/YHvYekLVc1I/AAAAAAAAASw/DSSK7kyHsT48vWlXC6Is93VwelF1YGcmwCLcBGAsYHQ/s0/jettheme-logo.png</b:widget-setting>
+      <b:widget-setting name='content'>https://1.bp.blogspot.com/-mo6pIle8rXw/YLplHDA1ZCI/AAAAAAAAATo/JPbzsy_srC8gFem56vJZ3wua-A5qClFxACLcBGAsYHQ/w175-h55/jettheme-logo.png</b:widget-setting>
     </b:widget-settings>
     <b:includable id='main'>
         <b:include name='JetLogo'/>
@@ -241,7 +244,7 @@ width: 50%;
   </b:widget>
 </b:section>
 </header>
-
+  
 <!--Main Content-->
 <div id='primary'>
 <div class='container px-0'>
@@ -419,6 +422,14 @@ width: 50%;
       <b:include name='JetHtml'/>
     </b:includable>
   </b:widget>
+  <b:widget id='HTML1' locked='false' title='#You may also like' type='HTML' visible='true'>
+    <b:widget-settings>
+      <b:widget-setting name='content'><![CDATA[<div data-title="You may also like..." class="custom-posts related-inline visually-hidden" data-shuffle="3" data-items="10" data-items="3" data-func="related_inline_temp"></div>]]></b:widget-setting>
+    </b:widget-settings>
+    <b:includable id='main'>
+      <b:include name='JetHtml'/>
+    </b:includable>
+  </b:widget>
   <b:widget id='HTML63' locked='false' title='#Advertisement' type='HTML' visible='true'>
     <b:widget-settings>
       <b:widget-setting name='content'><![CDATA[<div class="example-ads jt-bg-light rounded text-center py-4 fs-7">Advertisement here</div>]]></b:widget-setting>
@@ -585,11 +596,13 @@ width: 50%;
         </b:includable>
         <b:includable id='content'/>
       </b:widget>
-      <b:widget id='FollowByEmail50' locked='false' title='Newsletter' type='FollowByEmail' visible='true'>
+      <b:widget id='HTML58' locked='false' title='Newsletter' type='HTML' version='2' visible='true'>
+        <b:widget-settings>
+          <b:widget-setting name='content'>https://api.follow.it/subscription-form/bDVvZnRzRXhZM3VuejZCNUFLdEF4eVlvTnpzS3g0MzZIZVUvMzRpR3ZMRVRUQUtGdlBjaVBrcm5EbXE5bm5vWk9vdTZ1SUZwZlhqb3M5RmdwR1FZM3VUYmQ2UnEwRHJUTkdEbGJQN1czVk5QRHNGb2t6a3p3VlFIY1BCZGI3NUx8eEREYTIvN0wrUjBaWitnb3JLVk8zaGhxb2lxRXNZSXV2a1ZlQW5GS0FwTT0=/8</b:widget-setting>
+        </b:widget-settings>
         <b:includable id='main'>
-      <b:include name='JetFollowByEmail'/>
+      <b:include name='JetFollowIt'/>
     </b:includable>
-        <b:includable id='content'/>
       </b:widget>
     </b:section>
   </div>
@@ -606,7 +619,7 @@ width: 50%;
 </div>
 </footer>
 
-<div class='position-fixed d-none' id='back-to-top' style='right:20px;bottom:20px'><a aria-label='Back to Top' class='btn btn-sm jt-btn-light rounded-circle' href='#back-to-top' onclick='window.scroll({top:0,left: 0,behavior:&apos;smooth&apos;});'><svg aria-hidden='true' height='1em' style='vertical-align:-0.125em' width='1em'><use xlink:href='#i-arrow-t'/></svg></a></div>
+<div class='position-fixed d-none' id='back-to-top' style='right:20px;bottom:20px'><a aria-label='Back to Top' class='btn btn-sm jt-btn-light rounded-circle jt-icon-center' href='#back-to-top' onclick='window.scroll({top:0,left: 0,behavior:&apos;smooth&apos;});'><svg aria-hidden='true' class='jt-icon' height='1em' width='1em'><use xlink:href='#i-arrow-t'/></svg></a></div>
   
 <b:section class='d-none' id='jet-options' maxwidgets='5' showaddelement='no'>
   <b:widget id='HTML57' locked='true' title='SVG Icons' type='HTML' version='2' visible='true'>
@@ -617,24 +630,24 @@ width: 50%;
 &lt;symbol id=&quot;i-twitter&quot; fill=&quot;currentColor&quot; stroke=&quot;none&quot; viewbox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z&quot;&gt;&lt;/path&gt;&lt;/symbol&gt;
 &lt;symbol id=&quot;i-linkedin&quot; fill=&quot;currentColor&quot; stroke=&quot;none&quot; viewbox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z&quot;&gt;&lt;/path&gt;&lt;rect height=&quot;12&quot; width=&quot;4&quot; x=&quot;2&quot; y=&quot;9&quot;&gt;&lt;/rect&gt;&lt;circle cx=&quot;4&quot; cy=&quot;4&quot; r=&quot;2&quot;&gt;&lt;/circle&gt;&lt;/symbol&gt;
 &lt;symbol id=&quot;i-facebook&quot; fill=&quot;currentColor&quot; stroke=&quot;none&quot; viewbox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z&quot;&gt;&lt;/path&gt;&lt;/symbol&gt;
-&lt;symbol id=&quot;i-arrow-b&quot; fill=&quot;none&quot; viewbox=&quot;0 0 24 24&quot; stroke=&quot;currentColor&quot;&gt;&lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-width=&quot;2&quot; d=&quot;M19 9l-7 7-7-7&quot;&gt;&lt;/path&gt;&lt;/symbol&gt;
-&lt;symbol id=&quot;i-arrow-l&quot; fill=&quot;none&quot; viewbox=&quot;0 0 24 24&quot; stroke=&quot;currentColor&quot;&gt;&lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-width=&quot;2&quot; d=&quot;M15 19l-7-7 7-7&quot;&gt;&lt;/path&gt;&lt;/symbol&gt;
-&lt;symbol id=&quot;i-arrow-r&quot; fill=&quot;none&quot; viewbox=&quot;0 0 24 24&quot; stroke=&quot;currentColor&quot;&gt;&lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-width=&quot;2&quot; d=&quot;M9 5l7 7-7 7&quot;&gt;&lt;/path&gt;&lt;/symbol&gt;
-&lt;symbol id=&quot;i-arrow-t&quot; fill=&quot;none&quot; viewbox=&quot;0 0 24 24&quot; stroke=&quot;currentColor&quot;&gt;&lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-width=&quot;2&quot; d=&quot;M5 15l7-7 7 7&quot;&gt;&lt;/path&gt;&lt;/symbol&gt;
-&lt;symbol id=&quot;i-instagram&quot; viewbox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;rect x=&quot;2&quot; y=&quot;2&quot; width=&quot;20&quot; height=&quot;20&quot; rx=&quot;5&quot; ry=&quot;5&quot;&gt;&lt;/rect&gt;&lt;path d=&quot;M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z&quot;&gt;&lt;/path&gt;&lt;line x1=&quot;17.5&quot; y1=&quot;6.5&quot; x2=&quot;17.51&quot; y2=&quot;6.5&quot;&gt;&lt;/line&gt;&lt;/symbol&gt;
-&lt;symbol id=&quot;i-youtube&quot; viewbox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;path d=&quot;M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z&quot;&gt;&lt;/path&gt;&lt;polygon fill=&quot;currentColor&quot; points=&quot;9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02&quot;&gt;&lt;/polygon&gt;&lt;/symbol&gt;
-&lt;symbol id=&quot;i-user&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-width=&quot;2&quot; viewbox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2&quot;&gt;&lt;/path&gt;&lt;circle cx=&quot;12&quot; cy=&quot;7&quot; r=&quot;4&quot;&gt;&lt;/circle&gt;&lt;/symbol&gt;
-&lt;symbol id=&quot;i-clock&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; viewbox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-width=&quot;2&quot;&gt;&lt;/path&gt;&lt;/symbol&gt;
-&lt;symbol id=&quot;i-comment&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; viewbox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-width=&quot;2&quot;&gt;&lt;/path&gt;&lt;/symbol&gt;
-&lt;symbol id=&quot;i-menu&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; viewbox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M3 6h18M3 12h18M3 18h18&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-width=&quot;1.5&quot;&gt;&lt;/path&gt;&lt;/symbol&gt;
-&lt;symbol id=&quot;i-mail&quot; fill=&quot;none&quot; viewbox=&quot;0 0 24 24&quot; stroke=&quot;currentColor&quot;&gt;&lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-width=&quot;2&quot; d=&quot;M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z&quot;&gt;&lt;/path&gt;&lt;/symbol&gt;
-&lt;symbol id=&quot;i-edit&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-width=&quot;2&quot; viewbox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z&quot;&gt;&lt;/path&gt;&lt;/symbol&gt;
-&lt;symbol id=&quot;i-close&quot;  fill=&quot;none&quot; viewbox=&quot;0 0 24 24&quot; stroke=&quot;currentColor&quot;&gt;&lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-width=&quot;.1.5&quot; d=&quot;M6 18L18 6M6 6l12 12&quot;&gt;&lt;/path&gt;&lt;/symbol&gt;
-&lt;symbol id=&quot;i-search&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; viewbox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-width=&quot;1.5&quot;&gt;&lt;/path&gt;&lt;/symbol&gt;
-&lt;symbol id=&quot;i-check&quot; fill=&quot;none&quot; viewbox=&quot;0 0 24 24&quot; stroke=&quot;currentColor&quot;&gt;&lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-width=&quot;2&quot; d=&quot;M5 13l4 4L19 7&quot;&gt;&lt;/path&gt;&lt;/symbol&gt;
-&lt;symbol id=&quot;i-github&quot; viewbox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;path d=&quot;M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22&quot;&gt;&lt;/path&gt;&lt;/symbol&gt;
-&lt;symbol id=&quot;i-telegram&quot; fill=&quot;currentColor&quot; viewbox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M22.05 1.577c-.393-.016-.784.08-1.117.235-.484.186-4.92 1.902-9.41 3.64-2.26.873-4.518 1.746-6.256 2.415-1.737.67-3.045 1.168-3.114 1.192-.46.16-1.082.362-1.61.984-.133.155-.267.354-.335.628s-.038.622.095.895c.265.547.714.773 1.244.976 1.76.564 3.58 1.102 5.087 1.608.556 1.96 1.09 3.927 1.618 5.89.174.394.553.54.944.544l-.002.02s.307.03.606-.042c.3-.07.677-.244 1.02-.565.377-.354 1.4-1.36 1.98-1.928l4.37 3.226.035.02s.484.34 1.192.388c.354.024.82-.044 1.22-.337.403-.294.67-.767.795-1.307.374-1.63 2.853-13.427 3.276-15.38l-.012.046c.296-1.1.187-2.108-.496-2.705-.342-.297-.736-.427-1.13-.444zm-.118 1.874c.027.025.025.025.002.027-.007-.002.08.118-.09.755l-.007.024-.005.022c-.432 1.997-2.936 13.9-3.27 15.356-.046.196-.065.182-.054.17-.1-.015-.285-.094-.3-.1l-7.48-5.525c2.562-2.467 5.182-4.7 7.827-7.08.468-.235.39-.96-.17-.972-.594.14-1.095.567-1.64.84-3.132 1.858-6.332 3.492-9.43 5.406-1.59-.553-3.177-1.012-4.643-1.467 1.272-.51 2.283-.886 3.278-1.27 1.738-.67 3.996-1.54 6.256-2.415 4.522-1.748 9.07-3.51 9.465-3.662l.032-.013.03-.013c.11-.05.173-.055.202-.057 0 0-.01-.033-.002-.026zM10.02 16.016l1.234.912c-.532.52-1.035 1.01-1.398 1.36z&quot;&gt;&lt;/path&gt;&lt;/symbol&gt;
-&lt;symbol id=&quot;i-download&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; viewbox=&quot;0 0 24 24&quot;&gt;&lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-width=&quot;2&quot; d=&quot;M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4&quot;&gt;&lt;/path&gt;&lt;/symbol&gt;</b:widget-setting>
+&lt;symbol id=&quot;i-arrow-b&quot; viewbox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M19 9l-7 7-7-7&quot;&gt;&lt;/path&gt;&lt;/symbol&gt;
+&lt;symbol id=&quot;i-arrow-l&quot; viewbox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M15 19l-7-7 7-7&quot;&gt;&lt;/path&gt;&lt;/symbol&gt;
+&lt;symbol id=&quot;i-arrow-r&quot; viewbox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M9 5l7 7-7 7&quot;&gt;&lt;/path&gt;&lt;/symbol&gt;
+&lt;symbol id=&quot;i-arrow-t&quot; viewbox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M5 15l7-7 7 7&quot;&gt;&lt;/path&gt;&lt;/symbol&gt;
+&lt;symbol id=&quot;i-instagram&quot; viewbox=&quot;0 0 24 24&quot;&gt;&lt;rect x=&quot;2&quot; y=&quot;2&quot; width=&quot;20&quot; height=&quot;20&quot; rx=&quot;5&quot; ry=&quot;5&quot;&gt;&lt;/rect&gt;&lt;path d=&quot;M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z&quot;&gt;&lt;/path&gt;&lt;line x1=&quot;17.5&quot; y1=&quot;6.5&quot; x2=&quot;17.51&quot; y2=&quot;6.5&quot;&gt;&lt;/line&gt;&lt;/symbol&gt;
+&lt;symbol id=&quot;i-youtube&quot; viewbox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z&quot;&gt;&lt;/path&gt;&lt;polygon fill=&quot;currentColor&quot; points=&quot;9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02&quot;&gt;&lt;/polygon&gt;&lt;/symbol&gt;
+&lt;symbol id=&quot;i-user&quot; viewbox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2&quot;&gt;&lt;/path&gt;&lt;circle cx=&quot;12&quot; cy=&quot;7&quot; r=&quot;4&quot;&gt;&lt;/circle&gt;&lt;/symbol&gt;
+&lt;symbol id=&quot;i-clock&quot; viewbox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z&quot;&gt;&lt;/path&gt;&lt;/symbol&gt;
+&lt;symbol id=&quot;i-comment&quot; viewbox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z&quot;&gt;&lt;/path&gt;&lt;/symbol&gt;
+&lt;symbol id=&quot;i-menu&quot; viewbox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot;&gt;&lt;path d=&quot;M3 6h18M3 12h18M3 18h18&quot;&gt;&lt;/path&gt;&lt;/symbol&gt;
+&lt;symbol id=&quot;i-mail&quot; viewbox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z&quot;&gt;&lt;/path&gt;&lt;/symbol&gt;
+&lt;symbol id=&quot;i-edit&quot; viewbox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z&quot;&gt;&lt;/path&gt;&lt;/symbol&gt;
+&lt;symbol id=&quot;i-close&quot; viewbox=&quot;0 0 24 24&quot; stroke-width=&quot;1&quot;&gt;&lt;path d=&quot;M6 18L18 6M6 6l12 12&quot;&gt;&lt;/path&gt;&lt;/symbol&gt;
+&lt;symbol id=&quot;i-search&quot; viewbox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot;&gt;&lt;path d=&quot;M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z&quot;&gt;&lt;/path&gt;&lt;/symbol&gt;
+&lt;symbol id=&quot;i-check&quot; viewbox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M5 13l4 4L19 7&quot;&gt;&lt;/path&gt;&lt;/symbol&gt;
+&lt;symbol id=&quot;i-github&quot; viewbox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22&quot;&gt;&lt;/path&gt;&lt;/symbol&gt;
+&lt;symbol id=&quot;i-telegram&quot; stroke=&quot;none&quot; fill=&quot;currentColor&quot; viewbox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M22.05 1.577c-.393-.016-.784.08-1.117.235-.484.186-4.92 1.902-9.41 3.64-2.26.873-4.518 1.746-6.256 2.415-1.737.67-3.045 1.168-3.114 1.192-.46.16-1.082.362-1.61.984-.133.155-.267.354-.335.628s-.038.622.095.895c.265.547.714.773 1.244.976 1.76.564 3.58 1.102 5.087 1.608.556 1.96 1.09 3.927 1.618 5.89.174.394.553.54.944.544l-.002.02s.307.03.606-.042c.3-.07.677-.244 1.02-.565.377-.354 1.4-1.36 1.98-1.928l4.37 3.226.035.02s.484.34 1.192.388c.354.024.82-.044 1.22-.337.403-.294.67-.767.795-1.307.374-1.63 2.853-13.427 3.276-15.38l-.012.046c.296-1.1.187-2.108-.496-2.705-.342-.297-.736-.427-1.13-.444zm-.118 1.874c.027.025.025.025.002.027-.007-.002.08.118-.09.755l-.007.024-.005.022c-.432 1.997-2.936 13.9-3.27 15.356-.046.196-.065.182-.054.17-.1-.015-.285-.094-.3-.1l-7.48-5.525c2.562-2.467 5.182-4.7 7.827-7.08.468-.235.39-.96-.17-.972-.594.14-1.095.567-1.64.84-3.132 1.858-6.332 3.492-9.43 5.406-1.59-.553-3.177-1.012-4.643-1.467 1.272-.51 2.283-.886 3.278-1.27 1.738-.67 3.996-1.54 6.256-2.415 4.522-1.748 9.07-3.51 9.465-3.662l.032-.013.03-.013c.11-.05.173-.055.202-.057 0 0-.01-.033-.002-.026zM10.02 16.016l1.234.912c-.532.52-1.035 1.01-1.398 1.36z&quot;&gt;&lt;/path&gt;&lt;/symbol&gt;
+&lt;symbol id=&quot;i-download&quot; viewbox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4&quot;&gt;&lt;/path&gt;&lt;/symbol&gt;</b:widget-setting>
     </b:widget-settings>
     <b:includable id='main'>
       <svg style='display:none' xmlns='http://www.w3.org/2000/svg'><data:content/></svg>
@@ -645,13 +658,13 @@ width: 50%;
       <b:widget-setting name='content'>const analyticId = &quot;false&quot;;
 /*Fill with Analytic ID, and false if not used.*/
 
-const caPubAdsense = &quot;false&quot;;
-/*Fill with ca-pub-adsense ID, and false if not used.*/
+const caPubAdsense = false;
+/*Fill with ca-pub-adsense ID number, and false if not used.*/
 
 const autoTOC = true;
 /*false if not used.*/
 
-const positionTOC = &#39;noscript&#39;;
+const positionTOC = &quot;noscript&quot;;
 /*unique tag or class or id to set TOC.*/</b:widget-setting>
     </b:widget-settings>
     <b:includable id='main'>
@@ -676,7 +689,7 @@ blogTitle = &quot;<data:blog.title/>&quot;;
     </b:includable>
     <b:includable id='JetEdit'>
       <span class='position-absolute top-0 end-0 blog-admin'>
-        <a class='btn btn-sm jt-btn-light rounded-pill' expr:href='data:widget.quickEditUrl' rel='noopener' target='_blank'><svg aria-hidden='true' height='1em' style='vertical-align:-.15em' width='1em'><use xlink:href='#i-edit'/></svg></a>
+        <a class='btn btn-sm jt-btn-light rounded-pill jt-icon-center' expr:href='data:widget.quickEditUrl' rel='noopener' target='_blank'><svg aria-hidden='true' class='jt-icon'><use xlink:href='#i-edit'/></svg></a>
       </span>
     </b:includable>
     <b:includable id='JetHtml'>
@@ -688,7 +701,7 @@ blogTitle = &quot;<data:blog.title/>&quot;;
       <b:include name='JetWidgetTitle'/>
       <div class='widget-content social-media'>
         <div class='d-flex flex-wrap'>
-          <b:loop values='data:links' var='link'><a expr:aria-label='data:link.name' expr:class='&quot;list-inline-item mb-2 btn btn-sm jt-btn-light hover-btn-primary rounded-pill i-&quot; + data:link.name' expr:href='data:link.target' rel='noopener' target='_blank'><svg aria-hidden='true' height='1em' style='vertical-align:-.15em' width='1em'><use expr:xlink:href='&quot;#i-&quot; + data:link.name'/></svg></a></b:loop>
+          <b:loop values='data:links' var='link'><a expr:aria-label='data:link.name' expr:class='&quot;me-2 mb-2 btn btn-sm jt-btn-light hover-btn-primary rounded-pill jt-icon-center i-&quot; + data:link.name' expr:href='data:link.target' rel='noopener' target='_blank'><svg aria-hidden='true' class='jt-icon'><use expr:xlink:href='&quot;#i-&quot; + data:link.name'/></svg></a></b:loop>
         </div>
       </div>
       <b:include name='JetEdit'/>
@@ -722,10 +735,10 @@ blogTitle = &quot;<data:blog.title/>&quot;;
 </b:if>
 <h3 class='item-title fs-7 mb-2'><a class='text-reset text-decoration-none' expr:href='data:post.url'><data:post.title/></a></h3>
 <div class='item-meta text-secondary d-flex flex-wrap fs-8'>
-<small class='me-2'><svg aria-hidden='true' class='me-1' height='1em' style='vertical-align:-.15em' width='1em'><use xlink:href='#i-clock'/></svg><b:eval expr='data:post.lastUpdated format &quot;d MMM, yyyy&quot;'/>
+<small class='me-2'><svg aria-hidden='true' class='me-1 jt-icon'><use xlink:href='#i-clock'/></svg><b:eval expr='data:post.lastUpdated format &quot;d MMM, yyyy&quot;'/>
 </small>
 <b:if cond='data:post.numberOfComments gt 0'>
-<small><svg aria-hidden='true' class='me-1' height='1em' style='vertical-align:-.15em' width='1em'><use xlink:href='#i-comment'/></svg><data:post.numberOfComments/></small>
+<small><svg aria-hidden='true' class='me-1 jt-icon'><use xlink:href='#i-comment'/></svg><data:post.numberOfComments/></small>
 </b:if>
 </div>
 <b:if cond='data:postDisplay.showSnippet'>
@@ -740,7 +753,7 @@ blogTitle = &quot;<data:blog.title/>&quot;;
     <b:includable id='JetLabel'>
       <b:include name='JetWidgetTitle'/>
       <div class='widget-content categories'>
-        <ul expr:class='data:display + &quot; d-flex flex-wrap list-unstyled&quot;'><b:loop values='data:labels' var='label'><b:if cond='data:display == &quot;list&quot; and data:label.name not contains &quot;#&quot;'><li class='mb-2 pe-2 col-6'><a class='text-secondary fw-bold text-decoration-none' expr:href='data:label.url + &quot;?max-results=10&quot;'><data:label.name/></a></li><b:elseif cond='data:display == &quot;cloud&quot; and data:label.name contains &quot;#&quot;'/><li class='list-inline-item mb-2'><a class='btn btn-sm jt-btn-light rounded-pill' expr:href='data:label.url + &quot;?max-results=10&quot;'><data:label.name/></a></li></b:if></b:loop></ul>
+        <ul expr:class='data:display + &quot; d-flex flex-wrap list-unstyled&quot;'><b:loop values='data:labels' var='label'><b:if cond='data:display == &quot;list&quot; and data:label.name not contains &quot;#&quot;'><li class='mb-2 pe-2 col-6'><a class='text-reset fw-bold text-decoration-none' expr:href='data:label.url + &quot;?max-results=10&quot;'><data:label.name/></a></li><b:elseif cond='data:display == &quot;cloud&quot; and data:label.name contains &quot;#&quot;'/><li class='me-2 mb-2'><a class='btn btn-sm jt-btn-light rounded-pill' expr:href='data:label.url + &quot;?max-results=10&quot;'><data:label.name/></a></li></b:if></b:loop></ul>
       </div>
       <b:include name='JetEdit'/>
     </b:includable>
@@ -782,8 +795,17 @@ blogTitle = &quot;<data:blog.title/>&quot;;
           <input aria-label='Email Address' class='form-control fs-7 bg-transparent border-0 text-reset' id='newsletter-email' name='email' placeholder='Email Address' required='required' type='email'/>
           <input expr:value='data:feedPath' name='uri' type='hidden'/>
           <input name='loc' type='hidden' value='id_ID'/>
-          <button aria-label='Submit Button' class='btn py-0 border-0 text-reset fs-5' type='submit'><svg aria-hidden='true' height='1em' style='vertical-align:-.15em' width='1em'><use xlink:href='#i-mail'/></svg></button>
+          <button aria-label='Submit Button' class='btn py-0 border-0 text-reset fs-5' type='submit'><svg aria-hidden='true' class='jt-icon'><use xlink:href='#i-mail'/></svg></button>
         </form>
+      </div>
+      <b:include name='JetEdit'/>
+    </b:includable>
+    <b:includable id='JetFollowIt'>
+      <b:class name='position-relative mb-4'/>
+      <b:include name='JetWidgetTitle'/>
+      <div class='widget-content follow-by-email'>
+        <p class='mb-3'>Stay up to date with the latest news and relevant updates from <data:blog.title/>.</p>
+        <form expr:action='data:content' method='post' target='_blank'><div class='input-group rounded-pill overflow-hidden border border-2 jt-border-light'><input aria-label='Email Address' class='form-control fs-7 bg-transparent border-0 text-reset' id='newsletter-email' name='email' placeholder='Email Address' required='required' type='email'/><button aria-label='Submit Button' class='btn py-0 border-0 text-reset fs-5' type='submit'><svg aria-hidden='true' class='jt-icon'><use xlink:href='#i-mail'/></svg></button></div></form>
       </div>
       <b:include name='JetEdit'/>
     </b:includable>
@@ -791,7 +813,7 @@ blogTitle = &quot;<data:blog.title/>&quot;;
       <b:if cond='data:content contains &quot;data:image/&quot; OR  data:content contains &quot;https://&quot;'>
         <b:class name='logo-wrap position-relative'/>
         <a class='d-block navbar-brand me-0' expr:href='data:blog.homepageUrl'>
-          <img expr:alt='data:blog.title' expr:src='data:content' height='55' loading='lazy' width='174'/>
+          <img expr:alt='data:blog.title' expr:src='data:content' height='55' loading='lazy' width='175'/>
         </a>
       <b:else/>
         <a class='navbar-brand me-0 fw-bold' expr:href='data:blog.homepageUrl'>
@@ -802,21 +824,21 @@ blogTitle = &quot;<data:blog.title/>&quot;;
     <b:includable id='JetMenu'>      
     <b:class name='collapse navbar-collapse'/>
     <b:attr name='id' value='navbar'/>
-<label class='d-flex position-absolute d-lg-none mt-4 me-4 top-0 end-0' for='navbar-toggle'><svg aria-hidden='true' height='2em' width='2em'><use xlink:href='#i-close'/></svg></label>
+<label class='d-flex position-absolute fs-1 d-lg-none mt-4 me-4 top-0 end-0' for='navbar-toggle'><svg aria-hidden='true' class='jt-icon'><use xlink:href='#i-close'/></svg></label>
 <ul class='navbar-nav px-4 p-lg-0 container' itemscope='itemscope' itemtype='http://schema.org/SiteNavigationElement' role='menu'>
   <b:loop index='i' values='data:links' var='link'>
     <b:switch var='data:link.href'>
       <b:case value='#sub-start'/><input class='d-none' expr:id='&quot;sub-toggle-&quot; + data:i' type='checkbox'/><label class='dropdown-toggle' expr:for='&quot;sub-toggle-&quot; + data:i'/> &lt;ul class=&quot;dropdown-menu jt-border-light rounded-0&quot;&gt; &lt;li class=&quot;d-none&quot;&gt; <b:case value='#sub-end'/>&lt;/li&gt; &lt;/ul&gt; <b:default/><b:if cond='data:i gt 0'>&lt;/li&gt;</b:if>&lt;li class=&quot;menu-item&quot;&gt;<a class='nav-link' expr:href='data:link.href' itemprop='url' role='menuitem'><b:class cond='data:link.isCurrentPage or data:view.url == data:link.href or data:view.url == path(data:blog.homepageUrl, data:link.href)' name='active'/><span itemprop='name'><data:link.title/></span></a></b:switch></b:loop>&lt;/li&gt;</ul>
     </b:includable>
     <b:includable id='JetSearch'>
-      <b:class name='d-flex align-self-stretch align-items-center order-lg-1'/>
-      <b:tag class='position-relative pe-1 border-end jt-border-light' cond='data:links' name='div'><b:loop values='data:links' var='link'><a expr:aria-label='data:link.name' expr:class='&quot;px-2 text-reset i-&quot; + data:link.name' expr:href='data:link.target' rel='noopener' target='_blank'><svg aria-hidden='true' height='1em' style='vertical-align:-.15em' width='1em'><use expr:xlink:href='&quot;#i-&quot; + data:link.name'/></svg></a></b:loop></b:tag>
-      <div class='d-flex ps-1 align-self-stretch align-items-center position-md-relative'>
-        <label aria-label='Toggle Dark Mode' class='px-2 fs-5' id='dark-toggler'><i class='icon-mode' style='vertical-align:-.15em'/></label>
+      <b:class name='d-flex align-self-stretch align-items-center order-lg-1 ms-auto'/>
+      <b:tag class='d-flex pe-1 border-end jt-border-light' cond='data:links' name='div'><b:loop values='data:links' var='link'><a expr:aria-label='data:link.name' expr:class='&quot;px-2 text-reset jt-icon-center i-&quot; + data:link.name' expr:href='data:link.target' rel='noopener' target='_blank'><svg aria-hidden='true' class='jt-icon'><use expr:xlink:href='&quot;#i-&quot; + data:link.name'/></svg></a></b:loop></b:tag>
+      <div class='d-flex align-self-stretch align-items-center ps-1'>
+        <label aria-label='Toggle Dark Mode' class='p-2 jt-icon-center' id='dark-toggler'><i class='icon-mode jt-icon'/></label>
       </div>
       <div class='d-flex align-self-stretch align-items-center position-md-relative' id='search-header'>
         <input class='d-none' id='search-toggle' type='checkbox'/>
-        <label aria-label='Toggle search' class='px-2 fs-5 check-text-primary hover-text-primary' for='search-toggle' id='search-toggler'><svg aria-hidden='true' height='1em' style='vertical-align:-.15em' width='1em'><use xlink:href='#i-search'/></svg></label>
+        <label aria-label='Toggle search' class='p-2 check-text-primary hover-text-primary jt-icon-center' for='search-toggle' id='search-toggler'><svg aria-hidden='true' class='fs-5 jt-icon'><use xlink:href='#i-search'/></svg></label>
         <div class='dropdown-menu p-1 jt-border-light shadow-sm d-block-check'>
           <form class='input-group' expr:action='data:blog.searchUrl' method='GET' target='_top'> 
             <input class='form-control fs-7 border-0 rounded-0 bg-transparent text-reset' expr:value='data:view.isSearch ? data:view.search.query : &quot;&quot;' id='search-input' name='q' placeholder='Enter your search' required='required' type='text'/>
@@ -825,8 +847,8 @@ blogTitle = &quot;<data:blog.title/>&quot;;
           </form>
         </div>
       </div>
-      <div class='d-lg-none position-relative'>
-        <label aria-label='Toggle navigation' class='d-flex p-1 fs-3 hover-text-primary' for='navbar-toggle' id='navbar-toggler'><svg aria-hidden='true' height='1em' style='vertical-align:-.15em' width='1em'><use xlink:href='#i-menu'/></svg></label>
+      <div class='d-flex align-self-stretch align-items-center d-lg-none'>
+        <label aria-label='Toggle navigation' class='p-1 jt-icon-center hover-text-primary' for='navbar-toggle' id='navbar-toggler'><svg aria-hidden='true' class='fs-3 jt-icon'><use xlink:href='#i-menu'/></svg></label>
       </div>
     </b:includable>
     <b:includable id='JetCopyRight'>
@@ -867,16 +889,16 @@ blogTitle = &quot;<data:blog.title/>&quot;;
 </b:tag>
 <p class='item-snippet mb-3'><b:eval expr='data:post.snippets.short snippet { links: false }'/></p>
 <div class='item-meta text-secondary d-flex flex-wrap fw-light'>
-<small class='me-2'><svg aria-hidden='true' class='me-1' height='1em' style='vertical-align:-.15em' width='1em'><use xlink:href='#i-user'/></svg><data:post.author.name/>
+<small class='me-2'><svg aria-hidden='true' class='me-1 jt-icon'><use xlink:href='#i-user'/></svg><data:post.author.name/>
 </small>
-<small class='me-2'><svg aria-hidden='true' class='me-1' height='1em' style='vertical-align:-.15em' width='1em'><use xlink:href='#i-clock'/></svg><b:eval expr='data:post.lastUpdated format &quot;d MMM, yyyy&quot;'/>
+<small class='me-2'><svg aria-hidden='true' class='me-1 jt-icon'><use xlink:href='#i-clock'/></svg><b:eval expr='data:post.lastUpdated format &quot;d MMM, yyyy&quot;'/>
 </small>
 <b:if cond='data:post.numberOfComments gt 0'>
-<small><svg aria-hidden='true' class='me-1' height='1em' style='vertical-align:-.15em' width='1em'><use xlink:href='#i-comment'/></svg><data:post.numberOfComments/></small>
+<small><svg aria-hidden='true' class='me-1 jt-icon'><use xlink:href='#i-comment'/></svg><data:post.numberOfComments/></small>
 </b:if>
 </div>
 <span expr:class='&quot;position-absolute top-0 end-0 &quot; + data:post.adminClass'>
-<a class='btn btn-sm jt-btn-light rounded-pill' expr:href='&quot;https://www.blogger.com/blog/post/edit/&quot; + data:blog.blogId + &quot;/&quot; + data:post.id' rel='nofollow noopener noreferrer' target='_blank' title='Edit post'><svg aria-hidden='true' height='1em' style='vertical-align:-.15em' width='1em'><use xlink:href='#i-edit'/></svg></a>
+<a class='btn btn-sm jt-btn-light rounded-pill jt-icon-center' expr:href='&quot;https://www.blogger.com/blog/post/edit/&quot; + data:blog.blogId + &quot;/&quot; + data:post.id' rel='nofollow noopener noreferrer' target='_blank' title='Edit post'><svg aria-hidden='true' class='jt-icon'><use xlink:href='#i-edit'/></svg></a>
 </span>
 </div>
 </div>
@@ -887,12 +909,12 @@ blogTitle = &quot;<data:blog.title/>&quot;;
 <div class='d-sm-flex border-top border-bottom jt-border-light mb-5' id='post-pager'>
 <b:if cond='data:newerPageUrl'>
 <a class='d-block prev-page col-sm-6 py-3 pe-sm-3 border-sm-bottom jt-border-light text-reset text-center text-sm-start text-decoration-none' expr:href='data:newerPageUrl'>
-<span class='d-block pe-2 fs-8 fw-bold jt-text-primary'><svg aria-hidden='true' height='1em' style='vertical-align:-.15em' width='1em'><use xlink:href='#i-arrow-l'/></svg>Next Post</span>
+<span class='d-block pe-2 fs-7 fw-light'><svg aria-hidden='true' class='jt-icon'><use xlink:href='#i-arrow-l'/></svg>Next Post</span>
 </a>
 </b:if>
 <b:if cond='data:olderPageUrl'>
 <a class='d-block next-page col-sm-6 py-3 ps-sm-3 jt-border-light text-center text-sm-end text-reset text-decoration-none ms-auto' expr:href='data:olderPageUrl'>
-<span class='d-block ps-2 fs-8 fw-bold jt-text-primary'>Previous Post <svg aria-hidden='true' height='1em' style='vertical-align:-.15em' width='1em'><use xlink:href='#i-arrow-r'/></svg></span>
+<span class='d-block ps-2 fs-7 fw-light'>Previous Post <svg aria-hidden='true' class='jt-icon'><use xlink:href='#i-arrow-r'/></svg></span>
 </a>
 </b:if>
 </div>
@@ -939,16 +961,16 @@ blogTitle = &quot;<data:blog.title/>&quot;;
 <h3 class='item-title mb-4 fs-2'><a class='text-reset text-decoration-none' expr:href='data:post.url'><data:post.title/></a></h3>
 <p class='item-snippet mb-3'><b:eval expr='data:post.snippets.short snippet { links: false }'/></p>
 <div class='item-meta text-secondary d-flex flex-wrap fw-light'>
-<small class='me-2'><svg aria-hidden='true' class='me-1' height='1em' style='vertical-align:-.15em' width='1em'><use xlink:href='#i-user'/></svg><data:post.author.name/>
+<small class='me-2'><svg aria-hidden='true' class='me-1 jt-icon'><use xlink:href='#i-user'/></svg><data:post.author.name/>
 </small>
-<small class='me-2'><svg aria-hidden='true' class='me-1' height='1em' style='vertical-align:-.15em' width='1em'><use xlink:href='#i-clock'/></svg><b:eval expr='data:post.lastUpdated format &quot;d MMM, yyyy&quot;'/>
+<small class='me-2'><svg aria-hidden='true' class='me-1 jt-icon'><use xlink:href='#i-clock'/></svg><b:eval expr='data:post.lastUpdated format &quot;d MMM, yyyy&quot;'/>
 </small>
 <b:if cond='data:post.numberOfComments gt 0'>
-<small><svg aria-hidden='true' class='me-1' height='1em' style='vertical-align:-.15em' width='1em'><use xlink:href='#i-comment'/></svg><data:post.numberOfComments/></small>
+<small><svg aria-hidden='true' class='me-1 jt-icon'><use xlink:href='#i-comment'/></svg><data:post.numberOfComments/></small>
 </b:if>
 </div>
 <span class='position-absolute top-0 end-0 blog-admin'>
-<a class='btn btn-sm jt-btn-light rounded-pill' expr:href='&quot;https://www.blogger.com/blog/post/edit/&quot; + data:blog.blogId + &quot;/&quot; + data:post.id' rel='nofollow noopener noreferrer' target='_blank' title='Edit post'><svg aria-hidden='true' height='1em' style='vertical-align:-.15em' width='1em'><use xlink:href='#i-edit'/></svg></a>
+<a class='btn btn-sm jt-btn-light rounded-pill jt-icon-center' expr:href='&quot;https://www.blogger.com/blog/post/edit/&quot; + data:blog.blogId + &quot;/&quot; + data:post.id' rel='nofollow noopener noreferrer' target='_blank' title='Edit post'><svg aria-hidden='true' class='jt-icon'><use xlink:href='#i-edit'/></svg></a>
 </span>
 </div>
 </div>
@@ -985,7 +1007,7 @@ blogTitle = &quot;<data:blog.title/>&quot;;
 <b:if cond='data:view.isMultipleItems and !data:view.search.query and !data:view.search.label and !data:view.isArchive'>
 <b:tag class='widget-title fs-6 mb-3 text-uppercase fw-light' expr:name='data:view.isHomepage ? &quot;h2&quot; : &quot;div&quot;'><span>Latest Posts</span></b:tag>
 <b:else/>
-<div itemscope='itemscope' itemtype='https://schema.org/BreadcrumbList' style='--bs-breadcrumb-divider: url(&quot;data:image/svg+xml,%3Csvg xmlns=&apos;http://www.w3.org/2000/svg&apos; height=&apos;8&apos; width=&apos;8&apos; fill=&apos;none&apos; viewbox=&apos;0 0 24 24&apos; stroke=&apos;%236c757d&apos;%3E%3Cpath stroke-linecap=&apos;round&apos; stroke-linejoin=&apos;round&apos; stroke-width=&apos;1&apos; d=&apos;M 0.5,0.5 4,4 0.5,7.5&apos;/%3E%3C/svg%3E&quot;);'>
+<div itemscope='itemscope' itemtype='https://schema.org/BreadcrumbList' style='--bs-breadcrumb-divider: url(&quot;data:image/svg+xml,%3Csvg xmlns=&apos;http://www.w3.org/2000/svg&apos; height=&apos;8&apos; width=&apos;8&apos; fill=&apos;none&apos; viewbox=&apos;0 0 24 24&apos; stroke=&apos;%23686868&apos;%3E%3Cpath stroke-linecap=&apos;round&apos; stroke-linejoin=&apos;round&apos; stroke-width=&apos;1&apos; d=&apos;M 0.5,0.5 4,4 0.5,7.5&apos;/%3E%3C/svg%3E&quot;);'>
 <ol class='breadcrumb text-nowrap fs-7 overflow-hidden'>
 <b:if cond='data:view.search.query'>
   <li class='breadcrumb-item'>Search for: <data:view.search.query/></li>
@@ -1049,13 +1071,13 @@ blogTitle = &quot;<data:blog.title/>&quot;;
 <span class='d-block fs-7 fw-bold'>
 <data:commentLevel1.author/>
 <b:if cond='data:commentLevel1.authorUrl == data:post.author.profileUrl'>
-<svg aria-hidden='true' height='1em' style='vertical-align:-.15em' width='1em'><use xlink:href='#i-check'/></svg>
+<svg aria-hidden='true' class='jt-icon'><use xlink:href='#i-check'/></svg>
 </b:if>
 </span>
 <span class='d-inline-block fw-light text-secondary fs-8'><data:commentLevel1.timestamp/></span>
 </div>
 <span expr:class='&quot;delete-comment &quot; + data:commentLevel1.adminClass'>
-<a aria-label='Delete' class='btn btn-sm jt-btn-light rounded-pill' expr:href='data:commentLevel1.deleteUrl' rel='nofollow noopener noreferrer' target='_blank'><svg aria-hidden='true' height='1em' style='vertical-align:-.15em' width='1em'><use xlink:href='#i-close'/></svg></a>
+<a aria-label='Delete' class='btn btn-sm jt-btn-light rounded-pill jt-icon-center' expr:href='data:commentLevel1.deleteUrl' rel='nofollow noopener noreferrer' target='_blank'><svg aria-hidden='true' class='jt-icon'><use xlink:href='#i-close'/></svg></a>
 </span>
 </div>
 <div class='comment-content fs-7 jt-bg-light p-3 rounded mb-3'><p class='mb-0'><b:eval expr='data:commentLevel1.body snippet { links: false }'/></p></div>
@@ -1077,13 +1099,13 @@ blogTitle = &quot;<data:blog.title/>&quot;;
 <span class='d-block fs-7 fw-bold'>
 <data:commentLevel2.author/>
 <b:if cond='data:commentLevel2.authorUrl == data:post.author.profileUrl'>
-<svg aria-hidden='true' height='1em' style='vertical-align:-.15em' width='1em'><use xlink:href='#i-check'/></svg>
+<svg aria-hidden='true' class='jt-icon'><use xlink:href='#i-check'/></svg>
 </b:if>
 </span>
 <span class='d-inline-block fw-light text-secondary fs-8'><data:commentLevel2.timestamp/></span>
 </div>
 <span expr:class='&quot;delete-comment &quot; + data:commentLevel2.adminClass'>
-<a aria-label='Delete' class='btn btn-sm jt-btn-light rounded-pill' expr:href='data:commentLevel2.deleteUrl' rel='nofollow noopener noreferrer' target='_blank'><svg aria-hidden='true' height='1em' style='vertical-align:-.15em' width='1em'><use xlink:href='#i-close'/></svg></a>
+<a aria-label='Delete' class='btn btn-sm jt-btn-light rounded-pill jt-icon-center' expr:href='data:commentLevel2.deleteUrl' rel='nofollow noopener noreferrer' target='_blank'><svg aria-hidden='true' class='jt-icon'><use xlink:href='#i-close'/></svg></a>
 </span>
 </div>
 <div class='comment-content fs-7 jt-bg-light p-3 rounded mb-3'><p class='mb-0'><b:eval expr='data:commentLevel2.body snippet { links: false }'/></p></div>
@@ -1104,7 +1126,7 @@ blogTitle = &quot;<data:blog.title/>&quot;;
 </b:if>
 <b:if cond='data:post.allowNewComments'>
 <div id='add-comment'>
-<a class='btn btn-sm jt-btn-primary border-2 fw-bold py-2 px-5' expr:href='data:post.commentFormIframeSrc appendParams {skin: &quot;contempo&quot;}' id='comment-button' rel='nofollow noopener noreferrer' target='_blank'><svg aria-hidden='true' class='me-1' height='1em' style='vertical-align:-.15em' width='1em'><use xlink:href='#i-comment'/></svg>Add Comment</a>
+<a class='btn btn-sm jt-btn-primary border-2 fw-bold py-2 px-5' expr:href='data:post.commentFormIframeSrc appendParams {skin: &quot;contempo&quot;}' id='comment-button' rel='nofollow noopener noreferrer' target='_blank'><svg aria-hidden='true' class='me-1 fs-6 jt-icon'><use xlink:href='#i-comment'/></svg>Add Comment</a>
 <div class='mt-3 px-2 pt-2 jt-bg-light rounded d-none' id='threaded-comment-form'>
 <a class='d-none' href='#' id='comment-editor-src'>comment url</a>
 <iframe class='blogger-iframe-colorize blogger-comment-from-post' data-resized='true' height='90' id='comment-editor' name='comment-editor'/>
@@ -1118,13 +1140,13 @@ blogTitle = &quot;<data:blog.title/>&quot;;
     <b:includable id='JetShare' var='post'>
       <div class='social-share mb-3'>
         <div class='d-flex fs-5'>
-          <a class='list-inline-item mb-2 btn btn-sm text-white rounded-pill' expr:href='&quot;https://www.facebook.com/sharer.php?u=&quot; + data:post.url' rel='nofollow noopener noreferrer' style='background-color:#3b5998' target='_blank' title='Facebook Share'><svg aria-hidden='true' height='1em' style='vertical-align:-.15em' width='1em'><use xlink:href='#i-facebook'/></svg></a>
-          <a class='list-inline-item mb-2 btn btn-sm text-white rounded-pill' expr:href='&quot;https://twitter.com/intent/tweet?url=&quot; + data:blog.url' rel='nofollow noopener noreferrer' style='background-color:#55acee' target='_blank' title='Tweet This'><svg aria-hidden='true' height='1em' style='vertical-align:-.15em' width='1em'><use xlink:href='#i-twitter'/></svg></a>
-          <a class='list-inline-item mb-2 btn btn-sm text-white rounded-pill' expr:href='&quot;https://pinterest.com/pin/create/button/?url=&quot; + data:post.url + &quot;&amp;media=&quot; + data:post.thumbnailUrl' rel='nofollow noopener noreferrer' style='background-color:#cb2027' target='_blank' title='Pin It'><svg aria-hidden='true' height='1em' style='vertical-align:-.15em' width='1em'><use xlink:href='#i-pinterest'/></svg></a>
-          <a class='list-inline-item mb-2 btn btn-sm text-white rounded-pill' expr:href='&quot;https://www.linkedin.com/sharing/share-offsite/?url=&quot; + data:post.url' rel='nofollow noopener noreferrer' style='background-color:#2554bf' target='_blank' title='Linkedin Share'><svg aria-hidden='true' height='1em' style='vertical-align:-.15em' width='1em'><use xlink:href='#i-linkedin'/></svg></a>
-          <a class='list-inline-item mb-2 btn btn-sm text-white rounded-pill' expr:href='&quot;https://www.tumblr.com/share/link?url=&quot; + data:post.url' rel='nofollow noopener noreferrer' style='background-color:#314358' target='_blank' title='Tumblr Share'><svg aria-hidden='true' height='1em' style='vertical-align:-.15em' width='1em'><use xlink:href='#i-tumblr'/></svg></a>
-          <a class='list-inline-item mb-2 btn btn-sm text-white rounded-pill' expr:href='&quot;https://wa.me/?text=&quot;+ data:post.url' onclick='window.parent.null' rel='nofollow noopener noreferrer' style='background-color:#25d366' target='_blank' title='Share to whatsapp'><svg aria-hidden='true' height='1em' style='vertical-align:-.15em' width='1em'><use xlink:href='#i-whatsapp'/></svg></a>
-		  <a class='list-inline-item mb-2 btn btn-sm text-white rounded-pill' expr:href='&quot;https://t.me/share/url?url=&quot; + data:post.url' onclick='window.parent.null' rel='nofollow noopener noreferrer' style='background-color:#0088cc' target='_blank' title='Share to telegram'><svg aria-hidden='true' height='1em' style='vertical-align:-.15em' width='1em'><use xlink:href='#i-telegram'/></svg></a>
+          <a class='me-2 mb-2 btn btn-sm jt-icon-center text-white rounded-pill' expr:href='&quot;https://www.facebook.com/sharer.php?u=&quot; + data:post.url' rel='nofollow noopener noreferrer' style='background-color:#3b5998' target='_blank' title='Facebook Share'><svg aria-hidden='true' class='jt-icon'><use xlink:href='#i-facebook'/></svg></a>
+<a class='me-2 mb-2 btn btn-sm jt-icon-center text-white rounded-pill' expr:href='&quot;https://twitter.com/intent/tweet?url=&quot; + data:blog.url' rel='nofollow noopener noreferrer' style='background-color:#55acee' target='_blank' title='Tweet This'><svg aria-hidden='true' class='jt-icon'><use xlink:href='#i-twitter'/></svg></a>
+<a class='me-2 mb-2 btn btn-sm jt-icon-center text-white rounded-pill' expr:href='&quot;https://pinterest.com/pin/create/button/?url=&quot; + data:post.url + &quot;&amp;media=&quot; + data:post.thumbnailUrl' rel='nofollow noopener noreferrer' style='background-color:#cb2027' target='_blank' title='Pin It'><svg aria-hidden='true' class='jt-icon'><use xlink:href='#i-pinterest'/></svg></a>
+<a class='me-2 mb-2 btn btn-sm jt-icon-center text-white rounded-pill' expr:href='&quot;https://www.linkedin.com/sharing/share-offsite/?url=&quot; + data:post.url' rel='nofollow noopener noreferrer' style='background-color:#2554bf' target='_blank' title='Linkedin Share'><svg aria-hidden='true' class='jt-icon'><use xlink:href='#i-linkedin'/></svg></a>
+<a class='me-2 mb-2 btn btn-sm jt-icon-center text-white rounded-pill' expr:href='&quot;https://www.tumblr.com/share/link?url=&quot; + data:post.url' rel='nofollow noopener noreferrer' style='background-color:#314358' target='_blank' title='Tumblr Share'><svg aria-hidden='true' class='jt-icon'><use xlink:href='#i-tumblr'/></svg></a>
+<a class='me-2 mb-2 btn btn-sm jt-icon-center text-white rounded-pill' expr:href='&quot;https://wa.me/?text=&quot;+ data:post.url' onclick='window.parent.null' rel='nofollow noopener noreferrer' style='background-color:#25d366' target='_blank' title='Share to whatsapp'><svg aria-hidden='true' class='jt-icon'><use xlink:href='#i-whatsapp'/></svg></a>
+<a class='me-2 mb-2 btn btn-sm jt-icon-center text-white rounded-pill' expr:href='&quot;https://t.me/share/url?url=&quot; + data:post.url' onclick='window.parent.null' rel='nofollow noopener noreferrer' style='background-color:#0088cc' target='_blank' title='Share to telegram'><svg aria-hidden='true' class='jt-icon'><use xlink:href='#i-telegram'/></svg></a>
         </div>
       </div>
     </b:includable>
@@ -1163,12 +1185,12 @@ blogTitle = &quot;<data:blog.title/>&quot;;
 <header class='entry-header mb-3'>
 <h1 class='entry-title mb-4'><data:post.title/></h1>
 <div class='entry-meta mb-3 text-secondary d-flex flex-wrap fw-light'>
-<div class='me-3'><svg aria-hidden='true' class='me-1' height='1em' style='vertical-align:-.15em' width='1em'><use xlink:href='#i-user'/></svg><data:post.author.name/>
+<div class='me-3'><svg aria-hidden='true' class='me-1 jt-icon'><use xlink:href='#i-user'/></svg><data:post.author.name/>
 </div>
-<div class='me-3'><svg aria-hidden='true' class='me-1' height='1em' style='vertical-align:-.15em' width='1em'><use xlink:href='#i-clock'/></svg><b:eval expr='data:post.lastUpdated format &quot;d MMM, yyyy&quot;'/>
+<div class='me-3'><svg aria-hidden='true' class='me-1 jt-icon'><use xlink:href='#i-clock'/></svg><b:eval expr='data:post.lastUpdated format &quot;d MMM, yyyy&quot;'/>
 </div>
 <b:if cond='data:post.numberOfComments gt 0'>
-<div><svg aria-hidden='true' class='me-1' height='1em' style='vertical-align:-.15em' width='1em'><use xlink:href='#i-comment'/></svg><data:post.numberOfComments/></div>
+<div><svg aria-hidden='true' class='me-1 jt-icon'><use xlink:href='#i-comment'/></svg><data:post.numberOfComments/></div>
 </b:if>
 </div>
 </header>
@@ -1205,7 +1227,7 @@ blogTitle = &quot;<data:blog.title/>&quot;;
 </b:if>
 </article>
 <div expr:class='&quot;position-fixed start-0 top-50 &quot; + data:post.adminClass'>
-<a class='d-block btn btn-sm jt-btn-light rounded-0' expr:href='&quot;https://www.blogger.com/blog/posts/&quot; + data:blog.blogId' rel='nofollow noopener noreferrer' target='_blank' title='Dashboard'><svg aria-hidden='true' height='1em' style='vertical-align:-.15em' width='1em'><use xlink:href='#i-menu'/></svg></a><a class='d-block btn btn-sm jt-btn-light rounded-0' expr:href='&quot;https://www.blogger.com/blog/post/edit/&quot; + data:blog.blogId + &quot;/&quot; + data:post.id' rel='nofollow noopener noreferrer' target='_blank' title='Edit post'><svg aria-hidden='true' height='1em' style='vertical-align:-.15em' width='1em'><use xlink:href='#i-edit'/></svg></a>
+<a class='d-block btn btn-sm jt-btn-light rounded-0' expr:href='&quot;https://www.blogger.com/blog/posts/&quot; + data:blog.blogId' rel='nofollow noopener noreferrer' target='_blank' title='Dashboard'><svg aria-hidden='true' class='jt-icon'><use xlink:href='#i-menu'/></svg></a><a class='d-block btn btn-sm jt-btn-light rounded-0' expr:href='&quot;https://www.blogger.com/blog/post/edit/&quot; + data:blog.blogId + &quot;/&quot; + data:post.id' rel='nofollow noopener noreferrer' target='_blank' title='Edit post'><svg aria-hidden='true' class='jt-icon'><use xlink:href='#i-edit'/></svg></a>
 </div>
     </b:includable>
     <b:includable id='JetPage' var='post'>
@@ -1218,15 +1240,16 @@ blogTitle = &quot;<data:blog.title/>&quot;;
 </div>
 </article>
 <div expr:class='&quot;position-fixed start-0 top-50 &quot; + data:post.adminClass'>
-<a class='d-block btn btn-sm jt-btn-light rounded-0' expr:href='&quot;https://www.blogger.com/blog/pages/&quot; + data:blog.blogId' rel='nofollow noopener noreferrer' target='_blank' title='Dashboard'><svg aria-hidden='true' height='1em' style='vertical-align:-.15em' width='1em'><use xlink:href='#i-menu'/></svg></a><a class='d-block btn btn-sm jt-btn-light rounded-0' expr:href='&quot;https://www.blogger.com/blog/page/edit/&quot; + data:blog.blogId + &quot;/&quot; + data:post.id' rel='nofollow noopener noreferrer' target='_blank' title='Edit post'><svg aria-hidden='true' height='1em' style='vertical-align:-.15em' width='1em'><use xlink:href='#i-edit'/></svg></a>
+<a class='d-block btn btn-sm jt-btn-light rounded-0' expr:href='&quot;https://www.blogger.com/blog/pages/&quot; + data:blog.blogId' rel='nofollow noopener noreferrer' target='_blank' title='Dashboard'><svg aria-hidden='true' class='jt-icon'><use xlink:href='#i-menu'/></svg></a><a class='d-block btn btn-sm jt-btn-light rounded-0' expr:href='&quot;https://www.blogger.com/blog/page/edit/&quot; + data:blog.blogId + &quot;/&quot; + data:post.id' rel='nofollow noopener noreferrer' target='_blank' title='Edit post'><svg aria-hidden='true' class='jt-icon'><use xlink:href='#i-edit'/></svg></a>
 </div>
     </b:includable>
 	<b:includable id='JetRelatedPost' var='post'>
 <b:if cond='data:post.labels'>
-<div class='custom-posts visually-hidden related-posts' data-func='related_temp' data-items='4' data-title='Related Post' expr:data-no-item='data:post.url'><b:with value='data:post.labels where (l =&gt; l.name not contains &quot;#&quot;)' var='labels'><b:loop index='i' values='data:labels' var='label'><data:label.name/><b:if cond='data:i != data:labels.size - 1 '>,</b:if></b:loop></b:with></div>
+<div class='custom-posts visually-hidden related-posts' data-func='related_temp' data-items='10' data-shuffle='4' data-title='Related Post' expr:data-no-item='data:post.url'><b:with value='data:post.labels where (l =&gt; l.name not contains &quot;#&quot;)' var='labels'><b:loop index='i' values='data:labels' var='label'><data:label.name/><b:if cond='data:i != data:labels.size - 1 '>,</b:if></b:loop></b:with></div>
 </b:if>
 </b:includable>
     <b:includable id='JetBlog'>
+      
       <b:if cond='data:view.isError OR data:numPosts == 0'>
         <b:include name='JetBreadcrumbs'/>
         <b:include name='Jet404'/>
@@ -1461,9 +1484,22 @@ blogTitle = &quot;<data:blog.title/>&quot;;
   </b:defaultmarkup>
 </b:defaultmarkups>
 <script>//<![CDATA[
-function related_temp(e){return`${e.title?`<div class='widget-title mb-3 text-uppercase fw-light'><span>${e.title}</span></div>`:``}<div class='row row-cols-sm-2'>${e.posts.map(function(data,i){return`<article class='mb-4'><div class='h-100 overflow-hidden rounded position-relative border jt-border-light bg-archive shadow-sm'>${data.img?`<div class='item-thumbnail'><a class='jt-bg-light d-block ratio ratio-21x9' href='${data.url}'><img alt='${data.title}' class='object-cover lazy-${data.grup_id} lazyload' data-src='${data.img}' loading='lazy' src='data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=='/></a></div>`: ``}<div class='item-content p-4'><h2 class='item-title fs-6 mb-2' itemprop='headline'><a class='text-reset text-decoration-none' href='${data.url}'>${data.title}</a></h2><div class='item-meta text-secondary d-flex flex-wrap fw-light'><small class='me-2'><svg aria-hidden='true' class='me-1' height='1em' style='vertical-align:-.15em' width='1em'><use xlink:href='#i-user'/></svg>${data.author}</small><small class='me-2'><svg aria-hidden='true' class='me-1' height='1em' style='vertical-align:-.15em' width='1em'><use xlink:href='#i-clock'/></svg>${data.date}</small></div></div></div></article>`}).join('')}</div>`}function toc_temp(e){var hc=0;var l=1;return`<div id='toc-post' class="position-relative p-4 mb-4 border-bottom border-5 jt-border-light"><input id="toc-toggle" class="d-none" autocomplete="off" type="checkbox"/><label for="toc-toggle" id="toc-toggler" class="toc-toggler d-flex align-items-center"><span class="fw-light">On this Content</span><span class="dropdown-toggle ms-auto"></span></label>${e.map(function(data,i){var n=data.level;var text='';if(i==0){text +='<ul class="mb-0 ps-3 pt-3 d-none-check fs-7">'}else if(hc<n){text +='<ul class="mb-3 ps-3 pt-3 fs-8"><li>';l++}else if(hc>n&&l>1){for(var m=0;m<hc-n;m++){text +='</li></ul>'}l--}hc=n;text +=i>0?'</li>':'';text +='<li class="mb-2">';text +='<a class="text-reset text-decoration-none hover-text-primary" href="#'+data.id+'">'+data.title+'</a>';if(i==e.length-1){for(var j=1;j<hc;j++){text +='</li></ul>'}}return text}).join('').replace(/<li>\s*<\/li>/ig,'')}</div>`}function sitemap_temp(e){return`<div class='accordion'>${e.categories.map(function(data,i){return`<div class='accordion-item'><input ${i==0?'checked':''} id='sitemap-list-${i}' name='sitemap' type='radio' class='d-none'/><label for='sitemap-list-${i}' class='accordion-header accordion-button collapsed'>${data.term}</label><div class='accordion-collapse collapse border-top jt-border-light d-block-check'><div class='accordion-body'><div class='sitemap-list' data-label='${data.term}' data-func='sitemap_list_temp' data-items='9999'><div class='text-center'><div class='spinner-grow text-light' role='status'><span class='visually-hidden'>Loading...</span></div></div></div></div></div></div>`}).join('')}</div>`}function sitemap_list_temp(e){return`<ul class="list-unstyled fs-7">${e.posts.map(function(data,i){return`<li class="mb-2"><a href="${data.url}">${data.title}</a></li>`}).join('')}</ul>`}function sitemap_cb(e){var sm='.sitemap-list';if(document.querySelector(sm) !==null){Defer.dom(sm,100,'loaded',jo.loadCustomPosts)}}function jtCallback(){if(document.getElementById('page-skin-1') == null){Defer.css('https://www.blogger.com/dyn-css/authorization.css?targetBlogID='+blogId,'admin-css',100)}}
+!function(r,i,t){var u,o=/^data-(.+)/,a='IntersectionObserver',c=/p/.test(i.readyState),s=[],f=s.slice,l='lazied',n='load',e='pageshow',d='forEach',h='hasAttribute',m='shift';function v(e){i.head.appendChild(e)}function p(e,n){f.call(e.attributes)[d](n)}function y(e,n,t,o){return o=(o=n?i.getElementById(n):o)||i.createElement(e),n&&(o.id=n),t&&(o.onload=t),o}function b(e,n){return f.call((n||i).querySelectorAll(e))}function I(t,e){b('source',t)[d](I),p(t,function(e,n){(n=o.exec(e.name))&&(t[n[1]]=e.value)}),e&&(t.className+=' '+e),n in t&&t[n]()}function g(e){u(function(o){o=b(e||'[type=deferjs]'),function e(n,t){(n=o[m]())&&(n.parentNode.removeChild(n),(t=y(n.nodeName)).text=n.text,p(n,function(e){'type'!=e.name&&(t[e.name]=e.value)}),t.src&&!t[h]('async')?(t.onload=t.onerror=e,v(t)):(v(t),e()))}()})}(u=function(e,n){c?t(e,n):s.push(e,n)}).all=g,u.js=function(n,t,e,o){u(function(e){(e=y('SCRIPT',t,o)).src=n,v(e)},e)},u.css=function(n,t,e,o){u(function(e){(e=y('LINK',t,o)).rel='stylesheet',e.href=n,v(e)},e)},u.dom=function(e,n,t,z,o,i){function c(e){o&&!1===o(e)||I(e,t)}u(function(t){t=a in r&&new r[a](function(e){e[d](function(e,n){e.isIntersecting&&(n=e.target)&&(z&&z(n),t.unobserve(n),c(n))})},i),b(e||'[data-src]')[d](function(e){e[h](l)||(e.setAttribute(l,''),t?t.observe(e):c(e))})},n)},u.reveal=I,r.Defer=u,r.addEventListener('on'+e in r?e:n,function(){for(g();s[0];t(s[m](),s[m]()))c=1})}(this,document,setTimeout);'IntersectionObserver' in window||document.write('<script src="https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver"><\/script>');function related_temp(a){return`${a.title?`<div class='widget-title mb-3 text-uppercase fw-light'><span>${a.title}</span></div>`:``}<div class='row row-cols-sm-2'>${a.posts.map(function(a){return`<article class='mb-4'><div class='h-100 overflow-hidden rounded position-relative border jt-border-light bg-archive shadow-sm'>${a.img?`<div class='item-thumbnail'><a class='jt-bg-light d-block ratio ratio-21x9' href='${a.url}'><img alt='${a.title}' class='object-cover lazy-${a.grup_id} lazyload' data-src='${a.img}' loading='lazy' src='data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=='/></a></div>`:``}<div class='item-content p-4'><h2 class='item-title fs-6 mb-2' itemprop='headline'><a class='text-reset text-decoration-none' href='${a.url}'>${a.title}</a></h2><div class='item-meta text-secondary d-flex flex-wrap fw-light'><small class='me-2'><svg aria-hidden='true' class='me-1 jt-icon'><use xlink:href='#i-user'/></svg>${a.author}</small><small class='me-2'><svg aria-hidden='true' class='me-1 jt-icon'><use xlink:href='#i-clock'/></svg>${a.date}</small></div></div></div></article>`}).join("")}</div>`}function sitemap_temp(a){return`<div class='accordion'>${a.categories.map(function(a,b){return`<div class='accordion-item'><input ${0==b?"checked":""} id='sitemap-list-${b}' name='sitemap' type='radio' class='d-none'/><label for='sitemap-list-${b}' class='accordion-header accordion-button collapsed'>${a.term}</label><div class='accordion-collapse collapse border-top jt-border-light d-block-check'><div class='accordion-body'><div class='sitemap-list' data-label='${a.term}' data-func='sitemap_list_temp' data-items='9999'><div class='text-center'><div class='spinner-grow text-light' role='status'><span class='visually-hidden'>Loading...</span></div></div></div></div></div></div>`}).join("")}</div>`}function sitemap_list_temp(a){return`<ul class="list-unstyled fs-7">${a.posts.map(function(a){return`<li class="mb-2"><a href="${a.url}">${a.title}</a></li>`}).join("")}</ul>`}function sitemap_cb(){null!==document.querySelector(".sitemap-list")&&Defer.dom(".sitemap-list",100,"loaded",jo.loadCustomPosts)}function related_inline_temp(a){return`<div class='px-3 py-2 mb-4 border border-3 jt-border-light rounded'>${a.title?`<div class='fw-light pb-3'><span>${a.title}</span></div>`:``}<ul class='ps-3 fw-bold'>${a.posts.map(function(a){return`<li class='mb-2'><a class='text-decoration-none' href='${a.url}'>${a.title}</a></li>`}).join("")}</ul></div>`}function toc_temp(a){var b=0,c=1;return`<div id='toc-post' class="d-inline-block px-3 py-2 mb-4 jt-bg-light rounded"><input id="toc-toggle" class="d-none" autocomplete="off" type="checkbox"/><label for="toc-toggle" id="toc-toggler" class="toc-toggler d-flex align-items-center"><span class="fw-light pe-3">On this Content</span><span class="dropdown-toggle ms-auto"></span></label>${a.map(function(d,e){var f=d.level,g="";if(0==e)g+="<ul class=\"ps-3 pt-3 d-none d-block-check fs-7\">";else if(b<f)g+="<ul class=\"ps-3 pt-2 fs-8\"><li>",c++;else if(b>f&&1<c){for(var h=0;h<b-f;h++)g+="</li></ul>";c--}if(b=f,g+=0<e?"</li>":"",g+="<li class=\"mb-2\">",g+="<a class=\"text-reset text-decoration-none hover-text-primary\" href=\"#"+d.id+"\">"+d.title+"</a>",e==a.length-1)for(var i=1;i<b;i++)g+="</li></ul>";return g}).join("").replace(/<li>\s*<\/li>/ig,"")}</div>`}
+
+function jtCallback(){
+if(document.getElementById('page-skin-1') === null){Defer.css('https://www.blogger.com/dyn-css/authorization.css?targetBlogID='+blogId,'admin-css',100)}
+
+/*Your Script is here to maintain performance.*/
+
+
+// the example below if you use url.
+// Defer.css('your_css_url','your-style-id',100);
+// Defer.js('your_script_url','your-script-id',100);
+
+
+}
 //]]></script>
-<script src='https://cdn.jsdelivr.net/gh/jettheme/js@0.3.6/main.js'/>
+<script src='https://jetusers.com/main.js'/>
 <b:if cond='!data:view.isPreview'>
 &lt;div id=&quot;element-r&quot; style=&quot;display:none;&quot;&gt;
 &lt;textarea disabled readonly&gt;

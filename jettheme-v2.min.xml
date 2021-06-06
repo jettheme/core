@@ -1499,7 +1499,7 @@ if(document.getElementById('page-skin-1') === null){Defer.css('https://www.blogg
 
 }
 //]]></script>
-<script src='https://jetusers.com/main.js'/>
+<script async='async' src='https://cdn.jsdelivr.net/gh/jettheme/js@0.3.9/main.js'/>
 <b:if cond='!data:view.isPreview'>
 &lt;div id=&quot;element-r&quot; style=&quot;display:none;&quot;&gt;
 &lt;textarea disabled readonly&gt;

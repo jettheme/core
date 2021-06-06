@@ -1,5 +1,5 @@
 # core
-Blogger Template JetTheme v2.6 <br/>
+Blogger Template JetTheme v2.7 <br/>
 <a href='https://github.com/jettheme/core/archive/refs/heads/main.zip'>Download all files</a><br/>
 View <a href='https://jettheme-demo.blogspot.com/'>Demo</a><br/>
 How to Install <a href='https://www.jettheme.com/2020/02/cara-instal-jettheme-di-blogger.html'>Click Here</a><br/>

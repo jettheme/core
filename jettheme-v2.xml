@@ -2141,8 +2141,6 @@ function toc_temp(e) {
 }
 
 function jtCallback(){
-if(document.getElementById('page-skin-1') === null){Defer.css('https://www.blogger.com/dyn-css/authorization.css?targetBlogID='+blogId,'admin-css',100)}
-
 /*Your Script is here to maintain performance.*/
 
 

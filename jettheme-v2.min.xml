@@ -810,7 +810,11 @@ blogTitle = &quot;<data:blog.title/>&quot;;
       <b:include name='JetEdit'/>
     </b:includable>
     <b:includable id='JetLogo'>
-      <b:if cond='data:content contains &quot;data:image/&quot; OR  data:content contains &quot;https://&quot;'>
+	<b:if cond='data:content contains &quot;&lt;/svg&gt;&quot;'>
+        <a class='navbar-brand me-0 fw-bold' expr:href='data:blog.homepageUrl'>
+          <data:content/>
+        </a>
+      <b:elseif cond='data:content contains &quot;data:image/&quot; OR  data:content contains &quot;https://&quot;'/>
         <b:class name='logo-wrap position-relative'/>
         <a class='d-block navbar-brand me-0' expr:href='data:blog.homepageUrl'>
           <img expr:alt='data:blog.title' expr:src='data:content' height='55' loading='lazy' width='175'/>

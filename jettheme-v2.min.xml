@@ -989,7 +989,7 @@ blogTitle = &quot;<data:blog.title/>&quot;;
 <header class='entry-header'>
 <h1 class='entry-title mb-4'>Nothing Here</h1>
 </header>
-<div class='entry-text mb-5'>
+<div class='entry-text mb-5 text-break'>
 <b:if cond='data:view.isHomepage'>
 <p>Ready to publish your first post? <a expr:href='&quot;https://www.blogger.com/blog/posts/&quot; + data:blog.blogId'>Get started here.</a></p>
 <b:else/>
@@ -1002,7 +1002,7 @@ blogTitle = &quot;<data:blog.title/>&quot;;
 <header class='entry-header'>
 <h1 class='entry-title mb-4'>404 Not Found</h1>
 </header>
-<div class='entry-text mb-5'>
+<div class='entry-text mb-5 text-break'>
 <p>The page you are looking for may have been deleted, renamed, or temporarily unavailable.</p>
 </div>
 </article>
@@ -1200,7 +1200,7 @@ blogTitle = &quot;<data:blog.title/>&quot;;
 </div>
 </header>
 <b:include data='post' name='JetShare'/>
-<div class='entry-text mb-5' id='post-body'>
+<div class='entry-text mb-5 text-break' id='post-body'>
 <data:post.body/>
 </div>
 <b:if cond='data:post.labels'>
@@ -1240,7 +1240,7 @@ blogTitle = &quot;<data:blog.title/>&quot;;
 <header class='entry-header'>
 <h1 class='entry-title mb-4'><data:post.title/></h1>
 </header>
-<div class='entry-text mb-5'>
+<div class='entry-text mb-5 text-break'>
 <data:post.body/>
 </div>
 </article>

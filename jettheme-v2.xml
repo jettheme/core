@@ -210,6 +210,7 @@ min-width: 32px;
 min-height: 32px;
 }
 img,
+svg,
 iframe {
 max-width:100%
 }
@@ -1359,6 +1360,7 @@ blogTitle = &quot;<data:blog.title/>&quot;;
     </b:includable>
     <b:includable id='JetLogo'>
       <b:if cond='data:content contains &quot;&lt;/svg&gt;&quot;'>
+	<b:class name='logo-wrap position-relative'/>
         <a class='navbar-brand me-0 fw-bold' expr:href='data:blog.homepageUrl'>
           <data:content/>
         </a>

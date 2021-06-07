@@ -2157,7 +2157,7 @@ function jtCallback(){
 
 }
 //]]></script>
-<script async='async' src='https://cdn.jsdelivr.net/gh/jettheme/js@0.3.9/main.js'/>
+<script src='https://cdn.jsdelivr.net/gh/jettheme/js@0.3.9/main.js'/>
 <b:if cond='!data:view.isPreview'>
 &lt;div id=&quot;element-r&quot; style=&quot;display:none;&quot;&gt;
 &lt;textarea disabled readonly&gt;

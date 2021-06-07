@@ -63,7 +63,7 @@
 </b:if>
 <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css' rel='stylesheet'/>
 <b:if cond='!data:view.isLayoutMode'>
-<b:skin><![CDATA[/*
+&lt;style&gt;/*<b:skin><![CDATA[/*
 <Group description="_Main Color">
 <Variable name="keycolor" description="Main Color" type="color" default="#f67938" value="#f67938"/>
 <Variable name="body.background" description="Body Background" type="color" default="#ffffff" value="#ffffff"/>
@@ -1470,12 +1470,12 @@ blogTitle = &quot;<data:blog.title/>&quot;;
 <div class='d-flex justify-content-center visually-hidden' expr:data-label='data:view.search.label' expr:data-pagination='!data:view.isArchive and !data:view.isPost and !data:view.search.query' expr:data-posts='data:posts.size' id='pagination'>
 <b:if cond='data:newerPageUrl'>
 <div class='prev-page'>
-<a class='btn btn-sm jt-btn-primary border-2 py-2 px-5 fw-bold' expr:href='data:newerPageUrl'><svg aria-hidden='true' height='1em' style='vertical-align:-0.135em' width='1em'><use xlink:href='#i-arrow-l'/></svg>Previous</a>
+<a class='btn btn-sm jt-btn-primary border-2 py-2 px-5 fw-bold' expr:href='data:newerPageUrl'><svg aria-hidden='true' class='jt-icon'><use xlink:href='#i-arrow-l'/></svg>Previous</a>
 </div>
 </b:if>
 <b:if cond='data:olderPageUrl'>
 <div class='next-page'>
-<a class='btn btn-sm jt-btn-primary border-2 py-2 px-5 fw-bold' expr:href='data:olderPageUrl'>Next<svg aria-hidden='true' height='1em' style='vertical-align:-0.135em' width='1em'><use xlink:href='#i-arrow-r'/></svg></a>
+<a class='btn btn-sm jt-btn-primary border-2 py-2 px-5 fw-bold' expr:href='data:olderPageUrl'>Next<svg aria-hidden='true' class='jt-icon'><use xlink:href='#i-arrow-r'/></svg></a>
 </div>
 </b:if>
 </div>

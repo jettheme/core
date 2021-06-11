@@ -63,7 +63,7 @@
 </b:if>
 <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css' rel='stylesheet'/>
 <b:if cond='!data:view.isLayoutMode'>
-&lt;style&gt;/*<b:skin><![CDATA[/*
+<b:skin><![CDATA[/*
 <Group description="_Main Color">
 <Variable name="keycolor" description="Main Color" type="color" default="#f67938" value="#f67938"/>
 <Variable name="body.background" description="Body Background" type="color" default="#ffffff" value="#ffffff"/>

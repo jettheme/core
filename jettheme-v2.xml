@@ -1146,8 +1146,7 @@ width: 50%;
         <b:includable id='content'/>
       </b:widget>
       <b:widget id='HTML58' locked='false' title='Newsletter' type='HTML' version='2' visible='true'>
-        <b:widget-settings>
-          <b:widget-setting name='content'></b:widget-settings>
+        <b:widget-settings><b:widget-setting name='content'/></b:widget-settings>
         <b:includable id='main'>
       <b:include name='JetFollowIt'/>
     </b:includable>

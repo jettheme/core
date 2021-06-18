@@ -1147,8 +1147,7 @@ width: 50%;
       </b:widget>
       <b:widget id='HTML58' locked='false' title='Newsletter' type='HTML' version='2' visible='true'>
         <b:widget-settings>
-          <b:widget-setting name='content'>https://api.follow.it/subscription-form/bDVvZnRzRXhZM3VuejZCNUFLdEF4eVlvTnpzS3g0MzZIZVUvMzRpR3ZMRVRUQUtGdlBjaVBrcm5EbXE5bm5vWk9vdTZ1SUZwZlhqb3M5RmdwR1FZM3VUYmQ2UnEwRHJUTkdEbGJQN1czVk5QRHNGb2t6a3p3VlFIY1BCZGI3NUx8eEREYTIvN0wrUjBaWitnb3JLVk8zaGhxb2lxRXNZSXV2a1ZlQW5GS0FwTT0=/8</b:widget-setting>
-        </b:widget-settings>
+          <b:widget-setting name='content'></b:widget-settings>
         <b:includable id='main'>
       <b:include name='JetFollowIt'/>
     </b:includable>

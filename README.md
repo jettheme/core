@@ -1,9 +1,9 @@
 # core
 Blogger Template JetTheme<br/>
 <br/>
-JetTheme Versi 2.8 all<a href='https://github.com/jettheme/core/archive/refs/tags/2.8.zip'>Download files</a><br/>
+JetTheme Versi 2.8 <a href='https://github.com/jettheme/core/archive/refs/tags/2.8.zip'>Download files</a><br/>
 <br/>
-JetTheme Versi 2.7 all<a href='https://github.com/jettheme/core/archive/refs/tags/2.7.zip'>Download files</a><br/>
+JetTheme Versi 2.7 <a href='https://github.com/jettheme/core/archive/refs/tags/2.7.zip'>Download files</a><br/>
 <br/>
 View <a href='https://jettheme-demo.blogspot.com/'>Demo</a><br/>
 How to Install <a href='https://www.jettheme.com/2020/02/cara-instal-jettheme-di-blogger.html'>Click Here</a><br/>

@@ -1,69 +1,53 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE html>
-<html b:css='false' b:defaultwidgetversion='2' b:js='true' b:layoutsVersion='3' expr:dir='data:blog.languageDirection' expr:lang='data:blog.locale' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
-<b:attr name='xmlns' value=''/>
-<b:attr name='xmlns:b' value=''/>
-<b:attr name='xmlns:expr' value=''/>
-<b:attr name='xmlns:data' value=''/>
-<head>
-<script>/*<![CDATA[*/function rmurl(e){var t=new RegExp(/\?m=0|&m=0|\?m=1|&m=1/g);return t.test(e)&&(e=e.replace(t,''),window.history.replaceState({},document.title,e)),e}const currentUrl=rmurl(location.toString());'dark'==localStorage.getItem('theme')&&(document.querySelector('html').className='dark-mode')/*]]>*/</script>
-<meta charset='utf-8'/>
-<meta content='width=device-width, initial-scale=1' name='viewport'/>
-<meta content='general' name='rating'/>
-<meta content='#ffffff' name='theme-color'/>
-<link expr:href='data:view.url' rel='canonical'/>
-<meta content='jettheme-blogger' name='application-name'/>
-<meta content='#ffffff' name='msapplication-TileColor'/>
-<link expr:href='data:blog.blogspotFaviconUrl' rel='icon' type='image/x-icon'/>
-
-<!-- Title -->
-<b:with value='data:view.isHomepage ? data:blog.title + &quot; – #####&quot; :  data:view.isError ? &quot;404 (Error) Not Found – &quot;  + data:blog.title :  data:blog.pageName ? data:blog.pageName + &quot; – &quot; + data:blog.title :  &quot;Latest Posts – &quot; + data:blog.title' var='meta_title'>
-<title><data:meta_title/></title>
-<meta expr:content='data:meta_title' name='title'/>
-<meta expr:content='data:meta_title' property='og:title'/>
-<meta expr:content='data:meta_title' name='twitter:title'/>
-</b:with>
-
-<!-- Image -->
-<b:with value='data:view.featuredImage ? data:view.featuredImage : &quot;#####&quot;' var='meta_image'>
-<meta expr:content='data:meta_image' property='og:image'/>
-<meta expr:content='data:meta_image' name='twitter:image'/>
-</b:with>
-
-<!-- Description -->
-<b:with value='data:view.description ? data:view.description : &quot;#####&quot;' var='meta_desc'>
-<meta expr:content='data:meta_desc' name='description'/>
-<meta expr:content='data:meta_desc' property='og:description'/>
-<meta expr:content='data:meta_desc' name='twitter:description'/>
-</b:with>
-
-<!-- Primary Meta Tags -->
-<meta expr:content='data:view.url' property='og:url'/>
-<meta content='website' property='og:type'/>
-<meta content='' name='author'/>
-
-<!-- Open Graph / Facebook -->
-<meta content='' property='fb:app_id'/>
-<meta content='' property='article:author'/>
-<meta expr:content='data:blog.locale' property='og:locale'/>
-<meta expr:content='data:blog.title' property='og:site_name'/>
-<meta expr:content='data:view.url' property='og:url'/>
-<meta content='website' property='og:type'/>
-<meta expr:content='data:view.title' property='og:image:alt'/>
-
-<!-- Twitter -->
-<meta content='summary_large_image' name='twitter:card'/>
-<meta content='' name='twitter:site'/>
-<meta content='' name='twitter:creator'/>
-<meta expr:content='data:view.url' name='twitter:url'/>
-<meta expr:content='data:view.title' name='twitter:image:alt'/>
-<data:blog.feedLinks/>
-<b:if cond='data:view.isHomepage'>
-<script type='application/ld+json'>{&quot;@context&quot;:&quot;https://schema.org&quot;,&quot;@type&quot;:&quot;WebSite&quot;,&quot;url&quot;:&quot;<data:blog.homepageUrl/>&quot;,&quot;name&quot;:&quot;<data:blog.title/>&quot;,&quot;potentialAction&quot;:{&quot;@type&quot;:&quot;SearchAction&quot;,&quot;target&quot;:&quot;<data:blog.homepageUrl/>search?q={search_term_string}&amp;max-results=10&quot;,&quot;query-input&quot;:&quot;required name=search_term_string&quot;}}</script>
-</b:if>
-<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css' rel='stylesheet'/>
+<html b:css='false' b:defaultwidgetversion='2' b:js='true' b:layoutsVersion='3' b:render='true' b:responsive='true' b:templateUrl='https://www.jettheme.com' b:templateVersion='2.8' expr:dir='data:blog.languageDirection' expr:lang='data:blog.locale' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'><b:attr name='xmlns' value=''/><b:attr name='xmlns:b' value=''/><b:attr name='xmlns:expr' value=''/><b:attr name='xmlns:data' value=''/><head>
+<b:include data='blog' name='JetAll-head-content'/>
 <b:if cond='!data:view.isLayoutMode'>
 <b:skin><![CDATA[/*
+
+[!] Find (JetAll-head-content) to edit Open Graph and other Meta Tags
+
+-------------------------
+# JetTheme v2.8 Setting #
+-------------------------
+
+<Variable name="tagline" description="Tagline" type="string" value=""/>
+[!] Homepage tagline, ex: BlogName - Tagline
+
+<Variable name="separator" description="Separator" type="string" value=" - "/>
+[!] Title separator ( – ), ( | ), ( • )
+
+<Variable name="description" description="Description" type="string" value=""/>
+[!] Default meta description, recommended 155–160 characters
+
+<Variable name="cover" description="Cover" type="string" value=""/>
+[!] Default meta image, size recommended 1600x700 px
+
+<Variable name="logo" description="Logo" type="string" value=""/>
+[!] Schema logo, size recommended 175x55 px
+
+<Variable name="favicon" description="Favicon" type="string" value=""/>
+[!] Favicon high resolution, required format (.png), min size 200x200 px
+
+<Variable name="analyticId" description="Analytic ID" type="string" value=""/>
+[!] New Google Analytic 2021
+
+<Variable name="caPubAdsense" description="caPubAdsense ID" type="string" value=""/> 
+[!] number only
+
+<Variable name="autoTOC" description="Table of content" type="string" value="true"/>
+[!] true or false
+
+<Variable name="positionTOC" description="Position TOC" type="string" value="noscript"/>
+[!] tag name, class, id
+
+<Variable name="maxLabel" description="Limit Label" type="string" value="3"/>
+[!] Limit Label Display
+
+-------------------------
+# JetTheme Css Variable #
+-------------------------
+
 <Group description="_Main Color">
 <Variable name="keycolor" description="Main Color" type="color" default="#f67938" value="#f67938"/>
 <Variable name="body.background" description="Body Background" type="color" default="#ffffff" value="#ffffff"/>
@@ -82,7 +66,7 @@
 <Variable name="title.h6" description="H6 Size" type="length" default="16px" min="12px" max="50px" value="16px"/>
 <Variable name="body.link.color" description="Link Color" type="color" default="$(keycolor)" value="#f67938"/>
 <Variable name="body.hover.color" description="Link Hover Color" type="color" default="#f46013" value="#f46013"/>
-<Variable name="posts.text.color" description="Blockquote Color" type="color" default="#343a40" value="#343a40"/>
+<Variable name="posts.text.color" description="Blockquote Border Color" type="color" default="$(keycolor)" value="#f67938"/>
 </Group> 
 
 <Group description="_Logo">
@@ -111,15 +95,19 @@
 -----------------------------------------------
 JetTheme Blogger Template
 Name		: JetTheme Core
-Version		: 2.7
+Version		: 2.8
 Designer	: jettheme
 URL			: www.jettheme.com
 -----------------------------------------------
 */
 :root {
+--bs-font-sans-serif: $(body.text.family);
+--bs-body-color : $(body.text.color);
+--bs-body-bg : $(body.background);
 --jt-primary : $(keycolor);
---jt-text-color : $(body.text.color);
 --jt-heading-color : $(posts.title.color);
+--jt-heading-link : $(posts.title.color);
+--jt-heading-hover : $(keycolor);
 --jt-link-color : $(body.link.color);
 --jt-link-hover : $(body.hover.color);
 --jt-blockquote : $(posts.text.color);
@@ -128,23 +116,26 @@ URL			: www.jettheme.com
 --jt-btn-light-hover : $(posts.title.color);
 --jt-border-light : $(border.color);
 --jt-bg-light : #f3f7f9;
---jt-bg-archive : #fffff;
---jt-nav-text : $(tabs.color);
+--jt-archive-bg : #ffffff;
+--jt-nav-color : $(tabs.color);
 --jt-nav-hover : $(tabs.hover);
 --jt-nav-active : $(tabs.selected.color);
 --jt-nav-mobile : $(body.background);
---jt-bg-body : $(body.background);
---jt-bg-header : $(body.background);
---jt-bg-footer : #212529;
---jt-text-footer : #9fa6ad;
---jt-bg-dropdown : #ffffff;
---jt-dropdown-text : $(tabs.color);
+--jt-header-bg : $(body.background);
+--jt-footer-bg : #17141d;
+--jt-footer-color : #9fa6ad;
+--jt-dropdown-bg : #ffffff;
+--jt-dropdown-color : $(tabs.color);
 --jt-dropdown-hover : $(tabs.hover);
 }
 .dark-mode {
+--bs-body-color : #9fa6ad;
+--bs-body-bg : #212529;
 --jt-primary : $(keycolor);
---jt-text-color : #9fa6ad;
+--bs-body-color : #9fa6ad;
 --jt-heading-color : #9fa6ad;
+--jt-heading-link : #9fa6ad;
+--jt-heading-hover : $(keycolor);
 --jt-link-color : $(body.link.color);
 --jt-link-hover : $(body.hover.color);
 --jt-blockquote : $(posts.text.color);
@@ -153,25 +144,23 @@ URL			: www.jettheme.com
 --jt-btn-light-hover : #ffffff;
 --jt-border-light : #323539;
 --jt-bg-light : #292d31;
---jt-bg-archive : #292d31;
---jt-nav-text : #9fa6ad;
+--jt-archive-bg : #292d31;
+--jt-nav-color : #9fa6ad;
 --jt-nav-hover : #ffffff;
 --jt-nav-active : $(tabs.selected.color);
 --jt-nav-mobile : #212529;
---jt-bg-body : #212529;
---jt-bg-header : #212529;
---jt-bg-footer : #212529;
---jt-text-footer : #9fa6ad;
---jt-bg-dropdown : #292d31;
---jt-dropdown-text : #9fa6ad;
+--jt-header-bg : #212529;
+--jt-footer-bg : #212529;
+--jt-footer-color : #9fa6ad;
+--jt-dropdown-bg : #292d31;
+--jt-dropdown-color : #9fa6ad;
 --jt-dropdown-hover : #ffffff;
 }
 
 body {
---bs-font-sans-serif: $(body.text.family);
 font: $(body.text);
-color: var(--jt-text-color);
-background-color: var(--jt-bg-body);
+color: var(--bs-body-color);
+background-color: var(--bs-body-bg);
 line-height: 1.5;
 -webkit-font-smoothing: antialiased;
 -moz-osx-font-smoothing: grayscale;
@@ -191,15 +180,16 @@ color: var(--jt-link-color);
 a:hover {
 color: var(--jt-link-hover);
 }
-blockquote {
-color: var(--jt-blockquote);
-}
 .fs-7 {
 font-size: 0.875rem;
 line-height: 1.25rem;
 }
 .fs-8 {
 font-size: 0.75rem;
+line-height: 1rem;
+}
+.fs-9 {
+font-size: 0.7rem;
 line-height: 1rem;
 }
 .btn{
@@ -224,9 +214,12 @@ cursor: pointer;
 .visually-hidden {
 position: unset !important;
 }
-.form-control,
 .form-control:focus {
 box-shadow: none;
+border-color: var(--jt-primary);
+}
+.form-control::placeholder {
+opacity: .5;
 }
 .dropdown-menu {
 margin: 0;
@@ -262,7 +255,7 @@ background-color: var(--jt-btn-primary);
 border-color: var(--jt-btn-primary);
 }
 .jt-btn-light {
-color: var(--jt-text-color);
+color: var(--bs-body-color);
 background-color: var(--jt-bg-light);
 border-color: var(--jt-bg-light);
 }
@@ -271,7 +264,7 @@ color: var(--jt-btn-light-hover);
 }
 .jt-btn-primary:hover,
 .hover-btn-primary:hover,
-.jt-btn-primary:checked + .jt-btn-outline-primary {
+input:checked + .jt-btn-outline-primary {
 color: #fff !important;
 background-color: var(--jt-btn-primary-hover)!important;
 border-color: var(--jt-btn-primary-hover)!important
@@ -287,7 +280,7 @@ background-color: var(--jt-primary)
 background-color: var(--jt-bg-light)
 }
 .bg-archive {
-background-color: var(--jt-bg-archive)
+background-color: var(--jt-archive-bg)
 }
 .jt-border-light {
 border-color: var(--jt-border-light)!important;
@@ -301,8 +294,8 @@ display: none !important;
 .dropdown-menu,
 .accordion-item,
 .accordion-header {
-background-color: var(--jt-bg-dropdown);
-color: var(--jt-dropdown-text);
+background-color: var(--jt-dropdown-bg);
+color: var(--jt-dropdown-color);
 border-color: var(--jt-border-light)
 }
 .lazyload {
@@ -314,27 +307,29 @@ opacity: 0;
 .lazyload.loaded {
 opacity: 1;
 }
-.cursor-default {
-cursor: default !important;
-}
-.drag-scroll {
-cursor: grab;
-}
-.drag-scroll.row > * {
-max-width : 80%;
-}
-.drag-scroll.row-cols-2 > * {
-max-width : 45%;
-}
 
 /* JetTheme Style */
 
+pre {
+background-color: var(--jt-bg-light);
+margin-bottom: 1rem;
+padding: 1rem;
+font-size: 0.75rem;
+}
+blockquote {
+border-left:  5px solid var(--jt-blockquote);
+color: inherit;
+font-size: 1.125rem;
+margin-bottom: 1.5rem;
+margin-top: 1.5rem;
+padding-left: 1rem;
+}
 .header-animate.header-hidden {
 transform: translateY(-100%);
 box-shadow: none !important;
 }
 #header {
-background-color: var(--jt-bg-header);
+background-color: var(--jt-header-bg);
 transition-property: transform;
 transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 transition-duration: .3s;
@@ -352,17 +347,25 @@ stroke-linejoin:round;
 stroke-width:2;
 }
 .jt-icon-center {
-font-family: "Segoe UI", sans-serif;
+font-family: sans-serif;
+}
+#dark-toggler,
+#search-toggler,
+#navbar-toggler {
+line-height: 1;
 }
 #dark-toggler .icon-mode:before {
-content: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1.2em' height='1.2em' viewBox='0 0 24 24' fill='none' stroke='%23686868' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z'%3E%3C/path%3E%3C/svg%3E");
+content: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1.1em' height='1.1em' viewBox='0 0 24 24' fill='none' stroke='%23686868' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z'%3E%3C/path%3E%3C/svg%3E");
 }
 .dark-mode #dark-toggler .icon-mode:before {
-content: url("data:image/svg+xml;utf8,%3Csvg width='1.2em' height='1.2em' fill='white' stroke='white' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z'%3E%3C/path%3E%3C/svg%3E");
+content: url("data:image/svg+xml;utf8,%3Csvg width='1.1em' height='1.1em' fill='white' stroke='white' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z'%3E%3C/path%3E%3C/svg%3E");
 }
 #footer {
-background-color: var(--jt-bg-footer);
-color: var(--jt-text-footer);
+background-color: var(--jt-footer-bg);
+color: var(--jt-footer-color);
+}
+#socket {
+background-color: #09080c;
 }
 #navbar {
 z-index: 9999;
@@ -378,16 +381,27 @@ cursor: pointer;
 align-items: center;
 display: flex;
 }
+#navbar.d-block,
+#navbar .dropdown-menu,
+#navbar .nav-link,
+#navbar .dropdown-toggle {
+-webkit-transition: .3s;
+-ms-transition: .3s;
+-o-transition: .3s;
+transition: .3s;
+}
 #navbar .navbar-nav > .menu-item > .nav-link {
 font: $(tabs.font);
 line-height: 1.5;
-color: var(--jt-nav-text);
+color: var(--jt-nav-color);
 }
-#navbar .navbar-nav > .menu-item > .nav-link:hover {
+#navbar .navbar-nav > .menu-item:hover > .nav-link,
+#navbar .navbar-nav > .menu-item > .nav-link.active{
 color: var(--jt-nav-hover);
 }
-#navbar .navbar-nav > .menu-item > .nav-link.active {
-color: var(--jt-nav-active);
+#navbar .navbar-nav > .menu-item:hover > .dropdown-toggle,
+#navbar .navbar-nav > .menu-item > .active ~ .dropdown-toggle {
+color: var(--jt-nav-hover);
 }
 .logo-wrap {
 width: $(logo.width);
@@ -417,22 +431,84 @@ padding: 0 !important;
 #special-categories .widget {
 margin-bottom: 0 !important;
 }
+#post-body .widget {
+margin-top: 1.5rem;
+}
+.item-title {
+color: var(--jt-heading-link);
+}
+.item-title:hover {
+color: var(--jt-heading-hover);
+}
+#comment-editor{
+width:100%
+}
+#primary .widget-title {
+font-weight: 300;
+text-transform: uppercase;
+}
+#footer .widget-title {
+text-transform: uppercase;
+}
+#footer .widget-title,
+#sidebar .widget-title {
+font-size: 13px !important;
+}
+#primary .widget-title > span {
+background-color: var(--bs-body-bg);
+padding-right: 5px;
+position: relative;
+}
+#main .widget-title:before,
+#sidebar .widget-title:before {
+background-color:  var(--jt-bg-light);
+content: "";
+height: 1px;
+display: block;
+position: absolute;
+top: 50%;
+transform: translateY(-50%);
+width: 100%;
+}
+#main .widget-title:before {
+border-right: 30px solid var(--jt-primary);
+height: 5px;
+}
+.send-success:not(.loading) .contact-form-msg,
+.send-error:not(.loading) .contact-form-msg {
+display:block !important;
+}
+.send-success .contact-form-msg{
+border-color: rgba(var(--bs-success-rgb),.3) !important;
+}
+.send-error .contact-form-msg{
+border-color: rgba(var(--bs-warning-rgb),.3) !important;
+}
+.send-success .contact-form-msg:before{
+content: attr(data-success);
+}
+.send-error .contact-form-msg:before{
+content: attr(data-error);
+}
+hr.example-ads:before {
+content: "Advertisement here";
+}
+hr.example-ads {
+background-color: var(--jt-bg-light);
+border-radius: 0.25rem;
+font-size: 0.875rem;
+height: auto;
+margin: 0;
+opacity: 1;
+padding: 1.5rem 0;
+text-align: center;
+}
 body > .google-auto-placed {
 margin: 0 auto 1.5rem;
 max-width: 1108px;
 }
 .google-auto-placed > ins {
 margin: 0 !important;
-}
-#post-body .widget {
-margin-top: 1.5rem;
-}
-.item-title,
-.entry-title {
-color: var(--jt-heading-color);
-}
-#comment-editor{
-width:100%
 }
 
 /* TYPOGRAPY */
@@ -444,6 +520,9 @@ width:100%
 .h5,h5{font-size:$(title.h5)}
 .h6,h6{font-size:$(title.h6)}
 
+.entry-title {
+color: var(--jt-heading-color);
+}
 .entry-text h1,
 .entry-text h2,
 .entry-text h3,
@@ -455,18 +534,13 @@ padding-top: 1em;
 margin-bottom: 1rem;
 }
 
+.entry-text li {
+margin-bottom: 0.5rem;
+}
+
 /* Responsive Style */
 
 @media (min-width: 576px) {
-.drag-scroll.row-cols-sm-2 > * {
-max-width : 40%;
-}
-.drag-scroll.flex-lg-wrap {
-cursor: default;
-}
-.drag-scroll.flex-sm-wrap > * {
-max-width : none;
-}
 .ratio-sm-4x3 {
 padding-bottom: 75%;
 }
@@ -482,15 +556,6 @@ border-left: 1px solid;
 }
 }
 @media (min-width: 768px) {
-.drag-scroll.row-cols-md-3 > * {
-max-width: 30%;
-}
-.drag-scroll.flex-lg-wrap {
-cursor: default;
-}
-.drag-scroll.flex-md-wrap > * {
-max-width : none;
-}
 .position-md-relative {
 position: relative;
 }
@@ -504,15 +569,6 @@ border-right-style: solid;
 border-right-width: 1px !important;
 border-right-style: solid;
 }
-.drag-scroll.row-cols-lg-4 > * {
-max-width: 23%;
-}
-.drag-scroll.flex-lg-wrap {
-cursor: default;
-}
-.drag-scroll.flex-lg-wrap > * {
-max-width: none;
-}
 #navbar .navbar-nav > .menu-item {
 display: flex;
 }
@@ -522,19 +578,13 @@ display: block;
 opacity: 0;
 visibility: hidden;
 pointer-events: none;
--webkit-transition: .3s;
--ms-transition: .3s;
--o-transition: .3s;
-transition: .3s;
 box-shadow: 5px 10px 10px -5px rgba(0, 0, 0, 0.14);
-top:100%
+top:100%;
+min-width: 150px;
 }
 #navbar .dropdown-menu .nav-link {
 padding-right: 20px;
-color: var(--jt-text-color);
-}
-#navbar .dropdown-menu .nav-link:hover {
-color: var(--jt-dropdown-hover);
+color: var(--bs-body-color);
 }
 #navbar .dropdown-menu .dropdown-toggle {
 position: absolute;
@@ -542,9 +592,14 @@ right: 10px;
 top: 20px;
 }
 #navbar .dropdown-menu .dropdown-menu {
-margin-right: -10px;
 left: 100%;
 top: -1px;
+}
+#navbar .dropdown-menu .menu-item:hover > .nav-link,
+#navbar .dropdown-menu .menu-item > .nav-link.active,
+#navbar .dropdown-menu .menu-item:hover > .dropdown-toggle,
+#navbar .dropdown-menu .menu-item > .active ~ .dropdown-toggle {
+color:  var(--jt-dropdown-hover);
 }
 #navbar .menu-item:hover > .dropdown-menu {
 opacity: 1;
@@ -553,11 +608,16 @@ pointer-events: unset;
 margin: 0;
 }
 #navbar .navbar-nav > .menu-item > .nav-link {
-padding: 1.5rem 1rem;
+padding: 1.5rem 1.2rem;
 white-space:nowrap;
+font-size: 16px;
 }
 #navbar .navbar-nav > .menu-item > .dropdown-toggle {
+bottom: 0;
 pointer-events: none;
+position: absolute;
+right: 5px;
+top: 5px;
 }
 #sidebar {
 border-left: 1px solid;
@@ -579,9 +639,6 @@ display: block;
 input:checked + .dropdown-toggle {
 color: var(--jt-nav-active);
 }
-.drag-scroll {
-overflow-x: auto !important;
-}
 .logo-wrap {
 width: $(logo.width.mobile);
 }
@@ -602,10 +659,6 @@ width: auto;
 #navbar.d-block {
 opacity: 0;
 transform: translateX(-20%);
--webkit-transition: .3s;
--ms-transition: .3s;
--o-transition: .3s;
-transition: .3s;
 }
 #navbar.show {
 transform: translateX(0);
@@ -620,9 +673,9 @@ display:block;
 }
 #navbar .nav-link {
 border-bottom: 1px solid var(--jt-border-light);
-color: var(--jt-text-color);
+color: var(--bs-body-color);
 }
-#navbar .nav-link:hover {
+#navbar .menu-item:hover > .nav-link {
 color: var(--jt-dropdown-hover);
 }
 #navbar .dropdown-toggle {
@@ -651,7 +704,7 @@ box-shadow: none !important;
 padding-bottom: 75%;
 }
 .feature-posts .item-content {
-background-color: var(--jt-bg-body);
+background-color: var(--bs-body-bg);
 border: 5px solid;
 border-radius: 0.25rem;
 }
@@ -659,11 +712,16 @@ border-radius: 0.25rem;
 border-top: 1px solid;
 }
 .feature-image,
-.px-3 > .google-auto-placed,
+.px-3 .google-auto-placed,
 .feature-posts .item-thumbnail {
 margin-left: -1rem;
 margin-right: -1rem;
 width: auto !important;
+}
+#footer-widget .widget {
+padding-left: 3rem;
+padding-right: 3rem;
+text-align: center;
 }
 }
 
@@ -693,7 +751,7 @@ body#layout:before {
 background-color: #f67938;
 border-radius: 30px;
 color: #fff;
-content: "JetTheme Version 2.7";
+content: "JetTheme Version 2.8";
 display: block;
 font-family: Roboto,sans-serif;
 padding: 10px 20px;
@@ -707,6 +765,7 @@ body#layout #sidebar-static:before,
 body#layout #sidebar-sticky:before,
 body#layout #footer:before,
 body#layout #before-blog:before,
+body#layout #after-blog:before,
 body#layout #before-post:before,
 body#layout #jet-options:before,
 body#layout #ads-post:before {
@@ -734,6 +793,9 @@ content: "Footer";
 body#layout #before-blog:before {
 content: "Before Blog";
 }
+body#layout #after-blog:before {
+content: "After Blog";
+}
 body#layout #before-post:before {
 content: "Before Post";
 }
@@ -751,8 +813,111 @@ width: 50%;
 }
 ]]></b:template-skin>
 </b:if>
-</head>
-<body>
+<b:defaultmarkups>
+<b:defaultmarkup type='Common'>
+<b:includable id='JetAll-head-content'>
+<script>/*<![CDATA[*/function rmurl(e,t){var r=new RegExp(/\?m=0|&m=0|\?m=1|&m=1/g);return r.test(e)&&(e=e.replace(r,""),t&&window.history.replaceState({},document.title,e)),e}const currentUrl=rmurl(location.toString(),!0);null!==localStorage&&"dark"==localStorage.getItem("theme")&&(document.querySelector("html").className="dark-mode");/*]]>*/</script>
+<meta expr:content='&quot;text/html; charset=&quot; + data:blog.encoding' http-equiv='Content-Type'/>
+<meta content='width=device-width, initial-scale=1' name='viewport'/>
+
+<!-- Primary Meta Tags -->
+<link expr:href='data:view.url.canonical' rel='canonical'/>
+<meta expr:content='data:view.url.canonical' property='og:url'/>
+<meta expr:content='data:blog.title + &quot; Team&quot;' name='author'/>
+<meta content='jettheme-blogger' name='application-name'/>
+<meta expr:content='data:blog.adultContent ? &quot;adult&quot; : &quot;general&quot;' name='rating'/>
+      
+<!-- Favicon -->
+<b:if cond='data:skin.vars.favicon'>
+<b:with value='data:skin.vars.favicon' var='favicon'>
+<link expr:href='resizeImage(data:favicon,32,&quot;1:1&quot;)' rel='icon' sizes='32x32' type='image/png'/>
+<link expr:href='resizeImage(data:favicon,96,&quot;1:1&quot;)' rel='icon' sizes='96x96' type='image/png'/>
+<link expr:href='resizeImage(data:favicon,144,&quot;1:1&quot;)' rel='icon' sizes='144x144' type='image/png'/>
+<link expr:href='resizeImage(data:favicon,180,&quot;1:1&quot;)' rel='apple-touch-icon' type='image/png'/>
+<link expr:href='resizeImage(data:favicon,152,&quot;1:1&quot;)' rel='apple-touch-icon-precomposed' type='image/png'/>
+<meta expr:content='resizeImage(data:favicon,150,&quot;1:1&quot;)' name='msapplication-TileImage'/>
+</b:with>
+<b:else/>
+<link expr:href='data:blog.blogspotFaviconUrl' rel='icon' type='image/x-icon'/>
+</b:if>
+
+<!-- Theme Color -->
+<meta expr:content='data:skin.vars.body_background' name='theme-color'/>
+<meta expr:content='data:skin.vars.body_background' name='msapplication-TileColor'/>
+<meta expr:content='data:skin.vars.body_background' name='msapplication-navbutton-color'/>
+<meta expr:content='data:skin.vars.body_background' name='apple-mobile-web-app-status-bar-style'/>
+<meta content='yes' name='apple-mobile-web-app-capable'/>
+
+<!-- Title -->
+<b:with value='data:view.isHomepage ? data:blog.title + (data:skin.vars.tagline ? data:skin.vars.separator + data:skin.vars.tagline : &quot;&quot;) : data:view.isError ? &quot;404 (Error) Not Found&quot; + data:skin.vars.separator + data:blog.title : data:blog.pageName ? data:blog.pageName + data:skin.vars.separator + data:blog.title :  &quot;Latest Posts&quot; + data:skin.vars.separator + data:blog.title' var='meta_title'>
+<title><data:meta_title/></title>
+<meta expr:content='data:meta_title' name='title'/>
+<meta expr:content='data:meta_title' property='og:title'/>
+<meta expr:content='data:meta_title' name='twitter:title'/>
+</b:with>
+
+<!-- Image -->
+<b:with value='data:view.featuredImage ?: data:skin.vars.cover' var='meta_image'>
+<meta expr:content='data:meta_image' property='og:image'/>
+<meta expr:content='data:meta_image' name='twitter:image'/>
+</b:with>
+
+<!-- Description -->
+<b:with value='data:view.description ?: data:skin.vars.description' var='meta_desc'>
+<meta expr:content='data:meta_desc' name='description'/>
+<meta expr:content='data:meta_desc' property='og:description'/>
+<meta expr:content='data:meta_desc' name='twitter:description'/>
+</b:with>
+
+<!-- Open Graph / Facebook -->
+<meta content='' property='fb:app_id'/>
+<meta content='' property='article:author'/>
+<meta content='website' property='og:type'/>
+<meta expr:content='data:blog.locale' property='og:locale'/>
+<meta expr:content='data:blog.title' property='og:site_name'/>
+<meta expr:content='data:view.url.canonical' property='og:url'/>
+<meta expr:content='data:view.title' property='og:image:alt'/>
+
+<!-- Twitter -->
+<meta content='' name='twitter:site'/>
+<meta content='' name='twitter:creator'/>
+<meta content='summary_large_image' name='twitter:card'/>
+<meta expr:content='data:view.url.canonical' name='twitter:url'/>
+<meta expr:content='data:view.title' name='twitter:image:alt'/>
+
+<!-- Feed -->
+<data:blog.feedLinks/>
+
+<b:if cond='data:view.isHomepage'>
+<script type='application/ld+json'>{&quot;@context&quot;:&quot;https://schema.org&quot;,&quot;@type&quot;:&quot;WebSite&quot;,&quot;url&quot;:&quot;<data:blog.canonicalHomepageUrl/>&quot;,&quot;name&quot;:&quot;<data:blog.title/>&quot;,&quot;potentialAction&quot;:{&quot;@type&quot;:&quot;SearchAction&quot;,&quot;target&quot;:&quot;<data:blog.canonicalHomepageUrl/>search?q={search_term_string}&amp;max-results=10&quot;,&quot;query-input&quot;:&quot;required name=search_term_string&quot;}}</script>
+</b:if>
+<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css' rel='stylesheet'/>
+</b:includable>
+</b:defaultmarkup>
+</b:defaultmarkups>
+
+<!-- Your Style and Script before </head> is here -->
+
+<b:if cond='!data:view.isPreview'>&lt;/head&gt;&lt;body&gt;&lt;textarea disabled readonly id=&quot;element-h&quot; style=&quot;display:none&quot;&gt;</b:if></head><body><b:if cond='!data:view.isPreview'>&lt;/textarea&gt;</b:if>
+
+<b:section cond='data:view.isLayoutMode' id='upload-image' showaddelement='no'>
+  <b:widget id='Image50' locked='true' title='Upload Image' type='Image' visible='true'>
+    <b:widget-settings>
+      <b:widget-setting name='displayUrl'>https://1.bp.blogspot.com/-h5fUZDgfXe8/YR87osMq6UI/AAAAAAAAAYk/18JeDAzajvYhKnMnllSf_DSWAm51cueuQCLcBGAsYHQ/s728/placeholder.jpg</b:widget-setting>
+      <b:widget-setting name='displayHeight'>425</b:widget-setting>
+      <b:widget-setting name='sectionWidth'>1067</b:widget-setting>
+      <b:widget-setting name='shrinkToFit'>false</b:widget-setting>
+      <b:widget-setting name='displayWidth'>728</b:widget-setting>
+      <b:widget-setting name='link'>#</b:widget-setting>
+      <b:widget-setting name='caption'><![CDATA["Upload image from computer" > Save > Edit Again > Get URL]]></b:widget-setting>
+    </b:widget-settings>
+    <b:includable id='main'>
+      <b:include name='JetImage'/>
+    </b:includable>
+    <b:includable id='content'/>
+  </b:widget>
+</b:section>
+
 <header class='header-animate sticky-top navbar py-0 navbar-expand-lg border-bottom jt-border-light' content='itemid' id='header' itemid='#header' itemscope='itemscope' itemtype='https://schema.org/WPHeader'>
 <input class='d-none' id='navbar-toggle' type='checkbox'/>
 <b:section class='container position-relative px-3 flex-nowrap' id='header-main' maxwidgets='3' showaddelement='no'>
@@ -764,7 +929,7 @@ width: 50%;
         <b:include name='JetLogo'/>
       </b:includable>
   </b:widget>
-  <b:widget id='LinkList52' locked='true' title='#Search and Icons' type='LinkList' version='2' visible='true'>
+  <b:widget id='LinkList52' locked='true' title='Icons, Dark, Search' type='LinkList' version='2' visible='true'>
     <b:widget-settings>
       <b:widget-setting name='sorting'>NONE</b:widget-setting>
       <b:widget-setting name='text-1'>instagram</b:widget-setting>
@@ -779,7 +944,7 @@ width: 50%;
   </b:widget>
   <b:widget id='PageList50' locked='true' title='Menu' type='PageList' version='2' visible='true'>
     <b:widget-settings>
-      <b:widget-setting name='pageListJson'><![CDATA[{'home': {'href': 'https://jettheme-news.blogspot.com/', 'title': 'Home', 'position': 0}, 'link0': {'href': '/p/about.html', 'title': 'About', 'position': 1}, 'link1': {'href': '/search/label/Tech?max-results\x3d10', 'title': 'Tech', 'position': 2}, 'link2': {'href': '#sub-start', 'title': 'Sub Menu 1', 'position': 3}, 'link3': {'href': '#', 'title': 'Dropdown', 'position': 4}, 'link4': {'href': '#sub-start', 'title': 'Dropdown-2', 'position': 5}, 'link5': {'href': '#', 'title': 'Dropdown', 'position': 6}, 'link6': {'href': '#', 'title': 'Dropdown', 'position': 7}, 'link7': {'href': '#sub-end', 'title': 'Dropdown-#2', 'position': 8}, 'link8': {'href': '#', 'title': 'Dropdown', 'position': 9}, 'link9': {'href': '#sub-end', 'title': 'Sub Menu #1', 'position': 10}, 'link10': {'href': '/p/contact.html', 'title': 'Contact', 'position': 11}, 'link11': {'href': '/p/sitemap.html', 'title': 'Sitemap', 'position': 12}}]]></b:widget-setting>
+      <b:widget-setting name='pageListJson'><![CDATA[{'link0': {'href': '/', 'title': 'Home', 'position': 0}, 'link1': {'href': '/p/about.html', 'title': 'About', 'position': 1}, 'link2': {'href': '/search/label/Tech?max-results\x3d10', 'title': 'Tech', 'position': 2}, 'link3': {'href': '#sub-start', 'title': 'Sub Menu 1', 'position': 3}, 'link4': {'href': '#', 'title': 'Dropdown', 'position': 4}, 'link5': {'href': '#sub-start', 'title': 'Sub Menu 2', 'position': 5}, 'link6': {'href': '#', 'title': 'Dropdown', 'position': 6}, 'link7': {'href': '#', 'title': 'Dropdown', 'position': 7}, 'link8': {'href': '#sub-end', 'title': 'Sub Menu 2', 'position': 8}, 'link9': {'href': '#', 'title': 'Dropdown', 'position': 9}, 'link10': {'href': '#sub-end', 'title': 'Sub Menu 1', 'position': 10}, 'link11': {'href': '/p/contact.html', 'title': 'Contact', 'position': 11}, 'link12': {'href': '/p/sitemap.html', 'title': 'Sitemap', 'position': 12}}]]></b:widget-setting>
       <b:widget-setting name='homeTitle'>Home</b:widget-setting>
     </b:widget-settings>
     <b:includable id='main'>
@@ -793,7 +958,7 @@ width: 50%;
   </b:widget>
 </b:section>
 </header>
-  
+
 <!--Main Content-->
 <div id='primary'>
 <div class='container px-0'>
@@ -803,17 +968,17 @@ width: 50%;
 <b:section class='pt-4' cond='data:view.isMultipleItems and !data:view.search.query' id='before-blog' showaddelement='yes'>
   <b:widget id='HTML51' locked='false' title='#Advertisement' type='HTML' visible='true'>
     <b:widget-settings>
-      <b:widget-setting name='content'><![CDATA[<div class="example-ads jt-bg-light rounded text-center py-4 fs-7">Advertisement here</div>]]></b:widget-setting>
+      <b:widget-setting name='content'><![CDATA[<hr class="example-ads"/>]]></b:widget-setting>
     </b:widget-settings>
     <b:includable id='main'>
       <b:include name='JetHtml'/>
     </b:includable>
   </b:widget>
-  <b:widget cond='data:view.isHomepage or data:view.url == data:blog.homepageUrl path &quot;/search?max-results=10&quot;' id='FeaturedPost50' locked='false' title='Featured Post' type='FeaturedPost' visible='true'>
+  <b:widget cond='data:view.isHomepage or data:view.url.canonical == data:blog.canonicalHomepageUrl path &quot;/search?max-results=10&quot;' id='FeaturedPost50' locked='false' title='Featured Post' type='FeaturedPost' visible='true'>
     <b:widget-settings>
       <b:widget-setting name='showSnippet'>true</b:widget-setting>
       <b:widget-setting name='showPostTitle'>true</b:widget-setting>
-      <b:widget-setting name='postId'>4303680299253625703</b:widget-setting>
+      <b:widget-setting name='postId'>0</b:widget-setting>
       <b:widget-setting name='showFirstImage'>true</b:widget-setting>
       <b:widget-setting name='useMostRecentPost'>true</b:widget-setting>
     </b:widget-settings>
@@ -856,18 +1021,18 @@ width: 50%;
 <b:section class='pt-4' cond='data:view.isPost' id='before-post' showaddelement='yes'>
   <b:widget id='HTML52' locked='false' title='#Advertisement' type='HTML' version='2' visible='true'>
     <b:widget-settings>
-      <b:widget-setting name='content'><![CDATA[<div class="example-ads jt-bg-light rounded text-center py-4 fs-7">Advertisement here</div>]]></b:widget-setting>
+      <b:widget-setting name='content'><![CDATA[<hr class="example-ads"/>]]></b:widget-setting>
     </b:widget-settings>
     <b:includable id='main'><b:include name='JetHtml'/></b:includable>
   </b:widget>
 </b:section>
 <b:section class='pt-4 pb-5' id='blog-post' maxwidgets='1' showaddelement='no'>
-  <b:widget id='Blog50' locked='true' title='Postingan Blog' type='Blog' version='2' visible='true'>
+  <b:widget id='Blog50' locked='true' title='Blog Posts' type='Blog' version='2' visible='true'>
     <b:widget-settings>
       <b:widget-setting name='showDateHeader'>false</b:widget-setting>
-      <b:widget-setting name='commentLabel'>Review</b:widget-setting>
+      <b:widget-setting name='commentLabel'>Comment</b:widget-setting>
       <b:widget-setting name='style.textcolor'>#ffffff</b:widget-setting>
-      <b:widget-setting name='showShareButtons'>false</b:widget-setting>
+      <b:widget-setting name='showShareButtons'>true</b:widget-setting>
       <b:widget-setting name='showCommentLink'>true</b:widget-setting>
       <b:widget-setting name='style.urlcolor'>#efefef</b:widget-setting>
       <b:widget-setting name='showAuthor'>true</b:widget-setting>
@@ -879,9 +1044,9 @@ width: 50%;
       <b:widget-setting name='reactionsLabel'/>
       <b:widget-setting name='showAuthorProfile'>true</b:widget-setting>
       <b:widget-setting name='style.layout'>1x1</b:widget-setting>
-      <b:widget-setting name='showLabels'>false</b:widget-setting>
+      <b:widget-setting name='showLabels'>true</b:widget-setting>
       <b:widget-setting name='showLocation'>false</b:widget-setting>
-      <b:widget-setting name='showTimestamp'>false</b:widget-setting>
+      <b:widget-setting name='showTimestamp'>true</b:widget-setting>
       <b:widget-setting name='postsPerAd'>1</b:widget-setting>
       <b:widget-setting name='showBacklinks'>false</b:widget-setting>
       <b:widget-setting name='style.bordercolor'>#000000</b:widget-setting>
@@ -957,7 +1122,7 @@ width: 50%;
 <b:section class='d-none' cond='data:view.isPost' id='ads-post' showaddelement='yes'>
   <b:widget id='HTML61' locked='false' title='#Advertisement' type='HTML' visible='true'>
     <b:widget-settings>
-      <b:widget-setting name='content'><![CDATA[<div class="example-ads jt-bg-light rounded text-center py-4 fs-7">Advertisement here</div>]]></b:widget-setting>
+      <b:widget-setting name='content'><![CDATA[<hr class="example-ads"/>]]></b:widget-setting>
     </b:widget-settings>
     <b:includable id='main'>
       <b:include name='JetHtml'/>
@@ -965,7 +1130,7 @@ width: 50%;
   </b:widget>
   <b:widget id='HTML62' locked='false' title='#Advertisement' type='HTML' visible='true'>
     <b:widget-settings>
-      <b:widget-setting name='content'><![CDATA[<div class="example-ads jt-bg-light rounded text-center py-4 fs-7">Advertisement here</div>]]></b:widget-setting>
+      <b:widget-setting name='content'><![CDATA[<hr class="example-ads"/>]]></b:widget-setting>
     </b:widget-settings>
     <b:includable id='main'>
       <b:include name='JetHtml'/>
@@ -981,7 +1146,7 @@ width: 50%;
   </b:widget>
   <b:widget id='HTML63' locked='false' title='#Advertisement' type='HTML' visible='true'>
     <b:widget-settings>
-      <b:widget-setting name='content'><![CDATA[<div class="example-ads jt-bg-light rounded text-center py-4 fs-7">Advertisement here</div>]]></b:widget-setting>
+      <b:widget-setting name='content'><![CDATA[<hr class="example-ads"/>]]></b:widget-setting>
     </b:widget-settings>
     <b:includable id='main'>
       <b:include name='JetHtml'/>
@@ -989,11 +1154,19 @@ width: 50%;
   </b:widget>
   <b:widget id='HTML64' locked='false' title='#Advertisement' type='HTML' visible='true'>
     <b:widget-settings>
-      <b:widget-setting name='content'><![CDATA[<div class="example-ads jt-bg-light rounded text-center py-4 fs-7">Advertisement here</div>]]></b:widget-setting>
+      <b:widget-setting name='content'><![CDATA[<hr class="example-ads"/>]]></b:widget-setting>
     </b:widget-settings>
     <b:includable id='main'>
       <b:include name='JetHtml'/>
     </b:includable>
+  </b:widget>
+</b:section>
+<b:section class='pb-4' cond='data:view.isMultipleItems and !data:view.search.query' id='after-blog' showaddelement='yes'>
+  <b:widget id='HTML53' locked='false' title='#Advertisement' type='HTML' version='2' visible='false'>
+    <b:widget-settings>
+      <b:widget-setting name='content'><![CDATA[<hr class="example-ads"/>]]></b:widget-setting>
+    </b:widget-settings>
+    <b:includable id='main'><b:include name='JetHtml'/></b:includable>
   </b:widget>
 </b:section>
 </div>
@@ -1047,7 +1220,7 @@ width: 50%;
       <b:widget-setting name='display'>LIST</b:widget-setting>
       <b:widget-setting name='selectedLabelsList'/>
       <b:widget-setting name='showType'>ALL</b:widget-setting>
-      <b:widget-setting name='showFreqNumbers'>false</b:widget-setting>
+      <b:widget-setting name='showFreqNumbers'>true</b:widget-setting>
     </b:widget-settings>
     <b:includable id='main'>
       <b:include name='JetLabel'/>
@@ -1071,11 +1244,19 @@ width: 50%;
     <b:includable id='content'/>
     <b:includable id='list'/>
   </b:widget>
+  <b:widget id='HTML2' locked='false' title='#Recent Post' type='HTML' visible='true'>
+    <b:widget-settings>
+      <b:widget-setting name='content'><![CDATA[<div data-title="Recent Post" class="custom-posts visually-hidden" data-items="5" data-func="sidebar_temp"></div>]]></b:widget-setting>
+    </b:widget-settings>
+    <b:includable id='main'>
+      <b:include name='JetHtml'/>
+    </b:includable>
+  </b:widget>
 </b:section>
 <b:section class='position-sticky py-4 top-0' id='sidebar-sticky' itemscope='itemscope'>
-  <b:widget id='HTML53' locked='false' title='#Advertisement' type='HTML' visible='true'>
+  <b:widget id='HTML54' locked='false' title='#Advertisement' type='HTML' visible='true'>
     <b:widget-settings>
-      <b:widget-setting name='content'><![CDATA[<div class="example-ads jt-bg-light rounded text-center py-4 fs-7">Advertisement here</div>]]></b:widget-setting>
+      <b:widget-setting name='content'><![CDATA[<hr class="example-ads"/>]]></b:widget-setting>
     </b:widget-settings>
     <b:includable id='main'>
       <b:include name='JetHtml'/>
@@ -1091,7 +1272,7 @@ width: 50%;
 <footer class='border-top jt-border-light' content='itemid' id='footer' itemid='#footer' itemscope='itemscope' itemtype='https://schema.org/WPFooter'>
 <div class='py-5 fs-7' id='footer-main'>
   <div class='container px-3'>
-    <b:section class='row row-cols-sm-2 row-cols-lg-4' id='footer-widget' maxwidgets='5' showaddelement='yes'>
+    <b:section class='row row-cols-sm-2 row-cols-lg-4 justify-content-evenly' id='footer-widget' maxwidgets='5' showaddelement='yes'>
       <b:widget id='HTML55' locked='false' title='About Us' type='HTML' visible='true'>
         <b:widget-settings>
           <b:widget-setting name='content'><![CDATA[<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultricies, sapien et auctor bibendum, magna urna posuere purus, at vehicula erat est ac sem.</p>]]></b:widget-setting>
@@ -1146,7 +1327,9 @@ width: 50%;
         <b:includable id='content'/>
       </b:widget>
       <b:widget id='HTML58' locked='false' title='Newsletter' type='HTML' version='2' visible='true'>
-        <b:widget-settings><b:widget-setting name='content'/></b:widget-settings>
+        <b:widget-settings>
+          <b:widget-setting name='content'>Stay up to date with the latest news and relevant updates from us.</b:widget-setting>
+        </b:widget-settings>
         <b:includable id='main'>
       <b:include name='JetFollowIt'/>
     </b:includable>
@@ -1160,14 +1343,16 @@ width: 50%;
     <b:widget-settings>
       <b:widget-setting name='content'><![CDATA[Copyright &copy; 2021 BlogName. Design by <a class="text-decoration-none" href="https://www.jettheme.com">JetTheme.com</a>]]></b:widget-setting>
     </b:widget-settings>
-    <b:includable id='main'><b:include name='JetCopyRight'/></b:includable>
+    <b:includable id='main'>
+      <b:include name='JetCopyRight'/>
+    </b:includable>
   </b:widget>
 </b:section>
 </div>
 </footer>
 
 <div class='position-fixed d-none' id='back-to-top' style='right:20px;bottom:20px'><a aria-label='Back to Top' class='btn btn-sm jt-btn-light rounded-circle jt-icon-center' href='#back-to-top' onclick='window.scroll({top:0,left: 0,behavior:&apos;smooth&apos;});'><svg aria-hidden='true' class='jt-icon' height='1em' width='1em'><use xlink:href='#i-arrow-t'/></svg></a></div>
-  
+
 <b:section class='d-none' id='jet-options' maxwidgets='5' showaddelement='no'>
   <b:widget id='HTML57' locked='true' title='SVG Icons' type='HTML' version='2' visible='true'>
     <b:widget-settings>
@@ -1194,34 +1379,13 @@ width: 50%;
 &lt;symbol id=&quot;i-check&quot; viewbox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M5 13l4 4L19 7&quot;&gt;&lt;/path&gt;&lt;/symbol&gt;
 &lt;symbol id=&quot;i-github&quot; viewbox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22&quot;&gt;&lt;/path&gt;&lt;/symbol&gt;
 &lt;symbol id=&quot;i-telegram&quot; stroke=&quot;none&quot; fill=&quot;currentColor&quot; viewbox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M22.05 1.577c-.393-.016-.784.08-1.117.235-.484.186-4.92 1.902-9.41 3.64-2.26.873-4.518 1.746-6.256 2.415-1.737.67-3.045 1.168-3.114 1.192-.46.16-1.082.362-1.61.984-.133.155-.267.354-.335.628s-.038.622.095.895c.265.547.714.773 1.244.976 1.76.564 3.58 1.102 5.087 1.608.556 1.96 1.09 3.927 1.618 5.89.174.394.553.54.944.544l-.002.02s.307.03.606-.042c.3-.07.677-.244 1.02-.565.377-.354 1.4-1.36 1.98-1.928l4.37 3.226.035.02s.484.34 1.192.388c.354.024.82-.044 1.22-.337.403-.294.67-.767.795-1.307.374-1.63 2.853-13.427 3.276-15.38l-.012.046c.296-1.1.187-2.108-.496-2.705-.342-.297-.736-.427-1.13-.444zm-.118 1.874c.027.025.025.025.002.027-.007-.002.08.118-.09.755l-.007.024-.005.022c-.432 1.997-2.936 13.9-3.27 15.356-.046.196-.065.182-.054.17-.1-.015-.285-.094-.3-.1l-7.48-5.525c2.562-2.467 5.182-4.7 7.827-7.08.468-.235.39-.96-.17-.972-.594.14-1.095.567-1.64.84-3.132 1.858-6.332 3.492-9.43 5.406-1.59-.553-3.177-1.012-4.643-1.467 1.272-.51 2.283-.886 3.278-1.27 1.738-.67 3.996-1.54 6.256-2.415 4.522-1.748 9.07-3.51 9.465-3.662l.032-.013.03-.013c.11-.05.173-.055.202-.057 0 0-.01-.033-.002-.026zM10.02 16.016l1.234.912c-.532.52-1.035 1.01-1.398 1.36z&quot;&gt;&lt;/path&gt;&lt;/symbol&gt;
-&lt;symbol id=&quot;i-download&quot; viewbox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4&quot;&gt;&lt;/path&gt;&lt;/symbol&gt;</b:widget-setting>
+&lt;symbol id=&quot;i-download&quot; viewbox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4&quot;&gt;&lt;/path&gt;&lt;/symbol&gt;
+&lt;symbol id=&quot;i-eye&quot; viewbox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z&quot;&gt;&lt;/path&gt;&lt;circle cx=&quot;12&quot; cy=&quot;12&quot; r=&quot;3&quot;&gt;&lt;/circle&gt;&lt;/symbol&gt;
+&lt;symbol id=&quot;i-news&quot; viewbox=&quot;0 0 20 20&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M2 5a2 2 0 012-2h8a2 2 0 012 2v10a2 2 0 002 2H4a2 2 0 01-2-2V5zm3 1h6v4H5V6zm6 6H5v2h6v-2z&quot; clip-rule=&quot;evenodd&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M15 7h1a2 2 0 012 2v5.5a1.5 1.5 0 01-3 0V7z&quot;&gt;&lt;/path&gt;&lt;/symbol&gt;
+&lt;symbol id=&quot;i-phone&quot; viewbox=&quot;0 0 20 20&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;&lt;path d=&quot;M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z&quot;&gt;&lt;/path&gt;&lt;/symbol&gt;</b:widget-setting>
     </b:widget-settings>
     <b:includable id='main'>
       <svg style='display:none' xmlns='http://www.w3.org/2000/svg'><data:content/></svg>
-    </b:includable>
-  </b:widget>
-  <b:widget id='HTML59' locked='true' title='JetScript Options' type='HTML' version='2' visible='true'>
-    <b:widget-settings>
-      <b:widget-setting name='content'>const analyticId = &quot;false&quot;;
-/*Fill with Analytic ID, and false if not used.*/
-
-const caPubAdsense = false;
-/*Fill with ca-pub-adsense ID number, and false if not used.*/
-
-const autoTOC = true;
-/*false if not used.*/
-
-const positionTOC = &quot;noscript&quot;;
-/*unique tag or class or id to set TOC.*/</b:widget-setting>
-    </b:widget-settings>
-    <b:includable id='main'>
-<script>
-const siteUrl = rmurl(&quot;<data:blog.homepageUrl/>&quot;),
-<b:if cond='data:view.isPreview'>isPreview = true,</b:if>
-blogId = &quot;<data:blog.blogId/>&quot;,
-blogTitle = &quot;<data:blog.title/>&quot;;
-<data:content/>
-</script>
     </b:includable>
   </b:widget>
 </b:section>
@@ -1231,7 +1395,7 @@ blogTitle = &quot;<data:blog.title/>&quot;;
     <b:includable id='JetWidgetTitle'>
       <b:class name='position-relative mb-4'/>
       <b:if cond='data:title not contains &quot;#&quot;'>
-        <h2 class='widget-title fs-6 mb-3 text-uppercase fw-light'><span><data:title/></span></h2>
+        <h2 class='widget-title position-relative fs-6 mb-3'><span><data:title/></span></h2>
       </b:if>
     </b:includable>
     <b:includable id='JetEdit'>
@@ -1241,66 +1405,67 @@ blogTitle = &quot;<data:blog.title/>&quot;;
     </b:includable>
     <b:includable id='JetHtml'>
       <b:include name='JetWidgetTitle'/>
-      <div class='widget-content'><data:content/></div>
+      <div class='widget-content text-break'><data:content/></div>
       <b:include name='JetEdit'/>
     </b:includable>
     <b:includable id='JetSocial'>
       <b:include name='JetWidgetTitle'/>
-      <div class='widget-content social-media'>
-        <div class='d-flex flex-wrap'>
-          <b:loop values='data:links' var='link'><a expr:aria-label='data:link.name' expr:class='&quot;me-2 mb-2 btn btn-sm jt-btn-light hover-btn-primary rounded-pill jt-icon-center i-&quot; + data:link.name' expr:href='data:link.target' rel='noopener' target='_blank'><svg aria-hidden='true' class='jt-icon'><use expr:xlink:href='&quot;#i-&quot; + data:link.name'/></svg></a></b:loop>
-        </div>
+      <div class='widget-content social-media mb-3 ms-2 ms-sm-0'>
+          <b:loop index='i' values='data:links' var='link'><a expr:aria-label='data:link.name' expr:class='&quot;mb-2 btn btn-sm jt-btn-light hover-btn-primary rounded-pill jt-icon-center i-&quot; + data:link.name' expr:href='data:link.target' rel='noopener' target='_blank'><b:class cond='data:i != data:links.size - 1' name='me-2'/><svg aria-hidden='true' class='jt-icon'><use expr:xlink:href='&quot;#i-&quot; + data:link.name'/></svg></a></b:loop>
       </div>
       <b:include name='JetEdit'/>
     </b:includable>
     <b:includable id='JetPopularPosts'>
 <b:include name='JetWidgetTitle'/>
+<b:with value='(data:widgets where (w =&gt; w.type == &quot;Blog&quot; and w.id == &quot;Blog50&quot; )).first' var='jwidget'>
 <div class='widget-content popular-posts'>
 <b:loop index='i' values='data:posts' var='post'>
-<div class='d-flex mb-3'>
+<div class='item-post d-flex mb-3'>
 <b:if cond='data:postDisplay.showFeaturedImage'>
 <b:if cond='data:post.featuredImage'>
 <div class='item-thumbnail me-3' style='width:85px'>
-<a class='rounded jt-bg-light overflow-hidden d-block ratio ratio-1x1' expr:href='data:post.url'>
+<a class='rounded jt-bg-light overflow-hidden d-block ratio ratio-1x1' expr:href='data:post.url.canonical'>
 <img expr:alt='data:post.title' expr:class='data:post.featuredImage.isYoutube ?  &quot;object-cover lazyload&quot; : &quot;lazyload&quot;' expr:data-src='data:post.featuredImage.isYoutube ? data:post.featuredImage.youtubeMaxResDefaultUrl : data:post.featuredImage' loading='lazy' src='data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=='/>
 </a>
 </div>
 </b:if>
 <b:else/>
-<div class='item-number me-3'><span><b:eval expr='data:i + 1'/></span></div>
+<div class='item-number me-3'><a class='btn btn-sm rounded-pill jt-icon-center jt-btn-primary' expr:href='data:post.url.canonical'><b:eval expr='data:i + 1'/></a></div>
 </b:if>
 <div class='item-content col'>
-<b:if cond='data:post.labels'>
+<b:if cond='data:post.labels and data:jwidget.allBylineItems.labels'>
 <div class='item-tag mb-1 fw-light fs-8 text-secondary'>
-<b:loop index='i' values='data:post.labels where (l =&gt; l.name not contains &quot;#&quot;) take 3' var='label'>
+<b:loop index='i' values='data:post.labels where (l =&gt; l.name not contains &quot;#&quot;) take data:skin.vars.maxLabel' var='label'>
 <b:if cond='data:i != 0'>,</b:if>
-<a class='text-reset text-decoration-none' expr:href='data:label.url + &quot;?max-results=10&quot;' rel='tag'>
+<a class='text-reset hover-text-primary text-decoration-none' expr:href='data:label.url.canonical + &quot;?max-results=10&quot;' rel='tag'>
 <data:label.name/>
 </a>
 </b:loop>
 </div>
 </b:if>
-<h3 class='item-title fs-7 mb-2'><a class='text-reset text-decoration-none' expr:href='data:post.url'><data:post.title/></a></h3>
+<h3 class='item-title fs-7 mb-2'><a class='text-reset text-decoration-none' expr:href='data:post.url.canonical'><data:post.title/></a></h3>
 <div class='item-meta text-secondary d-flex flex-wrap fs-8'>
-<small class='me-2'><svg aria-hidden='true' class='me-1 jt-icon'><use xlink:href='#i-clock'/></svg><b:eval expr='data:post.lastUpdated format &quot;d MMM, yyyy&quot;'/>
-</small>
-<b:if cond='data:post.numberOfComments gt 0'>
+<b:if cond='data:jwidget.allBylineItems.timestamp'>
+<small class='me-2'><svg aria-hidden='true' class='me-1 jt-icon'><use xlink:href='#i-clock'/></svg><b:eval expr='data:post.date format &quot;d MMM, yyyy&quot;'/></small>
+</b:if>
+<b:if cond='data:post.numberOfComments gt 0 and data:jwidget.allBylineItems.comments'>
 <small><svg aria-hidden='true' class='me-1 jt-icon'><use xlink:href='#i-comment'/></svg><data:post.numberOfComments/></small>
 </b:if>
 </div>
 <b:if cond='data:postDisplay.showSnippet'>
-<div class='item-snippet text-sm'><p><b:eval expr='data:post.snippets.short snippet { links: false }'/></p></div>
+<div class='item-snippet text-break fs-8 pt-2'><p><b:eval expr='data:post.snippets.short snippet { links: false }'/></p></div>
 </b:if>
 </div>
 </div>
 </b:loop>
 </div>
+</b:with>
 <b:include name='JetEdit'/>
 </b:includable>
     <b:includable id='JetLabel'>
       <b:include name='JetWidgetTitle'/>
       <div class='widget-content categories'>
-        <ul expr:class='data:display + &quot; d-flex flex-wrap list-unstyled&quot;'><b:loop values='data:labels' var='label'><b:if cond='data:display == &quot;list&quot; and data:label.name not contains &quot;#&quot;'><li class='mb-2 pe-2 col-6'><a class='text-reset fw-bold text-decoration-none' expr:href='data:label.url + &quot;?max-results=10&quot;'><data:label.name/></a></li><b:elseif cond='data:display == &quot;cloud&quot; and data:label.name contains &quot;#&quot;'/><li class='me-2 mb-2'><a class='btn btn-sm jt-btn-light rounded-pill' expr:href='data:label.url + &quot;?max-results=10&quot;'><data:label.name/></a></li></b:if></b:loop></ul>
+        <ul expr:class='data:display + &quot; d-flex flex-wrap list-unstyled&quot;'><b:loop index='i' values='data:labels' var='label'><b:if cond='data:display == &quot;list&quot; and data:label.name not contains &quot;#&quot;'><li class='mb-2 pe-2 col-6'><a class='text-reset fw-bold hover-text-primary text-decoration-none' expr:href='data:label.url + &quot;?max-results=10&quot;'><span class='align-middle'><data:label.name/></span><b:if cond='data:showFreqNumbers'><span class='ms-1 fw-light fs-9'>[<data:label.count/>]</span></b:if></a></li><b:elseif cond='data:display == &quot;cloud&quot; and data:label.name contains &quot;#&quot;'/><li class='me-2 mb-2'><a class='btn btn-sm jt-btn-light rounded-pill px-3' expr:href='data:label.url + &quot;?max-results=10&quot;'><span class='align-middle'><data:label.name/></span><b:if cond='data:showFreqNumbers'><span class='ms-1 fw-light fs-9'>[<data:label.count/>]</span></b:if></a></li></b:if></b:loop></ul>
       </div>
       <b:include name='JetEdit'/>
     </b:includable>
@@ -1311,7 +1476,7 @@ blogTitle = &quot;<data:blog.title/>&quot;;
           <b:loop values='data:links' var='link'>
             <li>
               <a expr:href='data:link.href'>
-              <b:class cond='data:link.isCurrentPage or data:view.url == data:link.href' name='current-item'/>
+              <b:class cond='data:link.isCurrentPage or data:view.url.canonical == data:link.href' name='current-item'/>
               <data:link.title/>
               </a>
             </li>
@@ -1334,41 +1499,27 @@ blogTitle = &quot;<data:blog.title/>&quot;;
       </div>
       <b:include name='JetEdit'/>
     </b:includable>
-    <b:includable id='JetFollowByEmail'>
-      <b:include name='JetWidgetTitle'/>
-      <div class='widget-content follow-by-email'>
-        <p class='mb-3'>Stay up to date with the latest news and relevant updates from <data:blog.title/>.</p>
-        <form action='https://feedburner.google.com/fb/a/mailverify' class='input-group rounded-pill overflow-hidden border border-2 jt-border-light' method='post' target='_blank'>
-          <input aria-label='Email Address' class='form-control fs-7 bg-transparent border-0 text-reset' id='newsletter-email' name='email' placeholder='Email Address' required='required' type='email'/>
-          <input expr:value='data:feedPath' name='uri' type='hidden'/>
-          <input name='loc' type='hidden' value='id_ID'/>
-          <button aria-label='Submit Button' class='btn py-0 border-0 text-reset fs-5' type='submit'><svg aria-hidden='true' class='jt-icon'><use xlink:href='#i-mail'/></svg></button>
-        </form>
-      </div>
-      <b:include name='JetEdit'/>
-    </b:includable>
     <b:includable id='JetFollowIt'>
-      <b:class name='position-relative mb-4'/>
       <b:include name='JetWidgetTitle'/>
       <div class='widget-content follow-by-email'>
-        <p class='mb-3'>Stay up to date with the latest news and relevant updates from <data:blog.title/>.</p>
-        <form expr:action='data:content' method='post' target='_blank'><div class='input-group rounded-pill overflow-hidden border border-2 jt-border-light'><input aria-label='Email Address' class='form-control fs-7 bg-transparent border-0 text-reset' id='newsletter-email' name='email' placeholder='Email Address' required='required' type='email'/><button aria-label='Submit Button' class='btn py-0 border-0 text-reset fs-5' type='submit'><svg aria-hidden='true' class='jt-icon'><use xlink:href='#i-mail'/></svg></button></div></form>
+        <div class='mb-3'><data:content/></div>
+        <form action='https://api.follow.it/subscribe?pub=CQoJCcEXztieMrPUAQYKlNRPCjlhk9FW' method='post' target='_blank'><div class='input-group rounded-pill overflow-hidden border border-2 jt-border-light' style='max-width:400px'><input aria-label='Email Address' class='form-control fs-7 bg-transparent border-0 text-reset py-2' id='newsletter-email' name='email' placeholder='Email Address' required='required' type='email'/><button aria-label='Submit Button' class='btn py-0 border-0 text-reset fs-5' type='submit'><svg aria-hidden='true' class='jt-icon'><use xlink:href='#i-mail'/></svg></button></div></form>
       </div>
       <b:include name='JetEdit'/>
     </b:includable>
     <b:includable id='JetLogo'>
       <b:if cond='data:content contains &quot;&lt;/svg&gt;&quot;'>
 	<b:class name='logo-wrap position-relative'/>
-        <a class='navbar-brand me-0 fw-bold' expr:href='data:blog.homepageUrl'>
+        <a class='navbar-brand me-0 fw-bold' expr:href='data:blog.canonicalHomepageUrl'>
           <data:content/>
         </a>
       <b:elseif cond='data:content contains &quot;data:image/&quot; OR  data:content contains &quot;https://&quot;'/>
         <b:class name='logo-wrap position-relative'/>
-        <a class='d-block navbar-brand me-0' expr:href='data:blog.homepageUrl'>
+        <a class='d-block navbar-brand me-0' expr:href='data:blog.canonicalHomepageUrl'>
           <img expr:alt='data:blog.title' expr:src='data:content' height='55' loading='lazy' width='175'/>
         </a>
       <b:else/>
-        <a class='navbar-brand me-0 fw-bold' expr:href='data:blog.homepageUrl'>
+        <a class='navbar-brand me-0 fw-bold' expr:href='data:blog.canonicalHomepageUrl'>
           <data:content/>
         </a>
       </b:if>
@@ -1380,14 +1531,19 @@ blogTitle = &quot;<data:blog.title/>&quot;;
 <ul class='navbar-nav px-4 p-lg-0 container' itemscope='itemscope' itemtype='http://schema.org/SiteNavigationElement' role='menu'>
   <b:loop index='i' values='data:links' var='link'>
     <b:switch var='data:link.href'>
-      <b:case value='#sub-start'/><input class='d-none' expr:id='&quot;sub-toggle-&quot; + data:i' type='checkbox'/><label class='dropdown-toggle' expr:for='&quot;sub-toggle-&quot; + data:i'/> &lt;ul class=&quot;dropdown-menu jt-border-light rounded-0&quot;&gt; &lt;li class=&quot;d-none&quot;&gt; <b:case value='#sub-end'/>&lt;/li&gt; &lt;/ul&gt; <b:default/><b:if cond='data:i gt 0'>&lt;/li&gt;</b:if>&lt;li class=&quot;menu-item&quot;&gt;<a class='nav-link' expr:href='data:link.href' itemprop='url' role='menuitem'><b:class cond='data:link.isCurrentPage or data:view.url == data:link.href or data:view.url == path(data:blog.homepageUrl, data:link.href)' name='active'/><span itemprop='name'><data:link.title/></span></a></b:switch></b:loop>&lt;/li&gt;</ul>
+      <b:case value='#sub-start'/><input class='d-none' expr:id='&quot;sub-toggle-&quot; + data:i' type='checkbox'/><label class='dropdown-toggle' expr:for='&quot;sub-toggle-&quot; + data:i'/> &lt;ul class=&quot;dropdown-menu jt-border-light rounded-0&quot;&gt; &lt;li class=&quot;d-none&quot;&gt; <b:case value='#sub-end'/>&lt;/li&gt; &lt;/ul&gt; <b:default/><b:if cond='data:i gt 0'>&lt;/li&gt;</b:if>&lt;li class=&quot;menu-item&quot;&gt;<a class='nav-link' expr:href='data:link.href' itemprop='url' role='menuitem'><b:class cond='data:link.isCurrentPage or data:view.url.canonical == data:link.href or data:view.url.canonical == path(data:blog.canonicalHomepageUrl, data:link.href)' name='active'/><span itemprop='name'><data:link.title/></span></a></b:switch></b:loop>&lt;/li&gt;</ul>
     </b:includable>
     <b:includable id='JetSearch'>
       <b:class name='d-flex align-self-stretch align-items-center order-lg-1 ms-auto'/>
-      <b:tag class='d-flex pe-1 border-end jt-border-light' cond='data:links' name='div'><b:loop values='data:links' var='link'><a expr:aria-label='data:link.name' expr:class='&quot;px-2 text-reset jt-icon-center i-&quot; + data:link.name' expr:href='data:link.target' rel='noopener' target='_blank'><svg aria-hidden='true' class='jt-icon'><use expr:xlink:href='&quot;#i-&quot; + data:link.name'/></svg></a></b:loop></b:tag>
-      <div class='d-flex align-self-stretch align-items-center ps-1'>
+      <b:if cond='data:title not contains &quot;#Icons&quot;'>
+      <div class='header-social d-flex pe-1 border-end jt-border-light'><b:loop values='data:links' var='link'><a expr:aria-label='data:link.name' expr:class='&quot;px-2 text-reset jt-icon-center i-&quot; + data:link.name' expr:href='data:link.target' rel='noopener' target='_blank'><svg aria-hidden='true' class='jt-icon'><use expr:xlink:href='&quot;#i-&quot; + data:link.name'/></svg></a></b:loop></div>
+      </b:if>
+      <b:if cond='data:title not contains &quot;#Dark&quot;'>
+      <div class='d-flex align-self-stretch align-items-center ps-1' id='dark-header'>
         <label aria-label='Toggle Dark Mode' class='p-2 jt-icon-center' id='dark-toggler'><i class='icon-mode jt-icon'/></label>
       </div>
+      </b:if>
+      <b:if cond='data:title not contains &quot;#Search&quot;'>
       <div class='d-flex align-self-stretch align-items-center position-md-relative' id='search-header'>
         <input class='d-none' id='search-toggle' type='checkbox'/>
         <label aria-label='Toggle search' class='p-2 check-text-primary hover-text-primary jt-icon-center' for='search-toggle' id='search-toggler'><svg aria-hidden='true' class='fs-5 jt-icon'><use xlink:href='#i-search'/></svg></label>
@@ -1399,6 +1555,7 @@ blogTitle = &quot;<data:blog.title/>&quot;;
           </form>
         </div>
       </div>
+      </b:if>
       <div class='d-flex align-self-stretch align-items-center d-lg-none'>
         <label aria-label='Toggle navigation' class='p-1 jt-icon-center hover-text-primary' for='navbar-toggle' id='navbar-toggler'><svg aria-hidden='true' class='fs-3 jt-icon'><use xlink:href='#i-menu'/></svg></label>
       </div>
@@ -1420,32 +1577,34 @@ blogTitle = &quot;<data:blog.title/>&quot;;
 <b:include data='post' name='JetPostMeta'/>
 <b:if cond='data:post.featuredImage'>
 <div class='item-thumbnail'>
-<a class='jt-bg-light d-block ratio ratio-16x9' expr:href='data:post.url' rel='bookmark'>  
+<a class='jt-bg-light d-block ratio ratio-16x9' expr:href='data:post.url.canonical' rel='bookmark'>  
 <img expr:alt='data:post.title' expr:class='data:post.featuredImage.isYoutube ?  &quot;object-cover lazyload&quot; : &quot;lazyload&quot;' expr:data-src='data:post.featuredImage.isYoutube ? data:post.thumbnailUrl : data:post.featuredImage' loading='lazy' src='data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=='/>
 </a>
 </div>
 </b:if>
 <div class='item-content p-4'>
-<b:if cond='data:post.labels'>
+<b:if cond='data:post.labels and data:jwidget.allBylineItems.labels'>
 <div class='item-tag mb-3 fw-light text-secondary'>
-<b:loop index='i' values='data:post.labels where (l =&gt; l.name not contains &quot;#&quot;) take 3' var='label'>
+<b:loop index='i' values='data:post.labels where (l =&gt; l.name not contains &quot;#&quot;) take data:skin.vars.maxLabel' var='label'>
 <b:if cond='data:i != 0'>,</b:if>
-<a class='text-reset text-decoration-none' expr:href='data:label.url + &quot;?max-results=10&quot;' rel='tag'>
+<a class='text-reset hover-text-primary text-decoration-none' expr:href='data:label.url.canonical + &quot;?max-results=10&quot;' rel='tag'>
 <data:label.name/>
 </a>
 </b:loop>
 </div>
 </b:if>
 <b:tag class='item-title fs-5 mb-3' expr:name='data:view.isHomepage ? &quot;h3&quot; : &quot;h2&quot;'>
-<a class='text-reset text-decoration-none' expr:href='data:post.url'><data:post.title/></a>
+<a class='text-reset text-decoration-none' expr:href='data:post.url.canonical'><data:post.title/></a>
 </b:tag>
-<p class='item-snippet mb-3'><b:eval expr='data:post.snippets.short snippet { links: false }'/></p>
+<p class='item-snippet text-break mb-3'><b:eval expr='data:post.snippets.short snippet { links: false }'/></p>
 <div class='item-meta text-secondary d-flex flex-wrap fw-light'>
-<small class='me-2'><svg aria-hidden='true' class='me-1 jt-icon'><use xlink:href='#i-user'/></svg><data:post.author.name/>
-</small>
-<small class='me-2'><svg aria-hidden='true' class='me-1 jt-icon'><use xlink:href='#i-clock'/></svg><b:eval expr='data:post.lastUpdated format &quot;d MMM, yyyy&quot;'/>
-</small>
-<b:if cond='data:post.numberOfComments gt 0'>
+<b:if cond='data:jwidget.allBylineItems.author'>
+<small class='me-2'><svg aria-hidden='true' class='me-1 jt-icon'><use xlink:href='#i-user'/></svg><data:post.author.name/></small>
+</b:if>
+<b:if cond='data:jwidget.allBylineItems.timestamp'>
+<small class='me-2'><svg aria-hidden='true' class='me-1 jt-icon'><use xlink:href='#i-clock'/></svg><b:eval expr='data:post.date format &quot;d MMM, yyyy&quot;'/></small>
+</b:if>
+<b:if cond='data:post.numberOfComments gt 0 and data:jwidget.allBylineItems.comments'>
 <small><svg aria-hidden='true' class='me-1 jt-icon'><use xlink:href='#i-comment'/></svg><data:post.numberOfComments/></small>
 </b:if>
 </div>
@@ -1460,12 +1619,12 @@ blogTitle = &quot;<data:blog.title/>&quot;;
 <b:if cond='data:view.isPost'>
 <div class='d-sm-flex border-top border-bottom jt-border-light mb-5' id='post-pager'>
 <b:if cond='data:newerPageUrl'>
-<a class='d-block prev-page col-sm-6 py-3 pe-sm-3 border-sm-bottom jt-border-light text-reset text-center text-sm-start text-decoration-none' expr:href='data:newerPageUrl'>
+<a class='d-block prev-page col-sm-6 py-3 pe-sm-3 border-sm-bottom jt-border-light text-reset text-center text-sm-start text-decoration-none' expr:href='data:newerPageUrl.canonical'>
 <span class='d-block pe-2 fs-7 fw-light'><svg aria-hidden='true' class='jt-icon'><use xlink:href='#i-arrow-l'/></svg>Next Post</span>
 </a>
 </b:if>
 <b:if cond='data:olderPageUrl'>
-<a class='d-block next-page col-sm-6 py-3 ps-sm-3 jt-border-light text-center text-sm-end text-reset text-decoration-none ms-auto' expr:href='data:olderPageUrl'>
+<a class='d-block next-page col-sm-6 py-3 ps-sm-3 jt-border-light text-center text-sm-end text-reset text-decoration-none ms-auto' expr:href='data:olderPageUrl.canonical'>
 <span class='d-block ps-2 fs-7 fw-light'>Previous Post <svg aria-hidden='true' class='jt-icon'><use xlink:href='#i-arrow-r'/></svg></span>
 </a>
 </b:if>
@@ -1488,36 +1647,43 @@ blogTitle = &quot;<data:blog.title/>&quot;;
     </b:includable>
     <b:includable id='JetFeaturedPost'>
 <b:include name='JetWidgetTitle'/>
+<b:with value='(data:widgets where (w =&gt; w.type == &quot;Blog&quot; and w.id == &quot;Blog50&quot; )).first' var='jwidget'>
 <div class='widget-content feature-posts'>
 <b:loop values='data:posts' var='post'>
-<div class='d-sm-flex'>
-<b:if cond='data:post.featuredImage'>
+<div class='item-post d-sm-flex'>
+<b:if cond='data:post.featuredImage and data:postDisplay.showFeaturedImage'>
 <div class='item-thumbnail pe-sm-3 col-sm-6'>
-<a class='d-block jt-bg-light overflow-hidden rounded shadow-sm ratio ratio-1x1' expr:href='data:post.url' rel='bookmark'>
+<a class='d-block jt-bg-light overflow-hidden rounded shadow-sm ratio ratio-1x1' expr:href='data:post.url.canonical' rel='bookmark'>
 <img expr:alt='data:post.title' expr:class='data:post.featuredImage.isYoutube ?  &quot;object-cover lazyload&quot; : &quot;lazyload&quot;' expr:data-src='data:post.featuredImage.isYoutube ? data:post.featuredImage.youtubeMaxResDefaultUrl : data:post.featuredImage' loading='lazy' src='data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=='/>
 </a>
 </div>
 </b:if>
 <div class='item-content p-4 py-sm-0 position-relative jt-border-light'>
 <b:class cond='data:post.featuredImage' name='col-sm-6'/>
-<b:if cond='data:post.labels'>
+<b:if cond='data:post.labels and data:jwidget.allBylineItems.labels'>
 <div class='item-tag mb-3 fw-light text-secondary'>
-<b:loop index='i' values='data:post.labels where (l =&gt; l.name not contains &quot;#&quot;) take 3' var='label'>
+<b:loop index='i' values='data:post.labels where (l =&gt; l.name not contains &quot;#&quot;) take data:skin.vars.maxLabel' var='label'>
 <b:if cond='data:i != 0'>,</b:if>
-<a class='text-reset text-decoration-none' expr:href='data:label.url + &quot;?max-results=10&quot;' rel='tag'>
+<a class='text-reset hover-text-primary text-decoration-none' expr:href='data:label.url.canonical + &quot;?max-results=10&quot;' rel='tag'>
 <data:label.name/>
 </a>
 </b:loop>
 </div>
 </b:if>
-<h3 class='item-title mb-4 fs-2'><a class='text-reset text-decoration-none' expr:href='data:post.url'><data:post.title/></a></h3>
-<p class='item-snippet mb-3'><b:eval expr='data:post.snippets.short snippet { links: false }'/></p>
+<b:if cond='data:postDisplay.showTitle'>
+<h3 class='item-title mb-4 fs-2'><a class='text-reset text-decoration-none' expr:href='data:post.url.canonical'><data:post.title/></a></h3>
+</b:if>
+<b:if cond='data:postDisplay.showSnippet'>
+<p class='item-snippet text-break mb-3'><b:eval expr='data:post.snippets.short snippet { links: false }'/></p>
+</b:if>
 <div class='item-meta text-secondary d-flex flex-wrap fw-light'>
-<small class='me-2'><svg aria-hidden='true' class='me-1 jt-icon'><use xlink:href='#i-user'/></svg><data:post.author.name/>
-</small>
-<small class='me-2'><svg aria-hidden='true' class='me-1 jt-icon'><use xlink:href='#i-clock'/></svg><b:eval expr='data:post.lastUpdated format &quot;d MMM, yyyy&quot;'/>
-</small>
-<b:if cond='data:post.numberOfComments gt 0'>
+<b:if cond='data:jwidget.allBylineItems.author'>
+<small class='me-2'><svg aria-hidden='true' class='me-1 jt-icon'><use xlink:href='#i-user'/></svg><data:post.author.name/></small>
+</b:if>
+<b:if cond='data:jwidget.allBylineItems.timestamp'>
+<small class='me-2'><svg aria-hidden='true' class='me-1 jt-icon'><use xlink:href='#i-clock'/></svg><b:eval expr='data:post.date format &quot;d MMM, yyyy&quot;'/></small>
+</b:if>
+<b:if cond='data:post.numberOfComments gt 0 and data:jwidget.allBylineItems.comments.label'>
 <small><svg aria-hidden='true' class='me-1 jt-icon'><use xlink:href='#i-comment'/></svg><data:post.numberOfComments/></small>
 </b:if>
 </div>
@@ -1528,6 +1694,7 @@ blogTitle = &quot;<data:blog.title/>&quot;;
 </div>
 </b:loop>
 </div>
+</b:with>
 <b:include name='JetEdit'/>
 </b:includable>
 	<b:includable id='Jet404'>
@@ -1536,7 +1703,7 @@ blogTitle = &quot;<data:blog.title/>&quot;;
 <header class='entry-header'>
 <h1 class='entry-title mb-4'>Nothing Here</h1>
 </header>
-<div class='entry-text mb-5 text-break'>
+<div class='entry-text text-break mb-5'>
 <b:if cond='data:view.isHomepage'>
 <p>Ready to publish your first post? <a expr:href='&quot;https://www.blogger.com/blog/posts/&quot; + data:blog.blogId'>Get started here.</a></p>
 <b:else/>
@@ -1549,44 +1716,44 @@ blogTitle = &quot;<data:blog.title/>&quot;;
 <header class='entry-header'>
 <h1 class='entry-title mb-4'>404 Not Found</h1>
 </header>
-<div class='entry-text mb-5 text-break'>
-<p>The page you are looking for may have been deleted, renamed, or temporarily unavailable.</p>
+<div class='entry-text text-break mb-5'>
+<data:navMessage/>
 </div>
 </article>
 </b:if>
 </b:includable>
 	<b:includable id='JetBreadcrumbs' var='post'>
 <b:if cond='data:view.isMultipleItems and !data:view.search.query and !data:view.search.label and !data:view.isArchive'>
-<b:tag class='widget-title fs-6 mb-3 text-uppercase fw-light' expr:name='data:view.isHomepage ? &quot;h2&quot; : &quot;div&quot;'><span>Latest Posts</span></b:tag>
+<b:tag class='widget-title position-relative fs-6 mb-3' expr:name='data:view.isHomepage ? &quot;h2&quot; : &quot;div&quot;'><span>Latest Posts</span></b:tag>
 <b:else/>
 <div itemscope='itemscope' itemtype='https://schema.org/BreadcrumbList' style='--bs-breadcrumb-divider: url(&quot;data:image/svg+xml,%3Csvg xmlns=&apos;http://www.w3.org/2000/svg&apos; height=&apos;8&apos; width=&apos;8&apos; fill=&apos;none&apos; viewbox=&apos;0 0 24 24&apos; stroke=&apos;%23686868&apos;%3E%3Cpath stroke-linecap=&apos;round&apos; stroke-linejoin=&apos;round&apos; stroke-width=&apos;1&apos; d=&apos;M 0.5,0.5 4,4 0.5,7.5&apos;/%3E%3C/svg%3E&quot;);'>
-<ol class='breadcrumb text-nowrap fs-7 overflow-hidden'>
+<ol class='breadcrumb d-block text-nowrap fs-7 overflow-hidden text-truncate'>
 <b:if cond='data:view.search.query'>
-  <li class='breadcrumb-item'>Search for: <data:view.search.query/></li>
+  <li class='breadcrumb-item d-inline-block'>Search for: <data:view.search.query/></li>
 <b:else/>
-  <li class='breadcrumb-item' itemprop='itemListElement' itemscope='itemscope' itemtype='https://schema.org/ListItem'>
-    <a class='text-decoration-none' expr:href='data:blog.homepageUrl' itemprop='item' rel='tag' title='Home'><span itemprop='name'>Home</span></a>
+  <li class='breadcrumb-item d-inline-block' itemprop='itemListElement' itemscope='itemscope' itemtype='https://schema.org/ListItem'>
+    <a class='text-decoration-none' expr:href='data:blog.canonicalHomepageUrl' itemprop='item' rel='tag' title='Home'><span itemprop='name'>Home</span></a>
     <meta content='1' itemprop='position'/>
   </li>
   <b:if cond='data:post.labels'>     
-    <b:loop index='i' values='data:post.labels where (l =&gt; l.name not contains &quot;#&quot;) take 3' var='label'>
-      <li class='breadcrumb-item' itemprop='itemListElement' itemscope='itemscope' itemtype='https://schema.org/ListItem'>
-        <a class='text-decoration-none' expr:href='data:label.url + &quot;?max-results=10&quot;' expr:title='data:label.name' itemprop='item' rel='tag'><span itemprop='name'><data:label.name/></span></a>
+    <b:loop index='i' values='data:post.labels where (l =&gt; l.name not contains &quot;#&quot;) take data:skin.vars.maxLabel' var='label'>
+      <li class='breadcrumb-item d-inline-block' itemprop='itemListElement' itemscope='itemscope' itemtype='https://schema.org/ListItem'>
+        <a class='text-decoration-none' expr:href='data:label.url.canonical + &quot;?max-results=10&quot;' expr:title='data:label.name' itemprop='item' rel='tag'><span itemprop='name'><data:label.name/></span></a>
         <meta expr:content='data:i + 2' itemprop='position'/>
       </li>
     </b:loop>
   </b:if>
   <b:if cond='data:view.search.label'>
-    <li aria-current='page' class='breadcrumb-item active'><b:eval expr='data:view.search.label'/></li>
+    <li aria-current='page' class='breadcrumb-item d-inline-block active'><b:eval expr='data:view.search.label'/></li>
   </b:if>
   <b:if cond='data:view.isArchive'>
-    <li aria-current='page' class='breadcrumb-item active'>
+    <li aria-current='page' class='breadcrumb-item d-inline-block active'>
     <b:loop index='i' values='[data:view.archive.year,data:view.archive.month,data:view.archive.day]' var='dates'>
       <b:if cond='data:i == 0'>
-        <a expr:href='data:blog.homepageUrl + data:dates'><data:dates/></a>
+        <a expr:href='data:blog.canonicalHomepageUrl + data:dates'><data:dates/></a>
       </b:if>
       <b:if cond='data:i == 1'>
-        / <a expr:href='data:blog.homepageUrl + data:view.archive.year +(data:dates gte 10 ? &quot;/&quot; : &quot;/0&quot; )+ data:dates'>
+        / <a expr:href='data:blog.canonicalHomepageUrl + data:view.archive.year +(data:dates gte 10 ? &quot;/&quot; : &quot;/0&quot; )+ data:dates'>
         <b:eval expr='data:dates gte 10 ? data:dates : &quot;0&quot; + data:dates '/>
         </a>
       </b:if>
@@ -1604,10 +1771,9 @@ blogTitle = &quot;<data:blog.title/>&quot;;
     <b:includable id='JetComments' var='post'>
 <b:if cond='data:post.embedCommentForm'>
 <div class='comments threaded mb-5' id='comments'>
-<div class='widget-title mb-3 text-uppercase fw-light'>
-<span><b:eval expr='data:post.numberOfComments != 0 ? data:post.numberOfComments + &quot; Comments&quot; : &quot;No Comment&quot;'/></span>
+<div class='widget-title position-relative mb-3 text-uppercase fw-light'>
+<span><b:eval expr='data:post.numberOfComments gt 0 ? data:post.numberOfComments + &quot; Comments&quot; : &quot;No Comment&quot;'/></span>
 </div>
-<b:if cond='data:post.numComments != 0'>
 <div class='comments-content'>
 <ul class='list-unstyled'>
 <b:loop values='data:post.comments where (c =&gt; not c.inReplyTo)' var='commentLevel1'>
@@ -1632,7 +1798,7 @@ blogTitle = &quot;<data:blog.title/>&quot;;
 <a aria-label='Delete' class='btn btn-sm jt-btn-light rounded-pill jt-icon-center' expr:href='data:commentLevel1.deleteUrl' rel='nofollow noopener noreferrer' target='_blank'><svg aria-hidden='true' class='jt-icon'><use xlink:href='#i-close'/></svg></a>
 </span>
 </div>
-<div class='comment-content fs-7 jt-bg-light p-3 rounded mb-3'><p class='mb-0'><b:eval expr='data:commentLevel1.body snippet { links: false }'/></p></div>
+<div class='comment-content text-break fs-7 jt-bg-light p-3 rounded mb-3'><p class='mb-0'><b:eval expr='data:commentLevel1.body snippet { links: false }'/></p></div>
 </div>
 <b:with value='data:post.comments where (c =&gt; c.inReplyTo == data:commentLevel1.id)' var='commentL2'>
 <b:if cond='data:commentL2.size gt 0'>
@@ -1660,7 +1826,7 @@ blogTitle = &quot;<data:blog.title/>&quot;;
 <a aria-label='Delete' class='btn btn-sm jt-btn-light rounded-pill jt-icon-center' expr:href='data:commentLevel2.deleteUrl' rel='nofollow noopener noreferrer' target='_blank'><svg aria-hidden='true' class='jt-icon'><use xlink:href='#i-close'/></svg></a>
 </span>
 </div>
-<div class='comment-content fs-7 jt-bg-light p-3 rounded mb-3'><p class='mb-0'><b:eval expr='data:commentLevel2.body snippet { links: false }'/></p></div>
+<div class='comment-content text-break fs-7 jt-bg-light p-3 rounded mb-3'><p class='mb-0'><b:eval expr='data:commentLevel2.body snippet { links: false }'/></p></div>
 </div>
 </li>
 </b:loop>
@@ -1675,7 +1841,6 @@ blogTitle = &quot;<data:blog.title/>&quot;;
 </b:loop>
 </ul>
 </div>
-</b:if>
 <b:if cond='data:post.allowNewComments'>
 <div id='add-comment'>
 <a class='btn btn-sm jt-btn-primary border-2 fw-bold py-2 px-5' expr:href='data:post.commentFormIframeSrc appendParams {skin: &quot;contempo&quot;}' id='comment-button' rel='nofollow noopener noreferrer' target='_blank'><svg aria-hidden='true' class='me-1 fs-6 jt-icon'><use xlink:href='#i-comment'/></svg>Add Comment</a>
@@ -1690,17 +1855,20 @@ blogTitle = &quot;<data:blog.title/>&quot;;
 </b:if>
 </b:includable>
     <b:includable id='JetShare' var='post'>
+      <data:jwidget.allBylineItems.share/>
+      <b:if cond='data:jwidget.allBylineItems.share'>
       <div class='social-share mb-3'>
         <div class='d-flex fs-5'>
-          <a class='me-2 mb-2 btn btn-sm jt-icon-center text-white rounded-pill' expr:href='&quot;https://www.facebook.com/sharer.php?u=&quot; + data:post.url' rel='nofollow noopener noreferrer' style='background-color:#3b5998' target='_blank' title='Facebook Share'><svg aria-hidden='true' class='jt-icon'><use xlink:href='#i-facebook'/></svg></a>
-<a class='me-2 mb-2 btn btn-sm jt-icon-center text-white rounded-pill' expr:href='&quot;https://twitter.com/intent/tweet?url=&quot; + data:blog.url' rel='nofollow noopener noreferrer' style='background-color:#55acee' target='_blank' title='Tweet This'><svg aria-hidden='true' class='jt-icon'><use xlink:href='#i-twitter'/></svg></a>
-<a class='me-2 mb-2 btn btn-sm jt-icon-center text-white rounded-pill' expr:href='&quot;https://pinterest.com/pin/create/button/?url=&quot; + data:post.url + &quot;&amp;media=&quot; + data:post.thumbnailUrl' rel='nofollow noopener noreferrer' style='background-color:#cb2027' target='_blank' title='Pin It'><svg aria-hidden='true' class='jt-icon'><use xlink:href='#i-pinterest'/></svg></a>
-<a class='me-2 mb-2 btn btn-sm jt-icon-center text-white rounded-pill' expr:href='&quot;https://www.linkedin.com/sharing/share-offsite/?url=&quot; + data:post.url' rel='nofollow noopener noreferrer' style='background-color:#2554bf' target='_blank' title='Linkedin Share'><svg aria-hidden='true' class='jt-icon'><use xlink:href='#i-linkedin'/></svg></a>
-<a class='me-2 mb-2 btn btn-sm jt-icon-center text-white rounded-pill' expr:href='&quot;https://www.tumblr.com/share/link?url=&quot; + data:post.url' rel='nofollow noopener noreferrer' style='background-color:#314358' target='_blank' title='Tumblr Share'><svg aria-hidden='true' class='jt-icon'><use xlink:href='#i-tumblr'/></svg></a>
-<a class='me-2 mb-2 btn btn-sm jt-icon-center text-white rounded-pill' expr:href='&quot;https://wa.me/?text=&quot;+ data:post.url' onclick='window.parent.null' rel='nofollow noopener noreferrer' style='background-color:#25d366' target='_blank' title='Share to whatsapp'><svg aria-hidden='true' class='jt-icon'><use xlink:href='#i-whatsapp'/></svg></a>
-<a class='me-2 mb-2 btn btn-sm jt-icon-center text-white rounded-pill' expr:href='&quot;https://t.me/share/url?url=&quot; + data:post.url' onclick='window.parent.null' rel='nofollow noopener noreferrer' style='background-color:#0088cc' target='_blank' title='Share to telegram'><svg aria-hidden='true' class='jt-icon'><use xlink:href='#i-telegram'/></svg></a>
+          <a class='me-2 mb-2 btn btn-sm jt-icon-center text-white rounded-pill' expr:href='&quot;https://www.facebook.com/sharer.php?u=&quot; + data:post.url.canonical' rel='nofollow noopener noreferrer' style='background-color:#3b5998' target='_blank' title='Facebook Share'><svg aria-hidden='true' class='jt-icon'><use xlink:href='#i-facebook'/></svg></a>
+<a class='me-2 mb-2 btn btn-sm jt-icon-center text-white rounded-pill' expr:href='&quot;https://twitter.com/intent/tweet?url=&quot; + data:post.url.canonical' rel='nofollow noopener noreferrer' style='background-color:#55acee' target='_blank' title='Tweet This'><svg aria-hidden='true' class='jt-icon'><use xlink:href='#i-twitter'/></svg></a>
+<a class='me-2 mb-2 btn btn-sm jt-icon-center text-white rounded-pill' expr:href='&quot;https://pinterest.com/pin/create/button/?url=&quot; + data:post.url.canonical + &quot;&amp;media=&quot; + data:post.thumbnailUrl' rel='nofollow noopener noreferrer' style='background-color:#cb2027' target='_blank' title='Pin It'><svg aria-hidden='true' class='jt-icon'><use xlink:href='#i-pinterest'/></svg></a>
+<a class='me-2 mb-2 btn btn-sm jt-icon-center text-white rounded-pill' expr:href='&quot;https://www.linkedin.com/sharing/share-offsite/?url=&quot; + data:post.url.canonical' rel='nofollow noopener noreferrer' style='background-color:#2554bf' target='_blank' title='Linkedin Share'><svg aria-hidden='true' class='jt-icon'><use xlink:href='#i-linkedin'/></svg></a>
+<a class='me-2 mb-2 btn btn-sm jt-icon-center text-white rounded-pill' expr:href='&quot;https://www.tumblr.com/share/link?url=&quot; + data:post.url.canonical' rel='nofollow noopener noreferrer' style='background-color:#314358' target='_blank' title='Tumblr Share'><svg aria-hidden='true' class='jt-icon'><use xlink:href='#i-tumblr'/></svg></a>
+<a class='me-2 mb-2 btn btn-sm jt-icon-center text-white rounded-pill' expr:href='&quot;https://wa.me/?text=&quot;+ data:post.url.canonical' onclick='window.parent.null' rel='nofollow noopener noreferrer' style='background-color:#25d366' target='_blank' title='Share to whatsapp'><svg aria-hidden='true' class='jt-icon'><use xlink:href='#i-whatsapp'/></svg></a>
+<a class='me-2 mb-2 btn btn-sm jt-icon-center text-white rounded-pill' expr:href='&quot;https://t.me/share/url?url=&quot; + data:post.url.canonical' onclick='window.parent.null' rel='nofollow noopener noreferrer' style='background-color:#0088cc' target='_blank' title='Share to telegram'><svg aria-hidden='true' class='jt-icon'><use xlink:href='#i-telegram'/></svg></a>
         </div>
       </div>
+      </b:if>
     </b:includable>
     <b:includable id='JetPostMeta' var='post'>
 <script type='application/ld+json'>
@@ -1709,7 +1877,7 @@ blogTitle = &quot;<data:blog.title/>&quot;;
   &quot;@type&quot;: &quot;NewsArticle&quot;,
   &quot;mainEntityOfPage&quot;: {
     &quot;@type&quot;: &quot;WebPage&quot;,
-    &quot;@id&quot;: &quot;<data:post.url/>&quot;
+    &quot;@id&quot;: &quot;<data:post.url.canonical/>&quot;
   },
   &quot;author&quot;: {
     &quot;@type&quot;: &quot;Person&quot;,
@@ -1717,13 +1885,15 @@ blogTitle = &quot;<data:blog.title/>&quot;;
   },
   &quot;publisher&quot;: {
     &quot;@type&quot;: &quot;Organization&quot;,
-    &quot;name&quot;: &quot;<data:blog.title/>&quot;,
+    &quot;name&quot;: &quot;<data:blog.title.jsonEscaped/>&quot;,
+<b:if cond='data:skin.vars.logo'>
     &quot;logo&quot;: {
       &quot;@type&quot;: &quot;ImageObject&quot;,
-      &quot;url&quot;: &quot;#####&quot;
+      &quot;url&quot;: &quot;<data:skin.vars.logo/>&quot;
     }
+</b:if>
   },
-  &quot;headline&quot;: &quot;<data:post.title/>&quot;,
+  &quot;headline&quot;: &quot;<data:post.title.jsonEscaped/>&quot;,
   &quot;description&quot;: &quot;<b:eval expr='data:view.isMultipleItems ? data:post.snippets.long.jsonEscaped : data:view.description.jsonEscaped'/>&quot;,
   &quot;image&quot;: &quot;<data:post.featuredImage/>&quot;,
   &quot;datePublished&quot;: &quot;<data:post.date.iso8601/>&quot;,
@@ -1737,28 +1907,30 @@ blogTitle = &quot;<data:blog.title/>&quot;;
 <header class='entry-header mb-3'>
 <h1 class='entry-title mb-4'><data:post.title/></h1>
 <div class='entry-meta mb-3 text-secondary d-flex flex-wrap fw-light'>
-<div class='me-3'><svg aria-hidden='true' class='me-1 jt-icon'><use xlink:href='#i-user'/></svg><data:post.author.name/>
-</div>
-<div class='me-3'><svg aria-hidden='true' class='me-1 jt-icon'><use xlink:href='#i-clock'/></svg><b:eval expr='data:post.lastUpdated format &quot;d MMM, yyyy&quot;'/>
-</div>
-<b:if cond='data:post.numberOfComments gt 0'>
-<div><svg aria-hidden='true' class='me-1 jt-icon'><use xlink:href='#i-comment'/></svg><data:post.numberOfComments/></div>
+<b:if cond='data:jwidget.allBylineItems.author'>
+<div class='me-3'><svg aria-hidden='true' class='me-1 jt-icon'><use xlink:href='#i-user'/></svg><data:post.author.name/></div>
+</b:if>
+<b:if cond='data:jwidget.allBylineItems.timestamp'>
+<div class='me-3'><svg aria-hidden='true' class='me-1 jt-icon'><use xlink:href='#i-clock'/></svg><b:eval expr='data:post.date format &quot;d MMM, yyyy&quot;'/></div>
+</b:if>
+<b:if cond='data:post.numberOfComments gt 0 and data:jwidget.allBylineItems.comments'>
+<a class='text-reset text-decoration-none' href='#comments'><svg aria-hidden='true' class='me-1 jt-icon'><use xlink:href='#i-comment'/></svg><data:post.numberOfComments/></a>
 </b:if>
 </div>
 </header>
 <b:include data='post' name='JetShare'/>
-<div class='entry-text mb-5 text-break' id='post-body'>
+<div class='entry-text text-break mb-5' id='post-body'>
 <data:post.body/>
 </div>
 <b:if cond='data:post.labels'>
 <div class='entry-tag'>
-<b:loop index='i' values='data:post.labels where (l =&gt; l.name not contains &quot;#&quot;) skip 3' var='label'>
+<b:loop index='i' values='data:post.labels where (l =&gt; l.name not contains &quot;#&quot;) skip data:skin.vars.maxLabel' var='label'>
 <b:class expr:cond='data:i == 0' name='mb-4'/>
-<a class='btn jt-btn-light rounded-pill me-2 mb-2' expr:href='data:label.url + &quot;?max-results=10&quot;' rel='tag'><data:label.name/></a>
+<a class='btn jt-btn-light rounded-pill me-2 mb-2 px-3' expr:href='data:label.url.canonical + &quot;?max-results=10&quot;' rel='tag'><data:label.name/></a>
 </b:loop>
 <b:loop index='i' values='data:post.labels where (l =&gt; l.name contains &quot;#&quot;)' var='label'>
 <b:class expr:cond='data:i == 0' name='mb-4'/>
-<a class='btn jt-btn-light rounded-pill me-2 mb-2' expr:href='data:label.url + &quot;?max-results=10&quot;' rel='tag'><data:label.name/></a>
+<a class='btn jt-btn-light rounded-pill me-2 mb-2 px-3' expr:href='data:label.url.canonical + &quot;?max-results=10&quot;' rel='tag'><data:label.name/></a>
 </b:loop>
 </div>
 </b:if>
@@ -1766,7 +1938,7 @@ blogTitle = &quot;<data:blog.title/>&quot;;
 <div class='post-author jt-bg-light rounded'>
 <div class='d-flex p-3'>
 <div class='author-thumbnail me-3 col-2' style='max-width:70px'>
-<div class='ratio ratio-1x1'>
+<div class='rounded-pill overflow-hidden ratio ratio-1x1'>
 <img class='object-cover lazyload' expr:alt='data:post.author.name' expr:data-src='data:post.author.authorPhoto.image' loading='lazy' src='data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=='/>
 </div>
 </div>
@@ -1787,7 +1959,7 @@ blogTitle = &quot;<data:blog.title/>&quot;;
 <header class='entry-header'>
 <h1 class='entry-title mb-4'><data:post.title/></h1>
 </header>
-<div class='entry-text mb-5 text-break'>
+<div class='entry-text text-break mb-5'>
 <data:post.body/>
 </div>
 </article>
@@ -1797,11 +1969,11 @@ blogTitle = &quot;<data:blog.title/>&quot;;
     </b:includable>
 	<b:includable id='JetRelatedPost' var='post'>
 <b:if cond='data:post.labels'>
-<div class='custom-posts visually-hidden related-posts' data-func='related_temp' data-items='10' data-shuffle='4' data-title='Related Post' expr:data-no-item='data:post.url'><b:with value='data:post.labels where (l =&gt; l.name not contains &quot;#&quot;)' var='labels'><b:loop index='i' values='data:labels' var='label'><data:label.name/><b:if cond='data:i != data:labels.size - 1 '>,</b:if></b:loop></b:with></div>
+<div class='custom-posts visually-hidden related-posts' data-func='related_temp' data-items='10' data-shuffle='4' data-title='Related Post' expr:data-no-item='data:post.url.canonical'><b:with value='data:post.labels where (l =&gt; l.name not contains &quot;#&quot;)' var='labels'><b:loop index='i' values='data:labels' var='label'><data:label.name/><b:if cond='data:i != data:labels.size - 1 '>,</b:if></b:loop></b:with></div>
 </b:if>
 </b:includable>
     <b:includable id='JetBlog'>
-      
+	<b:with value='(data:widgets where (w =&gt; w.type == data:widget.type and w.id == data:widget.instanceId )).first' var='jwidget'>
       <b:if cond='data:view.isError OR data:numPosts == 0'>
         <b:include name='JetBreadcrumbs'/>
         <b:include name='Jet404'/>
@@ -1810,7 +1982,7 @@ blogTitle = &quot;<data:blog.title/>&quot;;
         <div class='widget-content'>
           <div class='row row-cols-sm-2' id='blog-content'>
             <b:loop values='data:posts' var='post'>
-              <article class='mb-4'>
+              <article class='item-post mb-4'>
                 <b:include data='post' name='JetArchive'/>
               </article>
             </b:loop>
@@ -1830,13 +2002,58 @@ blogTitle = &quot;<data:blog.title/>&quot;;
             <b:include data='post' name='JetComments'/>
           </b:if>          
         </b:loop>
-      </b:if>
+     </b:if>
+    </b:with>
+    </b:includable>
+    <b:includable id='JetContactForm'>
+      <b:include name='JetWidgetTitle'/>
+      <div class='widget-content contact-form'>
+      <form class='contact-form-blogger'>
+        <div class='contact-form-wrap row'>
+          <div class='col-12 mb-3'>
+            <label class='form-label fs-7 fw-bold' expr:for='&quot;field-name_&quot; + data:widget.instanceId'>Your Name</label>
+            <input class='form-control bg-transparent jt-border-light text-reset' expr:id='&quot;field-name_&quot; + data:widget.instanceId' name='name' placeholder='Enter Name' required='' type='text'/>
+          </div>
+          <div class='col-12 mb-3'>
+            <label class='form-label fs-7 fw-bold' expr:for='&quot;field-email_&quot; + data:widget.instanceId'>Email Address</label>
+            <input class='form-control bg-transparent jt-border-light text-reset' expr:id='&quot;field-email_&quot; + data:widget.instanceId' name='email' placeholder='Enter Email' required='' type='email'/>
+          </div>
+          <div class='col-12 mb-3'>
+            <label class='form-label fs-7 fw-bold' expr:for='&quot;field-message_&quot; + data:widget.instanceId'>Message</label>
+            <textarea class='form-control bg-transparent jt-border-light text-reset' expr:id='&quot;field-message_&quot; + data:widget.instanceId' name='message' placeholder='Enter Message' required='' rows='3'/>
+          </div>
+          <div class='col-12 mb-3'>
+            <button class='btn btn-sm fw-bold py-2 px-5 jt-btn-primary' type='submit'>SEND</button>
+          </div>
+        </div>
+        <div class='contact-form-msg d-none border border-3 rounded text-center p-3 fs-7' data-error='Message failed to send. Please try again an hour later.' data-success='Thank you message sent successfully.'>
+        </div>
+      </form>
+    </div>
+      <b:include name='JetEdit'/>
+  	</b:includable>
+  	<b:includable id='JetImage'>
+      <b:include name='JetWidgetTitle'/>
+      <div class='widget-content'>
+        <div class='overflow-hidden position-relative jt-bg-white'>
+          <b:class cond='data:title contains &quot;#&quot;' name='border-end border-bottom jt-border-light'/>
+          <div class='bg-dark ratio ratio-4x3'>
+            <img class='lazyload' expr:alt='data:caption' expr:data-src='data:sourceUrl' loading='lazy' src='data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=='/>
+            <b:tag class='image-content position-absolute d-flex justify-content-center align-items-center' cond='data:caption or data:link' expr:name='data:caption ? &quot;div&quot; : &quot;a&quot;'>
+              <b:attr cond='!data:caption' name='href' value='data:link'/> 
+              <b:attr cond='data:caption' name='style' value='background:linear-gradient(to top, rgba(0, 0, 0, 0.55) 0%, rgba(77, 77, 77, 0) 100%)'/>
+              <b:tag class='py-2 px-4 jt-bg-white' cond='data:caption' expr:href='data:link' expr:name='data:link ? &quot;a&quot; : &quot;span&quot;'><b:class cond='data:caption and data:link' name='btn btn-sm jt-btn-light hover-btn-primary rounded-0'/><data:caption/></b:tag>
+            </b:tag>
+          </div>
+        </div>
+      </div>
+      <b:include name='JetEdit'/>
     </b:includable>
   </b:defaultmarkup>
 </b:defaultmarkups>
   
 <b:defaultmarkups>
-  <b:defaultmarkup type='HTML'>
+  <b:defaultmarkup type='HTML,Text'>
     <b:includable id='main'>
       <b:include name='JetHtml'/>
     </b:includable>
@@ -1895,12 +2112,6 @@ blogTitle = &quot;<data:blog.title/>&quot;;
     <b:includable id='main'>
       <b:include name='JetTextList'/>
     </b:includable>
-  </b:defaultmarkup>
-  <b:defaultmarkup type='FollowByEmail'>
-    <b:includable id='main'>
-      <b:include name='JetFollowByEmail'/>
-    </b:includable>
-    <b:includable id='content'/>
   </b:defaultmarkup>
   <b:defaultmarkup type='Profile'>
     <b:includable id='main'>
@@ -2034,12 +2245,37 @@ blogTitle = &quot;<data:blog.title/>&quot;;
     <b:includable id='threadedCommentJs'/>
     <b:includable id='threadedComments'/>
   </b:defaultmarkup>
+  <b:defaultmarkup type='ContactForm'>
+    <b:includable id='main'>
+      <b:include name='JetContactForm'/>
+    </b:includable>    
+    <b:includable id='content'/>
+  </b:defaultmarkup>
+  <b:defaultmarkup type='Image'>
+    <b:includable id='main'>
+      <b:include name='JetImage'/>
+    </b:includable>
+    <b:includable id='content'/>
+  </b:defaultmarkup>
 </b:defaultmarkups>
-<script>//<![CDATA[
-!function(r,i,t){var u,o=/^data-(.+)/,a='IntersectionObserver',c=/p/.test(i.readyState),s=[],f=s.slice,l='lazied',n='load',e='pageshow',d='forEach',h='hasAttribute',m='shift';function v(e){i.head.appendChild(e)}function p(e,n){f.call(e.attributes)[d](n)}function y(e,n,t,o){return o=(o=n?i.getElementById(n):o)||i.createElement(e),n&&(o.id=n),t&&(o.onload=t),o}function b(e,n){return f.call((n||i).querySelectorAll(e))}function I(t,e){b('source',t)[d](I),p(t,function(e,n){(n=o.exec(e.name))&&(t[n[1]]=e.value)}),e&&(t.className+=' '+e),n in t&&t[n]()}function g(e){u(function(o){o=b(e||'[type=deferjs]'),function e(n,t){(n=o[m]())&&(n.parentNode.removeChild(n),(t=y(n.nodeName)).text=n.text,p(n,function(e){'type'!=e.name&&(t[e.name]=e.value)}),t.src&&!t[h]('async')?(t.onload=t.onerror=e,v(t)):(v(t),e()))}()})}(u=function(e,n){c?t(e,n):s.push(e,n)}).all=g,u.js=function(n,t,e,o){u(function(e){(e=y('SCRIPT',t,o)).src=n,v(e)},e)},u.css=function(n,t,e,o){u(function(e){(e=y('LINK',t,o)).rel='stylesheet',e.href=n,v(e)},e)},u.dom=function(e,n,t,z,o,i){function c(e){o&&!1===o(e)||I(e,t)}u(function(t){t=a in r&&new r[a](function(e){e[d](function(e,n){e.isIntersecting&&(n=e.target)&&(z&&z(n),t.unobserve(n),c(n))})},i),b(e||'[data-src]')[d](function(e){e[h](l)||(e.setAttribute(l,''),t?t.observe(e):c(e))})},n)},u.reveal=I,r.Defer=u,r.addEventListener('on'+e in r?e:n,function(){for(g();s[0];t(s[m](),s[m]()))c=1})}(this,document,setTimeout);'IntersectionObserver' in window||document.write('<script src="https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver"><\/script>');
+<script>
+<b:eval expr='&quot;const siteUrl=&apos;&quot; + data:blog.canonicalHomepageUrl + &quot;&apos;;&quot;'/>
+<b:eval expr='&quot;const blogId=&apos;&quot; + data:blog.blogId + &quot;&apos;;&quot;'/>
+<b:eval expr='&quot;const blogTitle=&apos;&quot; + data:blog.title + &quot;&apos;;&quot;'/>
+<b:eval expr='&quot;const isPreview=&apos;&quot; + data:view.isPreview + &quot;&apos;;&quot;'/>
+<b:eval expr='&quot;const titleSeparator=&apos;&quot; + data:skin.vars.separator + &quot;&apos;;&quot;'/>
+<b:eval expr='&quot;const autoTOC=&apos;&quot; + data:skin.vars.autoTOC + &quot;&apos;;&quot;'/>
+<b:eval expr='&quot;const positionTOC=&apos;&quot; + data:skin.vars.positionTOC + &quot;&apos;;&quot;'/>
+<b:eval expr='&quot;const analyticId=&apos;&quot; + (data:skin.vars.analyticId  != &quot;&quot; ? data:skin.vars.analyticId : data:blog.analyticsAccountNumber) + &quot;&apos;;&quot;'/>
+<b:eval expr='&quot;const caPubAdsense=&apos;&quot; + (data:skin.vars.caPubAdsense != &quot;&quot; ? data:skin.vars.caPubAdsense : data:blog.adsenseClientId) + &quot;&apos;;&quot;'/>
+
+/*<![CDATA[*/
+/*@shinsenter/defer.js@2.5.0*/
+!function(r,i,t){var u,o=/^data-(.+)/,a='IntersectionObserver',c=/p/.test(i.readyState),s=[],f=s.slice,l='deferjs',n='load',e='pageshow',d='forEach',h='shift';function m(e){i.head.appendChild(e)}function v(e,n){f.call(e.attributes)[d](n)}function p(e,n,t,o){return o=(o=n?i.getElementById(n):o)||i.createElement(e),n&&(o.id=n),t&&(o.onload=t),o}function y(e,n){return f.call((n||i).querySelectorAll(e))}function b(t,e){y('source',t)[d](b),v(t,function(e,n){(n=o.exec(e.name))&&(t[n[1]]=e.value)}),e&&(t.className+=' '+e),n in t&&t[n]()}function I(e){u(function(o){o=y(e||'[type=deferjs]'),function e(n,t){(n=o[h]())&&(n.parentNode.removeChild(n),(t=p(n.nodeName)).text=n.text,v(n,function(e){'type'!=e.name&&t.setAttribute(e.name,e.value)}),t.src&&!t.hasAttribute('async')?(t.onload=t.onerror=e,m(t)):(m(t),e()))}()})}(u=function(e,n){c?t(e,n):s.push(e,n)}).all=I,u.js=function(n,t,e,o){u(function(e){(e=p('SCRIPT',t,o)).src=n,m(e)},e)},u.css=function(n,t,e,o){u(function(e){(e=p('LINK',t,o)).rel='stylesheet',e.href=n,m(e)},e)},u.dom=function(e,n,t,z,o,i){function c(e){o&&!1===o(e)||b(e,t)}u(function(t){t=a in r&&new r[a](function(e){e[d](function(e,n){e.isIntersecting&&(n=e.target)&&(z&&z(n),t.unobserve(n),c(n))})},i),y(e||'[data-src]')[d](function(e){l in e||(e[l]=1,t?t.observe(e):c(e))})},n)},u.reveal=b,r.Defer=u,r.addEventListener('on'+e in r?e:n,function(){for(I();s[0];t(s[h](),s[h]()))c=1})}(this,document,setTimeout);'IntersectionObserver'in window||document.write('<script src="https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver"><\/script>');
+
 
 function related_temp(e) {
- return `${e.title ? `<div class='widget-title mb-3 text-uppercase fw-light'><span>${e.title}</span></div>` : ``}
+ return `${e.title ? `<div class='widget-title position-relative  mb-3 text-uppercase fw-light'><span>${e.title}</span></div>` : ``}
  <div class='row row-cols-sm-2'>
  ${e.posts.map(function(data, i){
  return `<article class='mb-4'>
@@ -2048,7 +2284,7 @@ function related_temp(e) {
  <div class='item-thumbnail'><a class='jt-bg-light d-block ratio ratio-21x9' href='${data.url}'><img alt='${data.title}' class='object-cover lazy-${data.grup_id} lazyload' data-src='${data.img}' loading='lazy' src='data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=='/></a></div>`: ``}
  <div class='item-content p-4'>
  <h2 class='item-title fs-6 mb-2' itemprop='headline'><a class='text-reset text-decoration-none' href='${data.url}'>${data.title}</a></h2>
- <div class='item-meta text-secondary d-flex flex-wrap fw-light'><small class='me-2'><svg aria-hidden='true' class='me-1 jt-icon'><use xlink:href='#i-user'/></svg>${data.author}</small><small class='me-2'><svg aria-hidden='true' class='me-1 jt-icon'><use xlink:href='#i-clock'/></svg>${data.date}</small></div>
+ <div class='item-meta text-secondary d-flex flex-wrap fw-light'>${data.author != 'Unknown' ? `<small class='me-2'><svg aria-hidden='true' class='me-1 jt-icon'><use xlink:href='#i-user'/></svg>${data.author}</small>`: ``}<small class='me-2'><svg aria-hidden='true' class='me-1 jt-icon'><use xlink:href='#i-clock'/></svg>${data.date}</small></div>
  </div>
  </div>
  </article>`;
@@ -2107,6 +2343,22 @@ function related_inline_temp(e) {
  </ul></div>`;
 }
 
+function sidebar_temp(e) {
+ return `${e.title ? `<div class='widget-title position-relative fs-6 mb-3'><span>${e.title}</span></div>` : ``}
+ <div class='mb-4'>
+ ${e.posts.map(function(data, i){
+ return `<div class='item-post d-flex mb-3'>
+ ${data.img ? `
+ <div class='item-thumbnail me-3' style="width:85px"><a class='rounded jt-bg-light overflow-hidden d-block ratio ratio-1x1' href='${data.url}'><img alt='${data.title}' class='object-cover lazy-${data.grup_id} lazyload' data-src='${data.img}' loading='lazy' src='data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=='/></a></div>`: ``}
+ <div class='item-content col'>
+ <h3 class='item-title fs-7 mb-2' itemprop='headline'><a class='text-reset text-decoration-none' href='${data.url}'>${data.title}</a></h3>
+ <div class='item-meta text-secondary d-flex flex-wrap fs-8'><small class='me-2'><svg aria-hidden='true' class='me-1 jt-icon'><use xlink:href='#i-clock'/></svg>${data.date}</small></div>
+ </div>
+ </div>`;
+ }).join('')}
+ </div>`;
+}
+
 function toc_temp(e) {
  var hc = 0;
  var l = 1;
@@ -2154,21 +2406,11 @@ function jtCallback(){
 
 
 }
-//]]></script>
-<script src='https://cdn.jsdelivr.net/gh/jettheme/js@0.3.9/main.js'/>
-<b:if cond='!data:view.isPreview'>
-&lt;div id=&quot;element-r&quot; style=&quot;display:none;&quot;&gt;
-&lt;textarea disabled readonly&gt;
-&lt;!--</b:if>
-</body>
-<b:if cond='!data:view.isPreview'>
---&gt;&lt;/textarea&gt;&lt;/div&gt;
-<script>//<![CDATA[
-const _sBgg=document.getElementById("element-r");null!==_sBgg&&(_sBgg.outerHTML="");
-const _WidgetManager={_PopupConfig:function(){}};
-//]]></script>
-</b:if>
-<b:if cond='!data:view.isPreview'>
-&lt;/body&gt;
-</b:if>
+/*]]>*/</script>
+<script src='https://cdn.jsdelivr.net/gh/jettheme/js@0.4.2/main.js'/>
+
+<!-- Your Style and Script before </body> is here -->
+
+<b:if cond='!data:view.isPreview'>&lt;textarea disabled readonly id=&quot;element-b&quot; style=&quot;display:none&quot;&gt;</b:if></body><b:if cond='!data:view.isPreview'>&lt;/textarea&gt;<script>/*<![CDATA[*/const _eh=document.getElementById("element-h"),_eb=document.getElementById("element-b"),_WidgetManager={_PopupConfig:function(){}};null!==_eh&&(_eh.outerHTML=""),null!==_eb&&(_eb.outerHTML="");/*]]>*/</script>
+&lt;/body&gt;</b:if>
 </html>

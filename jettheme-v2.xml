@@ -1881,17 +1881,16 @@ width: 50%;
   },
   &quot;author&quot;: {
     &quot;@type&quot;: &quot;Person&quot;,
-    &quot;name&quot;: &quot;<data:post.author.name/>&quot;
+    &quot;name&quot;: &quot;<data:post.author.name/>&quot;,
+    &quot;url&quot;: &quot;<data:post.author.profileUrl/>&quot;
   },
   &quot;publisher&quot;: {
     &quot;@type&quot;: &quot;Organization&quot;,
-    &quot;name&quot;: &quot;<data:blog.title.jsonEscaped/>&quot;,
-<b:if cond='data:skin.vars.logo'>
+    &quot;name&quot;: &quot;<data:blog.title.jsonEscaped/>&quot;<b:if cond='data:skin.vars.logo'>,
     &quot;logo&quot;: {
       &quot;@type&quot;: &quot;ImageObject&quot;,
       &quot;url&quot;: &quot;<data:skin.vars.logo/>&quot;
-    }
-</b:if>
+    }</b:if>
   },
   &quot;headline&quot;: &quot;<data:post.title.jsonEscaped/>&quot;,
   &quot;description&quot;: &quot;<b:eval expr='data:view.isMultipleItems ? data:post.snippets.long.jsonEscaped : data:view.description.jsonEscaped'/>&quot;,

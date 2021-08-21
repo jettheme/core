@@ -479,10 +479,10 @@ height: 5px;
 display:block !important;
 }
 .send-success .contact-form-msg{
-border-color: rgba(var(--bs-success-rgb),.3) !important;
+border-color: rgba(25,135,84,.3) !important;
 }
 .send-error .contact-form-msg{
-border-color: rgba(var(--bs-warning-rgb),.3) !important;
+border-color: rgba(255,193,7,.3) !important;
 }
 .send-success .contact-form-msg:before{
 content: attr(data-success);

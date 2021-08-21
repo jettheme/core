@@ -201,7 +201,7 @@ width: 50%;
 <link expr:href='data:view.url.canonical' rel='canonical'/>
 <meta expr:content='data:view.url.canonical' property='og:url'/>
 <meta expr:content='data:blog.title + &quot; Team&quot;' name='author'/>
-<meta content='jettheme-blogger' name='application-name'/>
+<meta expr:content='data:blog.title' name='application-name'/>
 <meta expr:content='data:blog.adultContent ? &quot;adult&quot; : &quot;general&quot;' name='rating'/>
       
 <!-- Favicon -->

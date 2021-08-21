@@ -515,7 +515,7 @@ width: 50%;
   </b:widget>
   <b:widget id='HTML1' locked='false' title='#You may also like' type='HTML' visible='true'>
     <b:widget-settings>
-      <b:widget-setting name='content'><![CDATA[<div data-title="You may also like..." class="custom-posts related-inline visually-hidden" data-shuffle="3" data-items="10" data-items="3" data-func="related_inline_temp"></div>]]></b:widget-setting>
+      <b:widget-setting name='content'><![CDATA[<div data-title="You may also like..." class="custom-posts related-inline visually-hidden" data-shuffle="3" data-items="10" data-func="related_inline_temp"></div>]]></b:widget-setting>
     </b:widget-settings>
     <b:includable id='main'>
       <b:include name='JetHtml'/>

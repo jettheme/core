@@ -1272,7 +1272,7 @@ width: 50%;
 <footer class='border-top jt-border-light' content='itemid' id='footer' itemid='#footer' itemscope='itemscope' itemtype='https://schema.org/WPFooter'>
 <div class='py-5 fs-7' id='footer-main'>
   <div class='container px-3'>
-    <b:section class='row row-cols-sm-2 row-cols-lg-4 justify-content-evenly' id='footer-widget' maxwidgets='5' showaddelement='yes'>
+    <b:section class='row row-cols-sm-2 row-cols-lg-4 justify-content-evenly' id='footer-widget' showaddelement='yes'>
       <b:widget id='HTML55' locked='false' title='About Us' type='HTML' visible='true'>
         <b:widget-settings>
           <b:widget-setting name='content'><![CDATA[<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultricies, sapien et auctor bibendum, magna urna posuere purus, at vehicula erat est ac sem.</p>]]></b:widget-setting>

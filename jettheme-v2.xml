@@ -620,7 +620,7 @@ bottom: 0;
 pointer-events: none;
 position: absolute;
 right: 5px;
-top: 5px;
+top: 3px;
 }
 #sidebar {
 border-left: 1px solid;

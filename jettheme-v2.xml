@@ -225,6 +225,9 @@ opacity: .5;
 margin: 0;
 padding: 0;
 }
+.dropdown-toggle::after {
+border-width: 0.25em 0.25em 0;
+}
 .ratio:before{
 content: none;
 }

@@ -50,23 +50,23 @@
 
 <Group description="_Main Color">
 <Variable name="keycolor" description="Main Color" type="color" default="#f67938" value="#f67938"/>
-<Variable name="body.background" description="Body Background" type="color" default="#ffffff" value="#ffffff"/>
+<Variable name="body.background" description="Body Background Color" type="color" default="#ffffff" value="#ffffff"/>
+<Variable name="body.text.color" description="Font Color" type="color" default="#686868" value="#686868"/>
+<Variable name="posts.title.color" description="Heading Color" type="color" default="#343a40" value="#000000"/>
+<Variable name="body.link.color" description="Link Color" type="color" default="$(keycolor)" value="#f67938"/>
+<Variable name="body.hover.color" description="Link Hover" type="color" default="#f46013" value="#f46013"/>
 <Variable name="border.color" description="Border Color" type="color" default="#efefef" value="#efefef"/>
+<Variable name="posts.text.color" description="Blockquote Border Color" type="color" default="$(keycolor)" value="#f67938"/>
 </Group>
 
 <Group description="_Typography">
 <Variable name="body.text" description="Body Font" type="font" default="normal normal 16px system-ui,-apple-system,Segoe UI,Helvetica Neue,Arial,Noto Sans,Liberation Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji" value="normal normal 16px system-ui,-apple-system,Segoe UI,Helvetica Neue,Arial,Noto Sans,Liberation Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji"/>
-<Variable name="body.text.color" description="Paragraph Color" type="color" default="#686868" value="#686868"/>
 <Variable name="posts.title" description="Heading Font" type="font" default="normal bold 40px var(--bs-font-sans-serif)" value="normal bold 40px var(--bs-font-sans-serif)"/>
-<Variable name="posts.title.color" description="Heading Color" type="color" default="#343a40" value="#343a40"/>
 <Variable name="title.h2" description="H2 Size" type="length" default="26px" min="12px" max="50px" value="26px"/>
 <Variable name="title.h3" description="H3 Size" type="length" default="22px" min="12px" max="50px" value="22px"/>
 <Variable name="title.h4" description="H4 Size" type="length" default="20px" min="12px" max="50px" value="20px"/>
 <Variable name="title.h5" description="H5 Size" type="length" default="18px" min="12px" max="50px" value="18px"/>
 <Variable name="title.h6" description="H6 Size" type="length" default="16px" min="12px" max="50px" value="16px"/>
-<Variable name="body.link.color" description="Link Color" type="color" default="$(keycolor)" value="#f67938"/>
-<Variable name="body.hover.color" description="Link Hover Color" type="color" default="#f46013" value="#f46013"/>
-<Variable name="posts.text.color" description="Blockquote Border Color" type="color" default="$(keycolor)" value="#f67938"/>
 </Group> 
 
 <Group description="_Logo">
@@ -74,11 +74,37 @@
 <Variable name="logo.width.mobile" description="Logo Max Width (mobile)" type="length" default="150px" min="50px" max="500px" value="150px"/>
 </Group>
 
+<Group description="_Header Color">
+<Variable name="header.bg" description="Background" type="color" default="#ffffff" value="#ffffff"/>
+<Variable name="header.color" description="Font Color " type="color" default="#686868" value="#686868"/>
+<Variable name="header.border" description="Border Color" type="color" default="#efefef" value="#efefef"/>
+</Group>
+
 <Group description="_Menu">
-<Variable name="tabs.font" description="Font Size" type="font" default="normal bold 16px var(--bs-font-sans-serif)" value="normal bold 16px var(--bs-font-sans-serif)"/>
+<Variable name="tabs.font" description="Menu Font" type="font" default="normal bold 16px var(--bs-font-sans-serif)" value="normal bold 16px var(--bs-font-sans-serif)"/>
 <Variable name="tabs.color" description="Font Color" type="color" default="$(body.text.color)" value="#686868"/>
 <Variable name="tabs.hover" description="Font Hover" type="color" default="$(keycolor)" value="#f67938"/>
 <Variable name="tabs.selected.color" description="Font Selected" type="color" default="$(keycolor)" value="#f67938"/>
+</Group>
+
+<Group description="_Dropdown Menu">
+<Variable name="dropdown.font" description="Font Size" type="length" default="16px" min="12px" max="50px" value="15px"/>
+<Variable name="dropdown.bg" description="Background Color" type="color" default="$(body.text.color)" value="#ffffff"/>
+<Variable name="dropdown.color" description="Font Color" type="color" default="$(keycolor)" value="#686868"/>
+<Variable name="dropdown.hover" description="Font Hover" type="color" default="$(keycolor)" value="#f67938"/>
+<Variable name="dropdown.selected" description="Dropdown Selected Color" type="color" default="$(keycolor)" value="#f67938"/>
+</Group>
+
+<Group description="_Footer Color">
+<Variable name="footer.bg" description="Background Color" type="color" default="#212529" value="#212529"/>
+<Variable name="footer.color" description="Font Color" type="color" default="#9fa6ad" value="#9fa6ad"/>
+<Variable name="footer.link" description="Link Color" type="color" default="#9fa6ad" value="#9fa6ad"/>
+<Variable name="footer.border" description="Border Color" type="color" default="#323539" value="#323539"/>
+</Group>
+
+<Group description="_Socket Color">
+<Variable name="socket.bg" description="Background Color" type="color" default="#09080c" value="#09080c"/>
+<Variable name="socket.color" description="Font Color" type="color" default="#9fa6ad" value="#9fa6ad"/>
 </Group>
 
 <Group description="_Button">
@@ -88,7 +114,7 @@
 
 <Group description="_Comment Form">
 <Variable name="body.text.font" description="Font" type="font" default="normal normal 14px system-ui,-apple-system,Segoe UI,Helvetica Neue,Arial,Noto Sans,Liberation Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji" value="normal normal 14px system-ui,-apple-system,Segoe UI,Helvetica Neue,Arial,Noto Sans,Liberation Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji"/>
-<Variable name="posts.background.color" description="Background" type="color" default="transparent" value="transparent"/>
+<Variable name="posts.background.color" description="Background" type="color" default="transparent" value="rgba(0,0,0,0)"/>
 </Group>
 */
 /*
@@ -102,59 +128,58 @@ URL			: www.jettheme.com
 */
 :root {
 --bs-font-sans-serif: $(body.text.family);
---bs-body-color : $(body.text.color);
---bs-body-bg : $(body.background);
---jt-primary : $(keycolor);
---jt-heading-color : $(posts.title.color);
---jt-heading-link : $(posts.title.color);
---jt-heading-hover : $(keycolor);
---jt-link-color : $(body.link.color);
---jt-link-hover : $(body.hover.color);
---jt-blockquote : $(posts.text.color);
---jt-btn-primary : $(posts.icons.color);
---jt-btn-primary-hover : $(labels.background.color);
---jt-btn-light-hover : $(posts.title.color);
---jt-border-light : $(border.color);
---jt-bg-light : #f3f7f9;
---jt-archive-bg : #ffffff;
---jt-nav-color : $(tabs.color);
---jt-nav-hover : $(tabs.hover);
---jt-nav-active : $(tabs.selected.color);
---jt-nav-mobile : $(body.background);
---jt-header-bg : $(body.background);
---jt-footer-bg : #17141d;
---jt-footer-color : #9fa6ad;
---jt-dropdown-bg : #ffffff;
---jt-dropdown-color : $(tabs.color);
---jt-dropdown-hover : $(tabs.hover);
+--bs-body-bg: $(body.background);
+--bs-body-color: $(body.text.color);
+--jt-primary: $(keycolor);
+--jt-heading-color: $(posts.title.color);
+--jt-heading-link: $(posts.title.color);
+--jt-heading-hover: $(keycolor);
+--jt-link-color: $(body.link.color);
+--jt-link-hover: $(body.hover.color);
+--jt-blockquote: $(posts.text.color);
+--jt-btn-primary: $(posts.icons.color);
+--jt-btn-primary-hover: $(labels.background.color);
+--jt-btn-light-hover: $(posts.title.color);
+--jt-border-light: $(border.color);
+--jt-bg-light: #f3f7f9;
+--jt-archive-bg: #ffffff;
+--jt-nav-color: $(tabs.color);
+--jt-nav-hover: $(tabs.hover);
+--jt-nav-selected: $(tabs.selected.color);
+--jt-dropdown-bg: $(dropdown.bg);
+--jt-dropdown-color: $(dropdown.color);
+--jt-dropdown-hover: $(dropdown.hover);
+--jt-dropdown-selected: $(dropdown.selected);
+--jt-header-bg: $(header.bg);
+--jt-header-color: $(header.color);
+--jt-header-border: $(header.border);
+--jt-footer-bg: $(footer.bg);
+--jt-footer-color: $(footer.color);
+--jt-footer-link: $(footer.link);
+--jt-footer-border: $(footer.border);
+--jt-socket-bg: $(socket.bg);
+--jt-socket-color: $(socket.color);
 }
 .dark-mode {
---bs-body-color : #9fa6ad;
---bs-body-bg : #212529;
---jt-primary : $(keycolor);
---bs-body-color : #9fa6ad;
---jt-heading-color : #9fa6ad;
---jt-heading-link : #9fa6ad;
---jt-heading-hover : $(keycolor);
---jt-link-color : $(body.link.color);
---jt-link-hover : $(body.hover.color);
---jt-blockquote : $(posts.text.color);
---jt-btn-primary : $(posts.icons.color);
---jt-btn-primary-hover : $(labels.background.color);
---jt-btn-light-hover : #ffffff;
---jt-border-light : #323539;
---jt-bg-light : #292d31;
---jt-archive-bg : #292d31;
---jt-nav-color : #9fa6ad;
---jt-nav-hover : #ffffff;
---jt-nav-active : $(tabs.selected.color);
---jt-nav-mobile : #212529;
---jt-header-bg : #212529;
---jt-footer-bg : #212529;
---jt-footer-color : #9fa6ad;
---jt-dropdown-bg : #292d31;
---jt-dropdown-color : #9fa6ad;
---jt-dropdown-hover : #ffffff;
+--bs-body-bg: hsl(210, 11%, 15%);
+--bs-body-color: hsl(210, 11%, 80%);
+--jt-heading-color: hsl(210, 11%, 80%);
+--jt-heading-link: hsl(210, 11%, 80%);
+--jt-btn-light-hover: hsl(210, 11%, 85%);
+--jt-border-light: hsl(210, 11%, 20%);
+--jt-bg-light: hsl(210, 11%, 20%);
+--jt-archive-bg: hsl(210, 11%, 17%);
+--jt-nav-color: hsl(210, 11%, 70%);
+--jt-dropdown-bg: hsl(210, 11%, 18%);
+--jt-dropdown-color: hsl(210, 11%, 70%);
+--jt-header-bg: hsl(210, 11%, 15%);
+--jt-header-color: hsl(210, 11%, 80%);
+--jt-header-border: hsl(210, 11%, 20%);
+--jt-footer-bg: hsl(210, 11%, 15%);
+--jt-footer-color: hsl(210, 11%, 80%);
+--jt-footer-border: hsl(210, 11%, 20%);
+--jt-socket-bg: hsl(210, 11%, 10%);
+--jt-socket-color: hsl(210, 11%, 80%);
 }
 
 body {
@@ -167,7 +192,7 @@ line-height: 1.5;
 text-rendering: optimizeLegibility;
 }
 .h1,.h2,.h3,.h4,.h5,.h6,
-h1,h2,h3,h4,h5,h6{
+h1,h2,h3,h4,h5,h6 {
 font: $(posts.title);
 line-height: 1.2;
 }
@@ -221,12 +246,12 @@ border-color: var(--jt-primary);
 .form-control::placeholder {
 opacity: .5;
 }
+.dropdown-toggle::after {
+border-width: 0.25em 0.25em 0;
+}
 .dropdown-menu {
 margin: 0;
 padding: 0;
-}
-.dropdown-toggle::after {
-border-width: 0.25em 0.25em 0;
 }
 .ratio:before{
 content: none;
@@ -297,9 +322,9 @@ display: none !important;
 .dropdown-menu,
 .accordion-item,
 .accordion-header {
-background-color: var(--jt-dropdown-bg);
-color: var(--jt-dropdown-color);
-border-color: var(--jt-border-light)
+background-color: var(--bs-body-bg);
+color: var(--bs-body-color);
+border-color: var(--jt-border-light);
 }
 .lazyload {
 transition-property: opacity;
@@ -333,10 +358,15 @@ box-shadow: none !important;
 }
 #header {
 background-color: var(--jt-header-bg);
+color: var(--jt-header-color);
 transition-property: transform;
 transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 transition-duration: .3s;
 min-height: 50px;
+border-bottom: 1px solid var(--jt-header-border);
+}
+.header-social {
+border-right: 1px solid var(--jt-header-border);
 }
 .jt-icon {
 display: inline-block;
@@ -366,9 +396,11 @@ content: url("data:image/svg+xml;utf8,%3Csvg width='1.1em' height='1.1em' fill='
 #footer {
 background-color: var(--jt-footer-bg);
 color: var(--jt-footer-color);
+border-top: 1px solid var(--jt-footer-border);
 }
 #socket {
-background-color: #09080c;
+background-color: var(--jt-socket-bg);
+color: var(--jt-socket-color);
 }
 #navbar {
 z-index: 9999;
@@ -399,17 +431,20 @@ line-height: 1.5;
 color: var(--jt-nav-color);
 }
 #navbar .navbar-nav > .menu-item:hover > .nav-link,
-#navbar .navbar-nav > .menu-item > .nav-link.active{
+#navbar .navbar-nav > .menu-item:hover > .dropdown-toggle {
 color: var(--jt-nav-hover);
 }
-#navbar .navbar-nav > .menu-item:hover > .dropdown-toggle,
+#navbar .navbar-nav > .menu-item > .nav-link.active,
 #navbar .navbar-nav > .menu-item > .active ~ .dropdown-toggle {
-color: var(--jt-nav-hover);
+color: var(--jt-nav-selected);
 }
 .logo-wrap {
 width: $(logo.width);
 }
-#search-header .dropdown-menu{
+#search-header .dropdown-menu {
+background-color:var(--jt-dropdown-bg);
+color: var(--jt-dropdown-color);
+border-color: var(--jt-header-border);
 min-width: 300px;
 right:0;
 top:100%
@@ -431,6 +466,7 @@ margin: 0 !important;
 padding: 0 !important;
 }
 .widget:last-child,
+#special-home .widget,
 #special-categories .widget {
 margin-bottom: 0 !important;
 }
@@ -514,6 +550,7 @@ max-width: 1108px;
 margin: 0 !important;
 }
 
+
 /* TYPOGRAPY */
 
 .h1,h1{font-size:calc(1.375rem + 1.5vw)}
@@ -576,6 +613,8 @@ border-right-style: solid;
 display: flex;
 }
 #navbar .dropdown-menu {
+background-color:var(--jt-dropdown-bg);
+border-color: var(--jt-header-border);
 margin-top: -10px;
 display: block;
 opacity: 0;
@@ -587,7 +626,8 @@ min-width: 150px;
 }
 #navbar .dropdown-menu .nav-link {
 padding-right: 20px;
-color: var(--bs-body-color);
+font-size: $(dropdown.font);
+color: var(--jt-dropdown-color);
 }
 #navbar .dropdown-menu .dropdown-toggle {
 position: absolute;
@@ -599,10 +639,12 @@ left: 100%;
 top: -1px;
 }
 #navbar .dropdown-menu .menu-item:hover > .nav-link,
-#navbar .dropdown-menu .menu-item > .nav-link.active,
-#navbar .dropdown-menu .menu-item:hover > .dropdown-toggle,
-#navbar .dropdown-menu .menu-item > .active ~ .dropdown-toggle {
+#navbar .dropdown-menu .menu-item:hover > .dropdown-toggle {
 color:  var(--jt-dropdown-hover);
+}
+#navbar .dropdown-menu .menu-item > .nav-link.active,
+#navbar .dropdown-menu .menu-item > .active ~ .dropdown-toggle {
+color:  var(--jt-dropdown-selected);
 }
 #navbar .menu-item:hover > .dropdown-menu {
 opacity: 1;
@@ -613,7 +655,6 @@ margin: 0;
 #navbar .navbar-nav > .menu-item > .nav-link {
 padding: 1.5rem 1.2rem;
 white-space:nowrap;
-font-size: 16px;
 }
 #navbar .navbar-nav > .menu-item > .dropdown-toggle {
 bottom: 0;
@@ -640,7 +681,7 @@ input:checked ~ .dropdown-menu {
 display: block;
 }
 input:checked + .dropdown-toggle {
-color: var(--jt-nav-active);
+color: var(--jt-dropdown-selected);
 }
 .logo-wrap {
 width: $(logo.width.mobile);
@@ -649,7 +690,7 @@ width: $(logo.width.mobile);
 width: 100%;
 }
 #navbar {
-background-color: var(--jt-nav-mobile);
+background-color: var(--jt-header-bg);
 padding-top: 70px;
 padding-bottom: 30px;
 position: fixed;
@@ -675,14 +716,18 @@ overflow-y: auto;
 display:block;
 }
 #navbar .nav-link {
-border-bottom: 1px solid var(--jt-border-light);
-color: var(--bs-body-color);
+border-bottom: 1px solid var(--jt-header-border);
+font-size: 16px !important;
+color: var(--jt-dropdown-color);
 }
 #navbar .menu-item:hover > .nav-link {
 color: var(--jt-dropdown-hover);
 }
+#navbar .active > .nav-link {
+color: var(--jt-dropdown-selected);
+}
 #navbar .dropdown-toggle {
-border-left: 1px solid var(--jt-border-light);
+border-left: 1px solid var(--jt-header-border);
 height: 2.5rem;
 padding: 0 1rem;
 position: absolute;
@@ -690,6 +735,7 @@ right: 0;
 top: 0;
 }
 #navbar .dropdown-menu {
+background-color: var(--jt-dropdown-bg);
 border: none;
 padding-left: 10px;
 }
@@ -921,7 +967,7 @@ width: 50%;
   </b:widget>
 </b:section>
 
-<header class='header-animate sticky-top navbar py-0 navbar-expand-lg border-bottom jt-border-light' content='itemid' id='header' itemid='#header' itemscope='itemscope' itemtype='https://schema.org/WPHeader'>
+<header class='header-animate sticky-top navbar py-0 navbar-expand-lg' content='itemid' id='header' itemid='#header' itemscope='itemscope' itemtype='https://schema.org/WPHeader'>
 <input class='d-none' id='navbar-toggle' type='checkbox'/>
 <b:section class='container position-relative px-3 flex-nowrap' id='header-main' maxwidgets='3' showaddelement='no'>
   <b:widget id='HTML50' locked='true' title='Logo' type='HTML' version='2' visible='true'>
@@ -1030,14 +1076,14 @@ width: 50%;
   </b:widget>
 </b:section>
 <b:section class='pt-4 pb-5' id='blog-post' maxwidgets='1' showaddelement='no'>
-  <b:widget id='Blog50' locked='true' title='Blog Posts' type='Blog' version='2' visible='true'>
+  <b:widget id='Blog50' locked='true' title='Blog Posts' type='Blog' visible='true'>
     <b:widget-settings>
       <b:widget-setting name='showDateHeader'>false</b:widget-setting>
       <b:widget-setting name='commentLabel'>Comment</b:widget-setting>
       <b:widget-setting name='style.textcolor'>#ffffff</b:widget-setting>
       <b:widget-setting name='showShareButtons'>true</b:widget-setting>
       <b:widget-setting name='showCommentLink'>true</b:widget-setting>
-      <b:widget-setting name='style.urlcolor'>#efefef</b:widget-setting>
+      <b:widget-setting name='style.urlcolor'>#686868</b:widget-setting>
       <b:widget-setting name='showAuthor'>true</b:widget-setting>
       <b:widget-setting name='disableGooglePlusShare'>true</b:widget-setting>
       <b:widget-setting name='style.linkcolor'>#f67938</b:widget-setting>
@@ -1139,7 +1185,7 @@ width: 50%;
       <b:include name='JetHtml'/>
     </b:includable>
   </b:widget>
-  <b:widget id='HTML1' locked='false' title='#You may also like' type='HTML' visible='true'>
+  <b:widget id='HTML63' locked='false' title='#You may also like' type='HTML' visible='true'>
     <b:widget-settings>
       <b:widget-setting name='content'><![CDATA[<div data-title="You may also like..." class="custom-posts related-inline visually-hidden" data-shuffle="3" data-items="10" data-func="related_inline_temp"></div>]]></b:widget-setting>
     </b:widget-settings>
@@ -1147,7 +1193,7 @@ width: 50%;
       <b:include name='JetHtml'/>
     </b:includable>
   </b:widget>
-  <b:widget id='HTML63' locked='false' title='#Advertisement' type='HTML' visible='true'>
+  <b:widget id='HTML64' locked='false' title='#Advertisement' type='HTML' visible='true'>
     <b:widget-settings>
       <b:widget-setting name='content'><![CDATA[<hr class="example-ads"/>]]></b:widget-setting>
     </b:widget-settings>
@@ -1155,7 +1201,7 @@ width: 50%;
       <b:include name='JetHtml'/>
     </b:includable>
   </b:widget>
-  <b:widget id='HTML64' locked='false' title='#Advertisement' type='HTML' visible='true'>
+  <b:widget id='HTML65' locked='false' title='#Advertisement' type='HTML' visible='true'>
     <b:widget-settings>
       <b:widget-setting name='content'><![CDATA[<hr class="example-ads"/>]]></b:widget-setting>
     </b:widget-settings>
@@ -1247,7 +1293,7 @@ width: 50%;
     <b:includable id='content'/>
     <b:includable id='list'/>
   </b:widget>
-  <b:widget id='HTML2' locked='false' title='#Recent Post' type='HTML' visible='true'>
+  <b:widget id='HTML66' locked='false' title='#Recent Post' type='HTML' visible='true'>
     <b:widget-settings>
       <b:widget-setting name='content'><![CDATA[<div data-title="Recent Post" class="custom-posts visually-hidden" data-items="5" data-func="sidebar_temp"></div>]]></b:widget-setting>
     </b:widget-settings>
@@ -1272,7 +1318,7 @@ width: 50%;
 </div>
 <!--Main Content End-->
 
-<footer class='border-top jt-border-light' content='itemid' id='footer' itemid='#footer' itemscope='itemscope' itemtype='https://schema.org/WPFooter'>
+<footer content='itemid' id='footer' itemid='#footer' itemscope='itemscope' itemtype='https://schema.org/WPFooter'>
 <div class='py-5 fs-7' id='footer-main'>
   <div class='container px-3'>
     <b:section class='row row-cols-sm-2 row-cols-lg-4 justify-content-evenly' id='footer-widget' showaddelement='yes'>
@@ -1539,7 +1585,7 @@ width: 50%;
     <b:includable id='JetSearch'>
       <b:class name='d-flex align-self-stretch align-items-center order-lg-1 ms-auto'/>
       <b:if cond='data:title not contains &quot;#Icons&quot;'>
-      <div class='header-social d-flex pe-1 border-end jt-border-light'><b:loop values='data:links' var='link'><a expr:aria-label='data:link.name' expr:class='&quot;px-2 text-reset jt-icon-center i-&quot; + data:link.name' expr:href='data:link.target' rel='noopener' target='_blank'><svg aria-hidden='true' class='jt-icon'><use expr:xlink:href='&quot;#i-&quot; + data:link.name'/></svg></a></b:loop></div>
+      <div class='header-social d-flex pe-1'><b:loop values='data:links' var='link'><a expr:aria-label='data:link.name' expr:class='&quot;px-2 text-reset jt-icon-center i-&quot; + data:link.name' expr:href='data:link.target' rel='noopener' target='_blank'><svg aria-hidden='true' class='jt-icon'><use expr:xlink:href='&quot;#i-&quot; + data:link.name'/></svg></a></b:loop></div>
       </b:if>
       <b:if cond='data:title not contains &quot;#Dark&quot;'>
       <div class='d-flex align-self-stretch align-items-center ps-1' id='dark-header'>
@@ -1550,7 +1596,7 @@ width: 50%;
       <div class='d-flex align-self-stretch align-items-center position-md-relative' id='search-header'>
         <input class='d-none' id='search-toggle' type='checkbox'/>
         <label aria-label='Toggle search' class='p-2 check-text-primary hover-text-primary jt-icon-center' for='search-toggle' id='search-toggler'><svg aria-hidden='true' class='fs-5 jt-icon'><use xlink:href='#i-search'/></svg></label>
-        <div class='dropdown-menu p-1 jt-border-light shadow-sm d-block-check'>
+        <div class='dropdown-menu p-1 shadow-sm d-block-check'>
           <form class='input-group' expr:action='data:blog.searchUrl' method='GET' target='_top'> 
             <input class='form-control fs-7 border-0 rounded-0 bg-transparent text-reset' expr:value='data:view.isSearch ? data:view.search.query : &quot;&quot;' id='search-input' name='q' placeholder='Enter your search' required='required' type='text'/>
             <input name='max-results' type='hidden' value='10'/>
@@ -2263,7 +2309,7 @@ width: 50%;
 <script>
 <b:eval expr='&quot;const siteUrl=&apos;&quot; + data:blog.canonicalHomepageUrl + &quot;&apos;;&quot;'/>
 <b:eval expr='&quot;const blogId=&apos;&quot; + data:blog.blogId + &quot;&apos;;&quot;'/>
-<b:eval expr='&quot;const blogTitle=&apos;&quot; + data:blog.title + &quot;&apos;;&quot;'/>
+<b:eval expr='&quot;const blogTitle=&apos;&quot; + data:blog.title.jsonEscaped + &quot;&apos;;&quot;'/>
 <b:eval expr='&quot;const isPreview=&apos;&quot; + data:view.isPreview + &quot;&apos;;&quot;'/>
 <b:eval expr='&quot;const titleSeparator=&apos;&quot; + data:skin.vars.separator + &quot;&apos;;&quot;'/>
 <b:eval expr='&quot;const autoTOC=&apos;&quot; + data:skin.vars.autoTOC + &quot;&apos;;&quot;'/>

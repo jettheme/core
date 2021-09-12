@@ -465,9 +465,7 @@ margin-bottom: 1.5rem;
 margin: 0 !important;
 padding: 0 !important;
 }
-.widget:last-child,
-#special-home .widget,
-#special-categories .widget {
+.widget:last-child {
 margin-bottom: 0 !important;
 }
 #post-body .widget {

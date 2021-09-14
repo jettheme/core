@@ -458,12 +458,22 @@ margin-left: 5px;
 .no-items {
 display: none;
 }
-.separator {
-margin-bottom: 1.5rem;
+.feature-image,
+.separator,
+.tr-caption-container {
+margin-bottom: 1rem;
 }
-.separator a {
+.tr-caption-container {
+width: 100%;
+}
+.separator a,
+.tr-caption-container a {
 margin: 0 !important;
 padding: 0 !important;
+}
+.tr-caption {
+font-size: 12px;
+font-style: italic;
 }
 .widget:last-child {
 margin-bottom: 0 !important;
@@ -758,7 +768,7 @@ border-radius: 0.25rem;
 #post-pager .prev-page + .next-page {
 border-top: 1px solid;
 }
-.feature-image,
+.full-width,
 .px-3 .google-auto-placed,
 .feature-posts .item-thumbnail {
 margin-left: -1rem;
@@ -2452,7 +2462,7 @@ function jtCallback(){
 
 }
 /*]]>*/</script>
-<script src='https://cdn.jsdelivr.net/gh/jettheme/js@0.4.3/main.js'/>
+<script src='https://cdn.jsdelivr.net/gh/jettheme/js@0.4.5/main.js'/>
 
 <!-- Your Style and Script before </body> is here -->
 

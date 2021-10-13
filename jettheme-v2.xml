@@ -1455,22 +1455,15 @@ width: 50%;
         <h2 class='widget-title position-relative fs-6 mb-3'><span><data:title/></span></h2>
       </b:if>
     </b:includable>
-    <b:includable id='JetEdit'>
-      <span class='position-absolute top-0 end-0 blog-admin'>
-        <a class='btn btn-sm jt-btn-light rounded-pill jt-icon-center' expr:href='data:widget.quickEditUrl' rel='noopener' target='_blank'><svg aria-hidden='true' class='jt-icon'><use xlink:href='#i-edit'/></svg></a>
-      </span>
-    </b:includable>
     <b:includable id='JetHtml'>
       <b:include name='JetWidgetTitle'/>
       <div class='widget-content text-break'><data:content/></div>
-      <b:include name='JetEdit'/>
     </b:includable>
     <b:includable id='JetSocial'>
       <b:include name='JetWidgetTitle'/>
       <div class='widget-content social-media mb-3 ms-2 ms-sm-0'>
           <b:loop index='i' values='data:links' var='link'><a expr:aria-label='data:link.name' expr:class='&quot;mb-2 btn btn-sm jt-btn-light hover-btn-primary rounded-pill jt-icon-center i-&quot; + data:link.name' expr:href='data:link.target' rel='noopener' target='_blank'><b:class cond='data:i != data:links.size - 1' name='me-2'/><svg aria-hidden='true' class='jt-icon'><use expr:xlink:href='&quot;#i-&quot; + data:link.name'/></svg></a></b:loop>
       </div>
-      <b:include name='JetEdit'/>
     </b:includable>
     <b:includable id='JetPopularPosts'>
 <b:include name='JetWidgetTitle'/>
@@ -1517,14 +1510,12 @@ width: 50%;
 </b:loop>
 </div>
 </b:with>
-<b:include name='JetEdit'/>
 </b:includable>
     <b:includable id='JetLabel'>
       <b:include name='JetWidgetTitle'/>
       <div class='widget-content categories'>
         <ul expr:class='data:display + &quot; d-flex flex-wrap list-unstyled&quot;'><b:loop index='i' values='data:labels' var='label'><b:if cond='data:display == &quot;list&quot; and data:label.name not contains &quot;#&quot;'><li class='mb-2 pe-2 col-6'><a class='text-reset fw-bold hover-text-primary text-decoration-none' expr:href='data:label.url + &quot;?max-results=10&quot;'><span class='align-middle'><data:label.name/></span><b:if cond='data:showFreqNumbers'><span class='ms-1 fw-light fs-9'>[<data:label.count/>]</span></b:if></a></li><b:elseif cond='data:display == &quot;cloud&quot; and data:label.name contains &quot;#&quot;'/><li class='me-2 mb-2'><a class='btn btn-sm jt-btn-light rounded-pill px-3' expr:href='data:label.url + &quot;?max-results=10&quot;'><span class='align-middle'><data:label.name/></span><b:if cond='data:showFreqNumbers'><span class='ms-1 fw-light fs-9'>[<data:label.count/>]</span></b:if></a></li></b:if></b:loop></ul>
       </div>
-      <b:include name='JetEdit'/>
     </b:includable>
     <b:includable id='JetPageList'>
       <b:include name='JetWidgetTitle'/>
@@ -1540,21 +1531,18 @@ width: 50%;
           </b:loop>
         </ul>
       </div>
-      <b:include name='JetEdit'/>
     </b:includable>
     <b:includable id='JetLinkList'>
       <b:include name='JetWidgetTitle'/>
       <div class='widget-content'>
         <ul class='list-unstyled'><b:loop values='data:links' var='link'><li class='mb-2'><a class='text-reset hover-text-primary text-decoration-none' expr:href='data:link.target'><data:link.name/></a></li></b:loop></ul>
       </div>
-      <b:include name='JetEdit'/>
     </b:includable>
     <b:includable id='JetTextList'>
       <b:include name='JetWidgetTitle'/>
       <div class='widget-content'>
         <ul><b:loop values='data:items' var='item'><li><data:item/></li></b:loop></ul>
       </div>
-      <b:include name='JetEdit'/>
     </b:includable>
     <b:includable id='JetFollowIt'>
       <b:include name='JetWidgetTitle'/>
@@ -1562,7 +1550,6 @@ width: 50%;
         <div class='mb-3'><data:content/></div>
         <form action='https://api.follow.it/subscribe?pub=CQoJCcEXztieMrPUAQYKlNRPCjlhk9FW' method='post' target='_blank'><div class='input-group rounded-pill overflow-hidden border border-2 jt-border-light' style='max-width:400px'><input aria-label='Email Address' class='form-control fs-7 bg-transparent border-0 text-reset py-2' id='newsletter-email' name='email' placeholder='Email Address' required='required' type='email'/><button aria-label='Submit Button' class='btn py-0 border-0 text-reset fs-5' type='submit'><svg aria-hidden='true' class='jt-icon'><use xlink:href='#i-mail'/></svg></button></div></form>
       </div>
-      <b:include name='JetEdit'/>
     </b:includable>
     <b:includable id='JetLogo'>
       <b:if cond='data:content contains &quot;&lt;/svg&gt;&quot;'>
@@ -1627,7 +1614,6 @@ width: 50%;
         <data:displayname/>
 <data:aboutme/>
       </div>
-      <b:include name='JetEdit'/>
     </b:includable>
     <b:includable id='JetArchive' var='post'>
 <div class='h-100 overflow-hidden rounded position-relative border jt-border-light bg-archive shadow-sm'>
@@ -1752,7 +1738,6 @@ width: 50%;
 </b:loop>
 </div>
 </b:with>
-<b:include name='JetEdit'/>
 </b:includable>
 	<b:includable id='Jet404'>
 <b:if cond='data:view.isMultipleItems'>
@@ -2085,7 +2070,6 @@ width: 50%;
         </div>
       </form>
     </div>
-      <b:include name='JetEdit'/>
   	</b:includable>
   	<b:includable id='JetImage'>
       <b:include name='JetWidgetTitle'/>
@@ -2102,7 +2086,6 @@ width: 50%;
           </div>
         </div>
       </div>
-      <b:include name='JetEdit'/>
     </b:includable>
   </b:defaultmarkup>
 </b:defaultmarkups>

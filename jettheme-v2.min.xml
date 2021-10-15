@@ -7,9 +7,9 @@
 
 [!] Find (JetAll-head-content) to edit Open Graph and other Meta Tags
 
--------------------------
+---------------------------
 # JetTheme v2.8.2 Setting #
--------------------------
+---------------------------
 
 <Variable name="tagline" description="Tagline" type="string" value=""/>
 [!] Homepage tagline, ex: BlogName - Tagline

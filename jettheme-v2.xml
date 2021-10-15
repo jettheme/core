@@ -769,8 +769,7 @@ border-radius: 0.25rem;
 border-top: 1px solid;
 }
 .full-width,
-.px-3 .google-auto-placed,
-.feature-posts .item-thumbnail {
+.px-3 .google-auto-placed {
 margin-left: -1rem;
 margin-right: -1rem;
 width: auto !important;
@@ -1708,7 +1707,7 @@ width: 50%;
 <b:loop values='data:posts' var='post'>
 <div class='item-post d-sm-flex'>
 <b:if cond='data:post.featuredImage and data:postDisplay.showFeaturedImage'>
-<div class='item-thumbnail pe-sm-3 col-sm-6'>
+<div class='item-thumbnail full-width pe-sm-3 col-sm-6'>
 <a class='d-block jt-bg-light overflow-hidden rounded shadow-sm ratio ratio-1x1' expr:href='data:post.url.canonical' rel='bookmark'>
 <img expr:alt='data:post.title' expr:class='data:post.featuredImage.isYoutube ?  &quot;object-cover lazyload&quot; : &quot;lazyload&quot;' expr:data-src='data:post.featuredImage.isYoutube ? data:post.featuredImage.youtubeMaxResDefaultUrl : data:post.featuredImage' loading='lazy' src='data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=='/>
 </a>

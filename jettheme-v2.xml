@@ -7,9 +7,9 @@
 
 [!] Find (JetAll-head-content) to edit Open Graph and other Meta Tags
 
--------------------------
+---------------------------
 # JetTheme v2.8.2 Setting #
--------------------------
+---------------------------
 
 <Variable name="tagline" description="Tagline" type="string" value=""/>
 [!] Homepage tagline, ex: BlogName - Tagline
@@ -769,6 +769,7 @@ border-radius: 0.25rem;
 border-top: 1px solid;
 }
 .full-width,
+.feature-image,
 .px-3 .google-auto-placed,
 .feature-posts .item-thumbnail {
 margin-left: -1rem;

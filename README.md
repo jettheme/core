@@ -1,7 +1,7 @@
 # core
 Blogger Template JetTheme<br/>
 <br/>
-JetTheme Versi 2.8 <a href='https://github.com/jettheme/core/archive/refs/heads/main.zip'>Download files</a><br/>
+JetTheme Versi 2.8.2 <a href='https://github.com/jettheme/core/archive/refs/heads/main.zip'>Download files</a><br/>
 <br/>
 JetTheme Versi 2.7 <a href='https://github.com/jettheme/core/archive/refs/tags/2.7.zip'>Download files</a><br/>
 <br/>

@@ -769,7 +769,6 @@ border-radius: 0.25rem;
 border-top: 1px solid;
 }
 .full-width,
-.feature-image,
 .px-3 .google-auto-placed,
 .feature-posts .item-thumbnail {
 margin-left: -1rem;
@@ -2459,7 +2458,7 @@ function jtCallback(){
 
 }
 /*]]>*/</script>
-<script src='https://cdn.jsdelivr.net/gh/jettheme/js@0.4.6/main.js'/>
+<script src='https://cdn.jsdelivr.net/gh/jettheme/js@0.4.7/main.js'/>
 
 <!-- Your Style and Script before </body> is here -->
 

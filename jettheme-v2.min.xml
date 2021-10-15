@@ -345,19 +345,32 @@ width: 50%;
     </b:includable>
     <b:includable id='content'/>
   </b:widget>
-  <b:widget id='PageList50' locked='true' title='Menu' type='PageList' version='2' visible='true'>
+  <b:widget id='LinkList53' locked='true' title='Menu' type='LinkList' version='2' visible='true'>
     <b:widget-settings>
-      <b:widget-setting name='pageListJson'><![CDATA[{'link0': {'href': '/', 'title': 'Home', 'position': 0}, 'link1': {'href': '/p/about.html', 'title': 'About', 'position': 1}, 'link2': {'href': '/search/label/Tech', 'title': 'Tech', 'position': 2}, 'link3': {'href': '#sub-start', 'title': 'Sub Menu 1', 'position': 3}, 'link4': {'href': '#', 'title': 'Dropdown', 'position': 4}, 'link5': {'href': '#sub-start', 'title': 'Sub Menu 2', 'position': 5}, 'link6': {'href': '#', 'title': 'Dropdown', 'position': 6}, 'link7': {'href': '#', 'title': 'Dropdown', 'position': 7}, 'link8': {'href': '#sub-end', 'title': 'Sub Menu 2', 'position': 8}, 'link9': {'href': '#', 'title': 'Dropdown', 'position': 9}, 'link10': {'href': '#sub-end', 'title': 'Sub Menu 1', 'position': 10}, 'link11': {'href': '/p/contact.html', 'title': 'Contact', 'position': 11}, 'link12': {'href': '/p/sitemap.html', 'title': 'Sitemap', 'position': 12}}]]></b:widget-setting>
-      <b:widget-setting name='homeTitle'>Home</b:widget-setting>
+      <b:widget-setting name='text-8'>Contact</b:widget-setting>
+      <b:widget-setting name='link-7'>/p/sitemap.html</b:widget-setting>
+      <b:widget-setting name='link-8'>/p/contact.html</b:widget-setting>
+      <b:widget-setting name='link-5'>#</b:widget-setting>
+      <b:widget-setting name='link-6'>#sub-end</b:widget-setting>
+      <b:widget-setting name='link-3'>#sub-start</b:widget-setting>
+      <b:widget-setting name='link-4'>#</b:widget-setting>
+      <b:widget-setting name='text-1'>About</b:widget-setting>
+      <b:widget-setting name='text-0'>Home</b:widget-setting>
+      <b:widget-setting name='text-3'>Sub Menu 1</b:widget-setting>
+      <b:widget-setting name='text-2'>Tech</b:widget-setting>
+      <b:widget-setting name='text-5'>DropDown</b:widget-setting>
+      <b:widget-setting name='text-4'>DropDown</b:widget-setting>
+      <b:widget-setting name='text-7'>Sitemap</b:widget-setting>
+      <b:widget-setting name='text-6'>Sub Menu 1</b:widget-setting>
+      <b:widget-setting name='sorting'>NONE</b:widget-setting>
+      <b:widget-setting name='link-1'>/p/about.html</b:widget-setting>
+      <b:widget-setting name='link-2'>/search/label/Tech?max-results=10</b:widget-setting>
+      <b:widget-setting name='link-0'>/</b:widget-setting>
     </b:widget-settings>
     <b:includable id='main'>
-        <b:include name='JetMenu'/>
-      </b:includable>
+      <b:include name='JetMenu'/>
+    </b:includable>
     <b:includable id='content'/>
-    <b:includable id='overflowButton'/>
-    <b:includable id='overflowablePageList'/>
-    <b:includable id='pageLink'/>
-    <b:includable id='pageList'/>
   </b:widget>
 </b:section>
 </header>
@@ -920,8 +933,8 @@ width: 50%;
 <label class='d-flex position-absolute fs-1 d-lg-none mt-4 me-4 top-0 end-0' for='navbar-toggle'><svg aria-hidden='true' class='jt-icon'><use xlink:href='#i-close'/></svg></label>
 <ul class='navbar-nav px-4 p-lg-0 container' itemscope='itemscope' itemtype='http://schema.org/SiteNavigationElement' role='menu'>
   <b:loop index='i' values='data:links' var='link'>
-    <b:switch var='data:link.href'>
-      <b:case value='#sub-start'/><input class='d-none' expr:id='&quot;sub-toggle-&quot; + data:i' type='checkbox'/><label class='dropdown-toggle' expr:for='&quot;sub-toggle-&quot; + data:i'/> &lt;ul class=&quot;dropdown-menu rounded-0&quot;&gt; &lt;li class=&quot;d-none&quot;&gt; <b:case value='#sub-end'/>&lt;/li&gt; &lt;/ul&gt; <b:default/><b:if cond='data:i gt 0'>&lt;/li&gt;</b:if>&lt;li class=&quot;menu-item&quot;&gt;<a class='nav-link' expr:href='data:link.href' itemprop='url' role='menuitem'><b:class cond='data:link.isCurrentPage or data:view.url.canonical == data:link.href or data:view.url.canonical == path(data:blog.canonicalHomepageUrl, data:link.href)' name='active'/><span itemprop='name'><data:link.title/></span></a></b:switch></b:loop>&lt;/li&gt;</ul>
+    <b:switch var='data:link.target'>
+      <b:case value='#sub-start'/><input class='d-none' expr:id='&quot;sub-toggle-&quot; + data:i' type='checkbox'/><label class='dropdown-toggle' expr:for='&quot;sub-toggle-&quot; + data:i'/> &lt;ul class=&quot;dropdown-menu rounded-0&quot;&gt; &lt;li class=&quot;d-none&quot;&gt; <b:case value='#sub-end'/>&lt;/li&gt; &lt;/ul&gt; <b:default/><b:if cond='data:i gt 0'>&lt;/li&gt;</b:if>&lt;li class=&quot;menu-item&quot;&gt;<a class='nav-link' expr:href='data:link.target' itemprop='url' role='menuitem'><b:class cond='data:view.url.canonical == data:link.target or data:view.url.canonical == path(data:blog.canonicalHomepageUrl, data:link.target)' name='active'/><span itemprop='name'><data:link.name/></span></a></b:switch></b:loop>&lt;/li&gt;</ul>
     </b:includable>
     <b:includable id='JetSearch'>
       <b:class name='d-flex align-self-stretch align-items-center order-lg-1 ms-auto'/>
@@ -1667,7 +1680,7 @@ function jtCallback(){
 
 }
 /*]]>*/</script>
-<script src='https://cdn.jsdelivr.net/gh/jettheme/js@0.4.5/main.js'/>
+<script src='https://cdn.jsdelivr.net/gh/jettheme/js@0.4.6/main.js'/>
 
 <!-- Your Style and Script before </body> is here -->
 

@@ -954,7 +954,7 @@ width: 50%;
 
 <!-- Your Style and Script before </head> is here -->
 
-<b:if cond='!data:view.isPreview'>&lt;/head&gt;&lt;body&gt;&lt;textarea disabled readonly id=&quot;element-h&quot; style=&quot;display:none&quot;&gt;</b:if></head><body><b:if cond='!data:view.isPreview'>&lt;/textarea&gt;</b:if>
+<b:if cond='!data:view.isPreview'>&lt;/head&gt;&lt;body&gt;&lt;textarea disabled readonly id=&quot;element-h&quot; style=&quot;display:none&quot;&gt;&lt;style&gt;/*</b:if></head><body><b:if cond='!data:view.isPreview'>*/&lt;/style&gt;&lt;/textarea&gt;</b:if>
 
 <b:section cond='data:view.isLayoutMode' id='upload-image' showaddelement='no'>
   <b:widget id='Image50' locked='true' title='Upload Image' type='Image' visible='true'>
@@ -1917,8 +1917,8 @@ width: 50%;
 <a class='me-2 mb-2 btn btn-sm jt-icon-center text-white rounded-pill' expr:href='&quot;https://pinterest.com/pin/create/button/?url=&quot; + data:post.url.canonical + &quot;&amp;media=&quot; + data:post.featuredImage' rel='nofollow noopener noreferrer' style='background-color:#cb2027' target='_blank' title='Pin It'><svg aria-hidden='true' class='jt-icon'><use xlink:href='#i-pinterest'/></svg></a>
 <a class='me-2 mb-2 btn btn-sm jt-icon-center text-white rounded-pill' expr:href='&quot;https://www.linkedin.com/sharing/share-offsite/?url=&quot; + data:post.url.canonical' rel='nofollow noopener noreferrer' style='background-color:#2554bf' target='_blank' title='Linkedin Share'><svg aria-hidden='true' class='jt-icon'><use xlink:href='#i-linkedin'/></svg></a>
 <a class='me-2 mb-2 btn btn-sm jt-icon-center text-white rounded-pill' expr:href='&quot;https://www.tumblr.com/share/link?url=&quot; + data:post.url.canonical' rel='nofollow noopener noreferrer' style='background-color:#314358' target='_blank' title='Tumblr Share'><svg aria-hidden='true' class='jt-icon'><use xlink:href='#i-tumblr'/></svg></a>
-<a class='me-2 mb-2 btn btn-sm jt-icon-center text-white rounded-pill' expr:href='&quot;https://wa.me/?text=&quot;+ data:post.url.canonical' onclick='window.parent.null' rel='nofollow noopener noreferrer' style='background-color:#25d366' target='_blank' title='Share to whatsapp'><svg aria-hidden='true' class='jt-icon'><use xlink:href='#i-whatsapp'/></svg></a>
-<a class='me-2 mb-2 btn btn-sm jt-icon-center text-white rounded-pill' expr:href='&quot;https://t.me/share/url?url=&quot; + data:post.url.canonical' onclick='window.parent.null' rel='nofollow noopener noreferrer' style='background-color:#0088cc' target='_blank' title='Share to telegram'><svg aria-hidden='true' class='jt-icon'><use xlink:href='#i-telegram'/></svg></a>
+<a class='me-2 mb-2 btn btn-sm jt-icon-center text-white rounded-pill' expr:href='&quot;https://wa.me/?text=&quot;+ data:post.url.canonical' rel='nofollow noopener noreferrer' style='background-color:#25d366' target='_blank' title='Share to whatsapp'><svg aria-hidden='true' class='jt-icon'><use xlink:href='#i-whatsapp'/></svg></a>
+<a class='me-2 mb-2 btn btn-sm jt-icon-center text-white rounded-pill' expr:href='&quot;https://t.me/share/url?url=&quot; + data:post.url.canonical' rel='nofollow noopener noreferrer' style='background-color:#0088cc' target='_blank' title='Share to telegram'><svg aria-hidden='true' class='jt-icon'><use xlink:href='#i-telegram'/></svg></a>
         </div>
       </div>
       </b:if>
@@ -2457,10 +2457,10 @@ function jtCallback(){
 
 }
 /*]]>*/</script>
-<script src='https://cdn.jsdelivr.net/gh/jettheme/js@0.4.7/main.js'/>
+<script src='https://cdn.jsdelivr.net/gh/jettheme/js@0.4.8/main.js'/>
 
 <!-- Your Style and Script before </body> is here -->
 
-<b:if cond='!data:view.isPreview'>&lt;textarea disabled readonly id=&quot;element-b&quot; style=&quot;display:none&quot;&gt;</b:if></body><b:if cond='!data:view.isPreview'>&lt;/textarea&gt;<script>/*<![CDATA[*/const _eh=document.getElementById("element-h"),_eb=document.getElementById("element-b"),_WidgetManager={_PopupConfig:function(){}};null!==_eh&&(_eh.outerHTML=""),null!==_eb&&(_eb.outerHTML="");/*]]>*/</script>
+<b:if cond='!data:view.isPreview'>&lt;textarea disabled readonly id=&quot;element-b&quot; style=&quot;display:none&quot;&gt;&lt;style&gt;/*</b:if></body><b:if cond='!data:view.isPreview'>*/&lt;/style&gt;&lt;/textarea&gt;<script>/*<![CDATA[*/const _eh=document.getElementById("element-h"),_eb=document.getElementById("element-b"),_WidgetManager={_PopupConfig:function(){}};null!==_eh&&(_eh.outerHTML=""),null!==_eb&&(_eb.outerHTML="");/*]]>*/</script>
 &lt;/body&gt;</b:if>
 </html>

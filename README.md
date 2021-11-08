@@ -4,8 +4,6 @@ Blogger Template JetTheme<br/>
 JetTheme Versi 2.8.2 <a href='https://github.com/jettheme/core/archive/refs/heads/main.zip'>Download files</a><br/>
 <a href='https://www.jettheme.com/p/change-log.html'>ChangeLog</a><br/>
 <br/>
-JetTheme Versi 2.7 <a href='https://github.com/jettheme/core/archive/refs/tags/2.7.zip'>Download files</a><br/>
-<br/>
 View <a href='https://jettheme-demo.blogspot.com/'>Demo</a><br/>
 How to Install <a href='https://www.jettheme.com/2020/02/cara-instal-jettheme-di-blogger.html'>Click Here</a><br/>
 How to Settings <a href='https://www.jettheme.com/2021/03/setting-template-jettheme.html'>Click Here</a><br/><br/>

@@ -178,7 +178,7 @@ URL			: www.jettheme.com
 --jt-footer-bg: hsl(210, 11%, 15%);
 --jt-footer-color: hsl(210, 11%, 80%);
 --jt-footer-border: hsl(210, 11%, 20%);
---jt-socket-bg: hsl(210, 11%, 10%);
+--jt-socket-bg: hsl(210, 11%, 17%);
 --jt-socket-color: hsl(210, 11%, 80%);
 }
 

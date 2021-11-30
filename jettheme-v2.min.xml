@@ -855,7 +855,7 @@ width: 50%;
 <h3 class='item-title fs-7 mb-2'><a class='text-reset text-decoration-none' expr:href='data:post.url.canonical'><data:post.title/></a></h3>
 <div class='item-meta text-secondary d-flex flex-wrap fs-8'>
 <b:if cond='data:jwidget.allBylineItems.timestamp'>
-<small class='me-2'><svg aria-hidden='true' class='me-1 jt-icon'><use xlink:href='#i-clock'/></svg><b:eval expr='data:post.date format &quot;d MMM, yyyy&quot;'/></small>
+<small class='me-2'><svg aria-hidden='true' class='me-1 jt-icon'><use xlink:href='#i-clock'/></svg><b:eval expr='data:post.date'/></small>
 </b:if>
 <b:if cond='data:post.numberOfComments gt 0 and data:jwidget.allBylineItems.comments'>
 <small><svg aria-hidden='true' class='me-1 jt-icon'><use xlink:href='#i-comment'/></svg><data:post.numberOfComments/></small>
@@ -1004,7 +1004,7 @@ width: 50%;
 <small class='me-2'><svg aria-hidden='true' class='me-1 jt-icon'><use xlink:href='#i-user'/></svg><data:post.author.name/></small>
 </b:if>
 <b:if cond='data:jwidget.allBylineItems.timestamp'>
-<small class='me-2'><svg aria-hidden='true' class='me-1 jt-icon'><use xlink:href='#i-clock'/></svg><b:eval expr='data:post.date format &quot;d MMM, yyyy&quot;'/></small>
+<small class='me-2'><svg aria-hidden='true' class='me-1 jt-icon'><use xlink:href='#i-clock'/></svg><b:eval expr='data:post.date'/></small>
 </b:if>
 <b:if cond='data:post.numberOfComments gt 0 and data:jwidget.allBylineItems.comments'>
 <small><svg aria-hidden='true' class='me-1 jt-icon'><use xlink:href='#i-comment'/></svg><data:post.numberOfComments/></small>
@@ -1083,7 +1083,7 @@ width: 50%;
 <small class='me-2'><svg aria-hidden='true' class='me-1 jt-icon'><use xlink:href='#i-user'/></svg><data:post.author.name/></small>
 </b:if>
 <b:if cond='data:jwidget.allBylineItems.timestamp'>
-<small class='me-2'><svg aria-hidden='true' class='me-1 jt-icon'><use xlink:href='#i-clock'/></svg><b:eval expr='data:post.date format &quot;d MMM, yyyy&quot;'/></small>
+<small class='me-2'><svg aria-hidden='true' class='me-1 jt-icon'><use xlink:href='#i-clock'/></svg><b:eval expr='data:post.date'/></small>
 </b:if>
 <b:if cond='data:post.numberOfComments gt 0 and data:jwidget.allBylineItems.comments.label'>
 <small><svg aria-hidden='true' class='me-1 jt-icon'><use xlink:href='#i-comment'/></svg><data:post.numberOfComments/></small>
@@ -1310,7 +1310,7 @@ width: 50%;
 <div class='me-3'><svg aria-hidden='true' class='me-1 jt-icon'><use xlink:href='#i-user'/></svg><data:post.author.name/></div>
 </b:if>
 <b:if cond='data:jwidget.allBylineItems.timestamp'>
-<div class='me-3'><svg aria-hidden='true' class='me-1 jt-icon'><use xlink:href='#i-clock'/></svg><b:eval expr='data:post.date format &quot;d MMM, yyyy&quot;'/></div>
+<div class='me-3'><svg aria-hidden='true' class='me-1 jt-icon'><use xlink:href='#i-clock'/></svg><b:eval expr='data:post.date'/></div>
 </b:if>
 <b:if cond='data:post.numberOfComments gt 0 and data:jwidget.allBylineItems.comments'>
 <a class='text-reset text-decoration-none' href='#comments'><svg aria-hidden='true' class='me-1 jt-icon'><use xlink:href='#i-comment'/></svg><data:post.numberOfComments/></a>

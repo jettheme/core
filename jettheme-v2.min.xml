@@ -456,7 +456,7 @@ width: 50%;
       <b:widget-setting name='style.linkcolor'>#f67938</b:widget-setting>
       <b:widget-setting name='style.unittype'>TextAndImage</b:widget-setting>
       <b:widget-setting name='style.bgcolor'>#000000</b:widget-setting>
-      <b:widget-setting name='timestampLabel'>d MMM, yyyy</b:widget-setting>
+      <b:widget-setting name='timestampLabel'></b:widget-setting>
       <b:widget-setting name='reactionsLabel'/>
       <b:widget-setting name='showAuthorProfile'>true</b:widget-setting>
       <b:widget-setting name='style.layout'>1x1</b:widget-setting>

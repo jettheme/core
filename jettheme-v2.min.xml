@@ -456,7 +456,7 @@ width: 50%;
       <b:widget-setting name='style.linkcolor'>#f67938</b:widget-setting>
       <b:widget-setting name='style.unittype'>TextAndImage</b:widget-setting>
       <b:widget-setting name='style.bgcolor'>#000000</b:widget-setting>
-      <b:widget-setting name='timestampLabel'>-</b:widget-setting>
+      <b:widget-setting name='timestampLabel'>d MMM, yyyy</b:widget-setting>
       <b:widget-setting name='reactionsLabel'/>
       <b:widget-setting name='showAuthorProfile'>true</b:widget-setting>
       <b:widget-setting name='style.layout'>1x1</b:widget-setting>
@@ -855,7 +855,7 @@ width: 50%;
 <h3 class='item-title fs-7 mb-2'><a class='text-reset text-decoration-none' expr:href='data:post.url.canonical'><data:post.title/></a></h3>
 <div class='item-meta text-secondary d-flex flex-wrap fs-8'>
 <b:if cond='data:jwidget.allBylineItems.timestamp'>
-<small class='me-2'><svg aria-hidden='true' class='me-1 jt-icon'><use xlink:href='#i-clock'/></svg><b:eval expr='data:post.date'/></small>
+<small class='me-2'><svg aria-hidden='true' class='me-1 jt-icon'><use xlink:href='#i-clock'/></svg><span class='date-format' expr:data-date='data:post.date.iso8601'><b:eval expr='data:jwidget.allBylineItems.timestamp.label ? data:post.date format data:jwidget.allBylineItems.timestamp.label : data:post.date'/></span></small>
 </b:if>
 <b:if cond='data:post.numberOfComments gt 0 and data:jwidget.allBylineItems.comments'>
 <small><svg aria-hidden='true' class='me-1 jt-icon'><use xlink:href='#i-comment'/></svg><data:post.numberOfComments/></small>
@@ -1004,7 +1004,7 @@ width: 50%;
 <small class='me-2'><svg aria-hidden='true' class='me-1 jt-icon'><use xlink:href='#i-user'/></svg><data:post.author.name/></small>
 </b:if>
 <b:if cond='data:jwidget.allBylineItems.timestamp'>
-<small class='me-2'><svg aria-hidden='true' class='me-1 jt-icon'><use xlink:href='#i-clock'/></svg><b:eval expr='data:post.date'/></small>
+<small class='me-2'><svg aria-hidden='true' class='me-1 jt-icon'><use xlink:href='#i-clock'/></svg><span class='date-format' expr:data-date='data:post.date.iso8601'><b:eval expr='data:jwidget.allBylineItems.timestamp.label ? data:post.date format data:jwidget.allBylineItems.timestamp.label : data:post.date'/></span></small>
 </b:if>
 <b:if cond='data:post.numberOfComments gt 0 and data:jwidget.allBylineItems.comments'>
 <small><svg aria-hidden='true' class='me-1 jt-icon'><use xlink:href='#i-comment'/></svg><data:post.numberOfComments/></small>
@@ -1083,7 +1083,7 @@ width: 50%;
 <small class='me-2'><svg aria-hidden='true' class='me-1 jt-icon'><use xlink:href='#i-user'/></svg><data:post.author.name/></small>
 </b:if>
 <b:if cond='data:jwidget.allBylineItems.timestamp'>
-<small class='me-2'><svg aria-hidden='true' class='me-1 jt-icon'><use xlink:href='#i-clock'/></svg><b:eval expr='data:post.date'/></small>
+<small class='me-2'><svg aria-hidden='true' class='me-1 jt-icon'><use xlink:href='#i-clock'/></svg><span class='date-format' expr:data-date='data:post.date.iso8601'><b:eval expr='data:jwidget.allBylineItems.timestamp.label ? data:post.date format data:jwidget.allBylineItems.timestamp.label : data:post.date'/></span></small>
 </b:if>
 <b:if cond='data:post.numberOfComments gt 0 and data:jwidget.allBylineItems.comments.label'>
 <small><svg aria-hidden='true' class='me-1 jt-icon'><use xlink:href='#i-comment'/></svg><data:post.numberOfComments/></small>
@@ -1310,7 +1310,7 @@ width: 50%;
 <div class='me-3'><svg aria-hidden='true' class='me-1 jt-icon'><use xlink:href='#i-user'/></svg><data:post.author.name/></div>
 </b:if>
 <b:if cond='data:jwidget.allBylineItems.timestamp'>
-<div class='me-3'><svg aria-hidden='true' class='me-1 jt-icon'><use xlink:href='#i-clock'/></svg><b:eval expr='data:post.date'/></div>
+<div class='me-3'><svg aria-hidden='true' class='me-1 jt-icon'><use xlink:href='#i-clock'/></svg><span class='date-format' expr:data-date='data:post.date.iso8601'><b:eval expr='data:jwidget.allBylineItems.timestamp.label ? data:post.date format data:jwidget.allBylineItems.timestamp.label : data:post.date'/></span></div>
 </b:if>
 <b:if cond='data:post.numberOfComments gt 0 and data:jwidget.allBylineItems.comments'>
 <a class='text-reset text-decoration-none' href='#comments'><svg aria-hidden='true' class='me-1 jt-icon'><use xlink:href='#i-comment'/></svg><data:post.numberOfComments/></a>

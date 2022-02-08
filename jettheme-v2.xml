@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE html>
-<html b:css='false' b:defaultwidgetversion='2' b:js='true' b:layoutsVersion='3' b:render='true' b:responsive='true' b:templateUrl='https://www.jettheme.com' b:templateVersion='2.8.2' expr:dir='data:blog.languageDirection' expr:lang='data:blog.locale' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'><b:attr name='xmlns' value=''/><b:attr name='xmlns:b' value=''/><b:attr name='xmlns:expr' value=''/><b:attr name='xmlns:data' value=''/><head>
+<html b:css='false' b:defaultwidgetversion='2' b:js='true' b:layoutsVersion='3' b:render='true' b:responsive='true' b:templateUrl='https://www.jettheme.com' b:templateVersion='2.9' expr:dir='data:blog.languageDirection' expr:lang='data:blog.locale' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'><b:attr name='xmlns' value=''/><b:attr name='xmlns:b' value=''/><b:attr name='xmlns:expr' value=''/><b:attr name='xmlns:data' value=''/><head>
 <b:include data='blog' name='JetAll-head-content'/>
 <b:if cond='!data:view.isLayoutMode'>
 <b:skin><![CDATA[/*
@@ -8,7 +8,7 @@
 [!] Find (JetAll-head-content) to edit Open Graph and other Meta Tags
 
 ---------------------------
-# JetTheme v2.8.2 Setting #
+# JetTheme v2.9 Setting #
 ---------------------------
 
 <Variable name="tagline" description="Tagline" type="string" value=""/>
@@ -121,7 +121,7 @@
 -----------------------------------------------
 JetTheme Blogger Template
 Name		: JetTheme Core
-Version		: 2.8.2
+Version		: 2.9
 Designer	: jettheme
 URL			: www.jettheme.com
 -----------------------------------------------
@@ -194,12 +194,12 @@ text-rendering: optimizeLegibility;
 .h1,.h2,.h3,.h4,.h5,.h6,
 h1,h2,h3,h4,h5,h6 {
 font: $(posts.title);
-line-height: 1.2;
 }
 a {
 transition-property: background-color, border-color, color, fill, stroke;
 transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 transition-duration: .3s;
+text-decoration: none;
 color: var(--jt-link-color);
 }
 a:hover {
@@ -207,15 +207,12 @@ color: var(--jt-link-hover);
 }
 .fs-7 {
 font-size: 0.875rem;
-line-height: 1.25rem;
 }
 .fs-8 {
 font-size: 0.75rem;
-line-height: 1rem;
 }
 .fs-9 {
 font-size: 0.7rem;
-line-height: 1rem;
 }
 .btn{
 box-shadow: none !important
@@ -382,16 +379,20 @@ stroke-width:2;
 .jt-icon-center {
 font-family: sans-serif;
 }
+.icon-dark,
+.dark-mode .icon-light {
+display: none;
+}
+.dark-mode .icon-dark {
+display: block;
+}
 #dark-toggler,
 #search-toggler,
 #navbar-toggler {
 line-height: 1;
 }
-#dark-toggler .icon-mode:before {
-content: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1.1em' height='1.1em' viewBox='0 0 24 24' fill='none' stroke='%23686868' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z'%3E%3C/path%3E%3C/svg%3E");
-}
-.dark-mode #dark-toggler .icon-mode:before {
-content: url("data:image/svg+xml;utf8,%3Csvg width='1.1em' height='1.1em' fill='white' stroke='white' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z'%3E%3C/path%3E%3C/svg%3E");
+#dark-toggler {
+font-size: 17px;
 }
 #footer {
 background-color: var(--jt-footer-bg);
@@ -500,6 +501,13 @@ text-transform: uppercase;
 #footer .widget-title,
 #sidebar .widget-title {
 font-size: 13px !important;
+}
+#footer .widget-title:after {
+content: "";
+display: block;
+width: 50px;
+border-bottom: 2px solid var(--jt-primary);
+margin-top: 10px;
 }
 #primary .widget-title > span {
 background-color: var(--bs-body-bg);
@@ -777,7 +785,6 @@ width: auto !important;
 #footer-widget .widget {
 padding-left: 3rem;
 padding-right: 3rem;
-text-align: center;
 }
 }
 
@@ -807,7 +814,7 @@ body#layout:before {
 background-color: #f67938;
 border-radius: 30px;
 color: #fff;
-content: "JetTheme Version 2.8.2";
+content: "JetTheme Version 2.9";
 display: block;
 font-family: Roboto,sans-serif;
 padding: 10px 20px;
@@ -957,7 +964,7 @@ width: 50%;
 <b:if cond='!data:view.isPreview'>&lt;/head&gt;&lt;body&gt;&lt;textarea disabled readonly id=&quot;element-h&quot; style=&quot;display:none&quot;&gt;&lt;style&gt;/*</b:if></head><body><b:if cond='!data:view.isPreview'>*/&lt;/style&gt;&lt;/textarea&gt;</b:if>
 
 <b:section cond='data:view.isLayoutMode' id='upload-image' showaddelement='no'>
-  <b:widget id='Image50' locked='true' title='Upload Image' type='Image' visible='true'>
+  <b:widget id='Image10' locked='true' title='Upload Image' type='Image' visible='true'>
     <b:widget-settings>
       <b:widget-setting name='displayUrl'>https://1.bp.blogspot.com/-h5fUZDgfXe8/YR87osMq6UI/AAAAAAAAAYk/18JeDAzajvYhKnMnllSf_DSWAm51cueuQCLcBGAsYHQ/s728/placeholder.jpg</b:widget-setting>
       <b:widget-setting name='displayHeight'>425</b:widget-setting>
@@ -977,7 +984,7 @@ width: 50%;
 <header class='header-animate sticky-top navbar py-0 navbar-expand-lg' content='itemid' id='header' itemid='#header' itemscope='itemscope' itemtype='https://schema.org/WPHeader'>
 <input class='d-none' id='navbar-toggle' type='checkbox'/>
 <b:section class='container position-relative px-3 flex-nowrap' id='header-main' maxwidgets='3' showaddelement='no'>
-  <b:widget id='HTML50' locked='true' title='Logo' type='HTML' version='2' visible='true'>
+  <b:widget id='HTML10' locked='true' title='Logo' type='HTML' version='2' visible='true'>
     <b:widget-settings>
       <b:widget-setting name='content'>https://1.bp.blogspot.com/-mo6pIle8rXw/YLplHDA1ZCI/AAAAAAAAATo/JPbzsy_srC8gFem56vJZ3wua-A5qClFxACLcBGAsYHQ/w175-h55/jettheme-logo.png</b:widget-setting>
     </b:widget-settings>
@@ -985,7 +992,7 @@ width: 50%;
         <b:include name='JetLogo'/>
       </b:includable>
   </b:widget>
-  <b:widget id='LinkList52' locked='true' title='Icons, Dark, Search' type='LinkList' version='2' visible='true'>
+  <b:widget id='LinkList10' locked='true' title='Icons, Dark, Search' type='LinkList' version='2' visible='true'>
     <b:widget-settings>
       <b:widget-setting name='sorting'>NONE</b:widget-setting>
       <b:widget-setting name='text-1'>instagram</b:widget-setting>
@@ -998,7 +1005,7 @@ width: 50%;
     </b:includable>
     <b:includable id='content'/>
   </b:widget>
-  <b:widget id='LinkList53' locked='true' title='Menu' type='LinkList' version='2' visible='true'>
+  <b:widget id='LinkList11' locked='true' title='Menu' type='LinkList' version='2' visible='true'>
     <b:widget-settings>
       <b:widget-setting name='text-8'>Contact</b:widget-setting>
       <b:widget-setting name='link-7'>/p/sitemap.html</b:widget-setting>
@@ -1035,7 +1042,7 @@ width: 50%;
 <div class='col-lg-8 px-3' id='main'>
 <b:if cond='data:view.isMultipleItems and !data:view.isError or !data:numPosts == 0'><b:with value='data:view.isHomepage ? &quot;Homepage &quot; + data:blog.title : data:blog.pageName ? data:blog.pageName : &quot;Latest Posts&quot;' var='auto_heading'><h1 class='d-none'><data:auto_heading/></h1></b:with></b:if>
 <b:section class='pt-4' cond='data:view.isMultipleItems and !data:view.search.query' id='before-blog' showaddelement='yes'>
-  <b:widget id='HTML51' locked='false' title='#Advertisement' type='HTML' visible='true'>
+  <b:widget id='HTML11' locked='false' title='#Advertisement' type='HTML' visible='true'>
     <b:widget-settings>
       <b:widget-setting name='content'><![CDATA[<hr class="example-ads"/>]]></b:widget-setting>
     </b:widget-settings>
@@ -1043,7 +1050,7 @@ width: 50%;
       <b:include name='JetHtml'/>
     </b:includable>
   </b:widget>
-  <b:widget cond='data:view.isHomepage or data:view.url.canonical == data:blog.canonicalHomepageUrl path &quot;/search?max-results=10&quot;' id='FeaturedPost50' locked='false' title='Featured Post' type='FeaturedPost' visible='true'>
+  <b:widget cond='data:view.isHomepage or data:view.url.canonical == data:blog.canonicalHomepageUrl path &quot;/search?max-results=10&quot;' id='FeaturedPost1' locked='false' title='Featured Post' type='FeaturedPost' visible='true'>
     <b:widget-settings>
       <b:widget-setting name='showSnippet'>true</b:widget-setting>
       <b:widget-setting name='showPostTitle'>true</b:widget-setting>
@@ -1088,7 +1095,7 @@ width: 50%;
   </b:widget>
 </b:section>
 <b:section class='pt-4' cond='data:view.isPost' id='before-post' showaddelement='yes'>
-  <b:widget id='HTML52' locked='false' title='#Advertisement' type='HTML' version='2' visible='true'>
+  <b:widget id='HTML12' locked='false' title='#Advertisement' type='HTML' version='2' visible='true'>
     <b:widget-settings>
       <b:widget-setting name='content'><![CDATA[<hr class="example-ads"/>]]></b:widget-setting>
     </b:widget-settings>
@@ -1096,7 +1103,7 @@ width: 50%;
   </b:widget>
 </b:section>
 <b:section class='pt-4 pb-5' id='blog-post' maxwidgets='1' showaddelement='no'>
-  <b:widget id='Blog50' locked='true' title='Blog Posts' type='Blog' visible='true'>
+  <b:widget id='Blog1' locked='true' title='Blog Posts' type='Blog' visible='true'>
     <b:widget-settings>
       <b:widget-setting name='showDateHeader'>false</b:widget-setting>
       <b:widget-setting name='commentLabel'>Comment</b:widget-setting>
@@ -1189,7 +1196,7 @@ width: 50%;
   </b:widget>
 </b:section>
 <b:section class='d-none' cond='data:view.isPost' id='ads-post' showaddelement='yes'>
-  <b:widget id='HTML61' locked='false' title='#Advertisement' type='HTML' visible='true'>
+  <b:widget id='HTML13' locked='false' title='#Advertisement' type='HTML' visible='true'>
     <b:widget-settings>
       <b:widget-setting name='content'><![CDATA[<hr class="example-ads"/>]]></b:widget-setting>
     </b:widget-settings>
@@ -1197,7 +1204,7 @@ width: 50%;
       <b:include name='JetHtml'/>
     </b:includable>
   </b:widget>
-  <b:widget id='HTML62' locked='false' title='#Advertisement' type='HTML' visible='true'>
+  <b:widget id='HTML14' locked='false' title='#Advertisement' type='HTML' visible='true'>
     <b:widget-settings>
       <b:widget-setting name='content'><![CDATA[<hr class="example-ads"/>]]></b:widget-setting>
     </b:widget-settings>
@@ -1205,7 +1212,7 @@ width: 50%;
       <b:include name='JetHtml'/>
     </b:includable>
   </b:widget>
-  <b:widget id='HTML63' locked='false' title='#You may also like' type='HTML' visible='true'>
+  <b:widget id='HTML15' locked='false' title='#You may also like' type='HTML' visible='true'>
     <b:widget-settings>
       <b:widget-setting name='content'><![CDATA[<div data-title="You may also like..." class="custom-posts related-inline visually-hidden" data-shuffle="3" data-items="10" data-func="related_inline_temp"></div>]]></b:widget-setting>
     </b:widget-settings>
@@ -1213,7 +1220,7 @@ width: 50%;
       <b:include name='JetHtml'/>
     </b:includable>
   </b:widget>
-  <b:widget id='HTML64' locked='false' title='#Advertisement' type='HTML' visible='true'>
+  <b:widget id='HTML16' locked='false' title='#Advertisement' type='HTML' visible='true'>
     <b:widget-settings>
       <b:widget-setting name='content'><![CDATA[<hr class="example-ads"/>]]></b:widget-setting>
     </b:widget-settings>
@@ -1221,7 +1228,7 @@ width: 50%;
       <b:include name='JetHtml'/>
     </b:includable>
   </b:widget>
-  <b:widget id='HTML65' locked='false' title='#Advertisement' type='HTML' visible='true'>
+  <b:widget id='HTML17' locked='false' title='#Advertisement' type='HTML' visible='true'>
     <b:widget-settings>
       <b:widget-setting name='content'><![CDATA[<hr class="example-ads"/>]]></b:widget-setting>
     </b:widget-settings>
@@ -1231,7 +1238,7 @@ width: 50%;
   </b:widget>
 </b:section>
 <b:section class='pb-4' cond='data:view.isMultipleItems and !data:view.search.query' id='after-blog' showaddelement='yes'>
-  <b:widget id='HTML53' locked='false' title='#Advertisement' type='HTML' version='2' visible='false'>
+  <b:widget id='HTML18' locked='false' title='#Advertisement' type='HTML' version='2' visible='false'>
     <b:widget-settings>
       <b:widget-setting name='content'><![CDATA[<hr class="example-ads"/>]]></b:widget-setting>
     </b:widget-settings>
@@ -1241,7 +1248,7 @@ width: 50%;
 </div>
 <div class='col-lg-4 px-3 jt-border-light separator-main position-relative ms-auto' content='itemid' id='sidebar' itemid='#sidebar' itemscope='itemscope' itemtype='https://schema.org/WPSideBar'>
 <b:section class='pt-4' id='sidebar-static' itemscope='itemscope'>
-  <b:widget id='PopularPosts50' locked='false' title='Popular Posts' type='PopularPosts' visible='true'>
+  <b:widget id='PopularPosts10' locked='false' title='Popular Posts' type='PopularPosts' visible='true'>
     <b:widget-settings>
       <b:widget-setting name='numItemsToShow'>5</b:widget-setting>
       <b:widget-setting name='showThumbnails'>true</b:widget-setting>
@@ -1283,7 +1290,7 @@ width: 50%;
     <b:includable id='snippetedPostTitle'/>
     <b:includable id='snippetedPosts'/>
   </b:widget>
-  <b:widget id='Label50' locked='false' title='Categories' type='Label' visible='true'>
+  <b:widget id='Label10' locked='false' title='Categories' type='Label' visible='true'>
     <b:widget-settings>
       <b:widget-setting name='sorting'>ALPHA</b:widget-setting>
       <b:widget-setting name='display'>LIST</b:widget-setting>
@@ -1298,7 +1305,7 @@ width: 50%;
     <b:includable id='content'/>
     <b:includable id='list'/>
   </b:widget>
-  <b:widget id='Label51' locked='false' title='Hashtag' type='Label' visible='true'>
+  <b:widget id='Label11' locked='false' title='Hashtag' type='Label' visible='true'>
     <b:widget-settings>
       <b:widget-setting name='sorting'>ALPHA</b:widget-setting>
       <b:widget-setting name='display'>CLOUD</b:widget-setting>
@@ -1313,7 +1320,28 @@ width: 50%;
     <b:includable id='content'/>
     <b:includable id='list'/>
   </b:widget>
-  <b:widget id='HTML66' locked='false' title='#Recent Post' type='HTML' visible='true'>
+  <b:widget id='BlogArchive10' locked='false' title='Blog Archive' type='BlogArchive' visible='true'>
+    <b:widget-settings>
+      <b:widget-setting name='showStyle'>FLAT</b:widget-setting>
+      <b:widget-setting name='yearPattern'>yyyy</b:widget-setting>
+      <b:widget-setting name='showWeekEnd'>true</b:widget-setting>
+      <b:widget-setting name='monthPattern'>MMM yyyy</b:widget-setting>
+      <b:widget-setting name='dayPattern'>MMM dd</b:widget-setting>
+      <b:widget-setting name='weekPattern'>MM/dd</b:widget-setting>
+      <b:widget-setting name='chronological'>false</b:widget-setting>
+      <b:widget-setting name='showPosts'>false</b:widget-setting>
+      <b:widget-setting name='frequency'>MONTHLY</b:widget-setting>
+    </b:widget-settings>
+    <b:includable id='main' var='this'>
+      <b:include name='JetBlogArchive'/>
+    </b:includable>
+    <b:includable id='content'/>
+    <b:includable id='flat'/>
+    <b:includable id='hierarchy'/>
+    <b:includable id='interval'/>
+    <b:includable id='posts'/>
+  </b:widget>
+  <b:widget id='HTML19' locked='false' title='#Recent Post' type='HTML' visible='true'>
     <b:widget-settings>
       <b:widget-setting name='content'><![CDATA[<div data-title="Recent Post" class="custom-posts visually-hidden" data-items="5" data-func="sidebar_temp"></div>]]></b:widget-setting>
     </b:widget-settings>
@@ -1323,7 +1351,7 @@ width: 50%;
   </b:widget>
 </b:section>
 <b:section class='position-sticky py-4 top-0' id='sidebar-sticky' itemscope='itemscope'>
-  <b:widget id='HTML54' locked='false' title='#Advertisement' type='HTML' visible='true'>
+  <b:widget id='HTML20' locked='false' title='#Advertisement' type='HTML' visible='true'>
     <b:widget-settings>
       <b:widget-setting name='content'><![CDATA[<hr class="example-ads"/>]]></b:widget-setting>
     </b:widget-settings>
@@ -1342,7 +1370,7 @@ width: 50%;
 <div class='py-5 fs-7' id='footer-main'>
   <div class='container px-3'>
     <b:section class='row row-cols-sm-2 row-cols-lg-4 justify-content-evenly' id='footer-widget' showaddelement='yes'>
-      <b:widget id='HTML55' locked='false' title='About Us' type='HTML' visible='true'>
+      <b:widget id='HTML21' locked='false' title='About Us' type='HTML' visible='true'>
         <b:widget-settings>
           <b:widget-setting name='content'><![CDATA[<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultricies, sapien et auctor bibendum, magna urna posuere purus, at vehicula erat est ac sem.</p>]]></b:widget-setting>
         </b:widget-settings>
@@ -1350,7 +1378,7 @@ width: 50%;
       <b:include name='JetHtml'/>
     </b:includable>
       </b:widget>
-      <b:widget id='LinkList50' locked='false' title='Learn More' type='LinkList' version='2' visible='true'>
+      <b:widget id='LinkList13' locked='false' title='Learn More' type='LinkList' version='2' visible='true'>
         <b:widget-settings>
           <b:widget-setting name='link-3'>https://jettheme-demo.blogspot.com/p/privacy-policy.html</b:widget-setting>
           <b:widget-setting name='sorting'>NONE</b:widget-setting>
@@ -1368,7 +1396,7 @@ width: 50%;
     </b:includable>
         <b:includable id='content'/>
       </b:widget>
-      <b:widget id='LinkList51' locked='false' title='Follow Us' type='LinkList' version='2' visible='true'>
+      <b:widget id='LinkList14' locked='false' title='Follow Us' type='LinkList' version='2' visible='true'>
         <b:widget-settings>
           <b:widget-setting name='text-8'>github</b:widget-setting>
           <b:widget-setting name='link-7'>#</b:widget-setting>
@@ -1395,7 +1423,7 @@ width: 50%;
         </b:includable>
         <b:includable id='content'/>
       </b:widget>
-      <b:widget id='HTML58' locked='false' title='Newsletter' type='HTML' version='2' visible='true'>
+      <b:widget id='HTML22' locked='false' title='Newsletter' type='HTML' version='2' visible='true'>
         <b:widget-settings>
           <b:widget-setting name='content'>Stay up to date with the latest news and relevant updates from us.</b:widget-setting>
         </b:widget-settings>
@@ -1408,9 +1436,9 @@ width: 50%;
 </div>
 <div class='py-3 fs-7 text-center' id='socket'>
 <b:section class='container px-3' id='copyright' maxwidgets='1' showaddelement='no'>
-  <b:widget id='HTML56' locked='true' title='Copyright' type='HTML' version='2' visible='true'>
+  <b:widget id='HTML23' locked='true' title='Copyright' type='HTML' version='2' visible='true'>
     <b:widget-settings>
-      <b:widget-setting name='content'><![CDATA[Copyright &copy; 2021 BlogName. Design by <a class="text-decoration-none" href="https://www.jettheme.com">JetTheme.com</a>]]></b:widget-setting>
+      <b:widget-setting name='content'><![CDATA[Copyright &copy; 2021 BlogName. Design by <a href="https://www.jettheme.com">JetTheme.com</a>]]></b:widget-setting>
     </b:widget-settings>
     <b:includable id='main'>
       <b:include name='JetCopyRight'/>
@@ -1423,7 +1451,7 @@ width: 50%;
 <div class='position-fixed d-none' id='back-to-top' style='right:20px;bottom:20px'><a aria-label='Back to Top' class='btn btn-sm jt-btn-light rounded-circle jt-icon-center' href='#back-to-top' onclick='window.scroll({top:0,left: 0,behavior:&apos;smooth&apos;});'><svg aria-hidden='true' class='jt-icon' height='1em' width='1em'><use xlink:href='#i-arrow-t'/></svg></a></div>
 
 <b:section class='d-none' id='jet-options' maxwidgets='5' showaddelement='no'>
-  <b:widget id='HTML57' locked='true' title='SVG Icons' type='HTML' version='2' visible='true'>
+  <b:widget id='HTML24' locked='true' title='SVG Icons' type='HTML' version='2' visible='true'>
     <b:widget-settings>
       <b:widget-setting name='content'>&lt;symbol id=&quot;i-whatsapp&quot; viewbox=&quot;0 0 512 512&quot; stroke=&quot;none&quot; fill=&quot;currentColor&quot;&gt;&lt;path d=&quot;M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z&quot;&gt;&lt;/path&gt;&lt;/symbol&gt;
 &lt;symbol id=&quot;i-pinterest&quot; viewbox=&quot;0 0 384 512&quot; stroke=&quot;none&quot; fill=&quot;currentColor&quot;&gt;&lt;path d=&quot;M204 6.5C101.4 6.5 0 74.9 0 185.6 0 256 39.6 296 63.6 296c9.9 0 15.6-27.6 15.6-35.4 0-9.3-23.7-29.1-23.7-67.8 0-80.4 61.2-137.4 140.4-137.4 68.1 0 118.5 38.7 118.5 109.8 0 53.1-21.3 152.7-90.3 152.7-24.9 0-46.2-18-46.2-43.8 0-37.8 26.4-74.4 26.4-113.4 0-66.2-93.9-54.2-93.9 25.8 0 16.8 2.1 35.4 9.6 50.7-13.8 59.4-42 147.9-42 209.1 0 18.9 2.7 37.5 4.5 56.4 3.4 3.8 1.7 3.4 6.9 1.5 50.4-69 48.6-82.5 71.4-172.8 12.3 23.4 44.1 36 69.3 36 106.2 0 153.9-103.5 153.9-196.8C384 71.3 298.2 6.5 204 6.5z&quot;&gt;&lt;/path&gt;&lt;/symbol&gt;
@@ -1440,7 +1468,7 @@ width: 50%;
 &lt;symbol id=&quot;i-user&quot; viewbox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2&quot;&gt;&lt;/path&gt;&lt;circle cx=&quot;12&quot; cy=&quot;7&quot; r=&quot;4&quot;&gt;&lt;/circle&gt;&lt;/symbol&gt;
 &lt;symbol id=&quot;i-clock&quot; viewbox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z&quot;&gt;&lt;/path&gt;&lt;/symbol&gt;
 &lt;symbol id=&quot;i-comment&quot; viewbox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z&quot;&gt;&lt;/path&gt;&lt;/symbol&gt;
-&lt;symbol id=&quot;i-menu&quot; viewbox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot;&gt;&lt;path d=&quot;M3 6h18M3 12h18M3 18h18&quot;&gt;&lt;/path&gt;&lt;/symbol&gt;
+&lt;symbol id=&quot;i-menu&quot; viewbox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot;&gt;&lt;path d=&quot;M3 6h18M8 12h13M3 18h18&quot;&gt;&lt;/path&gt;&lt;/symbol&gt;
 &lt;symbol id=&quot;i-mail&quot; viewbox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z&quot;&gt;&lt;/path&gt;&lt;/symbol&gt;
 &lt;symbol id=&quot;i-edit&quot; viewbox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z&quot;&gt;&lt;/path&gt;&lt;/symbol&gt;
 &lt;symbol id=&quot;i-close&quot; viewbox=&quot;0 0 24 24&quot; stroke-width=&quot;1&quot;&gt;&lt;path d=&quot;M6 18L18 6M6 6l12 12&quot;&gt;&lt;/path&gt;&lt;/symbol&gt;
@@ -1450,8 +1478,10 @@ width: 50%;
 &lt;symbol id=&quot;i-telegram&quot; stroke=&quot;none&quot; fill=&quot;currentColor&quot; viewbox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M22.05 1.577c-.393-.016-.784.08-1.117.235-.484.186-4.92 1.902-9.41 3.64-2.26.873-4.518 1.746-6.256 2.415-1.737.67-3.045 1.168-3.114 1.192-.46.16-1.082.362-1.61.984-.133.155-.267.354-.335.628s-.038.622.095.895c.265.547.714.773 1.244.976 1.76.564 3.58 1.102 5.087 1.608.556 1.96 1.09 3.927 1.618 5.89.174.394.553.54.944.544l-.002.02s.307.03.606-.042c.3-.07.677-.244 1.02-.565.377-.354 1.4-1.36 1.98-1.928l4.37 3.226.035.02s.484.34 1.192.388c.354.024.82-.044 1.22-.337.403-.294.67-.767.795-1.307.374-1.63 2.853-13.427 3.276-15.38l-.012.046c.296-1.1.187-2.108-.496-2.705-.342-.297-.736-.427-1.13-.444zm-.118 1.874c.027.025.025.025.002.027-.007-.002.08.118-.09.755l-.007.024-.005.022c-.432 1.997-2.936 13.9-3.27 15.356-.046.196-.065.182-.054.17-.1-.015-.285-.094-.3-.1l-7.48-5.525c2.562-2.467 5.182-4.7 7.827-7.08.468-.235.39-.96-.17-.972-.594.14-1.095.567-1.64.84-3.132 1.858-6.332 3.492-9.43 5.406-1.59-.553-3.177-1.012-4.643-1.467 1.272-.51 2.283-.886 3.278-1.27 1.738-.67 3.996-1.54 6.256-2.415 4.522-1.748 9.07-3.51 9.465-3.662l.032-.013.03-.013c.11-.05.173-.055.202-.057 0 0-.01-.033-.002-.026zM10.02 16.016l1.234.912c-.532.52-1.035 1.01-1.398 1.36z&quot;&gt;&lt;/path&gt;&lt;/symbol&gt;
 &lt;symbol id=&quot;i-download&quot; viewbox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4&quot;&gt;&lt;/path&gt;&lt;/symbol&gt;
 &lt;symbol id=&quot;i-eye&quot; viewbox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z&quot;&gt;&lt;/path&gt;&lt;circle cx=&quot;12&quot; cy=&quot;12&quot; r=&quot;3&quot;&gt;&lt;/circle&gt;&lt;/symbol&gt;
-&lt;symbol id=&quot;i-news&quot; viewbox=&quot;0 0 20 20&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M2 5a2 2 0 012-2h8a2 2 0 012 2v10a2 2 0 002 2H4a2 2 0 01-2-2V5zm3 1h6v4H5V6zm6 6H5v2h6v-2z&quot; clip-rule=&quot;evenodd&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M15 7h1a2 2 0 012 2v5.5a1.5 1.5 0 01-3 0V7z&quot;&gt;&lt;/path&gt;&lt;/symbol&gt;
-&lt;symbol id=&quot;i-phone&quot; viewbox=&quot;0 0 20 20&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;&lt;path d=&quot;M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z&quot;&gt;&lt;/path&gt;&lt;/symbol&gt;</b:widget-setting>
+&lt;symbol id=&quot;i-news&quot; viewbox=&quot;0 0 24 24&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M2 5a2 2 0 012-2h8a2 2 0 012 2v10a2 2 0 002 2H4a2 2 0 01-2-2V5zm3 1h6v4H5V6zm6 6H5v2h6v-2z&quot; clip-rule=&quot;evenodd&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M15 7h1a2 2 0 012 2v5.5a1.5 1.5 0 01-3 0V7z&quot;&gt;&lt;/path&gt;&lt;/symbol&gt;
+&lt;symbol id=&quot;i-phone&quot; viewbox=&quot;0 0 24 24&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;&lt;path d=&quot;M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z&quot;&gt;&lt;/path&gt;&lt;/symbol&gt;
+&lt;symbol id=&quot;i-sun&quot; fill=&quot;#ffffff&quot; stroke=&quot;#ffffff&quot; viewbox=&quot;0 0 24 24&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;&lt;circle cx=&quot;12&quot; cy=&quot;12&quot; r=&quot;5&quot;&gt;&lt;/circle&gt;&lt;line x1=&quot;12&quot; y1=&quot;1&quot; x2=&quot;12&quot; y2=&quot;3&quot;&gt;&lt;/line&gt;&lt;line x1=&quot;12&quot; y1=&quot;21&quot; x2=&quot;12&quot; y2=&quot;23&quot;&gt;&lt;/line&gt;&lt;line x1=&quot;4.22&quot; y1=&quot;4.22&quot; x2=&quot;5.64&quot; y2=&quot;5.64&quot;&gt;&lt;/line&gt;&lt;line x1=&quot;18.36&quot; y1=&quot;18.36&quot; x2=&quot;19.78&quot; y2=&quot;19.78&quot;&gt;&lt;/line&gt;&lt;line x1=&quot;1&quot; y1=&quot;12&quot; x2=&quot;3&quot; y2=&quot;12&quot;&gt;&lt;/line&gt;&lt;line x1=&quot;21&quot; y1=&quot;12&quot; x2=&quot;23&quot; y2=&quot;12&quot;&gt;&lt;/line&gt;&lt;line x1=&quot;4.22&quot; y1=&quot;19.78&quot; x2=&quot;5.64&quot; y2=&quot;18.36&quot;&gt;&lt;/line&gt;&lt;line x1=&quot;18.36&quot; y1=&quot;5.64&quot; x2=&quot;19.78&quot; y2=&quot;4.22&quot;&gt;&lt;/line&gt;&lt;/symbol&gt;
+&lt;symbol id=&quot;i-moon&quot; viewbox=&quot;0 0 24 24&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; stroke-width=&quot;1.5&quot;&gt;&lt;path d=&quot;M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z&quot;&gt;&lt;/path&gt;&lt;/symbol&gt;</b:widget-setting>
     </b:widget-settings>
     <b:includable id='main'>
       <svg style='display:none' xmlns='http://www.w3.org/2000/svg'><data:content/></svg>
@@ -1473,13 +1503,13 @@ width: 50%;
     </b:includable>
     <b:includable id='JetSocial'>
       <b:include name='JetWidgetTitle'/>
-      <div class='widget-content social-media mb-3 ms-2 ms-sm-0'>
+      <div class='widget-content social-media mb-3'>
           <b:loop index='i' values='data:links' var='link'><a expr:aria-label='data:link.name' expr:class='&quot;mb-2 btn btn-sm jt-btn-light hover-btn-primary rounded-pill jt-icon-center i-&quot; + data:link.name' expr:href='data:link.target' rel='noopener' target='_blank'><b:class cond='data:i != data:links.size - 1' name='me-2'/><svg aria-hidden='true' class='jt-icon'><use expr:xlink:href='&quot;#i-&quot; + data:link.name'/></svg></a></b:loop>
       </div>
     </b:includable>
     <b:includable id='JetPopularPosts'>
 <b:include name='JetWidgetTitle'/>
-<b:with value='(data:widgets where (w =&gt; w.type == &quot;Blog&quot; and w.id == &quot;Blog50&quot; )).first' var='jwidget'>
+<b:with value='(data:widgets where (w =&gt; w.type == &quot;Blog&quot; and w.id == &quot;Blog1&quot; )).first' var='jwidget'>
 <div class='widget-content popular-posts'>
 <b:loop index='i' values='data:posts' var='post'>
 <div class='item-post d-flex mb-3'>
@@ -1496,16 +1526,16 @@ width: 50%;
 </b:if>
 <div class='item-content col'>
 <b:if cond='data:post.labels and data:jwidget.allBylineItems.labels'>
-<div class='item-tag mb-1 fw-light fs-8 text-secondary'>
+<div class='item-tag mb-1 fw-light fs-8 text-secondary text-nowrap overflow-hidden text-truncate'>
 <b:loop index='i' values='data:post.labels where (l =&gt; l.name not contains &quot;#&quot;) take data:skin.vars.maxLabel' var='label'>
 <b:if cond='data:i != 0'>,</b:if>
-<a class='text-reset hover-text-primary text-decoration-none' expr:href='data:label.url.canonical + &quot;?max-results=10&quot;' rel='tag'>
+<a class='text-reset hover-text-primary' expr:href='data:label.url.canonical + &quot;?max-results=10&quot;' rel='tag'>
 <data:label.name/>
 </a>
 </b:loop>
 </div>
 </b:if>
-<h3 class='item-title fs-7 mb-2'><a class='text-reset text-decoration-none' expr:href='data:post.url.canonical'><data:post.title/></a></h3>
+<h3 class='item-title fs-7 mb-2'><a class='text-reset' expr:href='data:post.url.canonical'><data:post.title/></a></h3>
 <div class='item-meta text-secondary d-flex flex-wrap fs-8'>
 <b:if cond='data:jwidget.allBylineItems.timestamp'>
 <small class='me-2'><svg aria-hidden='true' class='me-1 jt-icon'><use xlink:href='#i-clock'/></svg><span class='date-format' expr:data-date='data:post.date.iso8601'><b:eval expr='data:jwidget.allBylineItems.timestamp.label ? data:post.date format data:jwidget.allBylineItems.timestamp.label : data:post.date'/></span></small>
@@ -1526,7 +1556,7 @@ width: 50%;
     <b:includable id='JetLabel'>
       <b:include name='JetWidgetTitle'/>
       <div class='widget-content categories'>
-        <ul expr:class='data:display + &quot; d-flex flex-wrap list-unstyled&quot;'><b:loop index='i' values='data:labels' var='label'><b:if cond='data:display == &quot;list&quot; and data:label.name not contains &quot;#&quot;'><li class='mb-2 pe-2 col-6'><a class='text-reset fw-bold hover-text-primary text-decoration-none' expr:href='data:label.url + &quot;?max-results=10&quot;'><span class='align-middle'><data:label.name/></span><b:if cond='data:showFreqNumbers'><span class='ms-1 fw-light fs-9'>[<data:label.count/>]</span></b:if></a></li><b:elseif cond='data:display == &quot;cloud&quot; and data:label.name contains &quot;#&quot;'/><li class='me-2 mb-2'><a class='btn btn-sm jt-btn-light rounded-pill px-3' expr:href='data:label.url + &quot;?max-results=10&quot;'><span class='align-middle'><data:label.name/></span><b:if cond='data:showFreqNumbers'><span class='ms-1 fw-light fs-9'>[<data:label.count/>]</span></b:if></a></li></b:if></b:loop></ul>
+        <ul expr:class='data:display + &quot; d-flex flex-wrap list-unstyled&quot;'><b:loop index='i' values='data:labels' var='label'><b:if cond='data:display == &quot;list&quot; and data:label.name not contains &quot;#&quot;'><li class='mb-2 pe-2 col-6'><a class='text-reset fw-bold hover-text-primary' expr:href='data:label.url + &quot;?max-results=10&quot;'><span class='align-middle'><data:label.name/></span><b:if cond='data:showFreqNumbers'><span class='ms-1 fw-light fs-9'>[<data:label.count/>]</span></b:if></a></li><b:elseif cond='data:display == &quot;cloud&quot; and data:label.name contains &quot;#&quot;'/><li class='me-2 mb-2'><a class='btn btn-sm jt-btn-light rounded-pill px-3' expr:href='data:label.url + &quot;?max-results=10&quot;'><span class='align-middle'><data:label.name/></span><b:if cond='data:showFreqNumbers'><span class='ms-1 fw-light fs-9'>[<data:label.count/>]</span></b:if></a></li></b:if></b:loop></ul>
       </div>
     </b:includable>
     <b:includable id='JetPageList'>
@@ -1547,7 +1577,7 @@ width: 50%;
     <b:includable id='JetLinkList'>
       <b:include name='JetWidgetTitle'/>
       <div class='widget-content'>
-        <ul class='list-unstyled'><b:loop values='data:links' var='link'><li class='mb-2'><a class='text-reset hover-text-primary text-decoration-none' expr:href='data:link.target'><data:link.name/></a></li></b:loop></ul>
+        <ul class='list-unstyled'><b:loop values='data:links' var='link'><li class='mb-2'><a class='text-reset hover-text-primary' expr:href='data:link.target'><data:link.name/></a></li></b:loop></ul>
       </div>
     </b:includable>
     <b:includable id='JetTextList'>
@@ -1566,16 +1596,16 @@ width: 50%;
     <b:includable id='JetLogo'>
       <b:if cond='data:content contains &quot;&lt;/svg&gt;&quot;'>
 	<b:class name='logo-wrap position-relative'/>
-        <a class='navbar-brand me-0 fw-bold' expr:href='data:blog.canonicalHomepageUrl'>
+        <a class='navbar-brand fw-bold' expr:href='data:blog.canonicalHomepageUrl'>
           <data:content/>
         </a>
       <b:elseif cond='data:content contains &quot;data:image/&quot; OR  data:content contains &quot;https://&quot;'/>
         <b:class name='logo-wrap position-relative'/>
-        <a class='d-block navbar-brand me-0' expr:href='data:blog.canonicalHomepageUrl'>
+        <a class='d-block navbar-brand' expr:href='data:blog.canonicalHomepageUrl'>
           <img expr:alt='data:blog.title' expr:src='data:content' height='55' loading='lazy' width='175'/>
         </a>
       <b:else/>
-        <a class='navbar-brand me-0 fw-bold' expr:href='data:blog.canonicalHomepageUrl'>
+        <a class='navbar-brand fw-bold' expr:href='data:blog.canonicalHomepageUrl'>
           <data:content/>
         </a>
       </b:if>
@@ -1596,7 +1626,7 @@ width: 50%;
       </b:if>
       <b:if cond='data:title not contains &quot;#Dark&quot;'>
       <div class='d-flex align-self-stretch align-items-center ps-1' id='dark-header'>
-        <label aria-label='Toggle Dark Mode' class='p-2 jt-icon-center' id='dark-toggler'><i class='icon-mode jt-icon'/></label>
+        <label aria-label='Toggle Dark Mode' class='p-2 jt-icon-center' id='dark-toggler'><svg aria-hidden='true' class='jt-icon'><use class='icon-light' xlink:href='#i-moon'/><use class='icon-dark' xlink:href='#i-sun'/></svg></label>
       </div>
       </b:if>
       <b:if cond='data:title not contains &quot;#Search&quot;'>
@@ -1639,17 +1669,17 @@ width: 50%;
 </b:if>
 <div class='item-content p-4'>
 <b:if cond='data:post.labels and data:jwidget.allBylineItems.labels'>
-<div class='item-tag mb-3 fw-light text-secondary'>
+<div class='item-tag mb-2 fw-light text-secondary text-nowrap overflow-hidden text-truncate'>
 <b:loop index='i' values='data:post.labels where (l =&gt; l.name not contains &quot;#&quot;) take data:skin.vars.maxLabel' var='label'>
 <b:if cond='data:i != 0'>,</b:if>
-<a class='text-reset hover-text-primary text-decoration-none' expr:href='data:label.url.canonical + &quot;?max-results=10&quot;' rel='tag'>
+<a class='text-reset hover-text-primary' expr:href='data:label.url.canonical + &quot;?max-results=10&quot;' rel='tag'>
 <data:label.name/>
 </a>
 </b:loop>
 </div>
 </b:if>
 <b:tag class='item-title fs-5 mb-3' expr:name='data:view.isHomepage ? &quot;h3&quot; : &quot;h2&quot;'>
-<a class='text-reset text-decoration-none' expr:href='data:post.url.canonical'><data:post.title/></a>
+<a class='text-reset' expr:href='data:post.url.canonical'><data:post.title/></a>
 </b:tag>
 <p class='item-snippet text-break mb-3'><b:eval expr='data:post.snippets.short snippet { links: false }'/></p>
 <div class='item-meta text-secondary d-flex flex-wrap fw-light'>
@@ -1674,26 +1704,26 @@ width: 50%;
 <b:if cond='data:view.isPost'>
 <div class='d-sm-flex border-top border-bottom jt-border-light mb-5' id='post-pager'>
 <b:if cond='data:newerPageUrl'>
-<a class='d-block prev-page col-sm-6 py-3 pe-sm-3 border-sm-bottom jt-border-light text-reset text-center text-sm-start text-decoration-none' expr:href='data:newerPageUrl.canonical'>
+<a class='d-block prev-page col-sm-6 py-3 pe-sm-3 border-sm-bottom jt-border-light text-reset text-center text-sm-start' expr:href='data:newerPageUrl.canonical'>
 <span class='d-block pe-2 fs-7 fw-light'><svg aria-hidden='true' class='jt-icon'><use xlink:href='#i-arrow-l'/></svg>Next Post</span>
 </a>
 </b:if>
 <b:if cond='data:olderPageUrl'>
-<a class='d-block next-page col-sm-6 py-3 ps-sm-3 jt-border-light text-center text-sm-end text-reset text-decoration-none ms-auto' expr:href='data:olderPageUrl.canonical'>
+<a class='d-block next-page col-sm-6 py-3 ps-sm-3 jt-border-light text-center text-sm-end text-reset ms-auto' expr:href='data:olderPageUrl.canonical'>
 <span class='d-block ps-2 fs-7 fw-light'>Previous Post <svg aria-hidden='true' class='jt-icon'><use xlink:href='#i-arrow-r'/></svg></span>
 </a>
 </b:if>
 </div>
 <b:else/>
-<div class='d-flex justify-content-center visually-hidden' expr:data-label='data:view.search.label' expr:data-pagination='!data:view.isArchive and !data:view.isPost and !data:view.search.query' expr:data-posts='data:posts.size' id='pagination'>
+<div class='d-flex justify-content-evenly visually-hidden' expr:data-label='data:view.search.label' expr:data-pagination='!data:view.isArchive and !data:view.isPost and !data:view.search.query' expr:data-posts='data:posts.size' id='pagination'>
 <b:if cond='data:newerPageUrl'>
-<div class='prev-page'>
-<a class='btn btn-sm jt-btn-primary border-2 py-2 px-5 fw-bold' expr:href='data:newerPageUrl'><svg aria-hidden='true' class='jt-icon'><use xlink:href='#i-arrow-l'/></svg>Previous</a>
+<div class='prev-page me-3'>
+<a class='btn btn-sm jt-btn-primary border-2 py-2 px-4 fw-bold' expr:href='data:newerPageUrl'><svg aria-hidden='true' class='jt-icon'><use xlink:href='#i-arrow-l'/></svg>Prev</a>
 </div>
 </b:if>
 <b:if cond='data:olderPageUrl'>
 <div class='next-page'>
-<a class='btn btn-sm jt-btn-primary border-2 py-2 px-5 fw-bold' expr:href='data:olderPageUrl'>Next<svg aria-hidden='true' class='jt-icon'><use xlink:href='#i-arrow-r'/></svg></a>
+<a class='btn btn-sm jt-btn-primary border-2 py-2 px-4 fw-bold' expr:href='data:olderPageUrl'>Next<svg aria-hidden='true' class='jt-icon'><use xlink:href='#i-arrow-r'/></svg></a>
 </div>
 </b:if>
 </div>
@@ -1702,7 +1732,7 @@ width: 50%;
     </b:includable>
     <b:includable id='JetFeaturedPost'>
 <b:include name='JetWidgetTitle'/>
-<b:with value='(data:widgets where (w =&gt; w.type == &quot;Blog&quot; and w.id == &quot;Blog50&quot; )).first' var='jwidget'>
+<b:with value='(data:widgets where (w =&gt; w.type == &quot;Blog&quot; and w.id == &quot;Blog1&quot; )).first' var='jwidget'>
 <div class='widget-content feature-posts'>
 <b:loop values='data:posts' var='post'>
 <div class='item-post d-sm-flex'>
@@ -1716,17 +1746,17 @@ width: 50%;
 <div class='item-content p-4 py-sm-0 position-relative jt-border-light'>
 <b:class cond='data:post.featuredImage' name='col-sm-6'/>
 <b:if cond='data:post.labels and data:jwidget.allBylineItems.labels'>
-<div class='item-tag mb-3 fw-light text-secondary'>
+<div class='item-tag mb-3 fw-light text-secondary text-nowrap overflow-hidden text-truncate'>
 <b:loop index='i' values='data:post.labels where (l =&gt; l.name not contains &quot;#&quot;) take data:skin.vars.maxLabel' var='label'>
 <b:if cond='data:i != 0'>,</b:if>
-<a class='text-reset hover-text-primary text-decoration-none' expr:href='data:label.url.canonical + &quot;?max-results=10&quot;' rel='tag'>
+<a class='text-reset hover-text-primary' expr:href='data:label.url.canonical + &quot;?max-results=10&quot;' rel='tag'>
 <data:label.name/>
 </a>
 </b:loop>
 </div>
 </b:if>
 <b:if cond='data:postDisplay.showTitle'>
-<h3 class='item-title mb-4 fs-2'><a class='text-reset text-decoration-none' expr:href='data:post.url.canonical'><data:post.title/></a></h3>
+<h3 class='item-title mb-4 fs-2'><a class='text-reset' expr:href='data:post.url.canonical'><data:post.title/></a></h3>
 </b:if>
 <b:if cond='data:postDisplay.showSnippet'>
 <p class='item-snippet text-break mb-3'><b:eval expr='data:post.snippets.short snippet { links: false }'/></p>
@@ -1786,13 +1816,13 @@ width: 50%;
   <li class='breadcrumb-item d-inline-block'>Search for: <data:view.search.query/></li>
 <b:else/>
   <li class='breadcrumb-item d-inline-block' itemprop='itemListElement' itemscope='itemscope' itemtype='https://schema.org/ListItem'>
-    <a class='text-decoration-none' expr:href='data:blog.canonicalHomepageUrl' itemprop='item' rel='tag' title='Home'><span itemprop='name'>Home</span></a>
+    <a expr:href='data:blog.canonicalHomepageUrl' itemprop='item' rel='tag' title='Home'><span itemprop='name'>Home</span></a>
     <meta content='1' itemprop='position'/>
   </li>
   <b:if cond='data:post.labels'>     
     <b:loop index='i' values='data:post.labels where (l =&gt; l.name not contains &quot;#&quot;) take data:skin.vars.maxLabel' var='label'>
       <li class='breadcrumb-item d-inline-block' itemprop='itemListElement' itemscope='itemscope' itemtype='https://schema.org/ListItem'>
-        <a class='text-decoration-none' expr:href='data:label.url.canonical + &quot;?max-results=10&quot;' expr:title='data:label.name' itemprop='item' rel='tag'><span itemprop='name'><data:label.name/></span></a>
+        <a expr:href='data:label.url.canonical + &quot;?max-results=10&quot;' expr:title='data:label.name' itemprop='item' rel='tag'><span itemprop='name'><data:label.name/></span></a>
         <meta expr:content='data:i + 2' itemprop='position'/>
       </li>
     </b:loop>
@@ -1966,7 +1996,7 @@ width: 50%;
 <div class='me-3'><svg aria-hidden='true' class='me-1 jt-icon'><use xlink:href='#i-clock'/></svg><span class='date-format' expr:data-date='data:post.date.iso8601'><b:eval expr='data:jwidget.allBylineItems.timestamp.label ? data:post.date format data:jwidget.allBylineItems.timestamp.label : data:post.date'/></span></div>
 </b:if>
 <b:if cond='data:post.numberOfComments gt 0 and data:jwidget.allBylineItems.comments'>
-<a class='text-reset text-decoration-none' href='#comments'><svg aria-hidden='true' class='me-1 jt-icon'><use xlink:href='#i-comment'/></svg><data:post.numberOfComments/></a>
+<a class='text-reset' href='#comments'><svg aria-hidden='true' class='me-1 jt-icon'><use xlink:href='#i-comment'/></svg><data:post.numberOfComments/></a>
 </b:if>
 </div>
 </header>
@@ -2098,6 +2128,49 @@ width: 50%;
           </div>
         </div>
       </div>
+    </b:includable>
+    <b:includable id='JetBlogArchive' var='this'>
+      <b:include name='JetWidgetTitle'/>
+      <div class='widget-content blog-archive'>
+        <b:if cond='data:this.style == &quot;HIERARCHY&quot;'>
+          <b:include data='data' name='JetBlogArchiveHierarchy'/>
+          <b:else/>
+          <ul class='flat d-flex flex-wrap list-unstyled mb-0'>
+            <b:loop values='data:data' var='i'>
+              <li class='mb-2 pe-2 col-6'>
+                <a class='text-reset fw-bold hover-text-primary' expr:href='data:i.url'>
+                  <span class='align-middle'><data:i.name/></span>
+                  <span class='ms-1 fw-light fs-9'>[<data:i.post-count/>]</span>
+                </a>
+              </li>
+            </b:loop>
+          </ul>
+        </b:if>
+      </div>
+    </b:includable>
+    <b:includable id='JetBlogArchiveHierarchy' var='intervals'>
+      <ul class='hierarchy list-unstyled border-start border-2 jt-border-light ps-2 mb-0'>
+        <b:loop values='data:intervals' var='interval'>
+          <li class='mb-2 pe-2'>
+            <div class='hierarchy-date mb-2'>
+              <a class='text-reset fw-bold hover-text-primary' expr:href='data:interval.url'>
+                <span class='align-middle'><data:interval.name/></span>
+                <span class='ms-1 fw-light fs-9'>[<data:interval.post-count/>]</span>
+              </a>
+            </div>
+            <div class='hierarchy-content'>
+                <b:include cond='data:interval.data' data='interval.data' name='JetBlogArchiveHierarchy'/>
+                <b:if cond='data:interval.posts'>
+                  <ul class='hierarchy-posts list-unstyled border-start border-2 jt-border-light ps-2 mb-0'>
+                    <b:loop values='data:interval.posts' var='post'>
+                      <li><a class='text-reset fs-7 hover-text-primary' expr:href='data:post.url'><data:post.title/></a></li>
+                    </b:loop>
+                  </ul>
+                </b:if>
+            </div>
+          </li>
+        </b:loop>
+      </ul>
     </b:includable>
   </b:defaultmarkup>
 </b:defaultmarkups>
@@ -2307,6 +2380,16 @@ width: 50%;
     </b:includable>
     <b:includable id='content'/>
   </b:defaultmarkup>
+  <b:defaultmarkup type='BlogArchive'>
+    <b:includable id='main' var='this'>
+      <b:include name='JetBlogArchive'/>
+    </b:includable>
+    <b:includable id='content'/>
+    <b:includable id='flat'/>
+    <b:includable id='hierarchy'/>
+    <b:includable id='interval'/>
+    <b:includable id='posts'/>
+  </b:defaultmarkup>
 </b:defaultmarkups>
 <script>
 <b:eval expr='&quot;const siteUrl=&apos;&quot; + data:blog.canonicalHomepageUrl + &quot;&apos;;&quot;'/>
@@ -2333,7 +2416,7 @@ function related_temp(e) {
  ${data.img ? `
  <div class='item-thumbnail'><a class='jt-bg-light d-block ratio ratio-21x9' href='${data.url}'><img alt='${data.title}' class='object-cover lazy-${data.grup_id} lazyload' data-src='${data.img}' loading='lazy' src='data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=='/></a></div>`: ``}
  <div class='item-content p-4'>
- <h2 class='item-title fs-6 mb-2' itemprop='headline'><a class='text-reset text-decoration-none' href='${data.url}'>${data.title}</a></h2>
+ <h2 class='item-title fs-6 mb-2' itemprop='headline'><a class='text-reset' href='${data.url}'>${data.title}</a></h2>
  <div class='item-meta text-secondary d-flex flex-wrap fw-light'>${data.author != 'Unknown' ? `<small class='me-2'><svg aria-hidden='true' class='me-1 jt-icon'><use xlink:href='#i-user'/></svg>${data.author}</small>`: ``}<small class='me-2'><svg aria-hidden='true' class='me-1 jt-icon'><use xlink:href='#i-clock'/></svg>${data.date}</small></div>
  </div>
  </div>
@@ -2386,7 +2469,7 @@ function related_inline_temp(e) {
  ${e.posts.map(function(data, i){
  return `
  <li class='mb-2'>
- <a class='text-decoration-none' href='${ data.url }'>${ data.title }</a>
+ <a href='${ data.url }'>${ data.title }</a>
  </li>
  `;
  }).join('')}
@@ -2401,7 +2484,7 @@ function sidebar_temp(e) {
  ${data.img ? `
  <div class='item-thumbnail me-3' style="width:85px"><a class='rounded jt-bg-light overflow-hidden d-block ratio ratio-1x1' href='${data.url}'><img alt='${data.title}' class='object-cover lazy-${data.grup_id} lazyload' data-src='${data.img}' loading='lazy' src='data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=='/></a></div>`: ``}
  <div class='item-content col'>
- <h3 class='item-title fs-7 mb-2' itemprop='headline'><a class='text-reset text-decoration-none' href='${data.url}'>${data.title}</a></h3>
+ <h3 class='item-title fs-7 mb-2' itemprop='headline'><a class='text-reset' href='${data.url}'>${data.title}</a></h3>
  <div class='item-meta text-secondary d-flex flex-wrap fs-8'><small class='me-2'><svg aria-hidden='true' class='me-1 jt-icon'><use xlink:href='#i-clock'/></svg>${data.date}</small></div>
  </div>
  </div>`;
@@ -2415,7 +2498,7 @@ function toc_temp(e) {
  return `<div id='toc-post' class="d-inline-block px-3 py-2 mb-4 jt-bg-light rounded">
  <input id="toc-toggle" class="d-none" autocomplete="off" type="checkbox"/>
  <label for="toc-toggle" id="toc-toggler" class="toc-toggler d-flex align-items-center">
- <span class="fw-light pe-3">On this Content</span>
+ <span class="fw-light pe-3">Table of content</span>
  <span class="dropdown-toggle ms-auto"></span>
  </label>
  ${e.map(function(data, i){
@@ -2435,7 +2518,7 @@ function toc_temp(e) {
  hc = n;
  text += i > 0 ? '</li>' : '';
  text += '<li class="mb-2">';
- text += '<a class="text-reset text-decoration-none hover-text-primary" href="#'+data.id+'">'+data.title+'</a>';
+ text += '<a class="text-reset hover-text-primary" href="#'+data.id+'">'+data.title+'</a>';
  if( i  ==  e.length - 1 ){
  for(var j = 1; j < hc; j++){
  text += '</li></ul>';
@@ -2457,7 +2540,7 @@ function jtCallback(){
 
 }
 /*]]>*/</script>
-<script src='https://cdn.jsdelivr.net/gh/jettheme/js@0.5.1/main.js'/>
+<script src='https://cdn.jsdelivr.net/gh/jettheme/js@0.5.2/main.js'/>
 
 <!-- Your Style and Script before </body> is here -->
 

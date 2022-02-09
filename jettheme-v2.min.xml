@@ -866,9 +866,9 @@ width: 50%;
 <b:else/>
 <div class='item-number me-3'><a class='btn btn-sm rounded-pill jt-icon-center jt-btn-primary' expr:href='data:post.url.canonical'><b:eval expr='data:i + 1'/></a></div>
 </b:if>
-<div class='item-content col'>
+<div class='item-content col overflow-hidden'>
 <b:if cond='data:post.labels and data:jwidget.allBylineItems.labels'>
-<div class='item-tag mb-1 fw-light fs-8 text-secondary text-nowrap overflow-hidden text-truncate'>
+<div class='item-tag mb-1 fw-light fs-8 text-secondary text-nowrap text-truncate'>
 <b:loop index='i' values='data:post.labels where (l =&gt; l.name not contains &quot;#&quot;) take data:skin.vars.maxLabel' var='label'>
 <b:if cond='data:i != 0'>,</b:if>
 <a class='text-reset hover-text-primary' expr:href='data:label.url.canonical + &quot;?max-results=10&quot;' rel='tag'>

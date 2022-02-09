@@ -126,6 +126,7 @@ Designer	: jettheme
 URL			: www.jettheme.com
 -----------------------------------------------
 */
+
 :root {
 --bs-font-sans-serif: $(body.text.family);
 --bs-body-bg: $(body.background);
@@ -252,6 +253,10 @@ border-width: 0.25em 0.25em 0;
 .dropdown-menu {
 margin: 0;
 padding: 0;
+}
+.px-3 {
+padding-right: 1rem;
+padding-left: 1rem;
 }
 .ratio:before{
 content: none;
@@ -624,6 +629,17 @@ border-right-style: solid;
 }
 }
 @media (min-width: 992px) {
+.d-lg-flex {
+display: flex;
+}
+.col-lg-4 {
+flex: 0 0 auto;
+width: 33.33333333%;
+}
+.col-lg-8 {
+flex: 0 0 auto;
+width: 66.66666667%;
+}
 .border-lg-end {
 border-right-width: 1px !important;
 border-right-style: solid;
@@ -690,6 +706,9 @@ margin-bottom: 0 !important;
 }
 }
 @media (min-width: 1200px){
+.container {
+max-width: 1140px;
+}
 .h1,h1{font-size:$(posts.title.size)}
 .h2,h2{font-size:$(title.h2)}
 .h3,h3{font-size:$(title.h3)}

@@ -2415,13 +2415,13 @@ width: 50%;
   </b:defaultmarkup>
 </b:defaultmarkups>
 <script>
-const siteUrl=&quot;<b:eval expr='data:blog.canonicalHomepageUrl'/>&quot;;
-const blogId=&quot;<b:eval expr='data:blog.blogId'/>&quot;;
-const blogTitle=&quot;<b:eval expr='data:blog.title.jsEscaped'/>&quot;;
-const isPreview=&quot;<b:eval expr='data:view.isPreview'/>&quot;;
+const siteUrl=&quot;<data:blog.canonicalHomepageUrl/>&quot;;
+const blogId=&quot;<data:blog.blogId/>&quot;;
+const blogTitle=&quot;<data:blog.title.jsEscaped/>&quot;;
 const titleSeparator=&quot;<b:eval expr='data:skin.vars.separator'/>&quot;;
 const autoTOC=&quot;<b:eval expr='data:skin.vars.autoTOC'/>&quot;;
 const positionTOC=&quot;<b:eval expr='data:skin.vars.positionTOC'/>&quot;;
+const isPreview=&quot;<b:eval expr='data:view.isPreview'/>&quot;;
 const analyticId=&quot;<b:eval expr='data:skin.vars.analyticId  != &quot;&quot; ? data:skin.vars.analyticId : data:blog.analyticsAccountNumber'/>&quot;;
 const caPubAdsense=&quot;<b:eval expr='data:skin.vars.caPubAdsense != &quot;&quot; ? data:skin.vars.caPubAdsense : data:blog.adsenseClientId'/>&quot;;
 

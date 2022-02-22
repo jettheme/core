@@ -1268,7 +1268,7 @@ width: 50%;
   </b:widget>
 </b:section>
 </div>
-<div class='col-lg-4 px-3 jt-border-light separator-main position-relative ms-auto' content='itemid' id='sidebar' itemid='#sidebar' itemscope='itemscope' itemtype='https://schema.org/WPSideBar'>
+<div class='col-lg-4 px-3 pb-5 jt-border-light separator-main position-relative ms-auto' content='itemid' id='sidebar' itemid='#sidebar' itemscope='itemscope' itemtype='https://schema.org/WPSideBar'>
 <b:section class='pt-4' id='sidebar-static' itemscope='itemscope'>
   <b:widget id='PopularPosts10' locked='false' title='Popular Posts' type='PopularPosts' visible='true'>
     <b:widget-settings>

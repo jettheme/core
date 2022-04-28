@@ -1202,7 +1202,7 @@ width: 50%;
 </div>
 <div class='comments-content'>
 <ul class='list-unstyled'>
-<b:loop values='data:post.comments where (c =&gt; not c.inReplyTo)' var='commentLevel1'>
+<b:loop values='data:post.comments where (c =&gt; not c.inReplyTo or c.inReplyTo == 0)' var='commentLevel1'>
 <li class='comment mb-4' expr:id='data:commentLevel1.anchorName'>
 <div class='comment-block'>
 <div class='comment-header position-relative d-flex mb-2'>

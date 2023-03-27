@@ -1011,13 +1011,56 @@ width: 50%;
 <header class='header-animate sticky-top navbar py-0 navbar-expand-lg' content='itemid' id='header' itemid='#header' itemscope='itemscope' itemtype='https://schema.org/WPHeader'>
 <input class='d-none' id='navbar-toggle' type='checkbox'/>
 <b:section class='container position-relative px-3 flex-nowrap' id='header-main' maxwidgets='3' showaddelement='no'>
-  <b:widget id='HTML10' locked='true' title='Logo' type='HTML' version='2' visible='true'>
+  <b:widget id='Header1' locked='true' title='Logo (Header)' type='Header' version='2' visible='true'>
     <b:widget-settings>
-      <b:widget-setting name='content'>https://1.bp.blogspot.com/-mo6pIle8rXw/YLplHDA1ZCI/AAAAAAAAATo/JPbzsy_srC8gFem56vJZ3wua-A5qClFxACLcBGAsYHQ/w175-h55/jettheme-logo.png</b:widget-setting>
+      <b:widget-setting name='displayUrl'>https://1.bp.blogspot.com/-mo6pIle8rXw/YLplHDA1ZCI/AAAAAAAAATo/JPbzsy_srC8gFem56vJZ3wua-A5qClFxACLcBGAsYHQ/s175/jettheme-logo.png</b:widget-setting>
+      <b:widget-setting name='displayHeight'>55</b:widget-setting>
+      <b:widget-setting name='sectionWidth'>1479</b:widget-setting>
+      <b:widget-setting name='useImage'>true</b:widget-setting>
+      <b:widget-setting name='shrinkToFit'>false</b:widget-setting>
+      <b:widget-setting name='imagePlacement'>REPLACE</b:widget-setting>
+      <b:widget-setting name='displayWidth'>175</b:widget-setting>
     </b:widget-settings>
-    <b:includable id='main'>
-        <b:include name='JetLogo'/>
-      </b:includable>
+    <b:includable id='main' var='this'>
+    <div class='header-widget'>
+      <b:include cond='data:imagePlacement in {&quot;REPLACE&quot;, &quot;BEFORE_DESCRIPTION&quot;}' name='image'/>
+      <b:include cond='data:imagePlacement not in {&quot;REPLACE&quot;, &quot;BEFORE_DESCRIPTION&quot;}' name='title'/>
+      <b:include cond='data:imagePlacement != &quot;REPLACE&quot;' name='description'/>
+    </div>
+    <b:include cond='data:imagePlacement == &quot;BEHIND&quot;' name='behindImageStyle'/>
+  </b:includable>
+    <b:includable id='behindImageStyle'>
+    <b:if cond='data:sourceUrl'>
+      <b:include cond='data:this.image' data='{                    image: data:this.image,                    selector: &quot;.header-widget&quot;                  }' name='responsiveImageStyle'/>
+      <style type='text/css'>
+        .header-widget {
+          background-position: <data:blog.locale.languageAlignment/>;
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+      </style>
+    </b:if>
+  </b:includable>
+    <b:includable id='description'>
+    <p>
+      <data:this.description/>
+    </p>
+  </b:includable>
+    <b:includable id='image'>
+    <a class='header-image-wrapper' expr:href='data:blog.homepageUrl'>
+      <b:include data='{                                                 image: data:image,                                                 altText: data:blog.title.escaped,                                                 originalWidth: data:width,                                                 originalHeight: data:height                                               }' name='responsiveImage'/>
+    </a>
+      <script>
+        document.querySelector(&quot;a.header-image-wrapper&gt;img&quot;).srcset=&quot;&quot;;
+      </script>
+  </b:includable>
+    <b:includable id='title'>
+    <h1>
+      <b:tag cond='data:view.url != data:blog.homepageUrl' expr:href='data:blog.homepageUrl' name='a'>
+        <data:title/>
+      </b:tag>
+    </h1>
+  </b:includable>
   </b:widget>
   <b:widget id='LinkList10' locked='true' title='Icons, Dark, Search' type='LinkList' version='2' visible='true'>
     <b:widget-settings>
